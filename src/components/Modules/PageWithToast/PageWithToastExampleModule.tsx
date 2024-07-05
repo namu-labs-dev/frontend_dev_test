@@ -1,9 +1,7 @@
-import { Button } from "antd";
-
 type Props = {
-  onClickToastButton: () => void;
+  title: string;
 };
 
 export const PageWithToastExampleModule = (props: Props) => {
-  return <Button onClick={props.onClickToastButton}>Show Toast Message</Button>;
+  return <div>{props.title}</div>;
 };
