@@ -12,6 +12,7 @@ type Props = {
 };
 
 const SVGAtom = (props: Props) => {
+  console.log(svgs);
   return React.createElement(svgs[props.iconName], {
     width: props.width ?? null,
     height: props.height ?? null,
