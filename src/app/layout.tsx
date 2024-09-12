@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body className="bg-[#efefef]">
-        <div className="m-auto h-screen max-w-[500px] overflow-auto bg-white">
+        <div className="m-auto h-screen max-w-[400px] overflow-auto bg-white">
           <GlobalLayout>{children}</GlobalLayout>
           <div id="custom-drawer" />
           <div id="custom-modal" />
