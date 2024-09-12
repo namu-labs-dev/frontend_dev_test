@@ -11,6 +11,14 @@ export default {
       spacing: {
         page: "500px",
       },
+      colors:{
+        kneutral:{
+          DEFAULT:"#1f1f1f",
+          11:"#1f1f1f",
+          10: "#262626"
+        },
+        
+      },
       keyframes: {
         shimmer: {
           "0%": { backgroundPosition: "200% 0" },

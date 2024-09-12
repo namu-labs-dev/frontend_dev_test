@@ -4,6 +4,7 @@ import { HomeFooterModule } from "~/components/Modules/Home/HomeFooterModule";
 import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
 import { HomeDescriptionModule } from "~/components/Modules/HomeDescription/HomeDescriptionModule";
+import HomeProvider from "~/providers/home-provider";
 
 type Props = {
   homeHeaderModuleProps: React.ComponentProps<typeof HomeHeaderModule>;
@@ -13,19 +14,21 @@ type Props = {
 
 export const HomeTemplate = (props: Props) => {
   return (
-    <Layout style={{ height: "100%" }}>
-      <Header style={{ padding: 0, height: 50 }}>
-        <HomeHeaderModule {...props.homeHeaderModuleProps} />
-      </Header>
+    <HomeProvider>
+      <Layout style={{ height: "100%" }}>
+        <Header style={{ padding: 0, height: 50 }}>
+          <HomeHeaderModule {...props.homeHeaderModuleProps} />
+        </Header>
 
-      <Content style={{ overflow: "auto", padding: "20px" }}>
-        <HomeContentModule {...props.homeContentModuleProps} />
-        <HomeDescriptionModule />
-      </Content>
+        <Content style={{ overflow: "auto", padding: "20px" }}>
+          <HomeContentModule {...props.homeContentModuleProps} />
+          <HomeDescriptionModule />
+        </Content>
 
-      <Footer style={{ padding: 0, minHeight: 50 }}>
-        <HomeFooterModule {...props.homeFooterModuleProps} />
-      </Footer>
-    </Layout>
+        <Footer style={{ padding: 0, minHeight: 50 }}>
+          <HomeFooterModule {...props.homeFooterModuleProps} />
+        </Footer>
+      </Layout>
+    </HomeProvider>
   );
 };
