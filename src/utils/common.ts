@@ -1,4 +1,6 @@
 import ToastStore from "~/store/ToastStore";
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function generateRandomString(length: number) {
   const characters =
@@ -19,7 +21,7 @@ export function isEmailValid(email: string): boolean {
 export function formatWalletAddress(
   address: string,
   prefixLength = 5,
-  suffixLength = 3,
+  suffixLength = 3
 ) {
   return `${address.slice(0, prefixLength)}...${address.slice(-suffixLength)}`;
 }
@@ -79,3 +81,7 @@ export const getTxScanUrl = (targetChainId: number, txHash: string) => {
       return "/";
   }
 };
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}

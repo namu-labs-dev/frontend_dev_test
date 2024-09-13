@@ -1,7 +1,7 @@
 import { proxy } from "valtio";
 import type { TitleAndContentModalProps } from "~/views/modal/TitleAndContentModal";
 
-type ViewType = "TitleAndContent";
+type ViewType = "TitleAndContent" | "Setttings";
 
 type DataType = {
   TitleAndContent?: TitleAndContentModalProps;
