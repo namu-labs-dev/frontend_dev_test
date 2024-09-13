@@ -45,9 +45,30 @@ const NathanAbsoluteEmptyContent = () => {
             name="Nvir"
             time="08:42 AM"
             userDetails="User: namulabs is a fantastic company..."
-            onclick={() => setIsOpen(!isOpen)} // Example onclick to show usage
-            setModalOpen={setIsOpen} // Example setModalOpen to show usage
-          />
+            onclick={() => setIsOpen(!isOpen)} // Use toggle logic for opening/closing the modal
+            modalOpen={isOpen}
+            setModalOpen={setIsOpen} // Pass setIsOpen correctly
+            containerClassName="bg-[#2C2D30] w-[300px] p-5 flex flex-col items-center justify-center text-white space-y-3"
+          >
+            <h1 className="text-center text-2xl font-bold">
+              Transaction <br /> processing
+            </h1>
+
+            <div className="h-[120px] w-[250px] overflow-hidden">
+              <Image
+                src={"/svgs/loader.svg"}
+                alt="loader"
+                className="h-full w-full object-cover"
+                width={100}
+                height={100}
+              />
+            </div>
+
+            <p className="text-sm text-white">
+              Uploading your transaction to the node. please wait for a
+              moment... <br /> This may take up to 2 minutes.
+            </p>
+          </NathanUserContentAtom>
         </div>
       </div>
     </>
