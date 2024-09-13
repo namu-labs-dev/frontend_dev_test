@@ -3,7 +3,7 @@ import React, { useCallback } from "react";
 import { ModalContainer } from "../ModalContainer/ModalContainer";
 
 interface ComponentProps {
-  avater: string;
+  avater: string | undefined;
   name: string;
   userDetails: string;
   time: string;
@@ -41,13 +41,15 @@ const NathanUserContentAtom = ({
         className="flex w-full flex-row items-center gap-2 outline-none"
       >
         <div className="flex h-10 w-12 items-center justify-center overflow-hidden rounded-full">
-          <Image
-            src={avater}
-            alt={name}
-            width={100}
-            height={100}
-            className="h-full w-full object-cover"
-          />
+          {avater && (
+            <Image
+              src={avater}
+              alt={name}
+              width={100}
+              height={100}
+              className="h-full w-full object-cover"
+            />
+          )}
         </div>
         <div className="w-full">
           <div className="flex flex-row items-center">
