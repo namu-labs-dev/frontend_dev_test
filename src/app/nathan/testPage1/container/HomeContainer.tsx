@@ -7,20 +7,15 @@ import NathanAbsoluteEmptyContent from "~/components/Atoms/EmptyContentAtom/Nath
 import NathanEmptyContentAtom from "~/components/Atoms/EmptyContentAtom/NathanEmptyContentAtom";
 import { NathanFooterAtom } from "~/components/Atoms/FooterAtom/NathanFooterAtom";
 import { NathanHeaderAtom } from "~/components/Atoms/HeaderAtom/NathanHeaderAtom";
-import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
 
 const HomeContainer = () => {
-  const [settingsClicked, setSettingsClicked] = useState<boolean>(false);
-  const [notificationsClicked, setNotificationsClicked] =
-    useState<boolean>(false);
-
   return (
     <Layout style={{ height: "100%" }}>
       <Header style={{ padding: 0 }}>
         <NathanHeaderAtom
           title="Proxima OS"
-          onClickLeftIcon={() => setNotificationsClicked((prev) => !prev)}
-          onClickRightIcon={() => setSettingsClicked((prev) => !prev)}
+          onClickLeftIcon={() => alert(`You clicked on the connected icon`)}
+          onClickRightIcon={() =>  alert(`You clicked on the settings icon`)}
         />
       </Header>
 

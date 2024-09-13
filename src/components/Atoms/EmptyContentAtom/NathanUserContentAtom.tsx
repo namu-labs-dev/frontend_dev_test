@@ -7,6 +7,7 @@ interface ComponentProps {
   userDetails: string;
   time: string;
   subUserAvatar?: string;
+  onclick?: () => void;
 }
 
 const NathanUserContentAtom = ({
@@ -15,11 +16,15 @@ const NathanUserContentAtom = ({
   time,
   userDetails,
   subUserAvatar,
+  onclick,
 }: ComponentProps) => {
   return (
     <>
-      <div className="flex w-full flex-row items-center gap-2">
-        <div className="flex h-10 w-12 items-center justify-center overflow-hidden rounded-full bg-[#054aee]">
+      <button
+        onClick={onclick}
+        className="flex w-full flex-row items-center gap-2 outline-none"
+      >
+        <div className="flex h-10 w-12 items-center justify-center overflow-hidden rounded-full">
           <Image
             src={avater}
             alt={name}
@@ -31,7 +36,7 @@ const NathanUserContentAtom = ({
         <div className="w-full">
           <div className="flex flex-row items-center">
             <div className="mr-auto">
-              <h3 className="text-lg font-semibold text-white">{name}</h3>
+              <h3 className="text-base font-semibold text-white">{name}</h3>
             </div>
             <div className="text-sm text-white">{time}</div>
           </div>
@@ -46,7 +51,7 @@ const NathanUserContentAtom = ({
             )}
           </div>
         </div>
-      </div>
+      </button>
     </>
   );
 };

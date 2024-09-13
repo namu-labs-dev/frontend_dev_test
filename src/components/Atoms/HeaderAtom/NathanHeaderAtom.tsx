@@ -31,7 +31,7 @@ export const NathanHeaderAtom = (props: Props) => {
       {props.onClickRightIcon && (
         <div
           className="flex w-[50px] cursor-pointer items-center justify-center"
-          onClick={() => console.log("Antd icon clicked")}
+          onClick={props.onClickRightIcon}
         >
           <SettingOutlined className="cursor-pointer text-[20px] !text-[#BFBFBF]" />
         </div>
