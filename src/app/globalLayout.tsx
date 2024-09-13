@@ -12,7 +12,7 @@ export default function GlobalLayout({
 }) {
   return (
     <>
-      <div className="m-auto h-screen max-w-[500px] overflow-auto bg-white">
+      <div className="h-screen overflow-auto bg-[#ffffff]">
         <RootStyleRegistry>{children}</RootStyleRegistry>
       </div>
       <SnapshotDrawerAtom />
