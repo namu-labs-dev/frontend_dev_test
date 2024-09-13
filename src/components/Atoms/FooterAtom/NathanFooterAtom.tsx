@@ -42,7 +42,7 @@ export const NathanFooterAtom = () => {
           return (
             <Link href={path} className="no-underline outline-none" key={index}>
               <div
-                className={`flex h-[55px] w-[90px] items-center justify-center border-t-2 border-t-transparent duration-300 ease-in md:w-[100px] ${pathname === path && "border-t-[#00EC97]"}`}
+                className={`flex h-[55px] w-[90px] items-center justify-center border-t-2 duration-300 ease-in md:w-[100px] ${pathname === path ? "border-t-[#00EC97]" : "border-t-transparent"}`}
               >
                 <SVGAtom iconName={icon} className="h-8 w-8" color="black" />
               </div>
