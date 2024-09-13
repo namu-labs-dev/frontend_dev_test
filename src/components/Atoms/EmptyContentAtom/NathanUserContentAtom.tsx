@@ -1,5 +1,6 @@
 import Image from "next/image";
-import React from "react";
+import React, { useCallback } from "react";
+import { ModalContainer } from "../ModalContainer/ModalContainer";
 
 interface ComponentProps {
   avater: string;
@@ -7,6 +8,11 @@ interface ComponentProps {
   userDetails: string;
   time: string;
   subUserAvatar?: string;
+  onclick?: () => void;
+  modalOpen?: boolean;
+  setModalOpen?: React.Dispatch<React.SetStateAction<boolean>>;
+  children?: React.ReactNode;
+  containerClassName?: string;
 }
 
 const NathanUserContentAtom = ({
@@ -15,11 +21,26 @@ const NathanUserContentAtom = ({
   time,
   userDetails,
   subUserAvatar,
+  onclick,
+  modalOpen,
+  setModalOpen,
+  children,
+  containerClassName,
 }: ComponentProps) => {
+  const onClose = useCallback(() => {
+    if (modalOpen && setModalOpen) {
+      // Added check for setModalOpen
+      setModalOpen(false);
+    }
+  }, [modalOpen, setModalOpen]);
+
   return (
     <>
-      <div className="flex w-full flex-row items-center gap-2">
-        <div className="flex h-10 w-12 items-center justify-center overflow-hidden rounded-full bg-[#054aee]">
+      <button
+        onClick={onclick}
+        className="flex w-full flex-row items-center gap-2 outline-none"
+      >
+        <div className="flex h-10 w-12 items-center justify-center overflow-hidden rounded-full">
           <Image
             src={avater}
             alt={name}
@@ -31,7 +52,7 @@ const NathanUserContentAtom = ({
         <div className="w-full">
           <div className="flex flex-row items-center">
             <div className="mr-auto">
-              <h3 className="text-lg font-semibold text-white">{name}</h3>
+              <h3 className="text-base font-semibold text-white">{name}</h3>
             </div>
             <div className="text-sm text-white">{time}</div>
           </div>
@@ -46,7 +67,25 @@ const NathanUserContentAtom = ({
             )}
           </div>
         </div>
-      </div>
+      </button>
+
+      {modalOpen && (
+        <div
+          className="fixed inset-0 z-[1000] mx-auto mt-0 box-border w-[400px] overflow-auto pt-0 text-center"
+          style={{ marginTop: 0 }}
+        >
+          <div
+            className="pointer fixed mx-auto mt-0 h-full w-[400px] bg-black pt-0 opacity-50"
+            onClick={onClose}
+          />
+          <ModalContainer
+            style={{ backgroundColor: "#2C2D30" }}
+            className={containerClassName}
+          >
+            {children}
+          </ModalContainer>
+        </div>
+      )}
     </>
   );
 };
