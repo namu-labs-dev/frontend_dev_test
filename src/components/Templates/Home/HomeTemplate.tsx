@@ -5,11 +5,13 @@ import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
 import { HomeDescriptionModule } from "~/components/Modules/HomeDescription/HomeDescriptionModule";
 import HomeProvider from "~/providers/home-provider";
+import HomeSettingsModalModule from "~/components/Modules/Home/HomeSettingsModalModule";
 
 type Props = {
   homeHeaderModuleProps: React.ComponentProps<typeof HomeHeaderModule>;
   homeContentModuleProps: React.ComponentProps<typeof HomeContentModule>;
   homeFooterModuleProps: React.ComponentProps<typeof HomeFooterModule>;
+  homeModalModuleProps: React.ComponentProps<typeof HomeSettingsModalModule>;
 };
 
 export const HomeTemplate = (props: Props) => {
@@ -22,12 +24,14 @@ export const HomeTemplate = (props: Props) => {
 
         <Content
           style={{
-            overflow: "auto",
+            // overflow: "none",
             backgroundColor: "#1f1f1f",
           }}
+          className='overflow-hidden'
         >
           <HomeContentModule {...props.homeContentModuleProps} />
           <HomeDescriptionModule />
+          <HomeSettingsModalModule {...props.homeModalModuleProps} />
         </Content>
 
         <Footer style={{ padding: 0, minHeight: 50 }}>

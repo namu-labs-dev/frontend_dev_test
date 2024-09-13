@@ -13,3 +13,5 @@ export interface WalletCoin {
 export type IFooterMenu = "dollar" | "message" | "wallet" | "history";
 
 export type IconName = keyof typeof svgs;
+
+export type TransactionStatus = "processing" | "completed" | "pending";

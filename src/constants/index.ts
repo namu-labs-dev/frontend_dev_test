@@ -24,7 +24,7 @@ export const walletCoins: WalletCoin[] = [
     name: "ETH",
     icon: "eth",
     time: "08:43 PM",
-    badge: "",
+    badge: "N",
     description: "User: namulabs is fantasic company...",
   },
   {

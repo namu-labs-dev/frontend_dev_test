@@ -6,7 +6,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        // sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        sans: ["Inter", ...fontFamily.sans],
+        pretendard: ["Pretendard Variable", ...fontFamily.sans],
+        roboto: ["Roboto Mono"],
       },
       spacing: {
         page: "500px",

@@ -17,18 +17,22 @@ const WalletItem = ({
   time: string;
 }) => {
   return (
-    <div className='p-[15px]'>
+    <div className='font-pretendard p-[15px]'>
       <div className='flex justify-between'>
         <div className='flex gap-[10px]'>
           <SVGAtom iconName={icon} width={44} height={44} color='black' />
           <div className='flex flex-col'>
-            <p className='text-[1rem] text-white'>{name}</p>
+            <p className='text-[1rem] font-bold text-white'>{name}</p>
             <p className='text-kmuted text-sm font-medium'>{description}</p>
           </div>
         </div>
         <div className='flex flex-col'>
-          <p className='text-sm text-white'>{time}</p>
-          {badge && <p>{badge} </p>}
+          <p className='font-sans text-sm text-white'>{time}</p>
+          {badge && (
+            <p className='font-roboto flex h-5 w-5 items-center justify-center rounded-lg bg-[#ff4d4f] text-white'>
+              {badge}
+            </p>
+          )}
         </div>
       </div>
     </div>
@@ -38,7 +42,7 @@ type Props = {};
 
 const HomeContentBody = (props: Props) => {
   return (
-    <div className='bg-kneutral-300 min-h-full w-full rounded-[1.875rem] p-5'>
+    <div className='bg-kneutral-300 min-h-full w-full rounded-[1.875rem] p-5 '>
       {walletCoins.map((item, idx) => (
         <WalletItem
           key={idx}

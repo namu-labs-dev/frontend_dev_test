@@ -1,3 +1,5 @@
+import React from "react";
+
 // basic util svg
 export { default as copy } from "./copy.svg";
 export { default as control } from "./control.svg";
@@ -13,3 +15,6 @@ export { default as proxima } from "./proxima.svg";
 export { default as eth } from "./eth.svg";
 export { default as nvir } from "./nvir.svg";
 export { default as nviro } from "./nviro.svg";
+// const Tensor = React.lazy(() => import('./tensor.svg'));
+
+export { default as tensor } from "./tensor.svg";
