@@ -76,3 +76,8 @@ a {
 .animate-fade-out {
   animation: fadeOut 0.3s ease-out forwards;
 }
+
+.ant-upload.ant-upload-select {
+  width: 100%;
+  cursor: pointer;
+}

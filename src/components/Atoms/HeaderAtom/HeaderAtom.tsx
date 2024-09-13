@@ -1,17 +1,29 @@
 import { SettingOutlined } from "@ant-design/icons";
 import SVGAtom from "../SVGAtom/SVGAtom";
 import * as svgs from "public/svgs";
+import { cn } from "~/utils/common";
+interface HeaderAtomStyle {
+  container?: string;
+  text?: string;
+}
 type Props = {
   title: string;
   onClickLeftIcon?: () => void;
   onClickRightIcon?: () => void;
   leftIcon?: keyof typeof svgs;
   rightIcon?: keyof typeof svgs;
+
+  style?: HeaderAtomStyle;
 };
 
 export const HeaderAtom = (props: Props) => {
   return (
-    <div className='relative flex h-full w-full items-center justify-center bg-kneutral-11'>
+    <div
+      className={cn(
+        "relative flex h-full w-full items-center justify-center bg-kneutral-11",
+        props?.style?.container
+      )}
+    >
       {/* Sample using custom svg */}
       {props.onClickLeftIcon && (
         <div
@@ -27,7 +39,9 @@ export const HeaderAtom = (props: Props) => {
         </div>
       )}
 
-      <div className='text-sm font-normal text-white'>{props.title}</div>
+      <div className={cn("text-sm font-normal text-white", props?.style?.text)}>
+        {props.title}
+      </div>
 
       {/* Sample using Antd icon */}
       {props.onClickRightIcon && (

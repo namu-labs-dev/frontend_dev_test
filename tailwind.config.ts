@@ -17,6 +17,7 @@ export default {
       colors: {
         kneutral: {
           DEFAULT: "#1f1f1f",
+          3: "#F5F5F5",
           11: "#1f1f1f",
           10: "#262626",
           300: "#2C2D30",
@@ -26,6 +27,10 @@ export default {
         },
         kmuted: {
           DEFAULT: "#bfbfbf",
+        },
+        kgeekblue: {
+          1: "#F0F5FF",
+          6: "#2F54EB",
         },
       },
       keyframes: {
