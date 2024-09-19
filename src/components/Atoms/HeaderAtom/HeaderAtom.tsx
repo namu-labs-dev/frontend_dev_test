@@ -35,7 +35,7 @@ export const HeaderAtom = (props: Props) => {
           className='absolute right-0 z-[1] flex w-[50px] cursor-pointer items-center justify-center'
           onClick={() => console.log("Antd icon clicked")}
         >
-          <SettingOutlined className={`${props.darkTheme ? "text-white" : "!text-gray-header"} cursor-pointer text-[20px]`} />
+          <SettingOutlined className={`${props.darkTheme ? "!text-white" : "!text-gray-header"} cursor-pointer text-[20px]`} />
         </div>
       )}
     </div>
