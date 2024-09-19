@@ -15,7 +15,7 @@ export const HeaderAtom = (props: Props) => {
   // for icons and font becomes white 
   return (
     <div
-      className={`relative flex h-full w-full items-center justify-center ${props.darkTheme ? "bg-[#1F1F1F" : "bg-[#FFC96F]"}`}
+      className={`relative flex h-full w-full items-center justify-center ${props.darkTheme ? "bg-[#1F1F1F]" : "bg-[#FFC96F]"}`}
     >
       {/* Sample using custom svg */}
       {props.onClickLeftIcon && (
