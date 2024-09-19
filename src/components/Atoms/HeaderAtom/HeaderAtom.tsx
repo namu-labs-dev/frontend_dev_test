@@ -25,7 +25,7 @@ export const HeaderAtom = (props: Props) => {
         </div>
       )}
 
-      <div className={`${props.darkTheme ? "white" : "black"}`}>{props.title}</div>
+      <div className={`${props.darkTheme ? "text-white" : "text-black"}`}>{props.title}</div>
 
       {/* Sample using Antd icon */}
       {props.onClickRightIcon && (
@@ -33,7 +33,7 @@ export const HeaderAtom = (props: Props) => {
           className='absolute right-0 z-[1] flex w-[50px] cursor-pointer items-center justify-center'
           onClick={() => console.log("Antd icon clicked")}
         >
-          <SettingOutlined className={`${props.darkTheme ? "white" : "!text-gray-header"} cursor-pointer text-[20px]`} />
+          <SettingOutlined className={`${props.darkTheme ? "text-white" : "!text-gray-header"} cursor-pointer text-[20px]`} />
         </div>
       )}
     </div>
