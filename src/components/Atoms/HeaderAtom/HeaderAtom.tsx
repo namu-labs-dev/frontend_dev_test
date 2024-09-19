@@ -1,9 +1,11 @@
 import { SettingOutlined } from "@ant-design/icons";
+import * as svgIcons from "public/svgs";
 import SVGAtom from "../SVGAtom/SVGAtom";
 
 type Props = {
   title: string;
   darkTheme?: boolean; // To add dark background to Header
+  iconName?: keyof typeof svgIcons;
   onClickLeftIcon?: () => void;
   onClickRightIcon?: () => void;
 };
@@ -21,7 +23,7 @@ export const HeaderAtom = (props: Props) => {
           className='absolute left-0 z-[1] flex w-[50px] cursor-pointer items-center justify-center'
           onClick={props.onClickLeftIcon}
         >
-          <SVGAtom iconName='arrowLeft' width={20} height={20} color={`${props.darkTheme ? "white" : "black"}`} />
+          <SVGAtom iconName={`${props.iconName ? props.iconName : "arrowLeft"}`} width={20} height={20} color={`${props.darkTheme ? "white" : "black"}`} />
         </div>
       )}
 
