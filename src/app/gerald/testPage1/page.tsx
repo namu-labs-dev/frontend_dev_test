@@ -1,8 +1,8 @@
 "use client";
-import { TestPageContainer } from "./container/TestPageContainer";
+import { HomePageContainer } from "./container/HomePageContainer";
 
 const TestPage1 = () => {
-  return <TestPageContainer />;
+  return <HomePageContainer />;
 };
 
 export default TestPage1;

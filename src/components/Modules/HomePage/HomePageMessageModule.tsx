@@ -5,7 +5,7 @@ type Props = {
   messages: any[];
 };
 
-export const TestPage1MessageModule = (props: Props) => {
+export const HomePageMessageModule = (props: Props) => {
   return (
     <>
       <MessageBoxAtom>

@@ -4,6 +4,6 @@ type Props = {
   jumbotronContentProps: React.ComponentProps<typeof JumbotronContent>;
 };
 
-export const TestPage1JumbotronModule = (props: Props) => {
+export const HomePageJumbotronModule = (props: Props) => {
   return <JumbotronContent {...props.jumbotronContentProps} />;
 };

@@ -1,10 +1,8 @@
 "use client";
 import { message } from "antd";
-import ethLogo from "public/svgs/ethLogo.svg";
-import nvirLogo from "public/svgs/nvirLogo.svg";
-import { TestPage1Template } from "~/components/Templates/TestPage1/TestPage1Template";
+import { HomePageTemplate } from "~/components/Templates/HomePage/HomePageTemplate";
 
-const TestPageContainer = () => {
+const HomePageContainer = () => {
   const headerRightIconClicked = () => {
     void message.info("can't go Settings");
   };
@@ -13,7 +11,7 @@ const TestPageContainer = () => {
     void message.info("No action");
   };
 
-  const testPage1TemplateProps: React.ComponentProps<typeof TestPage1Template> =
+  const testPage1TemplateProps: React.ComponentProps<typeof HomePageTemplate> =
     {
       headerModuleProps: {
         headerProps: {
@@ -60,9 +58,9 @@ const TestPageContainer = () => {
     };
   return (
     <>
-      <TestPage1Template {...testPage1TemplateProps} />
+      <HomePageTemplate {...testPage1TemplateProps} />
     </>
   );
 };
 
-export { TestPageContainer };
+export { HomePageContainer };
