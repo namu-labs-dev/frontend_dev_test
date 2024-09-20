@@ -24,7 +24,7 @@ export const PageWithFormFormModule = (props: Props) => {
         </p>
       </div>
 
-      {/* Ant Design Form component */}
+      {/* Ant Design Form componen */}
       <Form
         className='h-screen'
         form={form} // Associate form with form state
