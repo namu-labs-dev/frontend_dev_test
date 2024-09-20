@@ -1,7 +1,7 @@
 import { AvatarAtom, type AvatarImageSrcType } from "../AvatarAtom/AvatarAtom";
 import { Typography } from "antd";
 
-const { Title, Text } = Typography;
+const { Title } = Typography;
 
 type Props = {
   imgSrc: AvatarImageSrcType;

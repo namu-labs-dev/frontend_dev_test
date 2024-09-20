@@ -8,8 +8,14 @@ type Props = {
 
 export const AvatarAtom = (props: Props) => {
   return (
-    <div className='h-[44px] w-[44px]'>
-      <Image src={props.src} width={44} height={44} alt='user-avatar' />
+    <div className='h-[44px] w-[44px] rounded-full'>
+      <Image
+        src={props.src}
+        width={44}
+        height={44}
+        alt='user-avatar'
+        className='h-full w-full'
+      />
     </div>
   );
 };
