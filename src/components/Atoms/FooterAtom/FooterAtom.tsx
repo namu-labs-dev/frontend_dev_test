@@ -6,7 +6,7 @@ type Props = {
 
 export const FooterAtom = (props: Props) => {
   return (
-    <div className='flex h-full items-center justify-between bg-[#000] px-16 py-5 text-white'>
+    <div className='flex h-full items-center justify-between bg-[#1F1F1F] px-16 py-5 text-white'>
       <div className=' z-[1] flex w-[50px] cursor-pointer items-center justify-center'>
         <SVGAtom iconName='dollar' width={30} height={30} color='white' />
       </div>

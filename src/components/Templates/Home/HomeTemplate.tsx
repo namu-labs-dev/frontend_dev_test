@@ -18,7 +18,7 @@ export const HomeTemplate = (props: Props) => {
         <HomeHeaderModule {...props.homeHeaderModuleProps} />
       </Header>
 
-      <Content style={{ overflow: "auto", padding: "20px", backgroundColor:"black"
+      <Content style={{ overflow: "auto", padding: "0px", backgroundColor:"#1F1F1F"
        }}>
         <HomeContentModule {...props.homeContentModuleProps} />
         <HomeDescriptionModule />

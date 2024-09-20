@@ -9,7 +9,7 @@ type Props = {
 
 export const HeaderAtom = (props: Props) => {
   return (
-    <div className='relative flex h-full w-full items-center justify-center bg-[#000] text-white'>
+    <div className='relative flex h-full w-full items-center justify-center bg-[#1F1F1F] text-white'>
       {/* Sample using custom svg */}
       {props.onClickLeftIcon && (
         <div
