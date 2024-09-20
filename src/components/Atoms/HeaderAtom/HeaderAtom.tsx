@@ -16,7 +16,7 @@ export const HeaderAtom = (props: Props) => {
           className='absolute left-0 z-[1] flex w-[50px] cursor-pointer items-center justify-center'
           onClick={props.onClickLeftIcon}
         >
-          <SVGAtom iconName='outLink' width={20} height={20} color='white' />
+          <SVGAtom iconName='atomLeft' width={23} height={23} color='white' />
         </div>
       )}
 
