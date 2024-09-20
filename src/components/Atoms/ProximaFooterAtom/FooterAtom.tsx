@@ -7,8 +7,7 @@ type Props = {
 
 export const FooterAtom = (_props: Props) => {
   return (
-    // <div className='flex h-full items-center justify-center bg-[#FFC96F]'>
-    <div className='grid h-full grid-cols-4 border border-black bg-[#262626]'>
+    <div className='grid h-full grid-cols-4 bg-[#262626]'>
       <SVGAtomContainer>
         <SVGAtom iconName='dollar' width={24} height={24} />
       </SVGAtomContainer>

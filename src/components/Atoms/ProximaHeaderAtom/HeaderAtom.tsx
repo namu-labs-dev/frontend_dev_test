@@ -9,7 +9,7 @@ type Props = {
 
 export const HeaderAtom = (props: Props) => {
   return (
-    <div className='relative flex h-full w-full items-center justify-center bg-black'>
+    <div className='relative flex h-full w-full items-center justify-center bg-[#1F1F1F]'>
       {props.onClickLeftIcon && (
         <div
           className='absolute left-0 z-[1] flex w-[50px] cursor-pointer items-center justify-center'
@@ -28,7 +28,6 @@ export const HeaderAtom = (props: Props) => {
         >
           <SettingOutlined
             style={{ color: "#BFBFBF" }}
-            // className='text-gray-header cursor-pointer text-[20px]'
             className='cursor-pointer text-[20px]'
           />
         </div>
