@@ -1,4 +1,4 @@
-import { HeaderAtom } from "~/components/Atoms/HeaderAtom/HeaderAtom";
+import { FormHeader } from "~/components/Atoms/FormHeader/FormHeader";
 
 type Props = {
   title: string;
@@ -7,6 +7,6 @@ type Props = {
 
 export const PageWithFormHeaderModule = (props: Props) => {
   return (
-    <HeaderAtom title={props.title} onClickLeftIcon={props.onClickLeftIcon} />
+    <FormHeader title={props.title}  />
   );
 };
