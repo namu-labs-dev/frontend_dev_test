@@ -1,8 +1,11 @@
 "use client";
 import { message } from "antd";
+import { useEffect, useState } from "react";
 import { HomePageTemplate } from "~/components/Templates/HomePage/HomePageTemplate";
 
 const HomePageContainer = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const headerRightIconClicked = () => {
     void message.info("can't go Settings");
   };
@@ -10,6 +13,13 @@ const HomePageContainer = () => {
   const headerLeftIconClicked = () => {
     void message.info("No action");
   };
+
+  // useEffect(() => {
+  //   window.addEventListener('click', handleClickOutside);
+  //   return () => {
+  //     window.removeEventListener('click', handleClickOutside);
+  //   };
+  // }, [isModalOpen]);
 
   const testPage1TemplateProps: React.ComponentProps<typeof HomePageTemplate> =
     {
@@ -20,6 +30,13 @@ const HomePageContainer = () => {
           onClickRightIcon: headerRightIconClicked,
           onClickLeftIcon: headerLeftIconClicked,
           iconName: "customIcon",
+          modalProps: {
+            modalProps: {
+              isModalOpen: isModalOpen,
+              setModalOpen: setIsModalOpen,
+              containerClassName: "bg-[#2C2D30]",
+            },
+          },
         },
       },
 
