@@ -20,7 +20,7 @@ const config = {
     return [
       {
         source: "/",
-        destination: "/sample/home",
+        destination: "/don/home",
         permanent: false,
       },
     ];
