@@ -8,3 +8,5 @@ export { default as message } from "./message.svg";
 export { default as wallet } from "./wallet.svg";
 export { default as history } from "./history.svg";
 export { default as star } from "./star.svg";
+export { default as ethereum } from "./ethereum.svg";
+export { default as nvir } from "./nvir.svg";

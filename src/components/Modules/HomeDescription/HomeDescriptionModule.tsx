@@ -35,18 +35,34 @@ export const HomeDescriptionModule = () => {
             component, Form component
           </li>
         </ol> */}
-        <h1 className='text-3xl font-bold'>Messages</h1>
+        <h1 className='text-3xl font-semibold'>Messages</h1>
         <SVGAtom iconName='star' width={80} height={80} color='white' />
+        <p className='text-lg'>Proxima</p>
       </div>
 
-      <div className='flex flex-col gap-1 text-[14px]'>
-        <b>Minimum ability we want from developers</b>
-        <ol className='list-outside list-decimal pl-7'>
-          <li>
-            Understanding our page configuration rules and creating a requested
-            page following these rules
-          </li>
-          <li>
+      <div className='flex w-full flex-col gap-1 rounded-2xl bg-[#2C2D30] pb-60 pt-8 text-[14px] '>
+        <ul className='list-outside pl-2'>
+          <div className='flex pl-3'>
+            <SVGAtom iconName='ethereum' width={70} height={80} color='white' />
+            <div>
+              <h2 className='text-xl font-medium'>ETH</h2>
+              <p className='text-[#6d6d70]'>
+                User: namulabs is a fantastic company...
+              </p>
+            </div>
+          </div>
+          <div className='flex'>
+            <div className=''>
+              <SVGAtom iconName='nvir' width={80} height={80} color='white' />
+            </div>
+            <div>
+              <h2 className='text-xl font-medium'>Nvir</h2>
+              <p className='text-[#6d6d70]'>
+                User: namulabs is a fantastic company...
+              </p>
+            </div>
+          </div>
+          {/* <li>
             Handling volatile elements or elements containing business logic in
             the *Container.tsx file
           </li>
@@ -54,11 +70,11 @@ export const HomeDescriptionModule = () => {
           <li>
             Understanding and using basic components shown through the Sample
             Link
-          </li>
-        </ol>
+          </li> */}
+        </ul>
       </div>
 
-      <div className='flex flex-col gap-1 text-[14px]'>
+      {/* <div className='flex flex-col gap-1 text-[14px]'>
         <b>Maximum ability we want from developers</b>
         <ol className='list-outside list-decimal pl-7'>
           <li>
@@ -72,7 +88,7 @@ export const HomeDescriptionModule = () => {
             you must write an explanation through comments)
           </li>
         </ol>
-      </div>
+      </div> */}
     </div>
   );
 };
