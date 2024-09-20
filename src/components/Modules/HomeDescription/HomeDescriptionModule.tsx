@@ -1,6 +1,8 @@
+import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
+
 export const HomeDescriptionModule = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className='flex flex-col gap-2  text-white'>
       {/* 
         우리가 해외 개발자에게 원하는 최소 능력
           1. 우리의 페이지 구성 규칙을 이해하고, 이 규칙을 따라 요청 페이지를 제작하는 것
@@ -17,8 +19,8 @@ export const HomeDescriptionModule = () => {
         
           translate korean description to English and make markdown
         */}
-      <div className="flex flex-col gap-1 text-[14px]">
-        <b>Simple explanation of the roles of sample pages</b>
+      <div className='flex flex-col gap-1 text-[14px]'>
+        {/* <b>Simple explanation of the roles of sample pages</b>
         <ol className="list-outside list-decimal pl-7">
           <li>
             Empty: A page where you can check the page configuration rules, prop
@@ -32,12 +34,14 @@ export const HomeDescriptionModule = () => {
             PageWithForm: A page where you can check how to use the basic
             component, Form component
           </li>
-        </ol>
+        </ol> */}
+        <h1 className='text-3xl font-bold'>Messages</h1>
+        <SVGAtom iconName='star' width={80} height={80} color='white' />
       </div>
 
-      <div className="flex flex-col gap-1 text-[14px]">
+      <div className='flex flex-col gap-1 text-[14px]'>
         <b>Minimum ability we want from developers</b>
-        <ol className="list-outside list-decimal pl-7">
+        <ol className='list-outside list-decimal pl-7'>
           <li>
             Understanding our page configuration rules and creating a requested
             page following these rules
@@ -54,9 +58,9 @@ export const HomeDescriptionModule = () => {
         </ol>
       </div>
 
-      <div className="flex flex-col gap-1 text-[14px]">
+      <div className='flex flex-col gap-1 text-[14px]'>
         <b>Maximum ability we want from developers</b>
-        <ol className="list-outside list-decimal pl-7">
+        <ol className='list-outside list-decimal pl-7'>
           <li>
             Finding the inadequacies of our page configuration rules and
             improving them to reflect the results (In this case, you must write
