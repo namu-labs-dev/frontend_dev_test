@@ -17,8 +17,8 @@ export const PageWithFormFormModule = (props: Props) => {
     <div style={{ padding: "20px" }}>
       <div className='rounded-2xl bg-[#F0F5FF] px-9 py-5'>
         <p className='text-left text-lg'>
-          <span className='text-[#2F54EB] font-semibold'>10 FAO</span> will be deducted when
-          voting is <br /> generated (Amount: 9 FAO)
+          <span className='font-semibold text-[#2F54EB]'>10 FAO</span> will be
+          deducted when voting is <br /> generated (Amount: 9 FAO)
         </p>
       </div>
       <Form
@@ -39,10 +39,7 @@ export const PageWithFormFormModule = (props: Props) => {
         onFinish={onFinish}
       >
         <Form.Item label='Category' name='Category' className='font-medium'>
-          <Select
-            placeholder='Birthday DC' // Placeholder text here
-            style={{ height: "50px" }}
-          >
+          <Select placeholder='Birthday DC' style={{ height: "50px" }}>
             <Select.Option value='category1'>Category 1</Select.Option>
             <Select.Option value='category2'>Category 2</Select.Option>
             <Select.Option value='category3'>Category 3</Select.Option>
@@ -51,24 +48,39 @@ export const PageWithFormFormModule = (props: Props) => {
         <Form.Item label='Vote Title' name='Vote Title' className='font-medium'>
           <Input placeholder='Title' style={{ height: "50px" }} />
         </Form.Item>
+
+        {/* Updated Image input field */}
         <Form.Item label='Image' name='Image' className='font-medium'>
           <Input
-            prefix={
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  width: "100%",
-                  height: "100%",
-                }}
-              >
-                <SVGAtom iconName={"camera"} />
-              </div>
-            }
-            style={{ textAlign: "center" }}
+            type='file'
+            accept='image/*'
+            id='upload'
+            style={{ display: "none" }} // Hide the default input
           />
+          <label
+            htmlFor='upload'
+            style={{ width: "100%", textAlign: "center" }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                width: "100%",
+                height: "200px",
+                paddingLeft: "210px",
+                paddingTop: "130px",
+                cursor: "pointer",
+                border: "1px solid #d9d9d9",
+                backgroundColor: "#fff",
+              }}
+            >
+              <SVGAtom iconName={"camera"} />
+            </div>
+          </label>
         </Form.Item>
+
         <Form.Item
           label='Description'
           name='Description'
