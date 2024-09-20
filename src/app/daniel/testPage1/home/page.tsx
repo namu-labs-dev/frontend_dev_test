@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import DanielHomeContainer from "./container/DanielHomeContainer";
+import { DanielHomeContainer } from "./container/DanielHomeContainer";
 
 const Home = () => {
   return (
