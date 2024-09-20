@@ -18,7 +18,7 @@ export const PageWithFormTemplate = (props: Props) => {
       <Header style={{ padding: 0, height: 50 }}>
         <PageWithFormHeaderModule {...props.pageWithFormHeaderModuleProps} />
       </Header>
-      <Content style={{ overflow: "auto" }}>
+      <Content style={{ overflow: "auto", backgroundColor: "white" }}>
         <PageWithFormFormModule {...props.pageWithFormFormModuleProps} />
       </Content>
     </Layout>

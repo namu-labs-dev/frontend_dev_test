@@ -1,19 +1,5 @@
-import {
-  Form,
-  Radio,
-  Select,
-  TreeSelect,
-  Cascader,
-  DatePicker,
-  InputNumber,
-  Switch,
-  Button,
-  Slider,
-  ColorPicker,
-  Input,
-  message,
-} from "antd";
-const { RangePicker } = DatePicker;
+import { Form, DatePicker, Input, Button, message, Select } from "antd";
+import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
 const { TextArea } = Input;
 
 type Props = {
@@ -28,92 +14,82 @@ export const PageWithFormFormModule = (props: Props) => {
   };
 
   return (
-    <Form
-      form={form}
-      labelCol={{ span: 6 }}
-      wrapperCol={{ span: 14 }}
-      onFieldsChange={(changedFields) => {
-        props.setFormData((prevData: any) =>
-          changedFields.reduce(
-            (acc, { name, value }) => ({ ...acc, [name[0]]: value }),
-            prevData,
-          ),
-        );
-      }}
-      layout="horizontal"
-      style={{ maxWidth: 600 }}
-      onFinish={onFinish}
-    >
-      <Form.Item label="Radio" name="Radio">
-        <Radio.Group>
-          <Radio value="apple"> Apple </Radio>
-          <Radio value="pear"> Pear </Radio>
-        </Radio.Group>
-      </Form.Item>
-      <Form.Item label="Input" name="Input">
-        <Input />
-      </Form.Item>
-      <Form.Item label="Select" name="Select">
-        <Select>
-          <Select.Option value="demo">Demo</Select.Option>
-        </Select>
-      </Form.Item>
-      <Form.Item label="TreeSelect" name="TreeSelect">
-        <TreeSelect
-          treeData={[
-            {
-              title: "Light",
-              value: "light",
-              children: [{ title: "Bamboo", value: "bamboo" }],
-            },
-          ]}
-        />
-      </Form.Item>
-      <Form.Item label="Cascader" name="Cascader">
-        <Cascader
-          options={[
-            {
-              value: "zhejiang",
-              label: "Zhejiang",
-              children: [
-                {
-                  value: "hangzhou",
-                  label: "Hangzhou",
-                },
-              ],
-            },
-          ]}
-        />
-      </Form.Item>
-      <Form.Item label="DatePicker" name="DatePicker">
-        <DatePicker />
-      </Form.Item>
-      <Form.Item label="RangePicker" name="RangePicker">
-        <RangePicker />
-      </Form.Item>
-      <Form.Item label="InputNumber" name="InputNumber">
-        <InputNumber />
-      </Form.Item>
-      <Form.Item label="TextArea" name="TextArea">
-        <TextArea rows={4} />
-      </Form.Item>
-      <Form.Item label="Switch" name="Switch" valuePropName="checked">
-        <Switch />
-      </Form.Item>
-      <Form.Item label="Button" name="Button">
-        <Button>Button</Button>
-      </Form.Item>
-      <Form.Item label="Slider" name="Slider">
-        <Slider />
-      </Form.Item>
-      <Form.Item label="ColorPicker" name="ColorPicker">
-        <ColorPicker />
-      </Form.Item>
-      <div className="flex w-full items-center justify-center">
-        <Button type="primary" htmlType="submit">
-          Submit
-        </Button>
-      </div>
-    </Form>
+    <div style={{ padding: "20px" }}>
+      <Form
+        className='h-screen'
+        form={form}
+        labelCol={{ span: 24 }}
+        wrapperCol={{ span: 24 }}
+        onFieldsChange={(changedFields) => {
+          props.setFormData((prevData: any) =>
+            changedFields.reduce(
+              (acc, { name, value }) => ({ ...acc, [name[0]]: value }),
+              prevData
+            )
+          );
+        }}
+        layout='vertical'
+        style={{ maxWidth: 600 }}
+        onFinish={onFinish}
+      >
+        <Form.Item label='Category' name='Category' className='font-medium'>
+          <Select
+            placeholder='Birthday DC' // Placeholder text here
+            style={{ height: "50px" }}
+          >
+            <Select.Option value='category1'>Category 1</Select.Option>
+            <Select.Option value='category2'>Category 2</Select.Option>
+            <Select.Option value='category3'>Category 3</Select.Option>
+          </Select>
+        </Form.Item>
+        <Form.Item label='Title' name='Vote Title' className='font-medium'>
+          <Input placeholder='Title' style={{ height: "50px" }} />
+        </Form.Item>
+        <Form.Item label='Image' name='Image' className='font-medium'>
+          <Input
+            prefix={
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
+                  height: "100%",
+                }}
+              >
+                <SVGAtom iconName={"camera"} />
+              </div>
+            }
+            style={{ textAlign: "center" }}
+          />
+        </Form.Item>
+        <Form.Item
+          label='Description'
+          name='Description'
+          className='font-medium'
+        >
+          <TextArea
+            placeholder='Please write down a description of the event'
+            rows={7}
+          />
+        </Form.Item>
+        <Form.Item label='Start' name='Start' className='w-full font-medium'>
+          <DatePicker
+            placeholder='2024-09-06'
+            style={{ width: "100%", height: "50px" }}
+          />
+        </Form.Item>
+        <div className='flex w-full items-center justify-center'>
+          <Button
+            className='w-full'
+            type='primary'
+            htmlType='submit'
+            style={{ height: "40px", backgroundColor: "#2F54EB" }}
+          >
+            Create Vote
+          </Button>
+        </div>
+      </Form>
+    </div>
   );
 };

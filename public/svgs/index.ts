@@ -11,3 +11,4 @@ export { default as star } from "./star.svg";
 export { default as ethereum } from "./ethereum.svg";
 export { default as nvir } from "./nvir.svg";
 export { default as atomLeft } from "./atomLeft.svg";
+export { default as camera } from "./camera.svg";
