@@ -43,24 +43,27 @@ export const HeaderAtom = ({
       )}
 
       {isSettingsVisible && (
-        <div className='fixed inset-0 flex items-center justify-center'>
-          <div className='flex h-1/2 w-[450px] flex-col items-center justify-center rounded bg-[#2C2D30] p-4 text-white shadow-lg'>
-            <h1 className='mb-2 text-2xl font-semibold'>
-              Transaction <br /> Processing
-            </h1>
-            <Image
-              src='/images/shield.svg'
-              width={300}
-              height={80}
-              alt='Shield'
-            />
-            <p className='text-center'>
-              Uploading your transaction to the node
-            </p>
-            <p>Please wait for a moment...</p>
-            <p>This may take up to 2 minutes.</p>
+        <>
+          <div className='fixed inset-0 bg-black opacity-50 z-[2]' />
+          <div className='fixed inset-0 flex items-center justify-center z-[3]'>
+            <div className='flex h-1/2 w-[450px] flex-col items-center justify-center rounded-3xl bg-[#2C2D30] p-4 text-white shadow-lg'>
+              <h1 className='mb-2 text-2xl font-semibold'>
+                Transaction <br /> Processing
+              </h1>
+              <Image
+                src='/images/shield.svg'
+                width={300}
+                height={80}
+                alt='Shield'
+              />
+              <div className='-space-y-10 text-center'>
+                <p>Uploading your transaction to the node</p>
+                <p>Please wait for a moment...</p>
+                <p>This may take up to 2 minutes.</p>
+              </div>
+            </div>
           </div>
-        </div>
+        </>
       )}
     </div>
   );
