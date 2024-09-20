@@ -8,7 +8,7 @@ export function HomeContainer() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   function headerLeftIconClicked() {
-    void message.info("can't go back");
+    void message.info("Unbound Button!");
   }
 
   function headerRightIconClicked() {

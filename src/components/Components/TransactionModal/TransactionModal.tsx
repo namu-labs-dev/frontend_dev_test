@@ -13,8 +13,6 @@ type Props = {
 };
 
 export const TransactionModal = (props: Props) => {
-  console.log("Modal state:", props.modalProps.isModalOpen);
-
   return (
     <Modal
       {...props.modalProps}
