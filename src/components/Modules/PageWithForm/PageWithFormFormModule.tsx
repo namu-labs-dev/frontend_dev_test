@@ -15,6 +15,12 @@ export const PageWithFormFormModule = (props: Props) => {
 
   return (
     <div style={{ padding: "20px" }}>
+      <div className='rounded-2xl bg-[#F0F5FF] px-9 py-5'>
+        <p className='text-left text-lg'>
+          <span className='text-[#2F54EB] font-semibold'>10 FAO</span> will be deducted when
+          voting is <br /> generated (Amount: 9 FAO)
+        </p>
+      </div>
       <Form
         className='h-screen'
         form={form}
@@ -42,7 +48,7 @@ export const PageWithFormFormModule = (props: Props) => {
             <Select.Option value='category3'>Category 3</Select.Option>
           </Select>
         </Form.Item>
-        <Form.Item label='Title' name='Vote Title' className='font-medium'>
+        <Form.Item label='Vote Title' name='Vote Title' className='font-medium'>
           <Input placeholder='Title' style={{ height: "50px" }} />
         </Form.Item>
         <Form.Item label='Image' name='Image' className='font-medium'>
