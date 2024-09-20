@@ -11,6 +11,7 @@ export const JumbotronContent = (props: Props) => {
       <div className='w-max rounded-full bg-[#2C2D30] p-3'>
         <SVGAtom iconName='star' width={45} height={45} />
       </div>
+      <p className='my-2 text-white'>Proxima</p>
     </div>
   );
 };
