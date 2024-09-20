@@ -25,7 +25,7 @@ export const HomePageTemplate = (props: Props) => {
         <HomePageMessageModule {...props.messageModuleProps} />
       </Content>
 
-      <Footer>
+      <Footer style={{ padding: 0, minHeight: 50 }}>
         <HomePageFooterModule {...props.footerModuleProps} />
       </Footer>
     </Layout>
