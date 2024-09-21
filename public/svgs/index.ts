@@ -12,3 +12,4 @@ export { default as historyIcon } from "./historyIcon.svg";
 export { default as walletIcon } from "./walletIcon.svg";
 export { default as messageIcon } from "./messageIcon.svg";
 export { default as processingIcon } from "./processingIcon.svg";
+export { default as camera } from "./camera.svg";
