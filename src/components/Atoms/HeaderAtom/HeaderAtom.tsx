@@ -5,6 +5,7 @@ import { SettingsModal } from "../Modal/SettingsModal";
 
 type Props = {
   title: string;
+  weight?: string;
   /** Add custom props to manage custom features as regards the task */
   color?: string;
   titleColor?: string;
@@ -19,7 +20,8 @@ export const HeaderAtom = (props: Props) => {
   return (
     /*Make props dynamic. Given the task, some props are now volatile. */
     <div
-      className={`relative flex h-full w-full items-center justify-center ${props.color ? `bg-${props.color}` : "bg-[#FFC96F]"}`}
+      className={`relative flex h-full w-full items-center justify-center ${props.weight && props.weight}`}
+      style={{ background: props.color ? props.color : "#FFC96F" }}
     >
       {/* Sample using custom svg */}
       {props.onClickLeftIcon && (
