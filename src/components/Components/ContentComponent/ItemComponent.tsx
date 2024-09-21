@@ -25,7 +25,7 @@ export const ItemComponent: React.FC<SlidingDivContentProps> = ({ items }) => {
           <div className='flex items-center justify-center'>
             <SVGAtom
               iconName={item.imageIcon}
-              className={`h-16 w-16 ${item.imageIcon === "nvidia" && "h-12 w-12 rounded-full bg-blue-600 p-2"}`}
+              className={`h-12 w-12 ${item.imageIcon === "nvidia" && "rounded-full bg-blue-600 p-2"}`}
             />
           </div>
           <div className='flex flex-col'>

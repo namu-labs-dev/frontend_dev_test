@@ -19,7 +19,8 @@ export const HeaderAtom = (props: Props) => {
   return (
     /*Make props dynamic. Given the task, some props are now volatile. */
     <div
-      className={`relative flex h-full w-full items-center justify-center ${props.color ? `bg-${props.color}` : "bg-[#FFC96F]"}`}
+      className={`relative flex h-full w-full items-center justify-center`}
+      style={{ background: props.color ? props.color : "#FFC96F" }}
     >
       {/* Sample using custom svg */}
       {props.onClickLeftIcon && (

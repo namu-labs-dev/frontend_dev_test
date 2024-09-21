@@ -17,7 +17,8 @@ const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 
 type Props = {
-  setFormData: (data: any) => void;
+  //after extending the form template with the vote form, this needs to be optional
+  setFormData?: (data: any) => void;
 };
 
 export const PageWithFormFormModule = (props: Props) => {
@@ -33,32 +34,32 @@ export const PageWithFormFormModule = (props: Props) => {
       labelCol={{ span: 6 }}
       wrapperCol={{ span: 14 }}
       onFieldsChange={(changedFields) => {
-        props.setFormData((prevData: any) =>
+        props.setFormData!((prevData: any) =>
           changedFields.reduce(
             (acc, { name, value }) => ({ ...acc, [name[0]]: value }),
-            prevData,
-          ),
+            prevData
+          )
         );
       }}
-      layout="horizontal"
+      layout='horizontal'
       style={{ maxWidth: 600 }}
       onFinish={onFinish}
     >
-      <Form.Item label="Radio" name="Radio">
+      <Form.Item label='Radio' name='Radio'>
         <Radio.Group>
-          <Radio value="apple"> Apple </Radio>
-          <Radio value="pear"> Pear </Radio>
+          <Radio value='apple'> Apple </Radio>
+          <Radio value='pear'> Pear </Radio>
         </Radio.Group>
       </Form.Item>
-      <Form.Item label="Input" name="Input">
+      <Form.Item label='Input' name='Input'>
         <Input />
       </Form.Item>
-      <Form.Item label="Select" name="Select">
+      <Form.Item label='Select' name='Select'>
         <Select>
-          <Select.Option value="demo">Demo</Select.Option>
+          <Select.Option value='demo'>Demo</Select.Option>
         </Select>
       </Form.Item>
-      <Form.Item label="TreeSelect" name="TreeSelect">
+      <Form.Item label='TreeSelect' name='TreeSelect'>
         <TreeSelect
           treeData={[
             {
@@ -69,7 +70,7 @@ export const PageWithFormFormModule = (props: Props) => {
           ]}
         />
       </Form.Item>
-      <Form.Item label="Cascader" name="Cascader">
+      <Form.Item label='Cascader' name='Cascader'>
         <Cascader
           options={[
             {
@@ -85,32 +86,32 @@ export const PageWithFormFormModule = (props: Props) => {
           ]}
         />
       </Form.Item>
-      <Form.Item label="DatePicker" name="DatePicker">
+      <Form.Item label='DatePicker' name='DatePicker'>
         <DatePicker />
       </Form.Item>
-      <Form.Item label="RangePicker" name="RangePicker">
+      <Form.Item label='RangePicker' name='RangePicker'>
         <RangePicker />
       </Form.Item>
-      <Form.Item label="InputNumber" name="InputNumber">
+      <Form.Item label='InputNumber' name='InputNumber'>
         <InputNumber />
       </Form.Item>
-      <Form.Item label="TextArea" name="TextArea">
+      <Form.Item label='TextArea' name='TextArea'>
         <TextArea rows={4} />
       </Form.Item>
-      <Form.Item label="Switch" name="Switch" valuePropName="checked">
+      <Form.Item label='Switch' name='Switch' valuePropName='checked'>
         <Switch />
       </Form.Item>
-      <Form.Item label="Button" name="Button">
+      <Form.Item label='Button' name='Button'>
         <Button>Button</Button>
       </Form.Item>
-      <Form.Item label="Slider" name="Slider">
+      <Form.Item label='Slider' name='Slider'>
         <Slider />
       </Form.Item>
-      <Form.Item label="ColorPicker" name="ColorPicker">
+      <Form.Item label='ColorPicker' name='ColorPicker'>
         <ColorPicker />
       </Form.Item>
-      <div className="flex w-full items-center justify-center">
-        <Button type="primary" htmlType="submit">
+      <div className='flex w-full items-center justify-center'>
+        <Button type='primary' htmlType='submit'>
           Submit
         </Button>
       </div>
