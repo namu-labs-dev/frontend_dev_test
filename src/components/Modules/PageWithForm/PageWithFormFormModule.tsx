@@ -15,7 +15,7 @@ export const PageWithFormFormModule = (props: Props) => {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ padding: "0px" }}>
       {/* Info Box displaying details about voting deduction */}
       <div className='rounded-2xl bg-[#F0F5FF] px-9 py-5'>
         <p className='text-left text-lg'>
@@ -24,7 +24,7 @@ export const PageWithFormFormModule = (props: Props) => {
         </p>
       </div>
 
-      {/* Ant Design Form component */}
+      {/* Ant Design Form componen */}
       <Form
         className='h-screen'
         form={form} // Associate form with form state
@@ -40,12 +40,12 @@ export const PageWithFormFormModule = (props: Props) => {
           );
         }}
         layout='vertical' // Vertical layout for form labels and inputs
-        style={{ maxWidth: 600 }} // Set form max width
+        style={{ maxWidth: 600, padding: "20px" }} // Set form max width
         onFinish={onFinish} // Trigger form submit
       >
         {/* Category Input Field */}
         <Form.Item label='Category' name='Category' className='font-medium'>
-          <Select placeholder='Birthday DC' style={{ height: "50px" }}>
+          <Select placeholder='Birthday AD' style={{ height: "50px" }}>
             <Select.Option value='category1'>Category 1</Select.Option>
             <Select.Option value='category2'>Category 2</Select.Option>
             <Select.Option value='category3'>Category 3</Select.Option>
@@ -65,7 +65,10 @@ export const PageWithFormFormModule = (props: Props) => {
             id='upload'
             style={{ display: "none" }} // Hide the default input field
           />
-          <label htmlFor='upload' style={{ width: "100%", textAlign: "center" }}>
+          <label
+            htmlFor='upload'
+            style={{ width: "100%", textAlign: "center" }}
+          >
             <div
               style={{
                 display: "flex",
@@ -77,8 +80,9 @@ export const PageWithFormFormModule = (props: Props) => {
                 paddingLeft: "210px", // Adjust padding for icon positioning
                 paddingTop: "130px",
                 cursor: "pointer", // Change cursor to pointer
-                border: "1px solid #d9d9d9", // Add border
-                backgroundColor: "#fff", // Set background color to white
+                // Add border
+                borderRadius: "10px",
+                backgroundColor: "#f5f5f5", // Set background color to white
               }}
             >
               <SVGAtom iconName={"camera"} /> {/* Custom camera icon */}
@@ -87,7 +91,11 @@ export const PageWithFormFormModule = (props: Props) => {
         </Form.Item>
 
         {/* Description Input Field */}
-        <Form.Item label='Description' name='Description' className='font-medium'>
+        <Form.Item
+          label='Description'
+          name='Description'
+          className='font-medium'
+        >
           <TextArea
             placeholder='Please write down a description of the event'
             rows={7} // Set text area rows to 7
