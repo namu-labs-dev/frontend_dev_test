@@ -6,6 +6,7 @@ import SVGAtom from "../SVGAtom/SVGAtom";
 type Props = {
   title: string;
   darkTheme?: boolean; // To add dark background to Header
+  secondaryTheme?: boolean;
   iconName?: keyof typeof svgIcons;
   onClickLeftIcon?: () => void;
   onClickRightIcon?: () => void;
@@ -17,7 +18,7 @@ export const HeaderAtom = (props: Props) => {
   // for icons and font becomes white
   return (
     <div
-      className={`relative flex h-full w-full items-center justify-center ${props.darkTheme ? "bg-[#1F1F1F]" : "bg-[#FFC96F]"}`}
+      className={`relative flex h-full w-full items-center justify-center ${props.darkTheme ? "bg-[#1F1F1F]" : props.secondaryTheme ? "bg-white" : "bg-[#FFC96F]"}`}
     >
       {/* Sample using custom svg */}
       {props.onClickLeftIcon && (
@@ -34,7 +35,9 @@ export const HeaderAtom = (props: Props) => {
         </div>
       )}
 
-      <div className={`${props.darkTheme ? "text-white" : "text-black"}`}>
+      <div
+        className={`${props.darkTheme ? "text-white" : "text-black"} ${props.secondaryTheme && "font-bold"} text-lg`}
+      >
         {props.title}
       </div>
 
