@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { EmptyTemplate } from "~/components/Templates/Empty/EmptyTemplate";
+import React from "react";
 
 export const EmptyContainer = () => {
   const router = useRouter();
