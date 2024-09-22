@@ -38,6 +38,8 @@ export const HeaderAtom = (props: Props) => {
           {props.icon === "rectangle" && (
             <SVGAtom
               iconName='ellipseOutlined'
+              width={20}
+              height={20}
               color={props.iconColor ? props.iconColor : "black"}
               style={{
                 position: "absolute",
