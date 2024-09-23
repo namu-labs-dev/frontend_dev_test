@@ -1,5 +1,5 @@
 import { IsraelHomeHeaderModule } from "~/components/Modules/IsraelHome/IsraelHomeHeaderModule";
-// import { IsraelHomeContentModule } from "~/components/Modules/IsraelHome/IsraelHomeContentModule";
+import { IsraelHomeContentModule } from "~/components/Modules/IsraelHome/IsraelHomeContentModule";
 // import { IsraelHomeFooterModule } from "~/components/Modules/IsraelHome/IsraelHomeFooterModule";
 import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
@@ -7,7 +7,7 @@ import { HomeDescriptionModule } from "~/components/Modules/HomeDescription/Home
 
 type Props = {
   homeHeaderModuleProps: React.ComponentProps<typeof IsraelHomeHeaderModule>;
-  // homeContentModuleProps: React.ComponentProps<typeof IsraelHomeContentModule>;
+  homeContentModuleProps: React.ComponentProps<typeof IsraelHomeContentModule>;
   // homeFooterModuleProps: React.ComponentProps<typeof IsraelHomeFooterModule>;
 };
 
@@ -18,10 +18,9 @@ export const IsraelHomeTemplate = (props: Props) => {
         <IsraelHomeHeaderModule {...props.homeHeaderModuleProps} />
       </Header>
 
-      {/* <Content style={{ overflow: "auto", padding: "20px" }}>
+      <Content style={{ height: "100%" }}>
         <IsraelHomeContentModule {...props.homeContentModuleProps} />
-        <HomeDescriptionModule />
-      </Content> */}
+      </Content>
 
       {/* <Footer style={{ padding: 0, minHeight: 50 }}>
         <IsraelHomeFooterModule {...props.homeFooterModuleProps} />

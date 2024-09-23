@@ -19,7 +19,7 @@ export const IsraelHeaderAtom = (props: Props) => {
         </div>
       )}
 
-      <div className='text-white'>{props.title}</div>
+      <div className='text-base text-white'>{props.title}</div>
 
       {props.onClickRightIcon && (
         <div
