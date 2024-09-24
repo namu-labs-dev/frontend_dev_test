@@ -24,7 +24,7 @@ export const HomeTemplate = (props: Props) => {
       </Content>
 
       <Footer style={{ padding: 0, minHeight: 50 }}>
-        <HomeFooterModule {...props.homeFooterModuleProps} />
+        {/* <HomeFooterModule {...props.homeFooterModuleProps} /> */}
       </Footer>
     </Layout>
   );
