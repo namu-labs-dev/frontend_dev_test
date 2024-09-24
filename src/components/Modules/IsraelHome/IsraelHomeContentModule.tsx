@@ -3,6 +3,8 @@ import { MessageList } from "~/components/Components/MessageList/MessageList";
 import * as svgs from "public/svgs";
 import eth from "./../../../../public/pngs/eth.png";
 import nvir from "./../../../../public/pngs/nvir.png";
+import { Messages } from "~/components/Tabs/Messages";
+import { Tab } from "~/components/Atoms/IsraelFooterAtom/IsraelFooterAtom";
 
 // type Message = {
 //   id: string;
@@ -18,6 +20,9 @@ import nvir from "./../../../../public/pngs/nvir.png";
 
 type Props = {
   onClick: (isTrue: boolean) => void;
+  tabs: Tab[];
+  activeTabId: string;
+  setActiveTabId: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const messages = [
@@ -40,21 +45,9 @@ const messages = [
 ];
 
 export const IsraelHomeContentModule = (props: Props) => {
-  // console.log(props);
+  const { tabs, activeTabId } = props;
 
-  return (
-    <div className='h-full bg-[#1F1F1F]'>
-      <div className='px-5 pt-6'>
-        <h2 className='text-[28px] font-semibold leading-[33px] text-white'>
-          Messages
-        </h2>
-        <div className='pb-14 pt-7'>
-          <SVGAtom iconName='logo' width={65} height={65} />
-        </div>
-      </div>
-      <div className='h-full w-full rounded-t-[30px] bg-[#2C2D30] p-5'>
-        <MessageList messages={messages} />
-      </div>
-    </div>
-  );
+  const activeTabContent = tabs.find((tab) => tab.id === activeTabId)?.content;
+
+  return <>{activeTabContent}</>;
 };

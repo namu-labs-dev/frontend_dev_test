@@ -5,7 +5,6 @@ type Props = {
 };
 
 export const HomeContentModule = (props: Props) => {
-  console.log(props);
   return (
     <div className='py-3'>
       <LinkList links={props.sampleLinks} />
