@@ -25,6 +25,8 @@ export const HomeContainer = () => {
         "/sample/pageWithDrawer",
         "/sample/pageWithToast",
         "/sample/pageWithForm",
+        "/ewoma/testPage1",
+        "/ewoma/testPage2",
       ],
     },
     homeFooterModuleProps: { title: "HomeFooterModule" },
