@@ -16,7 +16,7 @@ type Props = {
 
 const Modal = (props: PropsWithChildren<Props>) => {
   const [modalContainer, setModalContainer] = useState<HTMLDivElement | null>(
-    null,
+    null
   );
 
   useEffect(() => {
@@ -38,16 +38,16 @@ const Modal = (props: PropsWithChildren<Props>) => {
     if (props.isModalOpen) {
       props.setModalOpen(false);
     }
-  }, [props.isModalOpen]);
+  }, [props]);
 
   return (
     modalContainer &&
     ReactDOM.createPortal(
       <>
         {props.isModalOpen ? (
-          <div className="fixed inset-0 z-[1000] box-border overflow-auto text-center">
+          <div className='fixed inset-0 z-[1000] box-border overflow-auto text-center'>
             <div
-              className="pointer fixed h-full w-full bg-black opacity-50"
+              className='pointer fixed h-full w-full bg-black opacity-50'
               onClick={onClose}
             />
             <ModalContainer className={props.containerClassName}>
@@ -56,7 +56,7 @@ const Modal = (props: PropsWithChildren<Props>) => {
           </div>
         ) : null}
       </>,
-      modalContainer,
+      modalContainer
     )
   );
 };
