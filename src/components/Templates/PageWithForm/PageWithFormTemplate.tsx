@@ -14,7 +14,7 @@ type Props = {
 
 export const PageWithFormTemplate = (props: Props) => {
   return (
-    <Layout style={{ height: "100%" }}>
+    <Layout style={{ height: "100%", backgroundColor: "white" }}>
       <Header style={{ padding: 0, height: 50 }}>
         <PageWithFormHeaderModule {...props.pageWithFormHeaderModuleProps} />
       </Header>
