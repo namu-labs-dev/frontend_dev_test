@@ -3,10 +3,6 @@ import { message } from "antd";
 import { useRouter } from "next/navigation";
 import { IsraelHomeTemplate } from "~/components/Templates/Home/IsraelHomeTemplate";
 import * as svgs from "public/svgs";
-import { Messages } from "~/components/Tabs/Messages";
-import { Transactions } from "~/components/Tabs/Transactions";
-import { Wallet } from "~/components/Tabs/Wallet";
-import { History } from "~/components/Tabs/History";
 import { getFooterTabs } from "~/components/Modules/IsraelHome/tabs";
 
 export const IsraelHomeContainer = () => {
@@ -15,7 +11,7 @@ export const IsraelHomeContainer = () => {
   const router = useRouter();
 
   const headerLeftIconClicked = () => {
-    void router.push("israel/vote");
+    void router.push("/israel/testPage2/vote");
   };
 
   const headerRightIconClicked = () => {
@@ -30,6 +26,8 @@ export const IsraelHomeContainer = () => {
         title: "Proxima OS",
         onClickLeftIcon: headerLeftIconClicked,
         onClickRightIcon: headerRightIconClicked,
+        backgroundColor: "#1F1F1F",
+        textColor: "#ffff",
       },
     },
     homeContentModuleProps: {
@@ -37,7 +35,6 @@ export const IsraelHomeContainer = () => {
       tabs: footerTabs,
       activeTabId,
       setActiveTabId,
-      // defaultActiveTab: defaultActiveTab,
     },
     homeFooterModuleProps: {
       tabs: footerTabs,
