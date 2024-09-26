@@ -4,10 +4,14 @@ import { useRouter } from "next/navigation";
 import { IsraelHomeTemplate } from "~/components/Templates/Home/IsraelHomeTemplate";
 import * as svgs from "public/svgs";
 import { Messages } from "~/components/Tabs/Messages";
+import { Transactions } from "~/components/Tabs/Transactions";
+import { Wallet } from "~/components/Tabs/Wallet";
+import { History } from "~/components/Tabs/History";
+import { getFooterTabs } from "~/components/Modules/IsraelHome/tabs";
 
 export const IsraelHomeContainer = () => {
   const [showCustomModal, setShowCustomModal] = useState<boolean>(false);
-  const [activeTabId, setActiveTabId] = useState<string>("home");
+  const [activeTabId, setActiveTabId] = useState<string>("dollar");
   const router = useRouter();
 
   const headerLeftIconClicked = () => {
@@ -18,28 +22,7 @@ export const IsraelHomeContainer = () => {
     void message.info("can't go Settings");
   };
 
-  const footerTabs = [
-    {
-      id: "dollar",
-      iconName: "dollar" as keyof typeof svgs,
-      content: <Messages />,
-    },
-    {
-      id: "message",
-      iconName: "message" as keyof typeof svgs,
-      content: <div>Messages Content</div>,
-    },
-    {
-      id: "wallet",
-      iconName: "wallet" as keyof typeof svgs,
-      content: <div>Profile Content</div>,
-    },
-    {
-      id: "history",
-      iconName: "history" as keyof typeof svgs,
-      content: <div>Profile Content</div>,
-    },
-  ];
+  const footerTabs = getFooterTabs(setShowCustomModal);
 
   const homeTemplateProps: React.ComponentProps<typeof IsraelHomeTemplate> = {
     homeHeaderModuleProps: {
@@ -61,10 +44,10 @@ export const IsraelHomeContainer = () => {
       activeTabId,
       setActiveTabId,
     },
-    // transactionModalProps: {
-    //   isModalOpen: showCustomModal,
-    //   setIsModalOpen: setShowCustomModal,
-    // },
+    transactionModalProps: {
+      isModalOpen: showCustomModal,
+      setModalOpen: setShowCustomModal,
+    },
   };
 
   return <IsraelHomeTemplate {...homeTemplateProps} />;

@@ -12,8 +12,6 @@ type Props = {
 };
 
 export const HomeTemplate = (props: Props) => {
-  console.log(props);
-
   return (
     <Layout style={{ height: "100%" }}>
       <Header style={{ padding: 0, height: 50 }}>

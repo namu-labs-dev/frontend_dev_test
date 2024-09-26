@@ -3,12 +3,13 @@ import { IsraelHomeContentModule } from "~/components/Modules/IsraelHome/IsraelH
 import { IsraelHomeFooterModule } from "~/components/Modules/IsraelHome/IsraelHomeFooterModule";
 import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
-import { HomeDescriptionModule } from "~/components/Modules/HomeDescription/HomeDescriptionModule";
+import TransactionModal from "~/components/Components/TransactionModal";
 
 type Props = {
   homeHeaderModuleProps: React.ComponentProps<typeof IsraelHomeHeaderModule>;
   homeContentModuleProps: React.ComponentProps<typeof IsraelHomeContentModule>;
   homeFooterModuleProps: React.ComponentProps<typeof IsraelHomeFooterModule>;
+  transactionModalProps: React.ComponentProps<typeof TransactionModal>;
 };
 
 export const IsraelHomeTemplate = (props: Props) => {
@@ -22,6 +23,7 @@ export const IsraelHomeTemplate = (props: Props) => {
 
       <Content style={{ flexGrow: 1, overflow: "auto" }}>
         <IsraelHomeContentModule {...props.homeContentModuleProps} />
+        <TransactionModal {...props.transactionModalProps} />
       </Content>
 
       <Footer style={{ padding: 0, minHeight: 50 }}>

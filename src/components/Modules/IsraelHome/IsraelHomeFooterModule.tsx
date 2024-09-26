@@ -15,7 +15,7 @@ type Props = {
 
 export const IsraelHomeFooterModule = (props: Props) => {
   const { tabs, activeTabId, setActiveTabId } = props;
-  console.log(props);
+ 
   return (
     <IsraelFooterAtom
       tabs={tabs}

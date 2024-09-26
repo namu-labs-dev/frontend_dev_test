@@ -47,9 +47,8 @@ type TabProps = {
 
 export const IsraelFooterAtom = (props: TabProps) => {
   const { tabs, activeTabId, setActiveTabId } = props;
-  console.log(tabs);
-
-  return (
+ 
+ return (
     <div>
       <div className='flex justify-around bg-[#262626] pb-2'>
         {tabs.map((tab) => (

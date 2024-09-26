@@ -25,25 +25,6 @@ type Props = {
   setActiveTabId: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const messages = [
-  {
-    id: "1",
-    image: eth,
-    title: "ETH",
-    content: "User: namulabs is fantasic company...",
-    timestamp: "08:43 PM",
-    isViewed: true,
-  },
-  {
-    id: "2",
-    image: nvir,
-    title: "Nvir",
-    content: "User: namulabs is fantasic company...",
-    timestamp: "08:42 AM",
-    isViewed: false,
-  },
-];
-
 export const IsraelHomeContentModule = (props: Props) => {
   const { tabs, activeTabId } = props;
 

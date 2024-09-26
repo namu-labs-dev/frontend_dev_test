@@ -2,7 +2,7 @@ import Image from "next/image";
 import { StaticImageData } from "next/image";
 // import * as svgs from "public/svgs";
 
-type Message = {
+export type MessageProps = {
   id: string;
   image: StaticImageData;
   title: string;
@@ -12,7 +12,7 @@ type Message = {
 };
 
 type Props = {
-  messages: Message[];
+  messages: MessageProps[];
 };
 
 export const MessageList = (props: Props) => {
