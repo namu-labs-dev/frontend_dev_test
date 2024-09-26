@@ -8,15 +8,10 @@ import { DanielHeaderAtom } from "~/components/Atoms/HeaderAtom/DanielHeaderAtom
 
 const HomeContainer = () => {
   return (
-    <Layout
-      className='flex min-h-screen flex-col'
-      style={{ height: "100dvh", background: "#1F1F1F" }}
-    >
+    <Layout className='flex min-h-screen flex-col' style={{ height: "100dvh" }}>
       <Header
-        className='bg-[#1F1F1F] p-[5px]'
         style={{
-          padding: "5px",
-          background: "#1F1F1F",
+          padding: "0px",
         }}
       >
         <DanielHeaderAtom
@@ -25,14 +20,18 @@ const HomeContainer = () => {
           title='Proxima OS'
         />
 
-        <Content
-          className='relative flex flex-grow flex-col bg-[#1F1F1F]'
-          style={{
-            padding: "15px 20px",
-          }}
-        >
-          <DanielEmptyContentAtom />
-          <DanielPreviewDisplayAtom />
+        <Content className='relative flex flex-grow flex-col bg-[#1F1F1F]'>
+          <div
+            style={{
+              padding: "15px 20px",
+            }}
+          >
+            <DanielEmptyContentAtom />
+          </div>
+          
+          <div style={{ padding: "auto 0px" }}>
+            <DanielPreviewDisplayAtom />
+          </div>
         </Content>
 
         <Footer style={{ padding: "0px", backgroundColor: "#262626" }}>
