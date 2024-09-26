@@ -45,7 +45,7 @@ const Modal = (props: PropsWithChildren<Props>) => {
     ReactDOM.createPortal(
       <>
         {props.isModalOpen ? (
-          <div className='fixed inset-0 z-[1000] box-border overflow-auto text-center'>
+          <div className='box-borderoverflow-auto fixed inset-0 z-[1000] mx-auto text-center'>
             <div
               className='pointer fixed h-full w-full bg-black opacity-50'
               onClick={onClose}

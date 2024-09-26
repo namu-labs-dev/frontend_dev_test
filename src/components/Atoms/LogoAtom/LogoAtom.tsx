@@ -16,7 +16,7 @@ const Logo: React.FC<LogoProps> = ({ alt, size = 40 }) => {
         height={size}
         className=''
       />
-      <p className='text-sm text-white'>Proxima</p>
+      <p className='mt-2 pl-[2%] text-lg text-white'>Proxima</p>
     </div>
   );
 };

@@ -17,10 +17,10 @@ const BottomNavigation: React.FC = () => {
   }
   // Define routes and corresponding icons
   const navigation: Navigation[] = [
-    { path: "/favour/home", icon: "dollar-circle.svg", label: "Home" },
-    { path: "/messages", icon: "message.svg", label: "Messages" },
+    { path: "#!", icon: "dollar-circle.svg", label: "Home" },
+    { path: "/#!", icon: "message.svg", label: "Messages" },
     { path: "/favour/testPage1", icon: "wallet.svg", label: "Profile" },
-    { path: "/history", icon: "history.svg", label: "History" },
+    { path: "/#!", icon: "history.svg", label: "History" },
   ];
 
   return (
