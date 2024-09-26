@@ -31,7 +31,7 @@ export const DanielFooterAtom = () => {
 
   return (
     <>
-      <div className='bottom-0 flex w-full items-center justify-center bg-[#262626]'>
+      <div className='flex w-full items-center justify-center bg-[#262626]'>
         <div className='flex flex-row justify-between'>
           {footerNavData.map((data, i) => {
             const { icon, path } = data;

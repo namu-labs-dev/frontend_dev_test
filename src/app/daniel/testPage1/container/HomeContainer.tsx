@@ -8,7 +8,7 @@ import { DanielHeaderAtom } from "~/components/Atoms/HeaderAtom/DanielHeaderAtom
 
 const HomeContainer = () => {
   return (
-    <Layout className='flex min-h-screen flex-col' style={{ height: "100dvh" }}>
+    <Layout className='flex min-h-screen flex-col' style={{ height: "100vh" }}>
       <Header
         style={{
           padding: "0px",
@@ -19,25 +19,25 @@ const HomeContainer = () => {
           onClickRightIcon={() => alert("You just clicked the settings icon")}
           title='Proxima OS'
         />
-
-        <Content className='relative flex flex-grow flex-col bg-[#1F1F1F]'>
-          <div
-            style={{
-              padding: "15px 20px",
-            }}
-          >
-            <DanielEmptyContentAtom />
-          </div>
-          
-          <div style={{ padding: "auto 0px" }}>
-            <DanielPreviewDisplayAtom />
-          </div>
-        </Content>
-
-        <Footer style={{ padding: "0px", backgroundColor: "#262626" }}>
-          <DanielFooterAtom />
-        </Footer>
       </Header>
+
+      <Content className='relative flex-col bg-[#1F1F1F]'>
+        <div
+          style={{
+            padding: "15px 20px",
+          }}
+        >
+          <DanielEmptyContentAtom />
+        </div>
+
+        <div style={{ padding: "auto 0px" }}>
+          <DanielPreviewDisplayAtom />
+        </div>
+      </Content>
+
+      <Footer style={{ padding: "0px", backgroundColor: "#262626" }}>
+        <DanielFooterAtom />
+      </Footer>
     </Layout>
   );
 };

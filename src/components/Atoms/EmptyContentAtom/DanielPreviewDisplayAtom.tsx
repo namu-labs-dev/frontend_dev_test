@@ -79,7 +79,7 @@ const DanielPreviewDisplayAtom = () => {
 
   return (
     <>
-      <div className='relative bottom-0 left-0 right-0 m-0 mt-5 h-[520px] w-full max-w-[500px] overflow-y-visible rounded-t-[30px] bg-[#2C2D30] p-5 sm:h-[380px] md:h-[450px]'>
+      <div className='absolute bottom-0 left-0 right-0 h-[340px] w-full max-w-[500px] rounded-t-[30px] bg-[#2C2D30] p-5 sm:h-[300px] md:h-[340px]'>
         <div className='flex flex-col space-y-4'>
           {previewData.map((data, index) => (
             <DanielPreviewContentAtom
