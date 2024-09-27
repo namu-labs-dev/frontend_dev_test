@@ -12,7 +12,11 @@ import {
   ColorPicker,
   Input,
   message,
+  Upload,
 } from "antd";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCamera } from "@fortawesome/free-solid-svg-icons";
+
 const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 
@@ -30,88 +34,70 @@ export const PageWithFormFormModule = (props: Props) => {
   return (
     <Form
       form={form}
-      labelCol={{ span: 6 }}
-      wrapperCol={{ span: 14 }}
+      labelCol={{ span: 24 }}
+      wrapperCol={{ span: 24 }}
       onFieldsChange={(changedFields) => {
         props.setFormData((prevData: any) =>
           changedFields.reduce(
             (acc, { name, value }) => ({ ...acc, [name[0]]: value }),
-            prevData,
-          ),
+            prevData
+          )
         );
       }}
-      layout="horizontal"
-      style={{ maxWidth: 600 }}
+      layout='vertical'
+      style={{
+        maxWidth: 600,
+        padding: "20px 24px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        height: "100vh",
+      }}
       onFinish={onFinish}
+      className='bg-white font-medium'
     >
-      <Form.Item label="Radio" name="Radio">
-        <Radio.Group>
-          <Radio value="apple"> Apple </Radio>
-          <Radio value="pear"> Pear </Radio>
-        </Radio.Group>
-      </Form.Item>
-      <Form.Item label="Input" name="Input">
-        <Input />
-      </Form.Item>
-      <Form.Item label="Select" name="Select">
-        <Select>
-          <Select.Option value="demo">Demo</Select.Option>
+      <Form.Item label='Category' name='category'>
+        <Select placeholder='Birthday AD' style={{ height: "55px" }}>
+          <Select.Option value='demo'>Birthday AD</Select.Option>
         </Select>
       </Form.Item>
-      <Form.Item label="TreeSelect" name="TreeSelect">
-        <TreeSelect
-          treeData={[
-            {
-              title: "Light",
-              value: "light",
-              children: [{ title: "Bamboo", value: "bamboo" }],
-            },
-          ]}
+      <Form.Item label='Vote Title' name='title'>
+        <Input placeholder='Title' className='h-14' />
+      </Form.Item>
+      <Form.Item label='Image' name='image'>
+        <div className='flex h-44 w-full items-center justify-center rounded-lg bg-[#F5F5F5]'>
+          <Upload name='file' listType='picture-card' showUploadList={false}>
+            <FontAwesomeIcon
+              icon={faCamera}
+              className='text-xl text-gray-400'
+            />
+          </Upload>
+        </div>
+      </Form.Item>
+      <Form.Item label='Description' name='description'>
+        <TextArea
+          placeholder='Please write down a description of the event'
+          rows={8}
         />
       </Form.Item>
-      <Form.Item label="Cascader" name="Cascader">
-        <Cascader
-          options={[
-            {
-              value: "zhejiang",
-              label: "Zhejiang",
-              children: [
-                {
-                  value: "hangzhou",
-                  label: "Hangzhou",
-                },
-              ],
-            },
-          ]}
+      <Form.Item label='Start' name='date'>
+        <DatePicker
+          format='YYYY-MM-DD'
+          placeholder='2024-09-06'
+          className='h-14 w-full'
         />
       </Form.Item>
-      <Form.Item label="DatePicker" name="DatePicker">
-        <DatePicker />
-      </Form.Item>
-      <Form.Item label="RangePicker" name="RangePicker">
-        <RangePicker />
-      </Form.Item>
-      <Form.Item label="InputNumber" name="InputNumber">
-        <InputNumber />
-      </Form.Item>
-      <Form.Item label="TextArea" name="TextArea">
-        <TextArea rows={4} />
-      </Form.Item>
-      <Form.Item label="Switch" name="Switch" valuePropName="checked">
-        <Switch />
-      </Form.Item>
-      <Form.Item label="Button" name="Button">
-        <Button>Button</Button>
-      </Form.Item>
-      <Form.Item label="Slider" name="Slider">
-        <Slider />
-      </Form.Item>
-      <Form.Item label="ColorPicker" name="ColorPicker">
-        <ColorPicker />
-      </Form.Item>
-      <div className="flex w-full items-center justify-center">
-        <Button type="primary" htmlType="submit">
-          Submit
+
+      {/* Spacer to push the button down */}
+      <div className='flex-grow'></div>
+
+      <div className='mb-4 flex w-full items-center justify-center'>
+        <Button
+          className='min-h-14 w-full bg-[#2F54EB]'
+          type='primary'
+          htmlType='submit'
+        >
+          <p className='text-xl'>Create Vote</p>
         </Button>
       </div>
     </Form>
