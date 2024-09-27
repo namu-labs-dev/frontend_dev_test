@@ -4,7 +4,10 @@ import WalletSVG from "@svgs/wallet.svg";
 import HistorySVG from "@svgs/history.svg";
 
 type Props = {
-  title: string;
+  onHomeClick?: () => void;
+  onMessageClick?: () => void;
+  onWalletClick?: () => void;
+  onHistoryClick?: () => void;
 };
 
 export const FooterAtom = (props: Props) => {
