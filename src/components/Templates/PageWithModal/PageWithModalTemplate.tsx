@@ -27,6 +27,7 @@ export const PageWithModalTemplate = (props: Props) => {
           gap: "20px",
           display: "flex",
           flexDirection: "column",
+          height: "100vh",
         }}
       >
         <PageWithModalDescriptionModule />

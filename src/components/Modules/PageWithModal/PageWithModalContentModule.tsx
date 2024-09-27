@@ -2,13 +2,12 @@ import { Button } from "antd";
 import { PageWithModalContentCustomModal } from "~/components/Components/PageWithModalContentCustomModal/PageWithModalContentCustomModal";
 
 type Props = {
-  onOpenSnapshotModal: () => void;
   modalProps: React.ComponentProps<typeof PageWithModalContentCustomModal>;
 };
 
 export const PageWithModalContentModule = (props: Props) => {
   return (
-    <div className="flex h-full w-full justify-around">
+    <div className='flex h-full w-full justify-around'>
       <div>
         <Button
           className="my-3"
