@@ -21,7 +21,7 @@ const HomeContainer = () => {
         />
       </Header>
 
-      <Content className='relative flex-col bg-[#1F1F1F]'>
+      <Content className='relative flex-grow flex-col bg-[#1F1F1F]'>
         <div
           style={{
             padding: "15px 20px",
