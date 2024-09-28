@@ -1,5 +1,6 @@
 import { HomeHeaderModule } from "~/components/Modules/Home/HomeHeaderModule";
-import { HomeContentModule } from "~/components/Modules/Home/HomeContentModule";
+import { HomeLogoModule } from "~/components/Modules/Home/HomeLogoModule";
+import HomeMessageCardModule from "~/components/Modules/Home/HomeMessageCardModule";
 import { HomeFooterModule } from "~/components/Modules/Home/HomeFooterModule";
 import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
@@ -7,7 +8,7 @@ import { HomeDescriptionModule } from "~/components/Modules/HomeDescription/Home
 
 type Props = {
   homeHeaderModuleProps: React.ComponentProps<typeof HomeHeaderModule>;
-  homeContentModuleProps: React.ComponentProps<typeof HomeContentModule>;
+  homeContentModuleProps: React.ComponentProps<typeof HomeLogoModule>;
   homeFooterModuleProps: React.ComponentProps<typeof HomeFooterModule>;
 };
 
@@ -17,15 +18,25 @@ export const HomeTemplate = (props: Props) => {
       <Header style={{ padding: 0, height: 50 }}>
         <HomeHeaderModule {...props.homeHeaderModuleProps} />
       </Header>
-
-      <Content style={{ overflow: "auto", padding: "20px" }}>
-        <HomeContentModule {...props.homeContentModuleProps} />
-        <HomeDescriptionModule />
+      <Content
+        style={{
+          backgroundColor: "#1F1F1F",
+          overflow: "auto",
+          padding: "20px",
+        }}
+      >
+        <HomeLogoModule {...props.homeContentModuleProps} />
       </Content>
-
-      <Footer style={{ padding: 0, minHeight: 50 }}>
-        {/* <HomeFooterModule {...props.homeFooterModuleProps} /> */}
-      </Footer>
+      <Content
+        style={{
+          backgroundColor: "#1F1F1F",
+          overflow: "auto",
+        }}
+      >
+        <HomeMessageCardModule size='' />
+        {/* <HomeDescriptionModule /> */}
+      </Content>
+      <HomeFooterModule />
     </Layout>
   );
 };

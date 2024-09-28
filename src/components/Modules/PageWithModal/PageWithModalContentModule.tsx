@@ -8,24 +8,14 @@ type Props = {
 
 export const PageWithModalContentModule = (props: Props) => {
   return (
-    <div className="flex h-full w-full justify-around">
+    <div className='flex h-full w-full justify-around'>
       <div>
         <Button
-          className="my-3"
-          type="primary"
-          onClick={props.onOpenSnapshotModal}
-        >
-          Open Snapshot Modal
-        </Button>
-      </div>
-
-      <div>
-        <Button
-          className="my-3"
-          type="primary"
+          className='my-3'
+          type='primary'
           onClick={() => props.modalProps.modalProps.setModalOpen(true)}
         >
-          Open Modal
+          Open Transaction Modal
         </Button>
         <PageWithModalContentCustomModal {...props.modalProps} />
       </div>
