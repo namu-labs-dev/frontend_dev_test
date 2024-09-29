@@ -18,7 +18,7 @@ const Header = () => {
         <h1 className='text-lg font-semibold text-white'>Proxima OS</h1>
       </div>
       <div className='flex items-center'>
-        <a className='text-white' href='#'>
+        <a className='text-white' href=''>
           <Image
             src='/svgs/settingsIcon.svg'
             alt='star'
