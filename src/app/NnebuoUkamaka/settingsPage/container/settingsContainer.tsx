@@ -1,20 +1,23 @@
 import React from "react";
 import { NextPage } from "next";
-// import Image from "next/image";
+import Image from "next/image";
+import Header from "../../header/headerContainer";
 const SettingsContainer: NextPage = () => {
   return (
+    <div>
+      <Header/>
     <div className=' min-h-screen  bg-gray-900 text-white'>
       <div className='pl-6'>
         <h1 className='mb-6 text-2xl font-semibold '>Messages</h1>
         <div className='w-80 rounded-xl'>
           <div className=' mb-1 h-10 w-10 justify-center'>
-            {/* <Image
+            <Image
               src='/images/starIcon.png'
               alt='star'
               width={100}
               height={100}
               className='rounded-full'
-            /> */}
+            />
           </div>
           <div className='mb-4'>
             <span className='text-lg font-semibold'>Proxima</span>
@@ -25,12 +28,12 @@ const SettingsContainer: NextPage = () => {
               Transaction processing
             </h1>
             <div className='mb-6 flex h-56 w-full justify-center'>
-              {/* <Image
-                src='/svgs/blocksIcon.svg'
+              <Image
+                src='/svgs/blocks.svg'
                 alt='Processing Cube'
                 width={100}
                 height={100}
-              /> */}
+              />
             </div>
 
             <p className=''>Uploading your transaction to the node.</p>
@@ -41,6 +44,7 @@ const SettingsContainer: NextPage = () => {
           {/* </div> */}
         </div>
       </div>
+    </div>
     </div>
   );
 };
