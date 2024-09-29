@@ -1,6 +1,8 @@
 import React from "react";
 import { NextPage } from "next";
 import Image from "next/image";
+import Header from "../../header/headerContainer";
+
 interface Message {
   id: number;
   icon: string; // URL or emoji for the icon
@@ -31,7 +33,10 @@ const messages: Message[] = [
 
 const HomeContainer: NextPage = () => {
   return (
-    <div className=' min-h-screen ms-8 items-start bg-gray-900 py-10 text-white'>
+    <div>
+      <Header/>
+      <div className="min-h-screen bg-gray-900 py-10 " >
+    <div className=' ms-8 items-start  text-white'>
       <h1 className='mb-6 ms-4 text-2xl font-semibold'>Messages</h1>
       <div className='w-80 rounded-xl  p-4'>
         <div className='mb-4 '>
@@ -87,6 +92,8 @@ const HomeContainer: NextPage = () => {
           ))}
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 };
