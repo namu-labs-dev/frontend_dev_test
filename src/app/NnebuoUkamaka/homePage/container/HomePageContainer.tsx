@@ -1,8 +1,8 @@
 import React from "react";
 import { NextPage } from "next";
 import Image from "next/image";
-import Header from "../../header/headerContainer";
-
+import Header from "../../header/HeaderContainer";
+import Footer from "../../footer/FooterContainer";
 interface Message {
   id: number;
   icon: string; // URL or emoji for the icon
@@ -94,6 +94,7 @@ const HomeContainer: NextPage = () => {
       </div>
     </div>
     </div>
+    <Footer/>
     </div>
   );
 };
