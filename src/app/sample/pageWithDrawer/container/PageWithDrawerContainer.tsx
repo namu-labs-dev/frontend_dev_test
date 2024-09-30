@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 import { useState } from "react";
 import { PageWithDrawerTemplate } from "~/components/Templates/PageWithDrawer/PageWithDrawerTemplate";
 import DrawerStore from "~/store/DrawerStore";
