@@ -1,30 +1,47 @@
-"use client";
 import { useRouter } from "next/navigation";
-import { EmptyTemplate } from "~/components/Templates/Empty/EmptyTemplate";
+import { useState } from "react";
+import { message } from "antd";
+import { PageWithModalTemplate } from "~/components/Templates/PageWithModal/PageWithModalTemplate";
+import ModalStore from "~/store/ModalStore";
 
-export const EmptyContainer = () => {
+export const PageWithModalContainer = () => {
   const router = useRouter();
+  const [isCustomModalOpen, setIsCustomModalOpen] = useState(true);
 
-  const emptyTemplateProps: React.ComponentProps<typeof EmptyTemplate> = {
-    emptyHeaderModuleProps: {
-      headerProps: {
-        title: "Test Page 1",
-        onClickLeftIcon: () => {
-          console.log("Left icon clicked");
-          router.back();
+  const headerRightIconClicked = () => {
+    void message.info("can't go to Settings");
+  };
+  const pagewithmodalTemplateProps: React.ComponentProps<
+    typeof PageWithModalTemplate
+  > = {
+    pageWithModalHeaderModuleProps: {
+      title: "Proxima OS",
+      onClickLeftIcon: () => router.back(),
+      onClickRightIcon: headerRightIconClicked,
+    },
+    pageWithModalContentModuleProps: {
+      onOpenSnapshotModal: () =>
+        ModalStore.open("TitleAndContent", {
+          TitleAndContent: {
+            title: "Modal Title",
+            description: "Modal Content",
+          },
+        }),
+      modalProps: {
+        modalProps: {
+          isModalOpen: isCustomModalOpen,
+          setModalOpen: setIsCustomModalOpen,
         },
-        onClickRightIcon: () => console.log("Right icon clicked"),
+        title: "Transaction Processing",
+        description:
+          "Uploading your transaction to the node. please wait for a moment...This may take up to 2 minutes",
       },
     },
-    emptyContentModuleProps: {
-      moduleProps: "Empty Content Module",
-      componentProps: { title: "EmptyContentComponent" },
-      atomProps: { title: "EmptyContentAtom" },
-    },
-    emptyFooterModuleProps: {
-      footerProps: { title: "EmptyFooterModule" },
+    pageInfoProps: {
+      title: "Messages",
+      sampleLinks: [],
     },
   };
 
-  return <EmptyTemplate {...emptyTemplateProps} />;
+  return <PageWithModalTemplate {...pagewithmodalTemplateProps} />;
 };
