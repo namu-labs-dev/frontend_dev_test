@@ -1,17 +1,20 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { message } from "antd";
 import { PageWithFormTemplate } from "~/components/Templates/PageWithForm/PageWithFormTemplate";
 
 export const PageWithFormContainer = () => {
   const router = useRouter();
   const [formData, setFormData] = useState<any>({});
 
+  const headerRightIconClicked = () => {
+    void message.info("can't go to Settings");
+  };
   const pagewithformTemplateProps: React.ComponentProps<
     typeof PageWithFormTemplate
   > = {
     pageWithFormHeaderModuleProps: {
-      title: "PageWithFormHeaderModule",
-      onClickLeftIcon: () => router.back(),
+      title: "Vote",
     },
     pageWithFormFormModuleProps: {
       setFormData,

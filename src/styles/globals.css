@@ -7,10 +7,14 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
-*::-webkit-scrollbar {
-  display: none;
+.form-scroll {
+  -ms-overflow-style: inherit;
+  scrollbar-width: auto;
 }
+
+/* *::-webkit-scrollbar {
+  display: none;
+} */
 /* Remove Scroll Bar : End */
 
 /* Set Link Color */
