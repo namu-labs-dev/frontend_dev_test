@@ -14,6 +14,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  /*
+    According to the figma file, the width of the screen is 400px, but here is 500px as a max width.
+    This could and should be changed to fit according to the design which means 400px for the max screen width.
+    But it will be left as 500px for the text.
+
+    @TODO And it seems the font isnt working???
+    
+  */
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body className="bg-[#efefef]">

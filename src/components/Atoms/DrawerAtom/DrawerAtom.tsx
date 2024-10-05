@@ -11,7 +11,7 @@ import { DrawerContainerAtom } from "../DrawerContainerAtom/DrawerContainerAtom"
 
 type Props = {
   isDrawerOpen: boolean;
-  setIsDrawerOpen: (value: boolean) => void;
+  setIsDrawerOpen?: (value: boolean) => void;
   containerClassName?: string;
 };
 
@@ -23,7 +23,7 @@ const DrawerAtom = (props: PropsWithChildren<Props>) => {
   const wasOpenRef = useRef(props.isDrawerOpen);
 
   const onClose = useCallback(() => {
-    props.setIsDrawerOpen(false);
+    props.setIsDrawerOpen?(false) : false;
     setIsAnimating(true);
   }, []);
 
@@ -62,7 +62,8 @@ const DrawerAtom = (props: PropsWithChildren<Props>) => {
     (props.isDrawerOpen || isAnimating) &&
     ReactDOM.createPortal(
       <>
-        <div className="fixed inset-0 z-[1000] box-border overflow-auto text-center">
+      {/* Footer should be the one with highest z-index hence we reduce the z index of drawer here*/}
+        <div className="fixed inset-0 z-[900] box-border overflow-auto text-center">
           <div
             className={`fixed h-full w-full cursor-pointer bg-black opacity-50 transition-opacity duration-500 ease-in-out ${isAnimating ? "animate-fade-out" : "animate-fade-in"}`}
             onClick={() => onClose()}

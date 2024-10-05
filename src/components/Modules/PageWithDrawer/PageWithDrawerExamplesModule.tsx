@@ -2,7 +2,7 @@ import { Button } from "antd";
 import { PageWithDrawerExamplesDrawer } from "~/components/Components/PageWithDrawerExamplesDrawer/PageWithDrawerExamplesDrawer";
 
 type Props = {
-  onOpenSnapshotDrawer: () => void;
+  onOpenSnapshotDrawer?: () => void;
   drawerProps: React.ComponentProps<typeof PageWithDrawerExamplesDrawer>;
 };
 

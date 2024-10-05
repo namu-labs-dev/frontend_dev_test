@@ -18,8 +18,8 @@ export const PageWithModalContainer = () => {
       onOpenSnapshotModal: () =>
         ModalStore.open("TitleAndContent", {
           TitleAndContent: {
-            title: "Modal Title",
-            description: "Modal Content",
+            title: "Transaction Processing",
+            description: "Uploading your transaction to the node.",
           },
         }),
       modalProps: {
