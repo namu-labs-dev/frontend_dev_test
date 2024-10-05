@@ -11,6 +11,7 @@ export const PageWithDrawerContainer = () => {
     pageWithDrawerHeaderModuleProps: {
       headerProps: {
         title: "PageWithDrawerHeaderModule",
+        bg: "#FFFFFF",
       },
     },
     pageWithDrawerExamplesModuleProps: {

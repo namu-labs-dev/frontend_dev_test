@@ -12,6 +12,7 @@ export const PageWithFormContainer = () => {
     pageWithFormHeaderModuleProps: {
       title: "PageWithFormHeaderModule",
       onClickLeftIcon: () => router.back(),
+      onClickRightIcon: () => {},
     },
     pageWithFormFormModuleProps: {
       setFormData,
