@@ -42,7 +42,8 @@ export const BottomNavAtom = (props: Props) => {
             onClick={props.onTabChange}
             className='text-[24px] text-[#8C8C8C]'
           >
-            <FieldTimeOutlined color='#8C8C8C' size={24} />
+            <FieldTimeOutlined color='#8C8C8C' size={24} />{" "}
+            {/* I couldn't find the proper icon so i substituted for this */}
           </button>
         </li>
       </ul>

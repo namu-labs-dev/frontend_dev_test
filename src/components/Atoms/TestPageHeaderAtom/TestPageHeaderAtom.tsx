@@ -23,7 +23,10 @@ export const TestPageHeaderAtom = (props: Props) => {
         />
       </button>
       <h3 className='font-pretendard text-[16px] font-[500]'>{props.title}</h3>
-      <button onClick={props.onClickRightIcon} className='text-[20px]'>
+      <button
+        onClick={props.onClickRightIcon}
+        className='text-[20px] text-[#BFBFBF]'
+      >
         <SettingOutlined />
       </button>
     </div>
