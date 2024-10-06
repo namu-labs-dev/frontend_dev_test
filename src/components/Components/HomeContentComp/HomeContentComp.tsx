@@ -1,19 +1,12 @@
 import React from "react";
 import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
-import type * as svgs from "public/svgs";
+import type { cardList } from "~/interfaces";
 import { PageWithModalContentCustomModal } from "~/components/Components/PageWithModalContentCustomModal/PageWithModalContentCustomModal";
 import MessageHero from "../MessagesHero/MessageHero";
 import UserAvatarAtom from "~/components/Atoms/UserAvatarAtom/UserAvaterAtom";
 
-interface CardList {
-  exchange: string;
-  message: string;
-  user: string;
-  timeStamp: string;
-  src: keyof typeof svgs;
-}
 type Props = {
-  cardProps: CardList[];
+  cardProps: cardList[];
   onOpenSnapshotModal: () => void;
   modalProps: React.ComponentProps<typeof PageWithModalContentCustomModal>;
   pageInfoProps: React.ComponentProps<typeof MessageHero>;

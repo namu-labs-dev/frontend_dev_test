@@ -1,9 +1,7 @@
 import React from "react";
-import Image from "next/image";
 import SVGAtom from "../SVGAtom/SVGAtom";
 
 type Props = {
-  alt: string;
   size?: number;
 };
 

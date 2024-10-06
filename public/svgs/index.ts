@@ -12,3 +12,4 @@ export { default as dollarCircle } from "./dollarCircle.svg";
 export { default as logo } from "./logo.svg";
 export { default as nvr } from "./nvr.svg";
 export { default as eth } from "./eth.svg";
+export { default as node } from "./node.svg";

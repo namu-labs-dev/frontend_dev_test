@@ -1,10 +1,6 @@
 import FooterAtom from "~/components/Atoms/HomeFooterAtom/HomeFooterAtom";
-import type * as svgs from "public/svgs";
-interface navs {
-  path: string;
-  label: string;
-  icon: keyof typeof svgs;
-}
+import type { navs } from "~/interfaces";
+
 type Props = {
   navigation: navs[];
 };

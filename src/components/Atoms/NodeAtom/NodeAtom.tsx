@@ -1,10 +1,10 @@
-import Image from "next/image";
 import React from "react";
+import SVGAtom from "../SVGAtom/SVGAtom";
 
-const NodeAtom: React.FC = () => {
+const NodeAtom = () => {
   return (
-    <div className='flex items-center justify-center'>
-      <Image src='/svgs/node.svg' width={300} height={300} alt='node-img' />
+    <div className='mx-auto ml-[8%] flex items-center justify-center'>
+      <SVGAtom iconName='node' width={300} height={200} />
     </div>
   );
 };

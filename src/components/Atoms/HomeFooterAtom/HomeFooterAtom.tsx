@@ -1,18 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { useRouter, usePathname } from "next/navigation";
-import { FaHome, FaHistory, FaUser } from "react-icons/fa";
-import { IconType } from "react-icons";
-import { FaMessage } from "react-icons/fa6";
-import Image from "next/image";
-import * as svgs from "public/svgs";
+import { usePathname } from "next/navigation";
+import type { navs } from "~/interfaces";
 import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
-
-interface navs {
-  path: string;
-  label: string;
-  icon: keyof typeof svgs;
-}
 
 type Props = {
   navs: navs[];
