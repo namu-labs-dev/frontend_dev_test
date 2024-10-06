@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { TestPageOneTemplate } from "~/components/Templates/TestPageOne/TestPageOneTemplate";
 
 export const Testpage1Container = () => {
   interface Message {
@@ -36,5 +37,22 @@ export const Testpage1Container = () => {
     ];
     setMessages(fetchedMessages);
   }, []);
-  return <div>Testpage1Container</div>;
+
+  const TestPageOneTemplateProps: React.ComponentProps<
+    typeof TestPageOneTemplate
+  > = {
+    topToolbarModuleProps: {
+      title: "Proxima OS",
+      color: "#1F1F1F",
+      onClickSettingsIcon: () => console.log("Settings icon clicked"),
+    },
+    messageListModuleProps: {
+      messages,
+    },
+    bottomNavbarModuleProps: {
+      onTabChange: (tab: string) => console.log(`Switched to tab: ${tab}`),
+    },
+  };
+
+  return <EmptyTemplate {...emptyTemplateProps} />;
 };
