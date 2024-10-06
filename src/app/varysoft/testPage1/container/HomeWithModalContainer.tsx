@@ -42,14 +42,14 @@ export const HomeWithModalContainer = () => {
           message: "User: namulabs is fantasic company...",
           user: "N",
           timeStamp: "08:43",
-          src: "eth.svg",
+          src: "eth",
         },
         {
           exchange: "Nvir",
           message: "User: namulabs is fantasic company...",
           user: "N",
           timeStamp: "08:42",
-          src: "nvr.svg",
+          src: "nvr",
         },
       ],
       pageInfoProps: {

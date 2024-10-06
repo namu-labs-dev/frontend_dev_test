@@ -1,6 +1,6 @@
 import React from "react";
-import AvatarAtom from "~/components/Atoms/AvatarAtom/AvatarAtom";
-import UserAvatar from "~/components/Atoms/UserAvatarAtom/UserAvaterAtom";
+import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
+import type * as svgs from "public/svgs";
 import { PageWithModalContentCustomModal } from "~/components/Components/PageWithModalContentCustomModal/PageWithModalContentCustomModal";
 import MessageHero from "../MessagesHero/MessageHero";
 import UserAvatarAtom from "~/components/Atoms/UserAvatarAtom/UserAvaterAtom";
@@ -10,7 +10,7 @@ interface CardList {
   message: string;
   user: string;
   timeStamp: string;
-  src: string;
+  src: keyof typeof svgs;
 }
 type Props = {
   cardProps: CardList[];
@@ -23,17 +23,18 @@ const HomeContentComp = (props: Props) => {
   return (
     <div>
       <MessageHero {...props.pageInfoProps} />
-      <div className='h-full rounded-t-3xl bg-[#2C2D30] px-10'>
+      <div className='h-full rounded-t-3xl bg-[#2C2D30] px-10 pt-5'>
         {props.cardProps.map((cardList, idx) => (
           <div
             key={idx}
-            className='mb-2 flex items-center justify-between rounded-md  p-4'
+            className='mb-2 flex items-center justify-between rounded-md  p-5'
           >
-            <div className='flex items-center'>
-              <AvatarAtom
-                src={cardList.src}
-                size={cardList.src === "nvr.svg " ? 80 : 40}
-                alt=''
+            <div className='flex items-center justify-center'>
+              <SVGAtom
+                iconName={cardList.src}
+                width={cardList.src === "eth" ? 45 : 60}
+                height={60}
+                className={`${cardList.src === "eth" && "ml-3"}`}
               />
               <div className='ml-4'>
                 <h1 className='font-bold text-white'>{cardList.exchange}</h1>
