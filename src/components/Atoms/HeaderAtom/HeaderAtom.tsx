@@ -5,11 +5,16 @@ type Props = {
   title: string;
   onClickLeftIcon?: () => void;
   onClickRightIcon?: () => void;
+  bgColor?: string;
+  titleColor?: string;
 };
 
 export const HeaderAtom = (props: Props) => {
   return (
-    <div className="relative flex h-full w-full items-center justify-center bg-[#262626]">
+    <div
+    className={`relative flex h-full w-full items-center justify-center`}
+    style={{ backgroundColor: props.bgColor || "#262626" }} 
+  >
       {/* Sample using custom svg */}
       {props.onClickLeftIcon && (
         <div
@@ -20,8 +25,12 @@ export const HeaderAtom = (props: Props) => {
         </div>
       )}
 
-      <div className="text-white text-[16px] font-medium">{props.title}</div>
-
+<div
+        className="text-[16px] font-medium"
+        style={{ color: props.titleColor || "#FFFFFF" }} // Use titleColor or default to white
+      >
+        {props.title}
+      </div>
       {/* Sample using Antd icon */}
       {props.onClickRightIcon && (
         <div

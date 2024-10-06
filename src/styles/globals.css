@@ -72,3 +72,7 @@ a {
 .animate-fade-out {
   animation: fadeOut 0.3s ease-out forwards;
 }
+
+.textarea-placeholder::placeholder {
+  font-size: 16px;
+}
