@@ -11,7 +11,7 @@ type Props = {
 export const PageWithModalContentCustomModal = (props: Props) => {
   return (
     <Modal {...props.modalProps}>
-      <div className='flex  h-full flex-col gap-4 rounded-t-3xl bg-[#2C2D30] p-10 '>
+      <div className='flex h-full  w-full flex-col gap-4 rounded-t-3xl bg-[#2C2D30] p-10 '>
         <h1 className='Capitalize mx-auto w-[80%] font-sans text-2xl font-bold text-white'>
           {props.title}
         </h1>
