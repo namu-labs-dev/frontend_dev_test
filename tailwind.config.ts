@@ -7,6 +7,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        inter: ["Inter", ...fontFamily.sans],
+        pretendard: ["Pretendard", ...fontFamily.sans],
       },
       spacing: {
         page: "500px",
