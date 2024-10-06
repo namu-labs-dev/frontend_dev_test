@@ -1,4 +1,3 @@
-import { SettingOutlined } from "@ant-design/icons";
 import SVGAtom from "../SVGAtom/SVGAtom";
 
 type Props = {

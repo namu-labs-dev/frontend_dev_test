@@ -1,8 +1,8 @@
 import React from "react";
 
-interface Props {
+type Props = {
   title: string;
-}
+};
 
 const FormHeaderAtom = (props: Props) => {
   return (

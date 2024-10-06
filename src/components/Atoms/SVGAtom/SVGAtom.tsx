@@ -4,8 +4,8 @@ import React from "react";
 type Props = {
   iconName: keyof typeof svgs;
   color?: string;
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
   onClick?: () => void;
   style?: React.CSSProperties;
   className?: string;
