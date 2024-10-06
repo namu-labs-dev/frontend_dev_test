@@ -20,19 +20,19 @@ export const TestpageOneContainer = () => {
     const fetchedMessages = [
       {
         id: 1,
-        photoUrl: "/assets/ethereum.pmg",
-        messageTitle: "Proxima",
-        messageBody: "Message content",
+        photoUrl: "/assets/ethereum.png",
+        messageTitle: "ETH",
+        messageBody: "User: namulabs is fantasic company...",
         receivedTime: "08:43 PM",
-        isRead: true,
+        isRead: false,
       },
       {
         id: 2,
         photoUrl: "/assets/nvir.webp",
         messageTitle: "Nvir",
-        messageBody: "Message content",
+        messageBody: "User: namulabs is fantasic company...",
         receivedTime: "08:42 AM",
-        isRead: false,
+        isRead: true,
       },
     ];
     setMessages(fetchedMessages);

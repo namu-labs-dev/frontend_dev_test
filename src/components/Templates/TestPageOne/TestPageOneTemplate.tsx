@@ -18,7 +18,7 @@ export const TestPageOneTemplate = (props: Props) => {
       <Header style={{ padding: 0, height: 50 }}>
         <TestPageOneHeaderModule {...props.TestPageOneHeaderProps} />
       </Header>
-      <Content style={{ overflow: "auto" }}>
+      <Content style={{ overflow: "auto", backgroundColor: "#1F1F1F" }}>
         <TestPageOneContentModule {...props.TestPageOneContentProps} />
       </Content>
       <Footer
