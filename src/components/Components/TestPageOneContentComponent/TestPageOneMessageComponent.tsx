@@ -13,7 +13,7 @@ export const TestPageOneMessageComponent = (props: Props) => {
           <div className=''>
             <Image
               src={message.photoUrl}
-              alt='message photo'
+              alt='message profile'
               className='shadow-custom rounded-full'
               width={44}
               height={44}
