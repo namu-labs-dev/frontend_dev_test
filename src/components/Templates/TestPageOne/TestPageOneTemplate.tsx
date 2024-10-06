@@ -14,7 +14,7 @@ type Props = {
 
 export const TestPageOneTemplate = (props: Props) => {
   return (
-    <Layout style={{ height: "100%" }}>
+    <Layout style={{ height: "100%", width: 400 }}>
       <Header style={{ padding: 0, height: 50 }}>
         <TestPageOneHeaderModule {...props.TestPageOneHeaderProps} />
       </Header>
