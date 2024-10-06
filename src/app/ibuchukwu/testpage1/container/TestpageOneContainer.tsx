@@ -56,7 +56,7 @@ export const TestpageOneContainer = () => {
     },
     TestPageOneFooterProps: {
       footerProps: {
-        onTabChange: () => console.log(`Tab clicked`),
+        onTabChange: () => console.log(`Tab clicked.`),
       },
     },
   };
