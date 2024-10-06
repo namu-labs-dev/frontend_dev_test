@@ -4,6 +4,8 @@ import {
   DollarCircleFilled,
   FieldTimeOutlined,
 } from "@ant-design/icons";
+import SVGAtom from "../SVGAtom/SVGAtom";
+import Image from "next/image";
 
 type Props = {
   onTabChange: () => void;
@@ -38,12 +40,13 @@ export const BottomNavAtom = (props: Props) => {
           </button>
         </li>
         <li className='flex w-1/4 cursor-pointer items-center justify-center'>
-          <button
-            onClick={props.onTabChange}
-            className='text-[24px] text-[#8C8C8C]'
-          >
-            <FieldTimeOutlined color='#8C8C8C' size={24} />{" "}
-            {/* I couldn't find the proper icon so i substituted for this */}
+          <button onClick={props.onTabChange} className='text-[24px]'>
+            <Image
+              src={"/assets/history.png"}
+              width={24}
+              height={24}
+              alt='btn icon'
+            />
           </button>
         </li>
       </ul>
