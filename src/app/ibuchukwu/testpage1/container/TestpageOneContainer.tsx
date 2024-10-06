@@ -3,16 +3,16 @@
 import { useEffect, useState } from "react";
 import { TestPageOneTemplate } from "~/components/Templates/TestPageOne/TestPageOneTemplate";
 
-export const Testpage1Container = () => {
-  interface Message {
-    id: number;
-    photoUrl: string;
-    messageTitle: string;
-    messageBody: string;
-    receivedTime: string;
-    isRead: boolean;
-  }
+export interface Message {
+  id: number;
+  photoUrl: string;
+  messageTitle: string;
+  messageBody: string;
+  receivedTime: string;
+  isRead: boolean;
+}
 
+export const TestpageOneContainer = () => {
   const [messages, setMessages] = useState<Message[]>([]);
 
   // Simulate fetching data for messages
@@ -20,7 +20,7 @@ export const Testpage1Container = () => {
     const fetchedMessages = [
       {
         id: 1,
-        photoUrl: "link/to/image",
+        photoUrl: "/assets/ethereum.pmg",
         messageTitle: "Proxima",
         messageBody: "Message content",
         receivedTime: "08:43 PM",
@@ -28,7 +28,7 @@ export const Testpage1Container = () => {
       },
       {
         id: 2,
-        photoUrl: "link/to/image",
+        photoUrl: "/assets/nvir.webp",
         messageTitle: "Nvir",
         messageBody: "Message content",
         receivedTime: "08:42 AM",
@@ -41,18 +41,25 @@ export const Testpage1Container = () => {
   const TestPageOneTemplateProps: React.ComponentProps<
     typeof TestPageOneTemplate
   > = {
-    topToolbarModuleProps: {
-      title: "Proxima OS",
-      color: "#1F1F1F",
-      onClickSettingsIcon: () => console.log("Settings icon clicked"),
+    TestPageOneHeaderProps: {
+      headerProps: {
+        title: "Proxima OS",
+        color: "#1F1F1F",
+        onClickLeftIcon: () => {
+          console.log("Left icon clicked");
+        },
+        onClickRightIcon: () => console.log("Right icon clicked"),
+      },
     },
-    messageListModuleProps: {
+    TestPageOneContentProps: {
       messages,
     },
-    bottomNavbarModuleProps: {
-      onTabChange: (tab: string) => console.log(`Switched to tab: ${tab}`),
+    TestPageOneFooterProps: {
+      footerProps: {
+        onTabChange: () => console.log(`Tab changed`),
+      },
     },
   };
 
-  return <EmptyTemplate {...emptyTemplateProps} />;
+  return <TestPageOneTemplate {...TestPageOneTemplateProps} />;
 };
