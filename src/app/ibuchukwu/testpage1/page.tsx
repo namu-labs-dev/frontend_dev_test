@@ -1,8 +1,8 @@
 "use client";
-import { Testpage1Container } from "./container/Testpage1Container";
+import { TestpageOneContainer } from "./container/TestpageOneContainer";
 
 const Empty = () => {
-  return <Testpage1Container />;
+  return <TestpageOneContainer />;
 };
 
 export default Empty;
