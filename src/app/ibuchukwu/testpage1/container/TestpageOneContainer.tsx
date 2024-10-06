@@ -14,6 +14,12 @@ export interface Message {
 
 export const TestpageOneContainer = () => {
   const [messages, setMessages] = useState<Message[]>([]);
+  const [isCustomModalOpen, setIsCustomModalOpen] = useState(false);
+  const [toolbarColor, setToolbarColor] = useState("#1F1F1F");
+
+  useEffect(() => {
+    setToolbarColor(isCustomModalOpen ? "#000000" : "#1F1F1F");
+  }, [isCustomModalOpen]);
 
   // Simulate fetching data for messages
   useEffect(() => {
@@ -44,15 +50,28 @@ export const TestpageOneContainer = () => {
     TestPageOneHeaderProps: {
       headerProps: {
         title: "Proxima OS",
-        color: "#1F1F1F",
+        color: toolbarColor,
         onClickLeftIcon: () => {
           console.log("Left icon clicked");
         },
-        onClickRightIcon: () => console.log("Right icon clicked"),
+        onClickRightIcon: () => {
+          setIsCustomModalOpen(true);
+          setToolbarColor("#000000");
+        },
       },
     },
     TestPageOneContentProps: {
       messages,
+      modalProps: {
+        modalProps: {
+          isModalOpen: isCustomModalOpen,
+          setModalOpen: setIsCustomModalOpen,
+        },
+        title: "Transaction Processing",
+        description:
+          "Uploading your transaction to the node. please wait for a moment... \nThis may take up to 2 minutes.",
+        iconUrl: "/assets/block.png",
+      },
     },
     TestPageOneFooterProps: {
       footerProps: {

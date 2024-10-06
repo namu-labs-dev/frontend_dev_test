@@ -7,7 +7,7 @@ type Props = {
 
 export const TestPageOneMessageComponent = (props: Props) => {
   return (
-    <div className='mt-5 flex h-full flex-col gap-5 rounded-t-3xl bg-[#2C2D30] px-[24px] pt-[20px]'>
+    <div className='mt-5 flex h-full flex-col gap-5 rounded-t-3xl bg-[#2C2D30] px-[24px] pt-[30px]'>
       {props.messages.map((message) => (
         <div key={message.id} className='flex cursor-pointer gap-5'>
           <div className=''>

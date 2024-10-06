@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { Message } from "~/app/ibuchukwu/testpage1/container/TestpageOneContainer";
 import { TestPageOneMessageComponent } from "~/components/Components/TestPageOneContentComponent/TestPageOneMessageComponent";
+import { TestPageOneLoadingModal } from "~/components/Components/TestPageOneLoadingModal/TestPageOneLoadingModal";
 
 type Props = {
   messages: Message[];
+  modalProps: React.ComponentProps<typeof TestPageOneLoadingModal>;
 };
 
 export const TestPageOneContentModule = (props: Props) => {
@@ -28,6 +30,7 @@ export const TestPageOneContentModule = (props: Props) => {
         </div>
       </div>
       <TestPageOneMessageComponent messages={props.messages} />
+      <TestPageOneLoadingModal {...props.modalProps} />
     </div>
   );
 };
