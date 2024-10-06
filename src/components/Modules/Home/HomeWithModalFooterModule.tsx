@@ -1,5 +1,5 @@
 import FooterAtom from "~/components/Atoms/HomeFooterAtom/HomeFooterAtom";
-import * as svgs from "public/svgs";
+import type * as svgs from "public/svgs";
 interface navs {
   path: string;
   label: string;
