@@ -29,7 +29,7 @@ export const PageWithModalContainer = () => {
         },
         title: "Custom Modal Title",
         description: "Custom Modal Description",
-         image: ""
+        image: ""
       },
     },
   };
