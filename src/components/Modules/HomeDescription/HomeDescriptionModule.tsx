@@ -1,6 +1,6 @@
 export const HomeDescriptionModule = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="absolute left-0 right-0 mt-5 max-w-[500px] w-full h-[58.8vh] bg-[#2C2D30]  m-auto rounded-t-3xl p-5 overflow-y-auto">
       {/* 
         우리가 해외 개발자에게 원하는 최소 능력
           1. 우리의 페이지 구성 규칙을 이해하고, 이 규칙을 따라 요청 페이지를 제작하는 것
@@ -17,58 +17,40 @@ export const HomeDescriptionModule = () => {
         
           translate korean description to English and make markdown
         */}
-      <div className="flex flex-col gap-1 text-[14px]">
-        <b>Simple explanation of the roles of sample pages</b>
-        <ol className="list-outside list-decimal pl-7">
-          <li>
-            Empty: A page where you can check the page configuration rules, prop
-            usage rules, and basic layout
-          </li>
-          <li>
-            PageWithModal: A page where you can check how to use the basic
-            component, Modal component
-          </li>
-          <li>
-            PageWithForm: A page where you can check how to use the basic
-            component, Form component
-          </li>
-        </ol>
-      </div>
+  
 
-      <div className="flex flex-col gap-1 text-[14px]">
-        <b>Minimum ability we want from developers</b>
-        <ol className="list-outside list-decimal pl-7">
-          <li>
-            Understanding our page configuration rules and creating a requested
-            page following these rules
-          </li>
-          <li>
-            Handling volatile elements or elements containing business logic in
-            the *Container.tsx file
-          </li>
-          <li>Following the convention for each code file</li>
-          <li>
-            Understanding and using basic components shown through the Sample
-            Link
-          </li>
-        </ol>
-      </div>
+      
+        <div className="flex gap-4 p-4">
+          <div>
+            <img src="/images/eth.png" alt="eth" className="w-[44px] h-[44px]"/>
+          </div>
+          <div className="flex justify-between gap-2">
+            <div>
+              <p className="text-[16px] text-white font-bold">ETH</p>
+              <p className="text-[16px] text-[#CACACA]">User: namulabs is fantasic company...</p>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <p className="text-[14px] text-white">8:50pm</p>
+              <p><img src="/images/Count.png"/></p>
+            </div>
+          </div>
+        </div>
 
-      <div className="flex flex-col gap-1 text-[14px]">
-        <b>Maximum ability we want from developers</b>
-        <ol className="list-outside list-decimal pl-7">
-          <li>
-            Finding the inadequacies of our page configuration rules and
-            improving them to reflect the results (In this case, you must write
-            an explanation through comments)
-          </li>
-          <li>
-            Finding the inadequacies of the basic components provided in the
-            Sample code and improving them to reflect the results (In this case,
-            you must write an explanation through comments)
-          </li>
-        </ol>
+        <div className="flex gap-4 p-4">
+          <div>
+            <img src="/images/nv.png" alt="nv" className="w-[44px] h-[44px] object-cover"/>
+          </div>
+          <div className="flex justify-between gap-2">
+            <div>
+              <p className="text-[16px] text-white font-bold">Nvir</p>
+              <p className="text-[16px] text-[#CACACA]">User: namulabs is fantasic company...</p>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <p className="text-[14px] text-white">8:50pm</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    
   );
 };

@@ -2,11 +2,12 @@ import { HeaderAtom } from "~/components/Atoms/HeaderAtom/HeaderAtom";
 
 type Props = {
   title: string;
-  onClickLeftIcon: () => void;
+  bgColor?: string;
+  titleColor?: string;
 };
 
 export const PageWithFormHeaderModule = (props: Props) => {
   return (
-    <HeaderAtom title={props.title} onClickLeftIcon={props.onClickLeftIcon} />
+    <HeaderAtom title={props.title} bgColor={props.bgColor} titleColor={props.titleColor}/>
   );
 };
