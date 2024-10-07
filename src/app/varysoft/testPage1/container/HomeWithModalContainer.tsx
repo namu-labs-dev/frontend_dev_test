@@ -54,6 +54,8 @@ export const HomeWithModalContainer = () => {
       ],
       pageInfoProps: {
         title: "Messages",
+        logo: "Proxima",
+        size: 80,
       },
     },
     homeWithModalFooterModuleProps: {

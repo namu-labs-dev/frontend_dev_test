@@ -3,6 +3,7 @@ import SVGAtom from "../SVGAtom/SVGAtom";
 
 type Props = {
   size?: number;
+  logo?: string;
 };
 
 const LogoAtom = (props: Props) => {
@@ -14,7 +15,7 @@ const LogoAtom = (props: Props) => {
         height={props.size}
         className=''
       />
-      <p className='mt-2 pb-3 pl-[2%] text-lg text-white'>Proxima</p>
+      <p className='mt-2 pb-3 pl-[2%] text-lg text-white'>{props.logo}</p>
     </div>
   );
 };
