@@ -2,9 +2,7 @@ import {
   WalletFilled,
   MessageFilled,
   DollarCircleFilled,
-  FieldTimeOutlined,
 } from "@ant-design/icons";
-import SVGAtom from "../SVGAtom/SVGAtom";
 import Image from "next/image";
 
 type Props = {

@@ -1,10 +1,12 @@
 import Image from "next/image";
-import { Message } from "~/app/ibuchukwu/testpage1/container/TestpageOneContainer";
+import { Message } from "~/app/ibuchukwu/testpage1/container/Testpage1Container";
 import { TestPageOneMessageComponent } from "~/components/Components/TestPageOneContentComponent/TestPageOneMessageComponent";
 import { TestPageOneLoadingModal } from "~/components/Components/TestPageOneLoadingModal/TestPageOneLoadingModal";
 
 type Props = {
-  messages: Message[];
+  messages: React.ComponentProps<
+    typeof TestPageOneMessageComponent
+  >["messages"];
   modalProps: React.ComponentProps<typeof TestPageOneLoadingModal>;
 };
 

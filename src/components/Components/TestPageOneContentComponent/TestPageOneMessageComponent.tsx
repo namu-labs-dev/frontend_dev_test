@@ -1,5 +1,13 @@
 import Image from "next/image";
-import { Message } from "~/app/ibuchukwu/testpage1/container/TestpageOneContainer";
+
+interface Message {
+  id: number;
+  photoUrl: string;
+  messageTitle: string;
+  messageBody: string;
+  receivedTime: string;
+  isRead: boolean;
+}
 
 type Props = {
   messages: Message[];
