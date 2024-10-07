@@ -9,3 +9,5 @@ export { default as wallet } from "./wallet.svg";
 export { default as history } from "./history.svg";
 export { default as home } from "./home.svg";
 export { default as setting } from "./setting.svg";
+export { default as arrowDown } from "./arrowDown.svg";
+export { default as camera } from "./camera.svg";
