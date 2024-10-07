@@ -15,13 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className={`${GeistSans.variable}`}>
-      <body className='bg-[#efefef]'>
-        {/* line 21: modified layout to properly accomodate test screen */}
-        <div className='m-auto h-screen w-fit max-w-[500px] overflow-auto bg-white'>
+    <html lang="en" className={`${GeistSans.variable}`}>
+      <body className="bg-[#efefef]">
+        <div className="m-auto h-screen max-w-[500px] overflow-auto bg-white">
           <GlobalLayout>{children}</GlobalLayout>
-          <div id='custom-drawer' />
-          <div id='custom-modal' />
+          <div id="custom-drawer" />
+          <div id="custom-modal" />
         </div>
       </body>
     </html>
