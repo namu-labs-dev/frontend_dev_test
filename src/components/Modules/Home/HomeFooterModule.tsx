@@ -1,5 +1,4 @@
 import { FooterAtom } from "~/components/Atoms/FooterAtom/FooterAtom";
-
 type Props = {
   title: string;
 };

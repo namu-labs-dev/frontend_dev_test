@@ -6,11 +6,11 @@ type Props = {
   onClickRightIcon: () => void;
 };
 
-export const PageWithModalHeaderModule = (props: Props) => {
+export const HomeWithModalHeaderModule = (props: Props) => {
   return (
     <HeaderAtom
       title={props.title}
-      onClickRightIcon={props.onClickLeftIcon}
+      onClickRightIcon={props.onClickRightIcon}
       onClickLeftIcon={props.onClickLeftIcon}
     />
   );
