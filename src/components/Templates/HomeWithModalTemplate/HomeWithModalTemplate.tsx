@@ -1,5 +1,5 @@
 import { Layout } from "antd";
-import { Content, Header } from "antd/es/layout/layout";
+import { Content, Footer, Header } from "antd/es/layout/layout";
 import { HomeWithModalFooterModule } from "~/components/Modules/Home/HomeWithModalFooterModule";
 import { HomeWithModalHeaderModule } from "~/components/Modules/Home/HomeWithModalHeaderModule";
 import { HomeWithModalContentModule } from "~/components/Modules/Home/HomeWithModalContentModule";
@@ -35,8 +35,9 @@ export const HomeWithModalTemplate = (props: Props) => {
           {...props.homeWithModalContentModuleProps}
         />
       </Content>
-
-      <HomeWithModalFooterModule {...props.homeWithModalFooterModuleProps} />
+      <Footer style={{ padding: 0, minHeight: 50 }}>
+        <HomeWithModalFooterModule {...props.homeWithModalFooterModuleProps} />
+      </Footer>
     </Layout>
   );
 };

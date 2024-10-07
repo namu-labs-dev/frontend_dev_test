@@ -1,6 +1,6 @@
+import React from "react";
 import { Layout } from "antd";
 import { Content, Header } from "antd/es/layout/layout";
-import React from "react";
 import VoteFormContentModule from "~/components/Modules/VoteForm/VoteFormContentModule";
 import VoteFormHeaderModule from "~/components/Modules/VoteForm/VoteFormHeaderModule";
 
