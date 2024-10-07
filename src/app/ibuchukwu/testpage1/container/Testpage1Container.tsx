@@ -1,37 +1,65 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { TestPageOneMessageComponent } from "~/components/Components/TestPageOneContentComponent/TestPageOneMessageComponent";
 import { TestPageOneTemplate } from "~/components/Templates/TestPageOne/TestPageOneTemplate";
 
-type Props = {
-  messages: React.ComponentProps<
-    typeof TestPageOneMessageComponent
-  >["messages"];
-  onClickRightIcon: () => void;
-  onClickLeftIcon: () => void;
-  setIsCustomModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  isCustomModalOpen: boolean;
-  toolbarColor: string;
-};
+export const Testpage1Container = () => {
+  const [messages, setMessages] = useState<
+    React.ComponentProps<typeof TestPageOneMessageComponent>["messages"]
+  >([]);
+  const [isCustomModalOpen, setIsCustomModalOpen] = useState(false);
+  const [toolbarColor, setToolbarColor] = useState("#1F1F1F");
 
-export const Testpage1Container = (props: Props) => {
+  useEffect(() => {
+    setToolbarColor(isCustomModalOpen ? "#000000" : "#1F1F1F");
+  }, [isCustomModalOpen]);
+
+  // Simulate fetching data for messages in the useEffect hook
+  useEffect(() => {
+    const fetchedMessages = [
+      {
+        id: 1,
+        photoUrl: "/assets/ethereum.png",
+        messageTitle: "ETH",
+        messageBody: "User: namulabs is fantasic company...",
+        receivedTime: "08:43 PM",
+        isRead: false,
+      },
+      {
+        id: 2,
+        photoUrl: "/assets/nvir.webp",
+        messageTitle: "Nvir",
+        messageBody: "User: namulabs is fantasic company...",
+        receivedTime: "08:42 AM",
+        isRead: true,
+      },
+    ];
+    setMessages(fetchedMessages);
+  }, []);
+
   const TestPageOneTemplateProps: React.ComponentProps<
     typeof TestPageOneTemplate
   > = {
     TestPageOneHeaderProps: {
       headerProps: {
         title: "Proxima OS",
-        color: props.toolbarColor,
-        onClickLeftIcon: props.onClickLeftIcon,
-        onClickRightIcon: props.onClickRightIcon,
+        color: toolbarColor,
+        onClickLeftIcon: () => {
+          console.log("Left icon clicked");
+        },
+        onClickRightIcon: () => {
+          setIsCustomModalOpen(true);
+          setToolbarColor("#000000");
+        },
       },
     },
     TestPageOneContentProps: {
-      messages: props.messages,
+      messages,
       modalProps: {
         modalProps: {
-          isModalOpen: props.isCustomModalOpen,
-          setModalOpen: props.setIsCustomModalOpen,
+          isModalOpen: isCustomModalOpen,
+          setModalOpen: setIsCustomModalOpen,
         },
         title: "Transaction Processing",
         description:
