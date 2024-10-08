@@ -10,7 +10,7 @@ export const PageWithFormContainer = () => {
     typeof PageWithFormTemplate
   > = {
     pageWithFormHeaderModuleProps: {
-      title: "PageWithFormHeaderModule",
+      title: "Vote",
       onClickLeftIcon: () => router.back(),
     },
     pageWithFormFormModuleProps: {
