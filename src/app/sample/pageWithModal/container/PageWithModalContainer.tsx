@@ -1,6 +1,6 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { PageWithModalTemplate } from "~/components/Templates/PageWithModal/PageWithModalTemplate";
+import { PageWithModalTemplate } from "~/components/Templates/PageWithModalTemplate/PageWithModalTemplate";
 import ModalStore from "~/store/ModalStore";
 
 export const PageWithModalContainer = () => {
@@ -13,6 +13,7 @@ export const PageWithModalContainer = () => {
     pageWithModalHeaderModuleProps: {
       title: "PageWithModalHeaderModule",
       onClickLeftIcon: () => router.back(),
+      onClickRightIcon: () => router.back(),
     },
     pageWithModalContentModuleProps: {
       onOpenSnapshotModal: () =>
