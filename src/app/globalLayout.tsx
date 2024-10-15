@@ -10,7 +10,7 @@ export default function GlobalLayout({
 }) {
   return (
     <>
-      <div className="m-auto h-screen max-w-[500px] overflow-auto bg-white">
+      <div className="">
         <RootStyleRegistry>{children}</RootStyleRegistry>
       </div>
 
