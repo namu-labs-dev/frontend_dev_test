@@ -20,7 +20,7 @@ const useDummyQuestData = (type: "ranking" | "raffle") => {
         endDate: new Date(
           Date.now() + Math.random() * 7 * 24 * 60 * 60 * 1000
         ).toISOString(), // Random end date within a week
-        type: type, // Alternate types
+        type: type ?? index % 2 === 0 ? "ranking" : "raffle", // Alternate types
         creator: {
           name: `Creator ${index + 1}`,
           imageLink: `http://www.iqandreas.com/sample-images/100-100-color/${String(index).padStart(2, "0")}.jpg`,

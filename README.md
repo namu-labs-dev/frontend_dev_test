@@ -77,7 +77,7 @@ This test for newly onboarded Level 1 developers assesses your ability to recrea
 - **Final Reviews**: By **21st October**, wrap up your work and prepare for reviews.
 - **Test End Date**: Concludes on **25th October**.
 
-### First 5 Days (16th - 19th October):
+### First 3 Days (16th - 19th October):
 
 - Focus on building **atoms**—small, reusable components. These components will be used in the final page builds.
 
