@@ -22,6 +22,7 @@ const FooterAtom = () => {
     { label: "Notice", href: "/notice" },
   ];
 
+  // Using ReactIcons bcos figma link couldnt extract icons
   const iconLinks = [
     { icon: <FiSend />, href: "/twitter" },
     { icon: <FaDiscord />, href: "/discord" },
