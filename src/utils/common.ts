@@ -1,3 +1,4 @@
+import { type ErrorStates } from "~/components/Components/TextInput/TextInput";
 import ToastStore from "~/store/ToastStore";
 
 export function generateRandomString(length: number) {
@@ -19,7 +20,7 @@ export function isEmailValid(email: string): boolean {
 export function formatWalletAddress(
   address: string,
   prefixLength = 5,
-  suffixLength = 3,
+  suffixLength = 3
 ) {
   return `${address.slice(0, prefixLength)}...${address.slice(-suffixLength)}`;
 }
@@ -79,3 +80,11 @@ export const getTxScanUrl = (targetChainId: number, txHash: string) => {
       return "/";
   }
 };
+
+export const errorMap: Record<ErrorStates, string> = {
+  warning: "#DD270E",
+  hint: "#1838E0",
+};
+
+// for tailwindcss
+const cls = "text-[#DD270E] text-[#1838E0] border-[#DD270E] border-[#1838E0]";
