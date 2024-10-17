@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { KeyCountAtom } from "~/components/Atoms/KeyCountAtom/KeyCountAtom";
+import { KeyCount } from "../KeyCount/KeyCount";
 import { Text } from "../Text/Text";
 import { errorMap } from "~/utils/common";
 
@@ -48,7 +48,7 @@ export function TextInput(props: Props) {
         )}
 
         {props.charCount && (
-          <KeyCountAtom
+          <KeyCount
             className='ml-auto'
             current={props.charCount.current}
             total={props.charCount.total}
