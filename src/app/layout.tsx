@@ -15,11 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
+    <html lang='en' className={`${GeistSans.variable}`}>
       <body>
-        <div >
+        <div>
           <GlobalLayout>{children}</GlobalLayout>
-
+          <div id='custom-drawer' />
+          <div id='custom-modal' />
         </div>
       </body>
     </html>
