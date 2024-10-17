@@ -4,8 +4,8 @@ import useDummyNotificationData from "~/hooks/useDummyNotification";
 import useDummyQuestData from "~/hooks/useDummyQuestData";
 // import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 import FooterAtom from "~/components/Atoms/FooterAtom/FooterAtom";
-import type * as svgs from "public/svgs";
 import ViewAllSectionTabAtom from "~/components/Atoms/ViewAllSectionTabAtom/ViewAllSectionTabAtom";
+import SectionWithTabsAtom from "~/components/Atoms/SectionWithTabsAtom/SectionWithTabsAtom";
 
 export const HomeContainer = () => {
   const creators = useDummyCreatorData();
@@ -13,6 +13,10 @@ export const HomeContainer = () => {
   const raffleQuests = useDummyQuestData("raffle");
   const notifications = useDummyNotificationData();
 
+  const displayTabs = {
+    text: "Daily earn",
+    tabs: ["Check In", "Quiz", "Gacha"],
+  };
   const handleViewAll = () => {
     return null;
   };
@@ -27,6 +31,7 @@ export const HomeContainer = () => {
     <div>
       <FooterAtom />
       <ViewAllSectionTabAtom {...viewAllProps} />
+      <SectionWithTabsAtom {...displayTabs} />
     </div>
   );
 };
