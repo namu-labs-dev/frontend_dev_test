@@ -1,3 +1,4 @@
+import { Props, Reward } from "~/components/Components/RewardOps/RewardOps";
 import ToastStore from "~/store/ToastStore";
 
 export function generateRandomString(length: number) {
@@ -19,7 +20,7 @@ export function isEmailValid(email: string): boolean {
 export function formatWalletAddress(
   address: string,
   prefixLength = 5,
-  suffixLength = 3,
+  suffixLength = 3
 ) {
   return `${address.slice(0, prefixLength)}...${address.slice(-suffixLength)}`;
 }
@@ -78,4 +79,32 @@ export const getTxScanUrl = (targetChainId: number, txHash: string) => {
     default:
       return "/";
   }
+};
+
+export const colorMap = {
+  green: "bg-base-green",
+  blue: "bg-base-blue",
+};
+
+export const rewardMap: Record<Props["type"], Reward> = {
+  nft: {
+    label: "NFT",
+    icon: "nft",
+    color: "#8FFFFF",
+  },
+  point: {
+    label: "Point",
+    icon: "point",
+    color: "#F9FF3C",
+  },
+  sbt: {
+    label: "SBT",
+    icon: "sbt",
+    color: "#99B9FF",
+  },
+  token: {
+    label: "Token",
+    icon: "point",
+    color: "#DA00F9",
+  },
 };
