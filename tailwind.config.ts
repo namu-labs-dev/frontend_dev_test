@@ -11,6 +11,11 @@ export default {
       spacing: {
         page: "500px",
       },
+      colors: {
+        "base-green": {
+          DEFAULT: "#00FF00",
+        },
+      },
       keyframes: {
         shimmer: {
           "0%": { backgroundPosition: "200% 0" },
