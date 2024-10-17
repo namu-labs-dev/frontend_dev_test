@@ -15,6 +15,9 @@ export default {
         "base-green": {
           DEFAULT: "#00FF00",
         },
+        "base-blue": {
+          DEFAULT: "#1838E0",
+        },
       },
       keyframes: {
         shimmer: {
