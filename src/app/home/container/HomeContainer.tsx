@@ -6,6 +6,7 @@ import useDummyQuestData from "~/hooks/useDummyQuestData";
 import FooterAtom from "~/components/Atoms/FooterAtom/FooterAtom";
 import ViewAllSectionTabAtom from "~/components/Atoms/ViewAllSectionTabAtom/ViewAllSectionTabAtom";
 import SectionWithTabsAtom from "~/components/Atoms/SectionWithTabsAtom/SectionWithTabsAtom";
+import DailyEarnMenuAtom from "~/components/Atoms/DailyEarnMenuAtom/DailyEarnMenuAtom";
 
 export const HomeContainer = () => {
   const creators = useDummyCreatorData();
@@ -32,6 +33,7 @@ export const HomeContainer = () => {
       <FooterAtom />
       <ViewAllSectionTabAtom {...viewAllProps} />
       <SectionWithTabsAtom {...displayTabs} />
+      <DailyEarnMenuAtom {...displayTabs} />
     </div>
   );
 };

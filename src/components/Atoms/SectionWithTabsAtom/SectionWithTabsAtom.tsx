@@ -25,7 +25,7 @@ const SectionWithTabsAtom = (props: PropsWithChildren<Props>) => {
         return (
           <button
             key={index}
-            className={`flex items-center gap-2 rounded-xl ${isActive && "bg-black px-3 py-1 text-[#00FF00]"}`}
+            className={`flex items-center gap-2 rounded-lg ${isActive && "bg-black px-3 py-2 text-[#00FF00]"}`}
             onClick={() => handleTabClick(tab)} // Set active tab on click
           >
             {tab}
