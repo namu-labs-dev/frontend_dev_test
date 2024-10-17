@@ -6,9 +6,10 @@ type Props = {
   description?: string; // Description
   author?: string; // Author
   avatar?: string; // Avatar
-  cover?: string;
+  cover?: string; // Cover
   onGoingStatus?: boolean; // Status
-  bannerColor?: "green" | "blue"; // Banner color options
+  bannerColor?: "green" | "blue"; // Banner Color Options
+  useShadow?: boolean; // Use Shadow
 };
 
 export const ListAtom = (props: Props) => {
@@ -18,17 +19,16 @@ export const ListAtom = (props: Props) => {
     description = "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     author = "Fractal Visions",
     cover, // "/images/cover1.png" | "/images/cover2.png" Cover Options
-    bannerColor = "green",
+    bannerColor = "blue",
     onGoingStatus = "true",
     avatar = "/images/avatar.png",
+    useShadow = "true",
   } = props;
 
   // Set banner color based on bannerColor here
-  const bannerBgColor =
-    bannerColor === "green" ? "bg-[#00FF00]" : "bg-[#1838E0]";
+  const bannerBgColor = bannerColor === "green" ? "bg-[#00FF00]" : "bg-[#1838E0]";
   const bannerTextColor = bannerColor === "green" ? "text-black" : "text-white";
-  const bannerDateColor =
-    bannerColor === "green" ? "text-[#0C0D0F]" : "text-white";
+  const bannerDateColor = bannerColor === "green" ? "text-[#0C0D0F]" : "text-white";
 
   // Set status background and text based on onGoingStatus
   const statusBgColor = onGoingStatus ? "bg-[#1838E0]" : "bg-[#F0F0F0]";
@@ -36,8 +36,13 @@ export const ListAtom = (props: Props) => {
   const statusTextColor = onGoingStatus ? "text-white" : "text-[#8C8C8C]";
   const statusBorderColor = onGoingStatus ? "border-black" : "border-[#8C8C8C]";
 
+  // Set shadow based on useShadow
+  const shadow = useShadow ? "custom-shadow" : "";
+
   return (
-    <Card className='max-h-[460px] w-[270px] rounded-[20px] border-[1.5px] border-black bg-white sm:max-h-[515px] sm:w-[348px] xl:max-h-[483px] xl:w-[413px]'>
+    <Card
+      className={`max-h-[460px] w-[270px] rounded-[20px] border-[1.5px] border-black bg-white sm:max-h-[515px] sm:w-[348px] xl:max-h-[483px] xl:w-[413px] ${shadow}`}
+    >
       <div
         className={`h-[64px] w-full rounded-t-[20px] ${bannerBgColor} flex items-center justify-between px-4`}
       >
@@ -92,7 +97,7 @@ export const ListAtom = (props: Props) => {
               </span>
             </div>
             <div className='mt-3'>
-              <span className='text-[20px] font-bold leading-[27px] text-black'>
+              <span className='line-clamp-2 text-[20px] font-bold leading-[27px] text-black'>
                 {title}
               </span>
             </div>
