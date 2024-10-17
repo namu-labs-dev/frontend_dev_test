@@ -8,6 +8,9 @@ export default {
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
       },
+      boxShadow: {
+        black_spread: "4px 5px 0px 1px",
+      },
       spacing: {
         page: "500px",
       },
