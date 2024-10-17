@@ -1,9 +1,10 @@
 import clsx from "clsx";
+import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
 import { colorMap } from "~/utils/common";
 
 type Props = {
   label?: string;
-  children?: React.ReactNode;
+  iconName: React.ComponentProps<typeof SVGAtom>["iconName"];
   color?: "green" | "blue";
   unselected?: boolean;
 };
@@ -17,7 +18,11 @@ export function SocialBadge(props: Props) {
         props.unselected && "bg-[#F0F0F0] opacity-70"
       )}
     >
-      {props.unselected ? null : <div>{props.children}</div>}
+      {props.unselected ? null : (
+        <div>
+          <SVGAtom iconName={props.iconName} className='h-[22px] w-[22px]' />
+        </div>
+      )}
       <span
         className={clsx("font-medium", {
           "text-white": props.color === "blue",
