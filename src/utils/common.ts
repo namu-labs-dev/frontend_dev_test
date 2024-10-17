@@ -1,3 +1,4 @@
+import { Props, Reward } from "~/components/Components/RewardOps/RewardOps";
 import ToastStore from "~/store/ToastStore";
 
 export function generateRandomString(length: number) {
@@ -83,4 +84,27 @@ export const getTxScanUrl = (targetChainId: number, txHash: string) => {
 export const colorMap = {
   green: "bg-base-green",
   blue: "bg-base-blue",
+};
+
+export const rewardMap: Record<Props["type"], Reward> = {
+  nft: {
+    label: "NFT",
+    icon: "nft",
+    color: "#8FFFFF",
+  },
+  point: {
+    label: "Point",
+    icon: "point",
+    color: "#F9FF3C",
+  },
+  sbt: {
+    label: "SBT",
+    icon: "sbt",
+    color: "#99B9FF",
+  },
+  token: {
+    label: "Token",
+    icon: "point",
+    color: "#DA00F9",
+  },
 };
