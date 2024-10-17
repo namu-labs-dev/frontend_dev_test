@@ -6,6 +6,7 @@ import { RankingQuest } from "~/components/Atoms/BannerAtom/RankingQuest";
 import { AttachmentAtom } from "~/components/Atoms/AttachmentAtom/AttachmentAtom";
 import { CreatorWrapAtom } from "~/components/Atoms/CreatorWrapAtom/CreatorWrapAtom";
 import { RaffleQuest } from "~/components/Atoms/BannerAtom/RaffleQuest";
+import { NFTCard } from "~/components/Atoms/NFTCardAtom/NFTCard";
 // import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 
 export const HomeContainer = () => {
@@ -18,7 +19,8 @@ export const HomeContainer = () => {
   return (
     <>
       <RankingQuest /> <br /> <RaffleQuest />
-      <br /> <AttachmentAtom /> <br /> <CreatorWrapAtom />{" "}
+      <br /> <AttachmentAtom /> <br /> <CreatorWrapAtom /> <br />
+      <NFTCard />
     </>
   );
 };
