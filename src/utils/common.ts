@@ -79,3 +79,8 @@ export const getTxScanUrl = (targetChainId: number, txHash: string) => {
       return "/";
   }
 };
+
+export const colorMap = {
+  green: "bg-base-green",
+  blue: "bg-base-blue",
+};

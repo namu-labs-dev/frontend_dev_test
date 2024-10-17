@@ -7,3 +7,4 @@ export { default as google } from "./google.svg";
 export { default as check } from "./check.svg";
 export { default as edit } from "./edit.svg";
 export { default as remove } from "./remove.svg";
+export { default as circleX } from "./circle-x.svg";
