@@ -5,7 +5,7 @@ type Props = {
   horizontal?: boolean;
 };
 
-export function Stats(props: Props) {
+export function CheckInStats(props: Props) {
   return (
     <div
       className={clsx("w-fit", {
