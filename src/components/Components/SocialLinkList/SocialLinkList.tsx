@@ -9,16 +9,18 @@ type Props = {
 
 const SocialLinkList = (props: Props) => {
   return (
-    <div className='flex space-x-4'>
-      {props.iconLinks.map((link, index) => (
-        <a
-          key={index}
-          href={link.href}
-          className='text-black hover:text-gray-600'
-        >
-          {link.icon}
-        </a>
-      ))}
+    <div className='ml-4'>
+      <div className=' flex gap-x-5 pt-3 md:pt-0'>
+        {props.iconLinks.map((link, index) => (
+          <a
+            key={index}
+            href={link.href}
+            className='text-black  hover:text-gray-600'
+          >
+            {link.icon}
+          </a>
+        ))}
+      </div>
     </div>
   );
 };

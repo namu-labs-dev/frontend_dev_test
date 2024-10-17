@@ -7,10 +7,6 @@ import { FaTwitter } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 
 const FooterAtom = () => {
-  const router = usePathname(); // Hook to access current route
-  const currentPath = router; // Gets the current path
-  console.log(currentPath);
-
   //All props would be adjusted based on the code-convention when building modules
 
   const title = "@FANDOM GLOBAL PTE LTD";
@@ -24,23 +20,23 @@ const FooterAtom = () => {
 
   // Using ReactIcons bcos figma link couldnt extract icons
   const iconLinks = [
-    { icon: <FiSend />, href: "/twitter" },
-    { icon: <FaDiscord />, href: "/discord" },
-    { icon: <FaTwitter />, href: "/telegram" },
+    { icon: <FiSend size={30} />, href: "/twitter" },
+    { icon: <FaDiscord size={30} />, href: "/discord" },
+    { icon: <FaTwitter size={30} />, href: "/telegram" },
   ];
 
   return (
     <div>
-      <header className='flex items-center justify-between px-8 py-4'>
-        <div className='flex items-center'>
-          <span className='mr-[5rem] font-bold'>{title}</span>
-          <nav>
-            <ul className='flex space-x-6'>
+      <header className='mt-2 items-center justify-between px-8 py-4 md:flex'>
+        <div className='my-2 items-center md:my-1 md:flex'>
+          <span className='font-bold md:mr-[3rem] lg:mr-[6rem]'>{title}</span>
+          <nav className=' mt-5 md:mt-0'>
+            <ul className='md:flex md:space-x-6'>
               {navLinks.map((link) => (
-                <li key={link.label}>
+                <li className='py-2 md:py-0' key={link.label}>
                   <Link
                     href={link.href}
-                    className={`text-black ${currentPath === link.href && "text-black"}  hover:text-gray-600`}
+                    className=' border-b-2 font-medium text-[#777784] hover:text-gray-600  md:border-none'
                   >
                     {link.label}
                   </Link>

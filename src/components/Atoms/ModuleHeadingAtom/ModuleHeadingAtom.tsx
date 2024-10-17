@@ -6,8 +6,10 @@ type Props = {
 
 const ModuleHeadingAtom = (props: Props) => {
   return (
-    <div>
-      <h1 className='text-lg font-bold'>{props.text}</h1>
+    <div className='p-[2%]'>
+      <h1 className='text-md font-sans font-extrabold lg:text-3xl'>
+        {props.text}
+      </h1>
     </div>
   );
 };

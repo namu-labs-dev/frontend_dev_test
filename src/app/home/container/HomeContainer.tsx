@@ -13,16 +13,20 @@ export const HomeContainer = () => {
   const raffleQuests = useDummyQuestData("raffle");
   const notifications = useDummyNotificationData();
 
+  const handleViewAll = () => {
+    return null;
+  };
   const viewAllProps = {
-    buttonLabel: "ViewAll",
+    buttonLabel: "View All",
     heading: { text: "Popular Quest" },
+    viewAll: handleViewAll,
   };
 
   // return <HomeTemplate {...homeTemplateProps} />;
   return (
     <div>
       <FooterAtom />
-      <ViewAllSectionTabAtom  {...viewAllProps}/>
+      <ViewAllSectionTabAtom {...viewAllProps} />
     </div>
   );
 };
