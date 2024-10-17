@@ -10,6 +10,7 @@ import DailyEarnMenuAtom from "~/components/Atoms/DailyEarnMenuAtom/DailyEarnMen
 import GachaPopUpCardAtom from "~/components/Atoms/GachaPopUpCardAtom/GachaPopUpCardAtom";
 import { useState } from "react";
 import * as svgs from "public/svgs";
+import CreatorCarouselAvatarAtom from "~/components/Atoms/CreatorCarouselAvatarAtom/CreatorCarouselAvatarAtom";
 
 export const HomeContainer = () => {
   const creators = useDummyCreatorData();
@@ -45,6 +46,18 @@ export const HomeContainer = () => {
     setModalOpen,
   };
 
+  const creatorAvatarProps = {
+    creators: [
+      {
+        name: "Creator 1",
+        icon: "/svgs/avatar1.svg",
+      },
+      {
+        name: "Creator 2",
+        icon: "/svgs/avatar2.svg",
+      },
+    ],
+  };
   // return <HomeTemplate {...homeTemplateProps} />;
   return (
     <div>
@@ -53,6 +66,7 @@ export const HomeContainer = () => {
       <SectionWithTabsAtom {...displayTabs} />
       <DailyEarnMenuAtom {...displayTabs} />
       <GachaPopUpCardAtom {...gachaModalProps} />
+      <CreatorCarouselAvatarAtom {...creatorAvatarProps} />
     </div>
   );
 };
