@@ -1,0 +1,10 @@
+.ant-card .ant-card-body {
+  padding: 0 !important;
+}
+
+.custom-shadow {
+  box-shadow:
+    8px 8px 0px #000000,
+    0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 20px; /* Adjust radius as needed */
+}
