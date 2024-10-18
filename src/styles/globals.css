@@ -72,3 +72,20 @@ a {
 .animate-fade-out {
   animation: fadeOut 0.3s ease-out forwards;
 }
+
+.custom-progress {
+  appearance: none;
+  height: 8px;
+}
+
+.custom-progress::-webkit-progress-value {
+  background: #ffff;
+  height: 8px;
+}
+
+.custom-progress::-webkit-progress-bar {
+  border-radius: 4px;
+  overflow: hidden;
+  height: 8px;
+  background-color: #a9a9a9;
+}
