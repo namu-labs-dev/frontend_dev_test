@@ -5,6 +5,9 @@ export default {
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
+      borderRadius: {
+        common: "0.625rem",
+      },
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
       },
