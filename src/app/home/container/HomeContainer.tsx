@@ -1,6 +1,5 @@
 import { message } from "antd";
-import AverageMovementAtom from "~/components/Atoms/AverageMovementAtom/AverageMovementAtom";
-import { SendReceiveAtom } from "~/components/Atoms/SendReceiveAtom/SendReceiveAtom";
+import NavigationAtom from "~/components/Atoms/NavigationAtom/NavigationAtom";
 import useDummyCreatorData from "~/hooks/useDummyCreatorData";
 import useDummyNotificationData from "~/hooks/useDummyNotification";
 import useDummyQuestData from "~/hooks/useDummyQuestData";
@@ -15,7 +14,7 @@ export const HomeContainer = () => {
   // return <HomeTemplate {...homeTemplateProps} />;
   return (
     <>
-      <AverageMovementAtom direction='up' percentage='3.73%' />
+      <NavigationAtom />
     </>
   );
 };
