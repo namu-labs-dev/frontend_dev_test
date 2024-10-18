@@ -10,8 +10,8 @@ type Props = {
 
 export const NFTCard = (props: Props) => {
   return (
-    <div className='mx-auto w-[318px] rounded-[0.625rem] border-2 border-[#000000] px-3.5 pb-5 pt-3.5'>
-      <div className='relative h-[18.125rem] w-[18.125rem]'>
+    <div className='mx-auto w-full max-w-xs rounded-[0.625rem] border-2 border-[#000000] px-3.5 pb-5 pt-3.5'>
+      <div className='relative w-full pb-[100%]'>
         <Image
           src={NFTImage}
           alt={`${props.name}'s name`}
