@@ -1,4 +1,5 @@
 import { message } from "antd";
+import AverageMovementAtom from "~/components/Atoms/AverageMovementAtom/AverageMovementAtom";
 import { SendReceiveAtom } from "~/components/Atoms/SendReceiveAtom/SendReceiveAtom";
 import useDummyCreatorData from "~/hooks/useDummyCreatorData";
 import useDummyNotificationData from "~/hooks/useDummyNotification";
@@ -12,5 +13,9 @@ export const HomeContainer = () => {
   const notifications = useDummyNotificationData();
 
   // return <HomeTemplate {...homeTemplateProps} />;
-  return <></>;
+  return (
+    <>
+      <AverageMovementAtom direction='up' percentage='3.73%' />
+    </>
+  );
 };
