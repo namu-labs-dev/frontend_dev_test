@@ -11,6 +11,7 @@ import GachaPopUpCardAtom from "~/components/Atoms/GachaPopUpCardAtom/GachaPopUp
 import { useState } from "react";
 import * as svgs from "public/svgs";
 import CreatorCarouselAvatarAtom from "~/components/Atoms/CreatorCarouselAvatarAtom/CreatorCarouselAvatarAtom";
+import CreateQuestAvatarAtom from "~/components/Atoms/CreateQuestAvatarAtom/CreateQuestAvatarAtom";
 
 export const HomeContainer = () => {
   const creators = useDummyCreatorData();
@@ -46,18 +47,16 @@ export const HomeContainer = () => {
     setModalOpen,
   };
 
+  // Creator Avatar props
   const creatorAvatarProps = {
-    creators: [
-      {
-        name: "Creator 1",
-        icon: "/svgs/avatar1.svg",
-      },
-      {
-        name: "Creator 2",
-        icon: "/svgs/avatar2.svg",
-      },
-    ],
+    name: "Creator Name",
+    icon: "/svgs/avatar1.svg",
   };
+  const createQuestAvatarProps = {
+    name: "Creator Name",
+    icon: "/svgs/createQuest.svg",
+  };
+
   // return <HomeTemplate {...homeTemplateProps} />;
   return (
     <div>
@@ -67,6 +66,7 @@ export const HomeContainer = () => {
       <DailyEarnMenuAtom {...displayTabs} />
       <GachaPopUpCardAtom {...gachaModalProps} />
       <CreatorCarouselAvatarAtom {...creatorAvatarProps} />
+      <CreateQuestAvatarAtom {...createQuestAvatarProps} />
     </div>
   );
 };

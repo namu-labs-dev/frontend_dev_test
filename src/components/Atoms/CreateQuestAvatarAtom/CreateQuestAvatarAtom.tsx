@@ -6,11 +6,11 @@ type Props = {
   icon: string;
 };
 
-const CreatorCarouselAvatarAtom = (props: Props) => {
+const CreateQuestAvatarAtom = (props: Props) => {
   return (
     <div className='mx-auto flex items-center justify-center gap-x-4'>
-      <div className='flex flex-col gap-y-2 p-2 text-center'>
-        <div className='relative size-[100px]  md:size-[176px]'>
+      <div className='mb-5 flex items-center gap-x-5 p-2 text-center'>
+        <div className='relative size-[100px]'>
           <Image
             className='relative object-cover object-center'
             fill
@@ -18,12 +18,10 @@ const CreatorCarouselAvatarAtom = (props: Props) => {
             alt=''
           />
         </div>
-        <p className='mx-auto w-[70%] font-medium md:w-full md:text-xl'>
-          {props.name}
-        </p>
+        <p className='text-xl  font-extrabold md:text-2xl'>{props.name}</p>
       </div>
     </div>
   );
 };
 
-export default CreatorCarouselAvatarAtom;
+export default CreateQuestAvatarAtom;
