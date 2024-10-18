@@ -15,6 +15,7 @@ import CancelPurchasePopUpCardAtom from "~/components/Atoms/CancelPurchasePopUpC
 import FanQuestBlogPublishPopUpAtom from "~/components/Atoms/FanQuestBogPopUpAtom/FanQuestBlogPublishPopUpAtom";
 import EmptyStateAtom from "~/components/Atoms/EmptyStateAtom/EmptyStateAtom";
 import ListProfileAtom from "~/components/Atoms/ListProfileAtom/ListProfileAtom";
+import CreatorWrapAtom from "~/components/Atoms/CreatorWrapAtom/CreatorWrapAtom";
 
 export const HomeContainer = () => {
   const creators = useDummyCreatorData();
@@ -99,7 +100,12 @@ export const HomeContainer = () => {
   };
   const creatorPlatformProps = {
     profile: "Fractal Visions",
-    platform: "platform",
+    platform: "Platform",
+    icon: "/svgs/avatar1.svg",
+  };
+  const creatorWrapProps = {
+    badgeCount: +999,
+    username: "Username",
     icon: "/svgs/avatar1.svg",
   };
 
@@ -117,6 +123,7 @@ export const HomeContainer = () => {
       <FanQuestBlogPublishPopUpAtom {...fanBlogPostProp} />
       <EmptyStateAtom {...emptyDataProps} />
       <ListProfileAtom {...creatorPlatformProps} />
+      <CreatorWrapAtom {...creatorWrapProps} />
     </div>
   );
 };
