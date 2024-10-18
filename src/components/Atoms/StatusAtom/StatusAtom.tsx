@@ -1,7 +1,7 @@
 type StatusType = "Success" | "Failed" | "Pending";
 
 type Props = {
-  type: StatusType;
+  status: StatusType;
 };
 
 const statusStyles: Record<StatusType, string> = {
@@ -13,9 +13,9 @@ const statusStyles: Record<StatusType, string> = {
 export const StatusAtom = (props: Props) => {
   return (
     <span
-      className={`${statusStyles[props.type]} inline-flex items-center rounded-[0.875rem] px-3 py-1 text-base font-medium leading-6`}
+      className={`${statusStyles[props.status]} inline-flex items-center rounded-[0.875rem] px-3 py-1 text-base font-medium leading-6`}
     >
-      {props.type}
+      {props.status}
     </span>
   );
 };

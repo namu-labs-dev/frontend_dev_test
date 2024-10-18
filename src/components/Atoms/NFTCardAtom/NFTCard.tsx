@@ -5,9 +5,9 @@ import { StaticImageData } from "next/image";
 import NFTCardPreview from "./NFTCardPreview";
 
 type Props = {
-  img?: StaticImageData;
-  name?: string;
-  creatorName?: string;
+  img: StaticImageData;
+  name: string;
+  creatorName: string;
 };
 
 export const NFTCard = (props: Props) => {
@@ -23,7 +23,7 @@ export const NFTCard = (props: Props) => {
 
   return (
     <div
-      className='mx-auto w-full max-w-xs cursor-pointer rounded-[0.625rem] border-2 border-[#000000] px-3.5 pb-5 pt-3.5'
+      className='w-full max-w-xs cursor-pointer rounded-[0.625rem] border-2 border-[#000000] px-3.5 pb-5 pt-3.5'
       onClick={handlePreview}
     >
       <div className='relative w-full pb-[100%]'>

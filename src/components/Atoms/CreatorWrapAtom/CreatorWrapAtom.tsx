@@ -3,13 +3,13 @@ import { StaticImageData } from "next/image";
 import avatar from "../../../../public/pngs/avatar.png";
 
 type Props = {
-  avatar?: StaticImageData;
-  creatorName?: string;
+  avatar: StaticImageData;
+  creatorName: string;
 };
 
 export const CreatorWrapAtom = (props: Props) => {
   return (
-    <div className='mx-auto flex w-full max-w-md justify-between'>
+    <div className='flex w-full max-w-md justify-between'>
       <div className='flex items-center justify-center space-x-2'>
         <div className='relative h-10 w-10 sm:h-11 sm:w-11 md:h-12 md:w-12'>
           <Image

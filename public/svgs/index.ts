@@ -6,3 +6,5 @@ export { default as outLink } from "./outLink.svg";
 export { default as star } from "./star.svg";
 export { default as raffle } from "./raffle.svg";
 export { default as ranking } from "./ranking.svg";
+export { default as send } from "./send.svg";
+export { default as receive } from "./receive.svg";

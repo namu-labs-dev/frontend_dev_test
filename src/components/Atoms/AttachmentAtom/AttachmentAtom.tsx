@@ -37,7 +37,7 @@ export const AttachmentAtom = (props: Props) => {
   };
 
   return (
-    <div className='mx-auto w-full max-w-md px-4 sm:px-0'>
+    <div className='w-full max-w-md px-4 sm:px-0'>
       <input
         id='file-upload'
         type='file'

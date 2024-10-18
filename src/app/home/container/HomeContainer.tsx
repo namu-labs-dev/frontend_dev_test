@@ -1,13 +1,8 @@
 import { message } from "antd";
+import { SendReceiveAtom } from "~/components/Atoms/SendReceiveAtom/SendReceiveAtom";
 import useDummyCreatorData from "~/hooks/useDummyCreatorData";
 import useDummyNotificationData from "~/hooks/useDummyNotification";
 import useDummyQuestData from "~/hooks/useDummyQuestData";
-import { RankingQuest } from "~/components/Atoms/BannerAtom/RankingQuest";
-import { AttachmentAtom } from "~/components/Atoms/AttachmentAtom/AttachmentAtom";
-import { CreatorWrapAtom } from "~/components/Atoms/CreatorWrapAtom/CreatorWrapAtom";
-import { RaffleQuest } from "~/components/Atoms/BannerAtom/RaffleQuest";
-import { NFTCard } from "~/components/Atoms/NFTCardAtom/NFTCard";
-import { StatusAtom } from "~/components/Atoms/StatusAtom/StatusAtom";
 // import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 
 export const HomeContainer = () => {
@@ -17,12 +12,5 @@ export const HomeContainer = () => {
   const notifications = useDummyNotificationData();
 
   // return <HomeTemplate {...homeTemplateProps} />;
-  return (
-    <>
-      {/* <RankingQuest /> <br /> <RaffleQuest />
-      <br /> <AttachmentAtom /> <br /> <CreatorWrapAtom /> <br />
-      <NFTCard /> <br />  */}
-      {/* <StatusAtom type='Pending' /> */}
-    </>
-  );
+  return <></>;
 };

@@ -2,7 +2,7 @@ import SVGAtom from "../SVGAtom/SVGAtom";
 
 export const RankingQuest = () => {
   return (
-    <div className='relative mx-auto mt-8 h-[20.635rem] w-[39.0625rem] max-w-2xl overflow-hidden rounded-[1.875rem] border-2 border-[#0C0D0F] bg-[#00FF00] px-6 pt-6'>
+    <div className='relative mt-8 h-[20.635rem] w-[39.0625rem] max-w-2xl overflow-hidden rounded-[1.875rem] border-2 border-[#0C0D0F] bg-[#00FF00] px-6 pt-6'>
       <div className='space-y-3.5'>
         <button className='rounded-xl border border-[#0C0D0F] bg-[#1838E0] px-4 py-2 text-base font-medium leading-6 text-white'>
           Ranking Quest
