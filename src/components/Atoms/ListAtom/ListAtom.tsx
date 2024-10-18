@@ -3,11 +3,12 @@ import "./custom.css";
 
 type Props = {
   title?: string; // Title
+  listPoint?: number; // Points
   description?: string; // Description
   author?: string; // Author
   avatar?: string; // Avatar
   cover?: string; // Cover
-  onGoingStatus?: boolean; // Status
+  status?: number; // Status
   bannerColor?: "green" | "blue"; // Banner Color Options
   useShadow?: boolean; // Use Shadow
 };
@@ -16,32 +17,35 @@ export const ListAtom = (props: Props) => {
   // Destructured the props here and set default
   const {
     title = "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint = 1000,
     description = "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     author = "Fractal Visions",
     cover, // "/images/cover1.png" | "/images/cover2.png" Cover Options
-    bannerColor = "blue",
-    onGoingStatus = "true",
+    bannerColor = "green",
+    status = 1, // 0 - Ended, 1 - Ranking
     avatar = "/images/avatar.png",
-    useShadow = "true",
+    useShadow = false,
   } = props;
 
   // Set banner color based on bannerColor here
-  const bannerBgColor = bannerColor === "green" ? "bg-[#00FF00]" : "bg-[#1838E0]";
+  const bannerBgColor =
+    bannerColor === "green" ? "bg-[#00FF00]" : "bg-[#1838E0]";
   const bannerTextColor = bannerColor === "green" ? "text-black" : "text-white";
-  const bannerDateColor = bannerColor === "green" ? "text-[#0C0D0F]" : "text-white";
+  const bannerDateColor =
+    bannerColor === "green" ? "text-[#0C0D0F]" : "text-white";
 
   // Set status background and text based on onGoingStatus
-  const statusBgColor = onGoingStatus ? "bg-[#1838E0]" : "bg-[#F0F0F0]";
-  const statusText = onGoingStatus ? "Ranking" : "Ended";
-  const statusTextColor = onGoingStatus ? "text-white" : "text-[#8C8C8C]";
-  const statusBorderColor = onGoingStatus ? "border-black" : "border-[#8C8C8C]";
+  const statusBgColor = status === 1 ? "bg-[#1838E0]" : "bg-[#F0F0F0]";
+  const statusText = status === 1 ? "Ranking" : "Ended";
+  const statusTextColor = status === 1 ? "text-white" : "text-[#8C8C8C]";
+  const statusBorderColor = status === 1 ? "border-black" : "border-[#8C8C8C]";
 
   // Set shadow based on useShadow
   const shadow = useShadow ? "custom-shadow" : "";
 
   return (
     <Card
-      className={`max-h-[460px] w-[270px] rounded-[20px] border-[1.5px] border-black bg-white sm:max-h-[515px] sm:w-[348px] xl:max-h-[483px] xl:w-[413px] ${shadow}`}
+      className={`max-h-[460px] w-[270px] bg-white sm:max-h-[515px] sm:w-[348px] xl:max-h-[483px] xl:w-[413px] ${shadow}`}
     >
       <div
         className={`h-[64px] w-full rounded-t-[20px] ${bannerBgColor} flex items-center justify-between px-4`}
@@ -50,7 +54,7 @@ export const ListAtom = (props: Props) => {
           <span
             className={`${bannerTextColor} text-[26px] font-black italic leading-[35.88px]`}
           >
-            1000 P
+            {listPoint.toLocaleString()} P
           </span>
           <Image
             src='/images/list_img.png'
@@ -135,13 +139,14 @@ export const ListAtom = (props: Props) => {
       </div>
 
       {cover && (
-        <div className='w-full'>
+        <div className='h-[220px] w-full'>
           <Image
             src={cover}
             alt='Cover'
-            height='220'
+            height='100%'
             width='100%'
             preview={false}
+            className='rounded-b-[20px] object-contain'
           />
         </div>
       )}

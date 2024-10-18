@@ -23,7 +23,7 @@ export const CheckAtom = (props: Props) => {
   const shadowClass = useShadow ? "custom-shadow" : "";
   // Set button label based on checkStatus
   const btnLabel =
-    checkStatus === 0 ? "Check" : checkStatus === 1 ? "Completed" : "Passed";
+    checkStatus === 0 ? "Check" : checkStatus === 1 ? "Complete" : "Passed";
   // Disable button based on disableBtn
   const isBtnDisabled = disableBtn ? "cursor-not-allowed" : "";
 
@@ -83,6 +83,7 @@ export const CheckAtom = (props: Props) => {
             width='60px'
             height='60px'
             className='mt-2'
+            preview={false}
           />
           <div className='mt-2'>
             <span className='text-[14px] font-medium leading-[21px] text-[#1838E0]'>

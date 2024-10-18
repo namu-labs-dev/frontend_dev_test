@@ -21,7 +21,7 @@ export const ListPointAtom = (props: Props) => {
 
   return (
     <Card
-      className={`w-[169px] rounded-[20px] border-[1.5px] border-black bg-white sm:w-[305px] ${shadow}`}
+      className={`w-[169px] bg-white sm:w-[305px] ${shadow}`}
     >
       <div className='flex h-[64px] w-full items-center justify-center rounded-t-[20px] bg-[#00FF00] px-4'>
         <span className='text-center text-[32px] font-black italic leading-[32px]'>
