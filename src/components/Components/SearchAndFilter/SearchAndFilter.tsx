@@ -7,17 +7,18 @@ type Props = {
 
 export function SearchAndFilter(props: Props) {
   return (
-    <div>
+    <div className='inline-block'>
       <div className='flex gap-[6px]'>
         <FilterAtom />
 
         <SearchBox />
       </div>
 
-      {props.withCount
-        ? // <KeyCount /> implementation on another branch
-          null
-        : null}
+      {props.withCount ? (
+        <div className='mt-3 flex'>
+          {/* <KeyCount /> implementation on another branch */}
+        </div>
+      ) : null}
     </div>
   );
 }
