@@ -6,9 +6,10 @@ import {
   useState,
 } from "react";
 import ReactDOM from "react-dom";
-import { ModalContainer } from "../ModalContainer/ModalContainer";
+import { ModalAtomContainer } from "../ModalAtomContainer/ModalAtomContainer";
 
 type Props = {
+  width?: string;
   isModalOpen: boolean;
   setModalOpen: (value: boolean) => void;
   containerClassName?: string;
@@ -45,14 +46,17 @@ const Modal = (props: PropsWithChildren<Props>) => {
     ReactDOM.createPortal(
       <div>
         {props.isModalOpen ? (
-          <div className='box-borderoverflow-auto fixed inset-0 z-[1000] mx-auto text-center'>
+          <div className='fixed inset-0 z-[1000] mx-auto box-border overflow-auto text-center'>
             <div
               className='pointer fixed h-full w-full bg-black opacity-50'
               onClick={onClose}
             />
-            <ModalContainer className={props.containerClassName}>
+            <ModalAtomContainer
+              width={props.width}
+              className={props.containerClassName}
+            >
               {props.children}
-            </ModalContainer>
+            </ModalAtomContainer>
           </div>
         ) : null}
       </div>,
