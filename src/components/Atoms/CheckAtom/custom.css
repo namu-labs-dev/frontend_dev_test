@@ -1,10 +1,19 @@
-.ant-card .ant-card-body {
-  padding: 8px !important;
+.ant-card {
+  border-radius: 10px !important;
 }
 
+.ant-card-bordered {
+  border: 2px solid #000000 !important;
+}
+.ant-card .ant-card-body {
+  padding: 4px !important;
+}
+.ant-divider-horizontal {
+  margin: 4px 0px !important;
+}
 .custom-shadow {
   box-shadow:
     8px 8px 0px #000000,
     0 0 10px rgba(0, 0, 0, 0.5);
-  border-radius: 20px; /* Adjust radius as needed */
+  border-radius: 10px; /* Adjust radius as needed */
 }
