@@ -83,7 +83,7 @@ export const HomeContainer = () => {
   };
   const createQuestAvatarProps = {
     name: "Creator Name",
-    width: "100px",
+    width: 100,
     icon: "/svgs/createQuest.svg",
   };
 
@@ -107,12 +107,12 @@ export const HomeContainer = () => {
   const creatorPlatformProps = {
     profile: "Fractal Visions",
     platform: "Platform",
-    icon: "/svgs/avatar1.svg",
-    width: "44px",
+    icon: "/svgs/avatar2.svg",
+    width: 44,
   };
   const creatorLabelProps = {
     badgeCount: +999,
-    width: "44px",
+    width: 30,
     username: "Username",
     icon: "/svgs/avatar2.svg",
     onClick: handleUsers,
@@ -121,8 +121,8 @@ export const HomeContainer = () => {
   const creatorWrapProps = {
     btnText: "Visit",
     creatorName: "Creator Name",
-    icon: "/svgs/avatar1.svg",
-    width: "44px",
+    icon: "/svgs/avatar2.svg",
+    width: 44,
     onClick: handleUsers,
   };
   // return <HomeTemplate {...homeTemplateProps} />;

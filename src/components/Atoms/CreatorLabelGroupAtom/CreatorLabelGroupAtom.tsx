@@ -7,7 +7,7 @@ type Props = {
   badgeCount: number;
   username: string;
   icon: string;
-  width: string;
+  width: number;
   onClick: () => void;
 };
 

@@ -3,7 +3,7 @@ import React from "react";
 import CreatorLayout from "~/components/Components/CreatorLayout/CreatorLayout";
 
 type Props = {
-  width: string;
+  width: number;
   platform: string;
   profile: string;
   icon: string;

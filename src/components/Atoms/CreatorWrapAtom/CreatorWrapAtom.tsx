@@ -7,7 +7,7 @@ type Props = {
   btnText: string;
   creatorName: string;
   icon: string;
-  width: string;
+  width: number;
   onClick: () => void;
 };
 

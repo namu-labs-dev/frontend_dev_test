@@ -3,16 +3,17 @@ import Image from "next/image";
 
 type Props = {
   icon: string;
-  width: string;
+  width: number;
 };
 
 const CreatorLayout = (props: PropsWithChildren<Props>) => {
   return (
     <div className='mb-5 flex items-center gap-x-5 p-2 text-center'>
-      <div className={`relative size-[${props.width}]`}>
+      <div className={`relative`}>
         <Image
           className='relative object-cover object-center'
-          fill
+          width={props.width}
+          height={props.width}
           src={props.icon}
           alt=''
         />

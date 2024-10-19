@@ -4,7 +4,7 @@ import CreatorLayout from "../../Components/CreatorLayout/CreatorLayout";
 
 type Props = {
   name: string;
-  width: string;
+  width: number;
   icon: string;
 };
 
