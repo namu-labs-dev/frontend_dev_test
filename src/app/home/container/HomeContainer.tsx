@@ -15,6 +15,7 @@ import CancelPurchasePopUpCardAtom from "~/components/Atoms/CancelPurchasePopUpC
 import FanQuestBlogPublishPopUpAtom from "~/components/Atoms/FanQuestBogPopUpAtom/FanQuestBlogPublishPopUpAtom";
 import EmptyStateAtom from "~/components/Atoms/EmptyStateAtom/EmptyStateAtom";
 import ListProfileAtom from "~/components/Atoms/ListProfileAtom/ListProfileAtom";
+import CreatorLabelGroupAtom from "~/components/Atoms/CreatorLabelGroupAtom/CreatorLabelGroupAtom";
 import CreatorWrapAtom from "~/components/Atoms/CreatorWrapAtom/CreatorWrapAtom";
 
 export const HomeContainer = () => {
@@ -38,12 +39,16 @@ export const HomeContainer = () => {
   const handleCancelPurchase = () => {
     return null;
   };
+  const handleUsers = () => {
+    return null;
+  };
 
-  // props for now
+  //All props would be adjusted based on the code-convention when building modules
+
   const viewAllProps = {
-    buttonLabel: "View All",
+    buttonText: "View All",
     heading: { text: "Popular Quest" },
-    viewAll: handleViewAll,
+    onClick: handleViewAll,
   };
 
   // modalProps
@@ -65,7 +70,7 @@ export const HomeContainer = () => {
     },
     cancelInfo: "You are about to cancel a purchase, are you sure about it?",
     cancelTitle: "Title",
-    width: "40%",
+    width: "20rem",
     cancelHandler: handleCancelPurchase,
     isModalOpen: isCancelModalOpen,
     setModalOpen: setCancelModalOpen,
@@ -78,6 +83,7 @@ export const HomeContainer = () => {
   };
   const createQuestAvatarProps = {
     name: "Creator Name",
+    width: "100px",
     icon: "/svgs/createQuest.svg",
   };
 
@@ -102,13 +108,23 @@ export const HomeContainer = () => {
     profile: "Fractal Visions",
     platform: "Platform",
     icon: "/svgs/avatar1.svg",
+    width: "44px",
   };
-  const creatorWrapProps = {
+  const creatorLabelProps = {
     badgeCount: +999,
+    width: "44px",
     username: "Username",
-    icon: "/svgs/avatar1.svg",
+    icon: "/svgs/avatar2.svg",
+    onClick: handleUsers,
   };
 
+  const creatorWrapProps = {
+    btnText: "Visit",
+    creatorName: "Creator Name",
+    icon: "/svgs/avatar1.svg",
+    width: "44px",
+    onClick: handleUsers,
+  };
   // return <HomeTemplate {...homeTemplateProps} />;
   return (
     <div>
@@ -123,6 +139,7 @@ export const HomeContainer = () => {
       <FanQuestBlogPublishPopUpAtom {...fanBlogPostProp} />
       <EmptyStateAtom {...emptyDataProps} />
       <ListProfileAtom {...creatorPlatformProps} />
+      <CreatorLabelGroupAtom {...creatorLabelProps} />
       <CreatorWrapAtom {...creatorWrapProps} />
     </div>
   );

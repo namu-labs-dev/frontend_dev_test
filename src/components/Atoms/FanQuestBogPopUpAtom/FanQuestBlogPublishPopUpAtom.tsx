@@ -26,7 +26,7 @@ const FanQuestBlogPublishPopUpAtom = (props: Props) => {
         </div>
         <h2 className='text-2xl font-medium'>{props.status}</h2>
 
-        <p className='text-[#475467]'>{props.blogInfo}</p>
+        <p className='text-blogPopUp'>{props.blogInfo}</p>
       </div>
     </AntModalAtom>
   );

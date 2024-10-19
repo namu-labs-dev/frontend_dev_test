@@ -9,9 +9,9 @@ type Props = {
 const CardLayout = (props: PropsWithChildren<Props>) => {
   return (
     <div
-      className={`relative transform  overflow-y-auto border transition  duration-200 ease-in-out ${
+      className={`relative transform  overflow-y-auto transition  duration-200 ease-in-out ${
         props.isModalOpen ? "scale-1" : "scale-0"
-      }  `}
+      }`}
     >
       <div className='cursor-pointer' onClick={() => props.setModalOpen(false)}>
         <SVGAtom
