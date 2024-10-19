@@ -27,16 +27,16 @@ const NavigationAtom = () => {
             >
               <p className='text-lg font-medium text-[#00FF00]'>Home</p>
             </a>
-            <a href='#' className='text-lg font-medium'>
+            <a href='#' className='text-lg font-medium md:max-lg:text-base'>
               Explore
             </a>
-            <a href='#' className='text-lg font-medium'>
+            <a href='#' className='text-lg font-medium md:max-lg:text-base'>
               Daily earn
             </a>
-            <a href='#' className='text-lg font-medium'>
+            <a href='#' className='text-lg font-medium md:max-lg:text-base'>
               Shop
             </a>
-            <a href='#' className='text-lg font-medium'>
+            <a href='#' className='text-lg font-medium md:max-lg:text-base'>
               SBT AirDrop
             </a>
           </div>

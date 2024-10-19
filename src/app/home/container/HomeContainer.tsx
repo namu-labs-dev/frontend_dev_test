@@ -1,5 +1,6 @@
 import { message } from "antd";
 import NavigationAtom from "~/components/Atoms/NavigationAtom/NavigationAtom";
+import { ReceiveHistoryAtom } from "~/components/Atoms/ReceiveHistoryAtom/ReceiveHistoryAtom";
 import useDummyCreatorData from "~/hooks/useDummyCreatorData";
 import useDummyNotificationData from "~/hooks/useDummyNotification";
 import useDummyQuestData from "~/hooks/useDummyQuestData";
@@ -14,7 +15,8 @@ export const HomeContainer = () => {
   // return <HomeTemplate {...homeTemplateProps} />;
   return (
     <>
-      <NavigationAtom />
+      {/* <NavigationAtom /> */}
+      {/* <ReceiveHistoryAtom /> */}
     </>
   );
 };
