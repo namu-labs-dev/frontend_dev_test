@@ -59,7 +59,7 @@ export const HomeContainer = () => {
     gachaPoint: "5 Point",
     iconName: "point",
     isModalOpen,
-    width: "30%",
+    width: "30px",
     setModalOpen: setModalOpen,
   };
 

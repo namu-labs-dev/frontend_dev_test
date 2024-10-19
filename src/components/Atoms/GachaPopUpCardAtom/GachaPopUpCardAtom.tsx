@@ -19,13 +19,13 @@ const GachaPopUpCardAtom = (props: Props) => {
   return (
     <ModalAtom {...props}>
       <CardLayout {...props}>
-        <div className='ml-[2%] flex flex-col  justify-center gap-3  '>
+        <div className='ml-[2%] flex flex-col   justify-center gap-3  '>
           <h1 className='text-left text-2xl font-extrabold'>
             {props.gachaTitle}
           </h1>
           <p className='text-left'>{props.gachaMessage}</p>
 
-          <SecondaryBtn>
+          <SecondaryBtn width='30%'>
             {props.iconName ? (
               <SVGAtom iconName={props.iconName} className='size-5' />
             ) : (
