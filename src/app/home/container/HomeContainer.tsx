@@ -3,7 +3,9 @@ import React from "react";
 import useDummyCreatorData from "~/hooks/useDummyCreatorData";
 import useDummyNotificationData from "~/hooks/useDummyNotification";
 import useDummyQuestData from "~/hooks/useDummyQuestData";
+
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
+
 
 export const HomeContainer = () => {
   const creators = useDummyCreatorData();
@@ -17,5 +19,7 @@ export const HomeContainer = () => {
     },
   };
 
+
   return <HomeTemplate {...homeTemplateProps} />;
+
 };

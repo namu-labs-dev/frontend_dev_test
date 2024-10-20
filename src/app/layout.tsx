@@ -22,7 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className={poppins.className}>
+
+    <html lang='en' className={`${GeistSans.variable}`}>
+
       <body>
         <div>
           <GlobalLayout>{children}</GlobalLayout>
