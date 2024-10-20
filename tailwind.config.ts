@@ -8,8 +8,19 @@ export default {
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
       },
+      boxShadow: {
+        black_spread: "4px 5px 0px 1px",
+      },
       spacing: {
         page: "500px",
+      },
+      colors: {
+        "base-green": {
+          DEFAULT: "#00FF00",
+        },
+        "base-blue": {
+          DEFAULT: "#1838E0",
+        },
       },
       keyframes: {
         shimmer: {
