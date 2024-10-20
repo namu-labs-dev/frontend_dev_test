@@ -2,7 +2,6 @@
 
 import { RootStyleRegistry } from "./RootStyleRegistry";
 
-
 export default function GlobalLayout({
   children,
 }: {
@@ -10,10 +9,9 @@ export default function GlobalLayout({
 }) {
   return (
     <>
-      <div className="">
+      <div className=''>
         <RootStyleRegistry>{children}</RootStyleRegistry>
       </div>
-
     </>
   );
 }
