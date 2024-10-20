@@ -21,6 +21,10 @@ export { default as point } from "./point.svg";
 
 export { default as arrowUpRight } from "./arrowUpRight.svg";
 
+export { default as closeCircle } from "./closeCircle.svg";
+export { default as point } from "./point.svg";
+
+
 export { default as box1 } from "./box1.svg";
 export { default as box2 } from "./box2.svg";
 export { default as box3 } from "./box3.svg";
@@ -61,3 +65,4 @@ export { default as diamondLight } from "./diamondLight.svg";
 export { default as diamondDark } from "./diamondDark.svg";
 export { default as championLight } from "./championLight.svg";
 export { default as championDark } from "./championDark.svg";
+

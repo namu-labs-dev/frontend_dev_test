@@ -23,12 +23,13 @@ export default function RootLayout({
 }) {
   return (
 
-
     <html lang='en' className={`${GeistSans.variable}`}>
-
       <body>
         <div>
           <GlobalLayout>{children}</GlobalLayout>
+          <div id='custom-drawer' />
+          <div id='custom-modal' />
+
         </div>
       </body>
     </html>

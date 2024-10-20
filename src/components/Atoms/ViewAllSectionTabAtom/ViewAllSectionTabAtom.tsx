@@ -14,7 +14,7 @@ type Props = {
 
 const ViewAllSectionTabAtom = (props: Props) => {
   return (
-    <div className='flex items-center gap-[8rem] space-x-2'>
+    <div className='flex  items-center gap-[8rem] space-x-2'>
       {/* section heading */}
       <ModuleHeadingAtom {...props.heading} />
       <ViewAllButton {...props} />

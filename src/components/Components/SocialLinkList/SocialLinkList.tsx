@@ -1,5 +1,4 @@
 import React from "react";
-import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
 
 type Props = {
   iconLinks: { icon: React.ReactNode; href: string }[];
