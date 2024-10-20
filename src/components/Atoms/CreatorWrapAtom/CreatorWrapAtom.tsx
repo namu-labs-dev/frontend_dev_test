@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import React from "react";
 import CreatorLayout from "../../Components/CreatorLayout/CreatorLayout";
 import PrimaryBtn from "~/components/Components/PrimaryBtn/PrimaryBtn";
@@ -25,3 +26,4 @@ const CreatorWrapAtom = (props: Props) => {
 };
 
 export default CreatorWrapAtom;
+
