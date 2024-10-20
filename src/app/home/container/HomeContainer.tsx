@@ -6,14 +6,15 @@ import useDummyQuestData from "~/hooks/useDummyQuestData";
 
 
 
-import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 
+import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 
 export const HomeContainer = () => {
   const creators = useDummyCreatorData();
   const rankingQuests = useDummyQuestData("ranking");
   const raffleQuests = useDummyQuestData("raffle");
   const notifications = useDummyNotificationData();
+
 
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
     homeModuleProps: {

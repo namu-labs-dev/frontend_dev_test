@@ -4,6 +4,11 @@ export { default as control } from "./control.svg";
 export { default as arrowLeft } from "./arrowLeft.svg";
 export { default as outLink } from "./outLink.svg";
 
+export { default as star } from "./star.svg";
+export { default as raffle } from "./raffle.svg";
+export { default as ranking } from "./ranking.svg";
+
+
 export { default as google } from "./google.svg";
 export { default as check } from "./check.svg";
 export { default as edit } from "./edit.svg";
@@ -30,5 +35,3 @@ export { default as crtr } from "./CRTR.svg";
 export { default as customChip } from "./customChip.svg";
 export { default as customFan } from "./customFan.svg";
 export { default as customStar } from "./customStar.svg";
-
-
