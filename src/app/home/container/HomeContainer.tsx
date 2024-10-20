@@ -1,11 +1,12 @@
 import { message } from "antd";
+import React from "react";
 import useDummyCreatorData from "~/hooks/useDummyCreatorData";
 import useDummyNotificationData from "~/hooks/useDummyNotification";
 import useDummyQuestData from "~/hooks/useDummyQuestData";
-// import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
-import FooterAtom from "~/components/Atoms/FooterAtom/FooterAtom";
-import type * as svgs from "public/svgs";
-import ViewAllSectionTabAtom from "~/components/Atoms/ViewAllSectionTabAtom/ViewAllSectionTabAtom";
+
+
+import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
+
 
 export const HomeContainer = () => {
   const creators = useDummyCreatorData();
@@ -13,20 +14,14 @@ export const HomeContainer = () => {
   const raffleQuests = useDummyQuestData("raffle");
   const notifications = useDummyNotificationData();
 
-  const handleViewAll = () => {
-    return null;
-  };
-  const viewAllProps = {
-    buttonLabel: "View All",
-    heading: { text: "Popular Quest" },
-    viewAll: handleViewAll,
+
+  const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
+    homeModuleProps: {
+      foo: "bar",
+    },
   };
 
-  // return <HomeTemplate {...homeTemplateProps} />;
-  return (
-    <div>
-      <FooterAtom />
-      <ViewAllSectionTabAtom {...viewAllProps} />
-    </div>
-  );
+
+  return <HomeTemplate {...homeTemplateProps} />;
+
 };
