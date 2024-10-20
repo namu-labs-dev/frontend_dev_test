@@ -36,7 +36,7 @@ const FooterAtom = () => {
                 <li className='py-2 md:py-0' key={link.label}>
                   <Link
                     href={link.href}
-                    className=' border-b-2 font-medium text-[#777784] hover:text-gray-600  md:border-none'
+                    className=' text-footerLink border-b-2 font-medium hover:text-gray-600  md:border-none'
                   >
                     {link.label}
                   </Link>

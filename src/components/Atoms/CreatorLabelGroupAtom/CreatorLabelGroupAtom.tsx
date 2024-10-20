@@ -1,29 +1,27 @@
 import Image from "next/image";
-
 import React from "react";
 import CreatorLayout from "../../Components/CreatorLayout/CreatorLayout";
 import PrimaryBtn from "~/components/Components/PrimaryBtn/PrimaryBtn";
 
 type Props = {
-  btnText: string;
-  creatorName: string;
+  badgeCount: number;
+  username: string;
   icon: string;
   width: number;
   onClick: () => void;
 };
 
-const CreatorWrapAtom = (props: Props) => {
+const CreatorLabelGroupAtom = (props: Props) => {
   return (
     <div className='mx-auto flex  justify-center gap-x-4'>
       <CreatorLayout {...props}>
-        <h2 className='md:text-md font-medium'>{props.creatorName}</h2>
+        <div className='mt-2 flex items-center gap-x-5  text-left'>
+          <h2 className='md:text-md ml-3 font-medium'>{props.username}</h2>
+          <PrimaryBtn onClick={props.onClick}>+ {props.badgeCount}</PrimaryBtn>
+        </div>
       </CreatorLayout>
-      <div className='ml-[10%] mt-2'>
-        <PrimaryBtn onClick={props.onClick}> {props.btnText}</PrimaryBtn>
-      </div>
     </div>
   );
 };
 
-export default CreatorWrapAtom;
-
+export default CreatorLabelGroupAtom;

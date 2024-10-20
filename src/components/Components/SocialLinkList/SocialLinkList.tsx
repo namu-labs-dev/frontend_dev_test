@@ -4,7 +4,7 @@ type Props = {
   iconLinks: { icon: React.ReactNode; href: string }[];
 };
 
-// had to use react-icons cause icons are extractable from the design for SVGAtom standard based on convention for icons
+// had to use react-icons cause icons are not extractable from the design for SVGAtom standard based on convention for icons
 
 const SocialLinkList = (props: Props) => {
   return (

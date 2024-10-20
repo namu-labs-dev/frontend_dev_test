@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-const tabs = ["Check In", "Quiz", "Gacha"];
-
 type Props = {
   tabs: string[];
 };
@@ -18,7 +16,7 @@ const DailyEarnMenuAtom = (props: Props) => {
         {props.tabs.map((tab, index) => (
           <button
             key={index}
-            className={`my-1 inline-block rounded-lg ${activeTab === tab && "bg-black px-1 py-1 text-[#00FF00]"}`}
+            className={`my-1 inline-block rounded-lg ${activeTab === tab && "text-primaryGreen bg-black px-1 py-1"}`}
             onClick={() => handleTabClick(tab)} // Set active tab on click
           >
             {tab}

@@ -1,15 +1,13 @@
 import React from "react";
-import { Button } from "antd";
 import type * as svgs from "public/svgs";
+import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
 import ModuleHeadingAtom from "../ModuleHeadingAtom/ModuleHeadingAtom";
-import ViewAllButton from "~/components/Components/ViewAllButton/ViewAllButton";
-
-//All props would be adjusted based on the code-convention when building modules
+import PrimaryBtn from "~/components/Components/PrimaryBtn/PrimaryBtn";
 
 type Props = {
-  buttonLabel: string;
+  buttonText: string;
   heading: { text: string };
-  viewAll: () => void;
+  onClick: () => void;
 };
 
 const ViewAllSectionTabAtom = (props: Props) => {
@@ -17,7 +15,14 @@ const ViewAllSectionTabAtom = (props: Props) => {
     <div className='flex  items-center gap-[8rem] space-x-2'>
       {/* section heading */}
       <ModuleHeadingAtom {...props.heading} />
-      <ViewAllButton {...props} />
+      <PrimaryBtn {...props}>
+        <span className='mr-2 hidden lg:inline-block'>{props.buttonText}</span>{" "}
+        {/* Text only visible on desktop */}
+        <SVGAtom
+          iconName='arrowUpRight'
+          className='mt-1 size-7 text-center  lg:mt-2 lg:size-9'
+        />
+      </PrimaryBtn>
     </div>
   );
 };
