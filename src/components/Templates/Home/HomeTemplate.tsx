@@ -5,5 +5,7 @@ type Props = {
 };
 
 export function HomeTemplate(props: Props) {
+
   return <HomeModule {...props.homeModuleProps} />;
+
 }
