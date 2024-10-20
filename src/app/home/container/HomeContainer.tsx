@@ -1,10 +1,18 @@
 import { message } from "antd";
-import NavigationAtom from "~/components/Atoms/NavigationAtom/NavigationAtom";
-import { ReceiveHistoryAtom } from "~/components/Atoms/ReceiveHistoryAtom/ReceiveHistoryAtom";
+
+import React from "react";
+
 import useDummyCreatorData from "~/hooks/useDummyCreatorData";
 import useDummyNotificationData from "~/hooks/useDummyNotification";
 import useDummyQuestData from "~/hooks/useDummyQuestData";
-// import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
+
+
+
+
+
+
+import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
+
 
 export const HomeContainer = () => {
   const creators = useDummyCreatorData();
@@ -12,11 +20,32 @@ export const HomeContainer = () => {
   const raffleQuests = useDummyQuestData("raffle");
   const notifications = useDummyNotificationData();
 
-  // return <HomeTemplate {...homeTemplateProps} />;
-  return (
-    <>
-      {/* <NavigationAtom /> */}
-      {/* <ReceiveHistoryAtom /> */}
-    </>
-  );
+
+
+
+  const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
+    homeModuleProps: {
+      foo: "bar",
+    },
+  };
+  const handleCancelPurchase = () => {
+    return null;
+  };
+  const handleUsers = () => {
+    return null;
+  };
+
+  //All props would be adjusted based on the code-convention when building modules
+
+
+
+  const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
+    homeModuleProps: {
+      foo: "bar",
+    },
+  };
+
+
+  return <HomeTemplate {...homeTemplateProps} />;
+
 };

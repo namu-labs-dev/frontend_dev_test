@@ -15,7 +15,7 @@
 
 /* Set Link Color */
 a {
-  color: black !important;
+  color: black;
 }
 /* Set Link Color : End */
 
@@ -71,4 +71,43 @@ a {
 
 .animate-fade-out {
   animation: fadeOut 0.3s ease-out forwards;
+}
+
+.custom-progress {
+  appearance: none;
+  height: 8px;
+}
+
+.custom-progress::-webkit-progress-value {
+  background: #ffff;
+  height: 8px;
+}
+
+.custom-progress::-webkit-progress-bar {
+  border-radius: 4px;
+  overflow: hidden;
+  height: 8px;
+  background-color: #a9a9a9;
+
+@layer utilities {
+  .scrollbar-custom {
+    scrollbar-width: auto;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 12px !important;
+    display: block !important;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: #8c8c8c !important;
+    border-radius: 99px !important;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+
 }
