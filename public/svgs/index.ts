@@ -4,6 +4,10 @@ export { default as control } from "./control.svg";
 export { default as arrowLeft } from "./arrowLeft.svg";
 export { default as outLink } from "./outLink.svg";
 
+export { default as pause } from "./pause.svg";
+export { default as play } from "./play.svg";
+
+
 export { default as upload } from "./upload.svg";
 
 export { default as search } from "./search.svg";
@@ -70,4 +74,3 @@ export { default as diamondLight } from "./diamondLight.svg";
 export { default as diamondDark } from "./diamondDark.svg";
 export { default as championLight } from "./championLight.svg";
 export { default as championDark } from "./championDark.svg";
-
