@@ -1,4 +1,8 @@
+
+import { Props, Reward } from "~/components/Components/RewardOps/RewardOps";
+
 import { type ErrorStates } from "~/components/Components/TextInput/TextInput";
+
 import ToastStore from "~/store/ToastStore";
 
 export function generateRandomString(length: number) {
@@ -81,6 +85,35 @@ export const getTxScanUrl = (targetChainId: number, txHash: string) => {
   }
 };
 
+
+export const colorMap = {
+  green: "bg-base-green",
+  blue: "bg-base-blue",
+};
+
+export const rewardMap: Record<Props["type"], Reward> = {
+  nft: {
+    label: "NFT",
+    icon: "nft",
+    color: "#8FFFFF",
+  },
+  point: {
+    label: "Point",
+    icon: "point",
+    color: "#F9FF3C",
+  },
+  sbt: {
+    label: "SBT",
+    icon: "sbt",
+    color: "#99B9FF",
+  },
+  token: {
+    label: "Token",
+    icon: "point",
+    color: "#DA00F9",
+  },
+};
+
 export const errorMap: Record<ErrorStates, string> = {
   warning: "#DD270E",
   hint: "#1838E0",
@@ -88,3 +121,4 @@ export const errorMap: Record<ErrorStates, string> = {
 
 // for tailwindcss
 const cls = "text-[#DD270E] text-[#1838E0] border-[#DD270E] border-[#1838E0]";
+

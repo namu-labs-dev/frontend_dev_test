@@ -5,9 +5,7 @@ type Props = {
 };
 
 export function HomeTemplate(props: Props) {
-  return (
-    <>
-      <HomeModule {...props.homeModuleProps} />
-    </>
-  );
+
+  return <HomeModule {...props.homeModuleProps} />;
+
 }
