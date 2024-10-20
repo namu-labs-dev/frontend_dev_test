@@ -8,7 +8,10 @@ type Props = {
 export const PointAtom = (props: Props) => {
   return (
     <div className='h-[30px] w-[30px]'>
-      <SVGAtom iconName={props.iconname} />
+      <SVGAtom
+        iconName={props.iconname}
+        className='h-full w-full object-contain'
+      />
     </div>
   );
 };
