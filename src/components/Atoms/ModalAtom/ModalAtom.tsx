@@ -9,9 +9,9 @@ import ReactDOM from "react-dom";
 import { ModalContainer } from "../ModalContainer/ModalContainer";
 
 type Props = {
-  isModalOpen: boolean;
   setModalOpen: (value: boolean) => void;
   containerClassName?: string;
+  isModalOpen: boolean;
 };
 
 const Modal = (props: PropsWithChildren<Props>) => {
