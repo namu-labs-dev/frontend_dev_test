@@ -20,7 +20,6 @@ export const HomeContainer = () => {
 
 
 
-
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
     homeModuleProps: {
       foo: "bar",

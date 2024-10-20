@@ -18,6 +18,9 @@ export { default as star } from "./star.svg";
 export { default as raffle } from "./raffle.svg";
 export { default as ranking } from "./ranking.svg";
 
+export { default as send } from "./send.svg";
+export { default as receive } from "./receive.svg";
+
 export { default as google } from "./google.svg";
 export { default as check } from "./check.svg";
 export { default as edit } from "./edit.svg";
@@ -74,3 +77,4 @@ export { default as diamondLight } from "./diamondLight.svg";
 export { default as diamondDark } from "./diamondDark.svg";
 export { default as championLight } from "./championLight.svg";
 export { default as championDark } from "./championDark.svg";
+
