@@ -1,5 +1,5 @@
 import "~/styles/globals.css";
-
+import { GeistSans } from "geist/font/sans";
 // import { GeistSans } from "geist/font/sans";
 import { Poppins } from "next/font/google";
 import GlobalLayout from "./globalLayout";
@@ -22,14 +22,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-
     <html lang='en' className={`${GeistSans.variable}`}>
       <body>
         <div>
           <GlobalLayout>{children}</GlobalLayout>
           <div id='custom-drawer' />
           <div id='custom-modal' />
-
         </div>
       </body>
     </html>
