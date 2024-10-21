@@ -7,7 +7,6 @@ export { default as outLink } from "./outLink.svg";
 export { default as pause } from "./pause.svg";
 export { default as play } from "./play.svg";
 
-
 export { default as upload } from "./upload.svg";
 
 export { default as search } from "./search.svg";
@@ -21,21 +20,17 @@ export { default as ranking } from "./ranking.svg";
 export { default as send } from "./send.svg";
 export { default as receive } from "./receive.svg";
 
-export { default as google } from "./google.svg";
 export { default as check } from "./check.svg";
 export { default as edit } from "./edit.svg";
 export { default as remove } from "./remove.svg";
 export { default as circleX } from "./circle-x.svg";
 export { default as nft } from "./nft.svg";
 export { default as sbt } from "./sbt.svg";
-export { default as point } from "./point.svg";
-
 
 export { default as arrowUpRight } from "./arrowUpRight.svg";
 
 export { default as closeCircle } from "./closeCircle.svg";
 export { default as point } from "./point.svg";
-
 
 export { default as box1 } from "./box1.svg";
 export { default as box2 } from "./box2.svg";
@@ -77,4 +72,3 @@ export { default as diamondLight } from "./diamondLight.svg";
 export { default as diamondDark } from "./diamondDark.svg";
 export { default as championLight } from "./championLight.svg";
 export { default as championDark } from "./championDark.svg";
-
