@@ -140,6 +140,9 @@ export const creatorAvatarProps = [
     status: 1, // 0 - Ended, 1 - Ranking
     avatar: "/images/avatar.png",
     useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
   },
   {
     title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
@@ -152,6 +155,9 @@ export const creatorAvatarProps = [
     status: 1, // 0 - Ended, 1 - Ranking
     avatar: "/images/avatar.png",
     useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
   },
   {
     title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
@@ -164,6 +170,9 @@ export const creatorAvatarProps = [
     status: 1, // 0 - Ended, 1 - Ranking
     avatar: "/images/avatar.png",
     useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
   },
   {
     title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
@@ -176,6 +185,9 @@ export const creatorAvatarProps = [
     status: 1, // 0 - Ended, 1 - Ranking
     avatar: "/images/avatar.png",
     useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
   },
   {
     title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
@@ -188,6 +200,9 @@ export const creatorAvatarProps = [
     status: 1, // 0 - Ended, 1 - Ranking
     avatar: "/images/avatar.png",
     useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
   },
 ];
 
@@ -204,17 +219,17 @@ export const creatorsData = [
   },
   {
     name: "Creator Name",
-    width: 100,
+    width: 175,
     icon: "/svgs/createQuest.svg",
   },
   {
     name: "Creator Name",
-    width: 100,
+    width: 175,
     icon: "/svgs/createQuest.svg",
   },
   {
     name: "Creator Name",
-    width: 100,
+    width: 175,
     icon: "/svgs/createQuest.svg",
   },
 ];

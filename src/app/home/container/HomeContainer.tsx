@@ -155,8 +155,8 @@ export const HomeContainer = () => {
         onClick: handleViewAll,
       },
       endingSoonCarouselProps: {
+        slideType: "card",
         slides: creatorAvatarProps,
-        slideType: "creator",
         options: OPTIONS,
       },
     },
@@ -167,7 +167,7 @@ export const HomeContainer = () => {
         onClick: handleViewAll,
       },
       recommededCarouselProps: {
-        slideType: "card",
+        slideType: "creator",
         slides: creatorsData,
         options: OPTIONS,
       },
