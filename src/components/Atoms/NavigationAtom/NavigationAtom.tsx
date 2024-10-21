@@ -68,10 +68,7 @@ const NavigationAtom = (props: Props) => {
           {isLoggedIn ? (
             <>
               <div className='relative'>
-                <a
-                  href='#'
-                  className='inline-block text-2xl md:rounded-[0.625rem] md:bg-[rgb(0,0,0)] md:px-2 md:py-0.5'
-                >
+                <button className='inline-block text-2xl md:rounded-[0.625rem] md:bg-[rgb(0,0,0)] md:px-2 md:py-0.5 md:text-white'>
                   {isViewed && (
                     <div className='absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#00FF00] md:-right-[0.8125rem] md:-top-[0.625rem] md:h-[1.5625rem] md:w-[1.5625rem]'>
                       <p className='text-xs font-medium text-[#000000] md:text-sm'>
@@ -81,21 +78,18 @@ const NavigationAtom = (props: Props) => {
                   )}
                   <BellOutlined
                     className='rounded p-0.5 text-black hover:bg-[#00FF00] hover:text-black 
-                   md:p-0 md:text-white md:hover:bg-transparent md:hover:text-[#00FF00]'
+                   md:p-0 md:hover:bg-transparent md:hover:text-[#00FF00]'
                     style={{ fontSize: "20px" }}
                   />
-                </a>
+                </button>
               </div>
-              <a
-                href='#'
-                className='inline-block text-2xl md:rounded-[0.625rem] md:bg-[rgb(0,0,0)] md:px-2 md:py-0.5'
-              >
+              <button className='inline-block text-2xl md:rounded-[0.625rem] md:bg-[rgb(0,0,0)] md:px-2 md:py-0.5 md:text-white'>
                 <UserOutlined
                   className='rounded p-0.5 text-black hover:bg-[#00FF00] hover:text-black 
-                   md:p-0 md:text-white md:hover:bg-transparent md:hover:text-[#00FF00]'
+                   md:p-0 md:hover:bg-transparent md:hover:text-[#00FF00]'
                   style={{ fontSize: "20px" }}
                 />
-              </a>
+              </button>
             </>
           ) : (
             <a
