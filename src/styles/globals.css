@@ -88,6 +88,7 @@ a {
   overflow: hidden;
   height: 8px;
   background-color: #a9a9a9;
+}
 
 @layer utilities {
   .scrollbar-custom {
@@ -109,5 +110,4 @@ a {
   .scrollbar-custom::-webkit-scrollbar-track {
     background: transparent !important;
   }
-
 }
