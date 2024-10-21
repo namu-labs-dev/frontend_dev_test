@@ -5,12 +5,9 @@ import { FiSend } from "react-icons/fi";
 import { FaDiscord } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { usePathname } from "next/navigation";
+import { FaRegCopyright } from "react-icons/fa";
 
-type Props = {
-  title: string | React.ReactNode;
-};
-
-const FooterAtom = (props: Props) => {
+const FooterAtom = () => {
   //All props would be adjusted based on the code-convention when building modules
 
   //const title = "@FANDOM GLOBAL PTE LTD";
@@ -34,7 +31,8 @@ const FooterAtom = (props: Props) => {
       <header className='mt-2 items-center justify-between px-8 py-4 md:flex'>
         <div className='my-2 items-center md:my-1 md:flex'>
           <span className='flex font-bold md:mr-[3rem] lg:mr-[6rem]'>
-            {props.title}
+            <FaRegCopyright className='mr-3' /> {new Date().getFullYear()}{" "}
+            FandomKorea. All rights reserved.
           </span>
           <nav className=' mt-5 md:mt-0'>
             <ul className='md:flex md:space-x-6'>
