@@ -1,7 +1,9 @@
-import { message } from "antd";
+import React from "react";
 import useDummyCreatorData from "~/hooks/useDummyCreatorData";
 import useDummyNotificationData from "~/hooks/useDummyNotification";
 import useDummyQuestData from "~/hooks/useDummyQuestData";
+import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
+import { message } from "antd";
 import { type EmblaOptionsType } from "embla-carousel";
 import { creatorAvatarProps } from "~/utils/common";
 // import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
@@ -21,7 +23,6 @@ import CreatorLabelGroupAtom from "~/components/Atoms/CreatorLabelGroupAtom/Crea
 import CreatorWrapAtom from "~/components/Atoms/CreatorWrapAtom/CreatorWrapAtom";
 import CreatorCarousel from "~/components/Components/CreatorCarousel/CreatorCarousel";
 import { TypeOf } from "zod";
-import { HomeEndingSoonCarouselTemplate } from "~/components/Templates/Home/HomeEndingSoonCarouselTemplate";
 
 export const HomeContainer = () => {
   const creators = useDummyCreatorData();
@@ -39,6 +40,12 @@ export const HomeContainer = () => {
   //   tabs: ["Check In", "Quiz", "Gacha"],
   // };
   const handleViewAll = () => {
+    return null;
+  };
+  const handleCancelPurchase = () => {
+    return null;
+  };
+  const handleUsers = () => {
     return null;
   };
   // const handleCancelPurchase = () => {
@@ -134,13 +141,17 @@ export const HomeContainer = () => {
 
   const OPTIONS: EmblaOptionsType = { align: "start" };
 
-  const homeTempateProps: React.ComponentProps<
-    typeof HomeEndingSoonCarouselTemplate
-  > = {
+  const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
+    homeHeaderModuleProps: {
+      headerProps: {
+        creators: creators,
+        notifications: notifications,
+      },
+    },
     homeEndingSoonModuleprops: {
       endingSoonSectionHeaderProps: {
         buttonText: "View All",
-        heading: { text: "Popular Quest" },
+        heading: { text: "Ending Soon" },
         onClick: handleViewAll,
       },
       endingSoonCarouselProps: {
@@ -149,23 +160,21 @@ export const HomeContainer = () => {
       },
     },
   };
-  // return <HomeTemplate {...homeTemplateProps} />;
-  return (
-    <div>
-      {/* <FooterAtom />
-      <ViewAllSectionTabAtom {...viewAllProps} />
-      <SectionWithTabsAtom {...displayTabs} />
-      <DailyEarnMenuAtom {...displayTabs} />
-      <GachaPopUpCardAtom {...gachaModalProps} />
-      <CreatorCarouselAvatarAtom {...creatorAvatarProps} />
-      <CreateQuestAvatarAtom {...createQuestAvatarProps} />
-      <CancelPurchasePopUpCardAtom {...camcelPurchaseModalProps} />
-      <FanQuestBlogPublishPopUpAtom {...fanBlogPostProp} />
-      <EmptyStateAtom {...emptyDataProps} />
-      <ListProfileAtom {...creatorPlatformProps} />
-      <CreatorLabelGroupAtom {...creatorLabelProps} />
-      <CreatorWrapAtom {...creatorWrapProps} /> */}
-      <HomeEndingSoonCarouselTemplate {...homeTempateProps} />
-    </div>
-  );
+  return <HomeTemplate {...homeTemplateProps} />;
 };
+
+{
+  /* <FooterAtom />
+  <ViewAllSectionTabAtom {...viewAllProps} />
+  <SectionWithTabsAtom {...displayTabs} />
+  <DailyEarnMenuAtom {...displayTabs} />
+  <GachaPopUpCardAtom {...gachaModalProps} />
+  <CreatorCarouselAvatarAtom {...creatorAvatarProps} />
+  <CreateQuestAvatarAtom {...createQuestAvatarProps} />
+  <CancelPurchasePopUpCardAtom {...camcelPurchaseModalProps} />
+  <FanQuestBlogPublishPopUpAtom {...fanBlogPostProp} />
+  <EmptyStateAtom {...emptyDataProps} />
+  <ListProfileAtom {...creatorPlatformProps} />
+  <CreatorLabelGroupAtom {...creatorLabelProps} />
+  <CreatorWrapAtom {...creatorWrapProps} /> */
+}

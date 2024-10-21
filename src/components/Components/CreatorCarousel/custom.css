@@ -17,7 +17,7 @@
   backface-visibility: hidden;
   display: flex;
   gap: 3rem;
-  touch-action: pan-y pinch-zoom;
+  /* touch-action: pan-y pinch-zoom; */
   margin-left: calc(var(--slide-spacing) * -1);
 }
 @media (min-width: 750px) {
