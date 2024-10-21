@@ -5,7 +5,7 @@ import useDummyQuestData from "~/hooks/useDummyQuestData";
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 import { message } from "antd";
 import { type EmblaOptionsType } from "embla-carousel";
-import { creatorAvatarProps } from "~/utils/common";
+import { creatorAvatarProps, creatorsData } from "~/utils/common";
 // import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 import FooterAtom from "~/components/Atoms/FooterAtom/FooterAtom";
 import ViewAllSectionTabAtom from "~/components/Atoms/ViewAllSectionTabAtom/ViewAllSectionTabAtom";
@@ -156,6 +156,19 @@ export const HomeContainer = () => {
       },
       endingSoonCarouselProps: {
         slides: creatorAvatarProps,
+        slideType: "creator",
+        options: OPTIONS,
+      },
+    },
+    homeRecommendedModuleprops: {
+      recommendedHeaderProps: {
+        buttonText: "View All",
+        heading: { text: "Recommended Creator" },
+        onClick: handleViewAll,
+      },
+      recommededCarouselProps: {
+        slideType: "card",
+        slides: creatorsData,
         options: OPTIONS,
       },
     },

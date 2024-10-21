@@ -3,6 +3,9 @@ import { type EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import { PrevButton, usePrevNextButtons, NextButton } from "./CarouselBtn";
 import "./custom.css";
+import CreatorCarouselAvatarAtom from "~/components/Atoms/CreatorCarouselAvatarAtom/CreatorCarouselAvatarAtom";
+import { ListAtom } from "~/components/Atoms/ListAtom/ListAtom";
+import CreateQuestAvatarAtom from "~/components/Atoms/CreateQuestAvatarAtom/CreateQuestAvatarAtom";
 
 type CreatorProps = {
   title?: string; // Title
@@ -14,9 +17,12 @@ type CreatorProps = {
   status?: number; // Status
   bannerColor?: string; // Banner Color Options
   useShadow?: boolean; // Use Shadow
+  name?: string;
+  width?: number;
 };
 
 type Props = {
+  slideType: string;
   options?: EmblaOptionsType;
   slides: CreatorProps[];
 };
@@ -35,7 +41,23 @@ const CreatorCarousel = (props: PropsWithChildren<Props>) => {
   return (
     <section className='embla'>
       <div className='embla__viewport' ref={emblaRef}>
-        <div className='embla__container'>{props.children}</div>
+        {props.slideType === "card" ? (
+          <div className='embla__container'>
+            {props.slides.map((slide, index) => (
+              <div className='embla__slide' key={index}>
+                <CreatorCarouselAvatarAtom {...slide} />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className='embla__container'>
+            {props.slides.map((slide, index) => (
+              <div className='embla__slide' key={index}>
+                <ListAtom {...slide} />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* <div className='embla__controls'>

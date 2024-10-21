@@ -128,7 +128,7 @@ export const errorMap: Record<ErrorStates, string> = {
 // for tailwindcss
 const cls = "text-[#DD270E] text-[#1838E0] border-[#DD270E] border-[#1838E0]";
 
-export const creatorAvatarProps  = [
+export const creatorAvatarProps = [
   {
     title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
     listPoint: 1000,
@@ -188,5 +188,33 @@ export const creatorAvatarProps  = [
     status: 1, // 0 - Ended, 1 - Ranking
     avatar: "/images/avatar.png",
     useShadow: false,
+  },
+];
+
+export const creatorsData = [
+  {
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/createQuest.svg",
+  },
+  {
+    name: "Creator Name",
+    width: 100,
+    icon: "/svgs/createQuest.svg",
+  },
+  {
+    name: "Creator Name",
+    width: 100,
+    icon: "/svgs/createQuest.svg",
+  },
+  {
+    name: "Creator Name",
+    width: 100,
+    icon: "/svgs/createQuest.svg",
   },
 ];
