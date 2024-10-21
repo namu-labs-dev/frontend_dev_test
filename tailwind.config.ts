@@ -25,6 +25,23 @@ export default {
       //     DEFAULT: "#1838E0",
       //   },
       // },
+      colors: {
+        "base-green": {
+          DEFAULT: "#00FF00",
+        },
+        "base-blue": {
+          DEFAULT: "#1838E0",
+        },
+        "faintAsh:": {
+          DEFAULT: "#8C8C8C",
+        },
+        footerLink: {
+          DEFAULT: "#777784",
+        },
+        blogPopUp: {
+          DEFAULT: "#475467",
+        },
+      },
       keyframes: {
         shimmer: {
           "0%": { backgroundPosition: "200% 0" },

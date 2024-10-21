@@ -9,7 +9,7 @@ type Props = {
   avatar?: string; // Avatar
   cover?: string; // Cover
   status?: number; // Status
-  bannerColor?: "green" | "blue"; // Banner Color Options
+  bannerColor?: string; // Banner Color Options
   useShadow?: boolean; // Use Shadow
 };
 
@@ -45,7 +45,8 @@ export const ListAtom = (props: Props) => {
 
   return (
     <Card
-      className={`max-h-[460px] w-[270px] bg-white sm:max-h-[515px] sm:w-[348px] xl:max-h-[483px] xl:w-[413px] ${shadow}`}
+      style={{ height: "100%" }}
+      className={`relative max-h-[400px] w-[270px] overflow-hidden bg-white sm:max-h-[515px] sm:w-[348px] xl:max-h-[483px] xl:w-[360px] ${shadow}`}
     >
       <div
         className={`h-[64px] w-full rounded-t-[20px] ${bannerBgColor} flex items-center justify-between px-4`}
@@ -139,14 +140,14 @@ export const ListAtom = (props: Props) => {
       </div>
 
       {cover && (
-        <div className='h-[220px] w-full'>
+        <div className='relative h-[220px] w-full'>
           <Image
             src={cover}
             alt='Cover'
             height='100%'
             width='100%'
             preview={false}
-            className='rounded-b-[20px] object-contain'
+            className='rounded-b-[20px] object-cover object-center'
           />
         </div>
       )}
