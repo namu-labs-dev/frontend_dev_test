@@ -40,7 +40,7 @@ const AuthForm = () => {
           </div>
 
           {/* Mobile Layout */}
-          <div className='relative flex h-screen w-full flex-col bg-[#302CF8] text-white md:hidden'>
+          <div className='relative flex h-screen w-full flex-col bg-[#302CF8] text-white lg:hidden'>
             {/* Text on top */}
             <div className='p-7'>
               <h1 className='inline-block bg-gradient-to-r from-[#FFFFFF] via-[#00FF00] to-[#F9FF3C] bg-clip-text text-[42px] font-black italic text-transparent'>
