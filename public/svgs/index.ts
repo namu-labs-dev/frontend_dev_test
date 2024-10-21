@@ -49,7 +49,6 @@ export { default as customStar } from "./customStar.svg";
 export { default as discord } from "./discord.svg";
 export { default as facebook } from "./facebook.svg";
 export { default as instagram } from "./instagram.svg";
-export { default as google } from "./google.svg";
 export { default as telegram } from "./telegram.svg";
 export { default as x } from "./x.svg";
 export { default as youtube } from "./youtube.svg";
