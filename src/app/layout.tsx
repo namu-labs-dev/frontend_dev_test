@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className={`${poppins}`}>
+    <html lang='en' className={``}>
       <body>
         <div>
           <GlobalLayout>{children}</GlobalLayout>
