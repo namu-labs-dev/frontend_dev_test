@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Image } from "antd";
+import { AuthStepOne } from "./AuthStepOne";
+import { AuthStepTwo } from "./AuthStepTwo";
+import { AuthStepThree } from "./AuthStepThree";
 
 const AuthForm = () => {
   const [step, setStep] = useState(4); // Track current step
@@ -23,6 +26,15 @@ const AuthForm = () => {
 
   return (
     <div>
+      {step === 1 && (
+        <AuthStepOne nextStep={nextStep} formData={formData} updateFormData={updateFormData} />
+      )}
+      {step === 2 && (
+        <AuthStepTwo nextStep={nextStep} prevStep={prevStep} formData={formData} updateFormData={updateFormData} />
+      )}
+      {step === 3 && (
+        <AuthStepThree nextStep={nextStep} prevStep={prevStep} formData={formData} updateFormData={updateFormData} />
+      )}
       {step === 4 && (
         <div className='flex min-h-screen flex-col items-center justify-center'>
           {/* Desktop Layout */}
@@ -32,6 +44,7 @@ const AuthForm = () => {
               src='./images/congrats.png'
               alt='Congrats'
               className='object-cover lg:max-h-[927px] lg:max-w-[800px]'
+              preview={false}
             />
             {/* Button below the image */}
             <button className='mt-4 w-full rounded-md border-2 border-black bg-[#00FF00] px-6 py-3 text-black'>
