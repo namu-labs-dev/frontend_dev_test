@@ -16,7 +16,7 @@ const DailyEarnMenuAtom = (props: Props) => {
         {props.tabs.map((tab, index) => (
           <button
             key={index}
-            className={`my-1 inline-block rounded-lg ${activeTab === tab && "text-primaryGreen bg-black px-1 py-1"}`}
+            className={`my-1 inline-block rounded-lg ${activeTab === tab && "text-base-green bg-black px-1 py-1"}`}
             onClick={() => handleTabClick(tab)} // Set active tab on click
           >
             {tab}

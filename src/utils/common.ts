@@ -140,3 +140,66 @@ This Policy applies to our collection, use and disclosure of Personal
 This Policy applies to our collection, use and disclosure of Personal 
 This Policy applies to our collection, use and disclosure of Personal 
 This Policy applies to our collection, use and disclosure of Personal `;
+
+export const creatorAvatarProps = [
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    cover: "/images/cover1.png",
+    bannerColor: "green",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    cover: "/images/cover1.png",
+    bannerColor: "green",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    cover: "/images/cover1.png",
+    bannerColor: "green",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    cover: "/images/cover1.png",
+    bannerColor: "green",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    cover: "/images/cover1.png",
+    bannerColor: "green",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+  },
+];

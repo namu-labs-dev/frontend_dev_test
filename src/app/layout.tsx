@@ -3,7 +3,6 @@ import "~/styles/globals.css";
 import { GeistSans } from "geist/font/sans";
 // import { Poppins } from "next/font/google";
 import GlobalLayout from "./globalLayout";
-import FooterAtom from "~/components/Atoms/FooterAtom/FooterAtom";
 
 export const metadata = {
   title: "Frontend test",
