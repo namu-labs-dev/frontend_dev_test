@@ -18,9 +18,9 @@ type CreatorProps = {
   status?: number; // Status
   bannerColor?: string; // Banner Color Options
   useShadow?: boolean; // Use Shadow
-  name: string;
-  width: number;
-  icon: string;
+  name?: string;
+  width?: number;
+  icon?: string;
 };
 
 type Props = {

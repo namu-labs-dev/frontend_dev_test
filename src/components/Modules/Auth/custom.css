@@ -1,0 +1,21 @@
+.ant-upload-wrapper.ant-upload-picture-circle-wrapper
+  .ant-upload.ant-upload-select {
+  width: 10rem !important;
+  height: 10rem !important;
+  border: 2px solid #000000 !important;
+  background-color: #bfbfbf !important;
+}
+
+.upload-button {
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .upload-button {
+    top: 10px;
+    left: 10px;
+    right: auto;
+  }
+}
