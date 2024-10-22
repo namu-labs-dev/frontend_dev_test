@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import GachaPopUpCardAtom from "~/components/Atoms/GachaPopUpCardAtom/GachaPopUpCardAtom";
+import { HomeErrorCardLayout } from "~/components/Components/CardLayout/HomeErrorCardLayout";
 import Link from "next/link";
 import { SocialIconAtom } from "~/components/Atoms/SocialIconAtom/SocialIconAtom";
 
@@ -25,9 +25,9 @@ export const HomeLoginPopUpModule = () => {
   return (
     <div>
       {isModalOpen && (
-        <div className='fixed left-0 top-0 z-50 flex h-screen w-full items-center justify-center bg-black bg-opacity-50'>
-          <GachaPopUpCardAtom
-            gachaTitle={
+        <div className='fixed left-0 top-0 z-50 flex h-screen w-full items-center justify-center overflow-y-auto bg-black bg-opacity-50 pt-[140px]'>
+          <HomeErrorCardLayout
+            title={
               <div className='text-left'>
                 <span className='text-2xl'>FANQUEST</span>
                 <br />
@@ -36,7 +36,7 @@ export const HomeLoginPopUpModule = () => {
                 </span>
               </div>
             }
-            gachaMessage={
+            message={
               <div className='flex w-full flex-col'>
                 <div className='mt-6 flex flex-col gap-y-3'>
                   <div className='font-medium'>Sign in with</div>
@@ -89,7 +89,6 @@ export const HomeLoginPopUpModule = () => {
                 </div>
               </div>
             }
-            width='538px'
             isModalOpen={isModalOpen}
             setModalOpen={handleToggleModal}
           />
