@@ -9,7 +9,11 @@ import nft from "../../../../public/pngs/NFTImage.png";
 import heroImage1 from "../../../../public/pngs/heroImage1.png";
 import { message } from "antd";
 import { type EmblaOptionsType } from "embla-carousel";
-import { creatorAvatarProps, creatorsData } from "~/utils/common";
+import {
+  creatorAvatarProps,
+  creatorsData,
+  noCoverCreatorProps,
+} from "~/utils/common";
 // import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 import FooterAtom from "~/components/Atoms/FooterAtom/FooterAtom";
 import ViewAllSectionTabAtom from "~/components/Atoms/ViewAllSectionTabAtom/ViewAllSectionTabAtom";
@@ -166,7 +170,6 @@ export const HomeContainer = () => {
         onClick: handleViewAll,
       },
       endingSoonCarouselProps: {
-        slideType: "card",
         slides: creatorAvatarProps,
         options: OPTIONS,
       },
@@ -178,8 +181,18 @@ export const HomeContainer = () => {
         onClick: handleViewAll,
       },
       recommededCarouselProps: {
-        slideType: "creator",
         slides: creatorsData,
+        options: OPTIONS,
+      },
+    },
+    homeNewQuestModuleProps: {
+      newQuestHeaderProps: {
+        buttonText: "View All",
+        heading: { text: "New Quest" },
+        onClick: handleViewAll,
+      },
+      newQuestCarouselProps: {
+        slides: noCoverCreatorProps,
         options: OPTIONS,
       },
     },

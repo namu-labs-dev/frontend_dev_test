@@ -1,13 +1,12 @@
 import React, { type PropsWithChildren, type ReactNode } from "react";
 import { type EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
-import { PrevButton, usePrevNextButtons, NextButton } from "./CarouselBtn";
+import {
+  PrevButton,
+  usePrevNextButtons,
+  NextButton,
+} from "./CarouselNavigation";
 import "./custom.css";
-import CreatorCarouselAvatarAtom from "~/components/Atoms/CreatorCarouselAvatarAtom/CreatorCarouselAvatarAtom";
-import { ListAtom } from "~/components/Atoms/ListAtom/ListAtom";
-import CreateQuestAvatarAtom from "~/components/Atoms/CreateQuestAvatarAtom/CreateQuestAvatarAtom";
-import { string } from "zod";
-import PrimaryBtn from "../PrimaryBtn/PrimaryBtn";
 
 type CreatorProps = {
   title?: string; // Title
@@ -25,11 +24,11 @@ type CreatorProps = {
 };
 
 type Props = {
-  slideType: string;
   options?: EmblaOptionsType;
   slides: CreatorProps[];
   removeLeftMargin?: boolean;
   reduceSlideWidth?: boolean;
+  increaseWidth?: boolean;
   slideRenderer: (slide: CreatorProps, index: number) => ReactNode; // Function to render slide
   renderNavButtons?: (props: {
     onPrev: () => void;
@@ -52,11 +51,14 @@ const CreatorCarousel = (props: Props) => {
 
   return (
     <section
-      className={`embla ${props.removeLeftMargin ? "remove-left-margin" : ""} ${
-        props.reduceSlideWidth ? "reduce-slide-width" : ""
+      className={`embla ${props.increaseWidth && "increase-embla-width"} ${props.removeLeftMargin ? "remove-left-margin" : ""} ${
+        props.reduceSlideWidth && "reduce-slide-width"
       }`}
     >
-      <div className='embla__viewport' ref={emblaRef}>
+      <div
+        className={`embla__viewport ${props.increaseWidth && "increase-embla-width"}`}
+        ref={emblaRef}
+      >
         <div className='embla__container'>
           {props.slides.map((slide, index) => (
             <div className='embla__slide ' key={index}>

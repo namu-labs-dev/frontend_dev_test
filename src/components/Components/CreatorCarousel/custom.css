@@ -15,9 +15,14 @@
   --slide-size-sm: 45%; /* Reduced width for medium screens */
   --slide-size-lg: calc(100% / 4); /* Reduced width for large screens */
 }
+
 .embla__viewport {
   overflow: hidden;
   margin-left: 7rem;
+}
+.embla__viewport.increase-embla-width {
+  overflow: visible;
+  /* margin-left: 7rem; */
 }
 .embla__container {
   backface-visibility: hidden;
@@ -38,9 +43,9 @@
 }
 @media (min-width: 1200px) {
   .embla.remove-left-margin .embla__container {
-    margin-left: -4rem !important;
+    margin-left: -10rem !important;
     padding-left: 0;
-    gap: 0 !important;
+    gap: 2.5rem !important;
   }
 }
 .embla__slide {
