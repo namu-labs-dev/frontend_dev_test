@@ -24,7 +24,7 @@ export function SearchDropDown(props: Props) {
   return (
     <div
       className={clsx(
-        "rounded-common relative inline-block border-2 border-black",
+        "relative inline-block rounded-common border-2 border-black bg-white",
         { "rounded-b-none": isOpen }
       )}
     >
@@ -41,7 +41,7 @@ export function SearchDropDown(props: Props) {
 
       <ul
         className={clsx(
-          "rounded-b-common absolute -left-[1.7px] top-[95%] z-10 flex w-[103%] flex-col gap-5 border-2 border-black bg-white px-3 py-5",
+          "absolute -left-[1.7px] top-[95%] z-10 flex w-[103%] flex-col gap-5 rounded-b-common border-2 border-black bg-white px-3 py-5",
           {
             hidden: !isOpen,
             "border-t-transparent": !isOpen,
