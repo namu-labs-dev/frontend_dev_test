@@ -1,4 +1,7 @@
-import { Props, Reward } from "~/components/Components/RewardOps/RewardOps";
+import {
+  type Props,
+  type Reward,
+} from "~/components/Components/RewardOps/RewardOps";
 
 import { type ErrorStates } from "~/components/Components/TextInput/TextInput";
 
