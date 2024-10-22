@@ -83,7 +83,7 @@
   display: flex;
   position: absolute;
   width: 100%;
-  bottom: 5rem;
+  bottom: 9rem;
   padding-inline: 3rem;
   grid-template-columns: auto 1fr;
   justify-content: space-between;
