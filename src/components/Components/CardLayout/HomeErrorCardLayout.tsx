@@ -1,9 +1,10 @@
+import React from "react";
 import CardLayout from "./CardLayout";
 import { FaCircleNotch } from "react-icons/fa";
 
 type Props = {
-  title: string;
-  message: string;
+  title: string | React.ReactNode;
+  message: string | React.ReactNode;
   isModalOpen: boolean;
   setModalOpen: (value: boolean) => void;
   loadingAnimation?: boolean;
