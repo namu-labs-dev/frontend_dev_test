@@ -24,15 +24,13 @@ export default {
         "base-blue": {
           DEFAULT: "#1838E0",
         },
-        "faintAsh:": {
-          DEFAULT: "#8C8C8C",
-        },
-        footerLink: {
-          DEFAULT: "#777784",
-        },
-        blogPopUp: {
-          DEFAULT: "#475467",
-        },
+        primaryBlue: "#1838E0",
+        primaryGreen: "#00FF00",
+        primaryRed: "#F5222D",
+
+        faintAsh: "#8C8C8C",
+        footerLink: "#777784",
+        blogPopUp: "#475467",
       },
       keyframes: {
         shimmer: {
