@@ -74,4 +74,5 @@ export { default as diamondLight } from "./diamondLight.svg";
 export { default as diamondDark } from "./diamondDark.svg";
 export { default as championLight } from "./championLight.svg";
 export { default as championDark } from "./championDark.svg";
+export { default as download } from "./download.svg";
 export { default as arrowRight } from "./arrowRight.svg";
