@@ -2,6 +2,9 @@ import { useState } from "react";
 import Image from "next/image";
 import fanquest_logo from "../../../../public/pngs/fanquest_logo.png";
 import { BellOutlined, UserOutlined, MenuOutlined } from "@ant-design/icons";
+import { UserPopOutAtom } from "../PopOutAtom/UserPopOutAtom";
+import { Popover, Button } from "antd";
+import { NotificationPopOutAtom } from "../PopOutAtom/NotificationPopOutAtom";
 
 type Props = {
   creators: any;
@@ -67,8 +70,14 @@ const NavigationAtom = (props: Props) => {
           </a>
           {isLoggedIn ? (
             <>
-              <div className='relative'>
-                <button className='inline-block text-2xl md:rounded-[0.625rem] md:bg-[rgb(0,0,0)] md:px-2 md:py-0.5 md:text-white'>
+              <Popover
+                className='relative'
+                content={<NotificationPopOutAtom />}
+                trigger='click'
+                placement='bottomRight'
+                arrow={false}
+              >
+                <button className='inline-block text-2xl md:rounded-[0.625rem] md:!bg-[rgb(0,0,0)] md:!py-0.5 md:px-2'>
                   {isViewed && (
                     <div className='absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#00FF00] md:-right-[0.8125rem] md:-top-[0.625rem] md:h-[1.5625rem] md:w-[1.5625rem]'>
                       <p className='text-xs font-medium text-[#000000] md:text-sm'>
@@ -77,19 +86,28 @@ const NavigationAtom = (props: Props) => {
                     </div>
                   )}
                   <BellOutlined
-                    className='rounded p-0.5 text-black hover:bg-[#00FF00] hover:text-black 
-                   md:p-0 md:hover:bg-transparent md:hover:text-[#00FF00]'
+                    className='!relative  !rounded !p-0.5 !text-black hover:!bg-[#00FF00] hover:!text-black 
+                   md:!p-0 md:!text-white md:hover:!bg-transparent md:hover:!text-[#00FF00]'
                     style={{ fontSize: "20px" }}
                   />
                 </button>
-              </div>
-              <button className='inline-block text-2xl md:rounded-[0.625rem] md:bg-[rgb(0,0,0)] md:px-2 md:py-0.5 md:text-white'>
-                <UserOutlined
-                  className='rounded p-0.5 text-black hover:bg-[#00FF00] hover:text-black 
-                   md:p-0 md:hover:bg-transparent md:hover:text-[#00FF00]'
-                  style={{ fontSize: "20px" }}
-                />
-              </button>
+              </Popover>
+
+              <Popover
+                className=''
+                content={<UserPopOutAtom />}
+                trigger='click'
+                placement='bottomRight'
+                arrow={false}
+              >
+                <Button className='inline-block text-2xl md:rounded-[0.625rem] md:!bg-[rgb(0,0,0)] md:!px-2 md:!py-0.5'>
+                  <UserOutlined
+                    className='rounded p-0.5 text-black hover:bg-[#00FF00] hover:text-black 
+                   md:p-0 md:!text-white md:hover:!bg-transparent md:hover:!text-[#00FF00]'
+                    style={{ fontSize: "20px" }}
+                  />
+                </Button>
+              </Popover>
             </>
           ) : (
             <a
