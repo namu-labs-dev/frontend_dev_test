@@ -1,4 +1,3 @@
-
 "use client";
 
 import clsx from "clsx";
@@ -15,9 +14,15 @@ type Props = {
 
 export function AuthHeaderModule(props: Props) {
   return (
-    <div className="flex flex-row">
-        <SVGAtom iconName="closeCircle"></SVGAtom>
-        <span>{props.title}</span>
-    </div>
+    <nav className='border-b-2 border-[#000000] p-4'>
+      <div className='flex h-16 items-center justify-between md:h-[5.875rem]'>
+        <div className='flex items-center space-x-4'>
+          <div className='h-8 w-8' onClick={props.onClickIcon} >
+            <SVGAtom iconName='closeCircle'></SVGAtom>
+          </div>
+          <span className=" text-[#262626] text-lg font-medium leading-[27px] ">{props.title}</span>
+        </div>
+      </div>
+    </nav>
   );
 }

@@ -18,7 +18,7 @@ export function LegalHeaderModule(props: Props) {
     <div>
       <NavigationAtom {...props.navigationProps} />
 
-      <div className='flex items-center justify-between p-5'>
+      <div className='flex items-center justify-between p-5 px-[40px]'>
         <Title className='hidden text-[42px] font-black italic lg:block'>
           {props.title}
         </Title>
@@ -26,7 +26,7 @@ export function LegalHeaderModule(props: Props) {
         <div>
           <Button
             className={clsx("border-transparent", {
-              "text-base-green bg-black": props.legal === "tos",
+              "bg-black text-base-green": props.legal === "tos",
             })}
             onClick={() => props.onChangeLegal("tos")}
           >
@@ -35,7 +35,7 @@ export function LegalHeaderModule(props: Props) {
 
           <Button
             className={clsx("border-transparent", {
-              "text-base-green bg-black": props.legal === "privacy",
+              "bg-black text-base-green": props.legal === "privacy",
             })}
             onClick={() => props.onChangeLegal("privacy")}
           >

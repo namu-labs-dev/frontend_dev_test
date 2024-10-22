@@ -11,9 +11,12 @@ export const AuthFormContainer = () => {
       setFormData,
     },
     authHeaderModuleProps: {
-      title: "Sign Up",
-      onClickIcon: undefined,
-      navigationProps: undefined,
+        title: "Sign Up",
+        onClickIcon: undefined,
+        navigationProps: {
+            creators: undefined,
+            notifications: undefined
+        }
     },
   };
 

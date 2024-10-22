@@ -9,11 +9,12 @@ type Props = {
 };
 
 const AuthForm = (props: Props) => {
-  const [step, setStep] = useState(4); // Track current step
+  const [step, setStep] = useState(1); // Track current step
   const [formData, setFormData] = useState({
     username: "",
     avatar: null,
-    // Add other fields as needed
+    categories: [],
+    referral: "",
   });
 
   const nextStep = () => setStep(step + 1);
@@ -31,13 +32,27 @@ const AuthForm = (props: Props) => {
   return (
     <div>
       {step === 1 && (
-        <AuthStepOne nextStep={nextStep} formData={formData} updateFormData={updateFormData} />
+        <AuthStepOne
+          nextStep={nextStep}
+          formData={formData}
+          updateFormData={updateFormData}
+        />
       )}
       {step === 2 && (
-        <AuthStepTwo nextStep={nextStep} prevStep={prevStep} formData={formData} updateFormData={updateFormData} />
+        <AuthStepTwo
+          nextStep={nextStep}
+          prevStep={prevStep}
+          formData={formData}
+          updateFormData={updateFormData}
+        />
       )}
       {step === 3 && (
-        <AuthStepThree nextStep={nextStep} prevStep={prevStep} formData={formData} updateFormData={updateFormData} />
+        <AuthStepThree
+          nextStep={nextStep}
+          prevStep={prevStep}
+          formData={formData}
+          updateFormData={updateFormData}
+        />
       )}
       {step === 4 && (
         <div className='flex min-h-screen flex-col items-center justify-center'>
