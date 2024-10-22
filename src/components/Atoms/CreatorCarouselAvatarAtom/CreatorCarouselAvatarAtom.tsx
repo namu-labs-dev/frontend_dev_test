@@ -4,17 +4,18 @@ import React from "react";
 type Props = {
   name: string;
   icon: string;
+  width: number;
 };
 
 const CreatorCarouselAvatarAtom = (props: Props) => {
   return (
-    <div className='mx-auto flex items-center justify-center gap-x-4'>
-      <div className='flex flex-col gap-y-2 p-2 text-center'>
-        <div className='relative size-[100px]  md:size-[176px]'>
+    <div className='mx-auto  flex items-center justify-center gap-x-4'>
+      <div className='flex flex-col gap-y-2 text-center'>
+        <div className='relative'>
           <Image
-            className='relative object-cover object-center'
-            fill
             src={props.icon}
+            width={props.width}
+            height={props.width}
             alt=''
           />
         </div>

@@ -9,7 +9,7 @@ import nft from "../../../../public/pngs/NFTImage.png";
 import heroImage1 from "../../../../public/pngs/heroImage1.png";
 import { message } from "antd";
 import { type EmblaOptionsType } from "embla-carousel";
-import { creatorAvatarProps } from "~/utils/common";
+import { creatorAvatarProps, creatorsData } from "~/utils/common";
 // import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 import FooterAtom from "~/components/Atoms/FooterAtom/FooterAtom";
 import ViewAllSectionTabAtom from "~/components/Atoms/ViewAllSectionTabAtom/ViewAllSectionTabAtom";
@@ -166,7 +166,20 @@ export const HomeContainer = () => {
         onClick: handleViewAll,
       },
       endingSoonCarouselProps: {
+        slideType: "card",
         slides: creatorAvatarProps,
+        options: OPTIONS,
+      },
+    },
+    homeRecommendedModuleprops: {
+      recommendedHeaderProps: {
+        buttonText: "View All",
+        heading: { text: "Recommended Creator" },
+        onClick: handleViewAll,
+      },
+      recommededCarouselProps: {
+        slideType: "creator",
+        slides: creatorsData,
         options: OPTIONS,
       },
     },

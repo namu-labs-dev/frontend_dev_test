@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import CreatorLayout from "../../Components/CreatorLayout/CreatorLayout";
+import { type EmblaOptionsType } from "embla-carousel";
 
 type Props = {
   name: string;
