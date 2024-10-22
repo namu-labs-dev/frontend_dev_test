@@ -15,7 +15,10 @@ export function SingleNoticeContainer(props: Props) {
     typeof SingleNoticeTemplate
   > = {
     noticeContentModuleProps: {
-      //
+      notice,
+    },
+    noticeFooterModuleProps: {
+      notice,
     },
   };
 
