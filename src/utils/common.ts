@@ -177,6 +177,8 @@ This Policy applies to our collection, use and disclosure of Personal
 This Policy applies to our collection, use and disclosure of Personal 
 This Policy applies to our collection, use and disclosure of Personal `;
 
+// home page data : prevent excess data on the HomeContainer
+
 export const creatorAvatarProps = [
   {
     title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
