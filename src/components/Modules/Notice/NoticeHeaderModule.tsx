@@ -7,7 +7,7 @@ type Props = {
 
 export function NoticeHeaderModule(props: Props) {
   return (
-    <div className='hidden items-center justify-between p-5 px-[40px] lg:flex'>
+    <div className='hidden items-center justify-between py-5 lg:flex'>
       <Title className='text-[42px] font-black italic'>Notice</Title>
 
       <Button className='bg-black text-lg font-medium text-base-green'>

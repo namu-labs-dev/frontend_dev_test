@@ -1,5 +1,6 @@
 "use client";
 
+import FooterAtom from "~/components/Atoms/FooterAtom/FooterAtom";
 import { MobileNavigationAtom } from "~/components/Atoms/MobileNavigationAtom/MobileNavigationAtom";
 import NavigationAtom from "~/components/Atoms/NavigationAtom/NavigationAtom";
 
@@ -17,6 +18,8 @@ export function NoticeLayout(props: Props) {
       <MobileNavigationAtom title='Notice' />
 
       {props.children}
+
+      <FooterAtom />
     </div>
   );
 }
