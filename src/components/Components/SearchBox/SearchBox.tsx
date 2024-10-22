@@ -8,15 +8,15 @@ type Props = {
 
 export function SearchBox({ type = "text", ...props }: Props) {
   return (
-    <div className='rounded-common flex overflow-hidden border-2 border-black'>
+    <div className='flex overflow-hidden rounded-common border-2 border-black'>
       <input
         type={type}
         {...props}
         placeholder='search'
-        className='flex-1 px-4 py-[15px] outline-none'
+        className='w-[90%] px-4 py-[15px] outline-none placeholder:text-base placeholder:font-medium placeholder:text-black'
         id='ns_search'
       />
-      <label htmlFor='ns_search' className='m-0 block py-[15px] pr-4'>
+      <label htmlFor='ns_search' className='block bg-white py-[15px] pr-4'>
         <SVGAtom iconName='search' className='h-[21px] w-[21px]' />
       </label>
     </div>

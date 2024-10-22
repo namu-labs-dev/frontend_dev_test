@@ -131,6 +131,39 @@ export const errorMap: Record<ErrorStates, string> = {
 // for tailwindcss
 const cls = "text-[#DD270E] text-[#1838E0] border-[#DD270E] border-[#1838E0]";
 
+export const popularCreatorAvatarProps = [
+  {
+    name: "Creator name",
+    icon: "/images/creatorAvatar1.png",
+    width: 176,
+  },
+  {
+    name: "Creator name",
+    icon: "/images/creatorAvatar2.png",
+    width: 176,
+  },
+  {
+    name: "Creator name",
+    icon: "/images/creatorAvatar3.png",
+    width: 176,
+  },
+  {
+    name: "Creator name",
+    icon: "/images/creatorAvatar4.png",
+    width: 176,
+  },
+  {
+    name: "Creator name",
+    icon: "/images/creatorAvatar5.png",
+    width: 176,
+  },
+  {
+    name: "Creator name",
+    icon: "/images/creatorAvatar6.png",
+    width: 176,
+  },
+];
+
 export const tos = `This Privacy Policy (“Policy”) describes how Star Frameworks Labs Pte Ltd., d/b/a Galxe with registered office at 3 Fraser Street, #05-25, Duo Tower, Singapore, 189352 (company number 202201184M), and its affiliates (collectively, “Galxe” “we” “us” or “our”) collects, uses, and discloses information related to the users of the website https://app.galxe.com/ (“Website”) and/or our mobile application (“App”), if offered, and any other related and connected platforms and other online and offline interactions (collectively, the “Services”).
 Your use of our Services is subject to our Terms of Use, available at https://gal.xyz/tos, which includes applicable terms governing limitations on liability and the resolution of disputes. By using the Services, you accept and agree to the practices described in this Policy. If you do not agree with this Policy, please do not use the Services or provide us with any Personal Information (as defined below).
 ​
@@ -321,5 +354,96 @@ export const creatorsData = [
     name: "Creator Name",
     width: 175,
     icon: "/svgs/createQuest.svg",
+  },
+];
+
+export const testNotices = [
+  {
+    id: "1",
+    title: "Notice title",
+    timestamp: "0000-00-00",
+    description: "Notice Description",
+    content:
+      "test test\n Join our exciting quest on QuestN to explore Fermion Protocol!\n\n Learn about our innovative approach to tokenizing and trading verified physcial real-world assets.\n\n Participate in educational activities and quizzes to deepen your understanding and stand a chance to win your share of $500 in rewards.\n\n Start your journey today and unlock the potential of Fermion Protocol. For more information visit our website.",
+    img: "/images/reward.png",
+    filename: "filename.png",
+    filesize: "4 mb",
+  },
+  {
+    id: "2",
+    title: "Notice title",
+    timestamp: "0000-00-00",
+    description: "Notice Description",
+    content:
+      "test test\n Join our exciting quest on QuestN to explore Fermion Protocol!\n\n Learn about our innovative approach to tokenizing and trading verified physcial real-world assets.\n\n Participate in educational activities and quizzes to deepen your understanding and stand a chance to win your share of $500 in rewards.\n\n Start your journey today and unlock the potential of Fermion Protocol. For more information visit our website.",
+    img: "/images/reward.png",
+    filename: "filename.png",
+    filesize: "4 mb",
+  },
+  {
+    id: "3",
+    title: "Notice title",
+    timestamp: "0000-00-00",
+    description: "Notice Description",
+    content:
+      "test test\n Join our exciting quest on QuestN to explore Fermion Protocol!\n\n Learn about our innovative approach to tokenizing and trading verified physcial real-world assets.\n\n Participate in educational activities and quizzes to deepen your understanding and stand a chance to win your share of $500 in rewards.\n\n Start your journey today and unlock the potential of Fermion Protocol. For more information visit our website.",
+    img: "/images/reward.png",
+    filename: "filename.png",
+    filesize: "4 mb",
+  },
+  {
+    id: "4",
+    title: "Notice title",
+    timestamp: "0000-00-00",
+    description: "Notice Description",
+    content:
+      "test test\n Join our exciting quest on QuestN to explore Fermion Protocol!\n\n Learn about our innovative approach to tokenizing and trading verified physcial real-world assets.\n\n Participate in educational activities and quizzes to deepen your understanding and stand a chance to win your share of $500 in rewards.\n\n Start your journey today and unlock the potential of Fermion Protocol. For more information visit our website.",
+    img: "/images/reward.png",
+    filename: "filename.png",
+    filesize: "4 mb",
+  },
+  {
+    id: "5",
+    title: "Notice title",
+    timestamp: "0000-00-00",
+    description: "Notice Description",
+    content:
+      "test test\n Join our exciting quest on QuestN to explore Fermion Protocol!\n\n Learn about our innovative approach to tokenizing and trading verified physcial real-world assets.\n\n Participate in educational activities and quizzes to deepen your understanding and stand a chance to win your share of $500 in rewards.\n\n Start your journey today and unlock the potential of Fermion Protocol. For more information visit our website.",
+    img: "/images/reward.png",
+    filename: "filename.png",
+    filesize: "4 mb",
+  },
+  {
+    id: "6",
+    title: "Notice title",
+    timestamp: "0000-00-00",
+    description: "Notice Description",
+    content:
+      "test test\n Join our exciting quest on QuestN to explore Fermion Protocol!\n\n Learn about our innovative approach to tokenizing and trading verified physcial real-world assets.\n\n Participate in educational activities and quizzes to deepen your understanding and stand a chance to win your share of $500 in rewards.\n\n Start your journey today and unlock the potential of Fermion Protocol. For more information visit our website.",
+    img: "/images/reward.png",
+    filename: "filename.png",
+    filesize: "4 mb",
+  },
+  {
+    id: "7",
+    title: "Notice title",
+    timestamp: "0000-00-00",
+    description: "Notice Description",
+    content:
+      "test test\n Join our exciting quest on QuestN to explore Fermion Protocol!\n\n Learn about our innovative approach to tokenizing and trading verified physcial real-world assets.\n\n Participate in educational activities and quizzes to deepen your understanding and stand a chance to win your share of $500 in rewards.\n\n Start your journey today and unlock the potential of Fermion Protocol. For more information visit our website.",
+    img: "/images/reward.png",
+    filename: "filename.png",
+    filesize: "4 mb",
+  },
+  {
+    id: "8",
+    title: "Notice title",
+    timestamp: "0000-00-00",
+    description: "Notice Description",
+    content:
+      "test test\n Join our exciting quest on QuestN to explore Fermion Protocol!\n\n Learn about our innovative approach to tokenizing and trading verified physcial real-world assets.\n\n Participate in educational activities and quizzes to deepen your understanding and stand a chance to win your share of $500 in rewards.\n\n Start your journey today and unlock the potential of Fermion Protocol. For more information visit our website.",
+    img: "/images/reward.png",
+    filename: "filename.png",
+    filesize: "4 mb",
   },
 ];

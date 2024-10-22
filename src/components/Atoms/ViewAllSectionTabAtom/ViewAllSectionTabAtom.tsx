@@ -12,7 +12,7 @@ type Props = {
 
 const ViewAllSectionTabAtom = (props: Props) => {
   return (
-    <div className='ml-[10%] flex items-center  justify-center gap-[30rem] pb-[2%] '>
+    <div className='flex items-center justify-center gap-x-[10rem]  pb-[2%] md:ml-[10%] md:gap-x-[30rem] '>
       {/* section heading */}
       <ModuleHeadingAtom {...props.heading} />
       <PrimaryBtn {...props}>

@@ -24,6 +24,7 @@ const HomeRecommendedModule = (props: Props) => {
           <CreatorCarouselAvatarAtom key={index} {...slide} />
         )}
         reduceSlideWidth={true}
+        removeLeftMargin={true}
         renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
           <div className='embla__controls z-10'>
             <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
