@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 
 type Props = {
-  name: string;
+  name?: string;
   icon: string;
-  width: number;
+  width?: number;
 };
 
 const CreatorCarouselAvatarAtom = (props: Props) => {

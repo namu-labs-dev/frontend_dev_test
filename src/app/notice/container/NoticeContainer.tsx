@@ -1,12 +1,24 @@
 "use client";
 
 import React from "react";
-import { NoticeTemplate } from "~/components/Templates/Notice/NoticeTemplate";
+import { NoticesTemplate } from "~/components/Templates/Notice/NoticesTemplate";
+import { testNotices } from "~/utils/common";
 
 export function NoticeContainer() {
-  const noticeTemplateProps: React.ComponentProps<typeof NoticeTemplate> = {
+  const noticeTemplateProps: React.ComponentProps<typeof NoticesTemplate> = {
     noticeHeaderModuleProps: {},
+    noticeListModuleProps: {
+      notices: testNotices,
+    },
+    noticeFooterModuleProps: {
+      paginationProps: {
+        currentPage: 1,
+      },
+    },
+    noticeSearchModuleProps: {
+      noticesLength: testNotices.length,
+    },
   };
 
-  return <NoticeTemplate {...noticeTemplateProps} />;
+  return <NoticesTemplate {...noticeTemplateProps} />;
 }
