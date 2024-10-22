@@ -4,7 +4,11 @@ import { AuthStepOne } from "./AuthStepOne";
 import { AuthStepTwo } from "./AuthStepTwo";
 import { AuthStepThree } from "./AuthStepThree";
 
-const AuthForm = () => {
+type Props = {
+  setFormData: (data: any) => void;
+};
+
+const AuthForm = (props: Props) => {
   const [step, setStep] = useState(4); // Track current step
   const [formData, setFormData] = useState({
     username: "",
