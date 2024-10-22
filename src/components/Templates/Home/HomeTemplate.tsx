@@ -1,11 +1,25 @@
-import { HomeModule } from "~/components/Modules/Home/HomeModule";
+import { HomeHeaderModule } from "~/components/Modules/Home/HomeHeaderModule";
+import { Layout } from "antd";
+import { Content, Footer, Header } from "antd/es/layout/layout";
+import { HomeEndingSoonCarouselModule } from "~/components/Modules/Home/HomeEndingSoonCarouselModule";
 
 type Props = {
-  homeModuleProps: React.ComponentProps<typeof HomeModule>;
+  homeHeaderModuleProps: React.ComponentProps<typeof HomeHeaderModule>;
+  homeEndingSoonModuleprops: React.ComponentProps<
+    typeof HomeEndingSoonCarouselModule
+  >;
 };
 
 export function HomeTemplate(props: Props) {
+  return (
+    <Layout style={{ height: "100%" }}>
+      {/* <HomeHeaderModule {...props.homeHeaderModuleProps} /> */}
 
-  return <HomeModule {...props.homeModuleProps} />;
+      <Content>
+        <HomeEndingSoonCarouselModule {...props.homeEndingSoonModuleprops} />;
+      </Content>
 
+      <Footer style={{ padding: 0, minHeight: 50 }}></Footer>
+    </Layout>
+  );
 }
