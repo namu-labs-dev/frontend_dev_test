@@ -4,6 +4,7 @@ import CreatorCarousel from "~/components/Components/CreatorCarousel/CreatorCaro
 import PrimaryBtn from "~/components/Components/PrimaryBtn/PrimaryBtn";
 import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
 import { ListAtom } from "~/components/Atoms/ListAtom/ListAtom";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 type Props = {
   promotedQuestHeaderProps: React.ComponentProps<typeof ViewAllSectionTabAtom>;
@@ -15,10 +16,11 @@ type Props = {
 
 const HomePromotedQuestModule = (props: Props) => {
   return (
-    <div className='relative py-[3%]'>
+    <div className='relative py-[2%]'>
       <ViewAllSectionTabAtom {...props.promotedQuestHeaderProps} />
       <CreatorCarousel
         {...props.promotedQuestCarouselProps}
+        removeLeftMargin={true}
         slideRenderer={(slide, index) => <ListAtom key={index} {...slide} />}
         renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
           <div className='embla__controls z-10'>
@@ -31,7 +33,7 @@ const HomePromotedQuestModule = (props: Props) => {
               />
             </PrimaryBtn>
             <button onClick={onNext} disabled={nextDisabled}>
-              Next
+              <FaLongArrowAltRight />
             </button>
           </div>
         )}

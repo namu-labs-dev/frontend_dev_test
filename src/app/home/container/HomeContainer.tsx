@@ -178,7 +178,7 @@ export const HomeContainer = () => {
     homeEndingSoonModuleprops: {
       endingSoonSectionHeaderProps: {
         buttonText: "View All",
-        heading: { text: "Ending Soon" },
+        heading: { text: "⏰ Ending Soon" },
         onClick: handleViewAll,
       },
       endingSoonCarouselProps: {
@@ -189,7 +189,7 @@ export const HomeContainer = () => {
     homeRecommendedModuleprops: {
       recommendedHeaderProps: {
         buttonText: "View All",
-        heading: { text: "Recommended Creator" },
+        heading: { text: "🚀 Recommended Creator" },
         onClick: handleViewAll,
       },
       recommededCarouselProps: {
@@ -200,7 +200,7 @@ export const HomeContainer = () => {
     homeNewQuestModuleProps: {
       newQuestHeaderProps: {
         buttonText: "View All",
-        heading: { text: "New Quest" },
+        heading: { text: "✨ New Quest" },
         onClick: handleViewAll,
       },
       newQuestCarouselProps: {
@@ -211,7 +211,7 @@ export const HomeContainer = () => {
     homePromotedQuestModuleProps: {
       promotedQuestHeaderProps: {
         buttonText: "View All",
-        heading: { text: "Promoted Quest" },
+        heading: { text: "🤡 Promoted Quest" },
         onClick: handleViewAll,
       },
       promotedQuestCarouselProps: {
@@ -222,7 +222,7 @@ export const HomeContainer = () => {
     homeQuestBannerModuleProps: {
       questBannerHeaderProps: {
         text: "Enjoy a variety of Quests",
-        classNames: `text-center text-3xl`,
+        classNames: `text-center`,
       },
       questBannerProps: {
         rankingBtnText: "Ranking Quest",

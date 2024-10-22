@@ -14,7 +14,7 @@ type Props = {
 export const BannerQuestAtom = (props: Props) => {
   return (
     <div className='flex flex-col items-center justify-center gap-y-5 p-[4%] md:flex-row md:gap-x-10 md:p-2'>
-      <div className='bg-primaryGreen relative h-[15.635rem] w-[25rem] max-w-2xl overflow-hidden rounded-[1.875rem] border-2 border-[#0C0D0F] px-6 pt-6 md:h-[18.635rem] md:w-[30.0625rem]'>
+      <div className='bg-primaryGreen relative h-[15.635rem] w-[20rem] max-w-2xl overflow-hidden rounded-[1.875rem] border-2 border-[#0C0D0F] px-6 pt-6 md:h-[18.635rem] md:w-[30.0625rem]'>
         <div className='space-y-3.5'>
           <SecondaryBtn color='blue' onClick={props.onClickRanking}>
             {props.rankingBtnText}
@@ -38,7 +38,7 @@ export const BannerQuestAtom = (props: Props) => {
           />
         </div>
       </div>
-      <div className='relative h-[15.635rem] w-[25rem] max-w-2xl overflow-hidden rounded-[30px] border-2 border-[#0C0D0F] bg-[#1838E0] px-6 pt-6 md:h-[18.635rem] md:w-[30.0625rem]'>
+      <div className='relative h-[15.635rem] w-[20rem] max-w-2xl overflow-hidden rounded-[30px] border-2 border-[#0C0D0F] bg-[#1838E0] px-6 pt-6 md:h-[18.635rem] md:w-[30.0625rem]'>
         <div className='space-y-3.5'>
           <SecondaryBtn color='green' onClick={props.onClickRaffle}>
             {props.raffleBtnText}

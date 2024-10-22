@@ -14,14 +14,14 @@ type Props = {
 
 const HomeNewQuestModule = (props: Props) => {
   return (
-    <div className='relative py-[3%]'>
+    <div className='relative py-[2%]'>
       <ViewAllSectionTabAtom {...props.newQuestHeaderProps} />
       <CreatorCarousel
         {...props.newQuestCarouselProps}
         slideRenderer={(slide, index) => <ListAtom key={index} {...slide} />}
         removeLeftMargin={true}
         increaseWidth={true}
-        reduceSlideWidth={true}
+        // reduceSlideWidth={true}
       />
     </div>
   );
