@@ -13,13 +13,13 @@ type Props = {
 
 export const BannerQuestAtom = (props: Props) => {
   return (
-    <div className='flex items-center justify-center gap-x-10'>
-      <div className='bg-primaryGreen relative  h-[18.635rem] w-[30.0625rem] max-w-2xl overflow-hidden rounded-[1.875rem] border-2 border-[#0C0D0F] px-6 pt-6'>
+    <div className='flex flex-col items-center justify-center gap-y-5 p-[4%] md:flex-row md:gap-x-10 md:p-2'>
+      <div className='bg-primaryGreen relative h-[15.635rem] w-[25rem] max-w-2xl overflow-hidden rounded-[1.875rem] border-2 border-[#0C0D0F] px-6 pt-6 md:h-[18.635rem] md:w-[30.0625rem]'>
         <div className='space-y-3.5'>
           <SecondaryBtn color='blue' onClick={props.onClickRanking}>
             {props.rankingBtnText}
           </SecondaryBtn>
-          <div className='w-[16.875rem]'>
+          <div className='relative z-10 max-w-[16.875rem] md:w-[16.87rem]'>
             <p className='text-sm font-medium '>{props.rankingQuestInfo}</p>
           </div>
         </div>
@@ -38,13 +38,13 @@ export const BannerQuestAtom = (props: Props) => {
           />
         </div>
       </div>
-      <div className='relative h-[18.635rem] w-[30.0625rem] max-w-2xl overflow-hidden rounded-[30px] border-2 border-[#0C0D0F] bg-[#1838E0] px-6 pt-6'>
+      <div className='relative h-[15.635rem] w-[25rem] max-w-2xl overflow-hidden rounded-[30px] border-2 border-[#0C0D0F] bg-[#1838E0] px-6 pt-6 md:h-[18.635rem] md:w-[30.0625rem]'>
         <div className='space-y-3.5'>
           <SecondaryBtn color='green' onClick={props.onClickRaffle}>
             {props.raffleBtnText}
           </SecondaryBtn>
-          <div className='w-[16.875rem]'>
-            <p className='text-sm font-medium text-white '>
+          <div className='max-w-[16.875rem] md:w-[16.875rem]'>
+            <p className='relative z-10 text-sm font-medium text-white '>
               {props.raffleQuestInfo}
             </p>
           </div>
