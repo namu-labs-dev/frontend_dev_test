@@ -4,13 +4,15 @@ import useDummyNotificationData from "~/hooks/useDummyNotification";
 import useDummyQuestData from "~/hooks/useDummyQuestData";
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 import avatar from "../../../../public/pngs/avatar.png";
-import fanquest from "../../../../public/pngs/fanquest_logo.png";
 import nft from "../../../../public/pngs/NFTImage.png";
+import cover1 from "../../../../public/images/cover1.png";
 import heroImage1 from "../../../../public/pngs/heroImage1.png";
 import { message } from "antd";
 import { type EmblaOptionsType } from "embla-carousel";
+import {} from "~/utils/common";
 import {
   creatorAvatarProps,
+  popularCreatorAvatarProps,
   creatorsData,
   noCoverCreatorProps,
 } from "~/utils/common";
@@ -63,7 +65,7 @@ export const HomeContainer = () => {
   //   return null;
   // };
 
-  const heroImages = [heroImage1, nft, fanquest];
+  const heroImages = [heroImage1, nft, cover1];
 
   //All props would be adjusted based on the code-convention when building modules
 
@@ -161,6 +163,16 @@ export const HomeContainer = () => {
     homeHeroModuleProps: {
       heroProps: {
         images: heroImages,
+      },
+    },
+    homePopularCreatorModuleProps: {
+      popularCreatorHeaderProps: {
+        buttonText: "View All",
+        heading: { text: "🔥 Popular Creator" },
+        onClick: handleViewAll,
+      },
+      popularCreatorCarouselProps: {
+        slides: popularCreatorAvatarProps,
       },
     },
     homeEndingSoonModuleprops: {
