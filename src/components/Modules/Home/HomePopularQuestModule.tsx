@@ -21,21 +21,22 @@ export const HomePopularQuestModule = (props: Props) => {
       <CreatorCarousel
         {...props.popularQuestCarouselProps}
         slideRenderer={(slide, index) => <ListAtom key={index} {...slide} />}
-        renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
-          <div className='embla__controls z-10'>
-            <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
-              <SVGAtom
-                className='text-center'
-                iconName='arrowLeftLong'
-                width={20}
-                height={20}
-              />
-            </PrimaryBtn>
-            <button onClick={onNext} disabled={nextDisabled}>
-              Next
-            </button>
-          </div>
-        )}
+        removeLeftMargin={true}
+        // renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
+        //   <div className='embla__controls z-10'>
+        //     <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
+        //       <SVGAtom
+        //         className='text-center'
+        //         iconName='arrowLeftLong'
+        //         width={20}
+        //         height={20}
+        //       />
+        //     </PrimaryBtn>
+        //     <button onClick={onNext} disabled={nextDisabled}>
+        //       Next
+        //     </button>
+        //   </div>
+        // )}
       />
     </div>
   );
