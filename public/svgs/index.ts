@@ -31,6 +31,7 @@ export { default as arrowUpRight } from "./arrowUpRight.svg";
 
 export { default as closeCircle } from "./closeCircle.svg";
 export { default as point } from "./point.svg";
+export { default as arrowLeftLong } from "./arrowLeftLong.svg";
 
 // export { default as box1 } from "./box1.svg";
 // export { default as box2 } from "./box2.svg";

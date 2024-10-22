@@ -4,25 +4,24 @@ import CreatorCarousel from "~/components/Components/CreatorCarousel/CreatorCaro
 
 type Props = {
   popularCreatorHeaderProps: React.ComponentProps<typeof ViewAllSectionTabAtom>;
-  popularCreatorCarouselProps: React.ComponentProps<typeof CreatorCarousel>;
+  popularCreatorCarouselProps: Omit<
+    React.ComponentProps<typeof CreatorCarousel>,
+    "slideRenderer"
+  >;
 };
 
 export const HomePopularCreatorModule = (props: Props) => {
   console.log(props.popularCreatorCarouselProps);
-
   return (
     <>
       <ViewAllSectionTabAtom {...props.popularCreatorHeaderProps} />
-      <CreatorCarousel {...props.popularCreatorCarouselProps}>
-        {props.popularCreatorCarouselProps.slides.map((slide, index) => (
-          <div className='embla__slide'>
-            <CreatorCarouselAvatarAtom
-              name={slide.title ?? ""}
-              icon={slide.avatar ?? ""}
-            />
-          </div>
-        ))}
-      </CreatorCarousel>
+      <CreatorCarousel
+        {...props.popularCreatorCarouselProps}
+        slideRenderer={(slide, index) => (
+          <CreatorCarouselAvatarAtom key={index} {...slide} />
+        )}
+        reduceSlideWidth={true}
+      />
     </>
   );
 };

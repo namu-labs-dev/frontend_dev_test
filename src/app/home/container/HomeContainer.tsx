@@ -4,13 +4,18 @@ import useDummyNotificationData from "~/hooks/useDummyNotification";
 import useDummyQuestData from "~/hooks/useDummyQuestData";
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 import avatar from "../../../../public/pngs/avatar.png";
-import fanquest from "../../../../public/pngs/fanquest_logo.png";
 import nft from "../../../../public/pngs/NFTImage.png";
+import cover1 from "../../../../public/images/cover1.png";
 import heroImage1 from "../../../../public/pngs/heroImage1.png";
 import { message } from "antd";
 import { type EmblaOptionsType } from "embla-carousel";
-import { creatorAvatarProps } from "~/utils/common";
-import { popularCreatorAvatarProps } from "~/utils/common";
+import {} from "~/utils/common";
+import {
+  creatorAvatarProps,
+  popularCreatorAvatarProps,
+  creatorsData,
+  noCoverCreatorProps,
+} from "~/utils/common";
 // import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 import FooterAtom from "~/components/Atoms/FooterAtom/FooterAtom";
 import ViewAllSectionTabAtom from "~/components/Atoms/ViewAllSectionTabAtom/ViewAllSectionTabAtom";
@@ -60,7 +65,7 @@ export const HomeContainer = () => {
   //   return null;
   // };
 
-  const heroImages = [heroImage1, nft, fanquest];
+  const heroImages = [heroImage1, nft, cover1];
 
   //All props would be adjusted based on the code-convention when building modules
 
@@ -160,6 +165,16 @@ export const HomeContainer = () => {
         images: heroImages,
       },
     },
+    homePopularCreatorModuleProps: {
+      popularCreatorHeaderProps: {
+        buttonText: "View All",
+        heading: { text: "🔥 Popular Creator" },
+        onClick: handleViewAll,
+      },
+      popularCreatorCarouselProps: {
+        slides: popularCreatorAvatarProps,
+      },
+    },
     homeEndingSoonModuleprops: {
       endingSoonSectionHeaderProps: {
         buttonText: "View All",
@@ -171,14 +186,26 @@ export const HomeContainer = () => {
         options: OPTIONS,
       },
     },
-    homePopularCreatorModuleProps: {
-      popularCreatorHeaderProps: {
+    homeRecommendedModuleprops: {
+      recommendedHeaderProps: {
         buttonText: "View All",
-        heading: { text: "🔥 Popular Quest" },
+        heading: { text: "Recommended Creator" },
         onClick: handleViewAll,
       },
-      popularCreatorCarouselProps: {
-        slides: popularCreatorAvatarProps,
+      recommededCarouselProps: {
+        slides: creatorsData,
+        options: OPTIONS,
+      },
+    },
+    homeNewQuestModuleProps: {
+      newQuestHeaderProps: {
+        buttonText: "View All",
+        heading: { text: "New Quest" },
+        onClick: handleViewAll,
+      },
+      newQuestCarouselProps: {
+        slides: noCoverCreatorProps,
+        options: OPTIONS,
       },
     },
   };
