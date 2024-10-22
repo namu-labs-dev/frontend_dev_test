@@ -3,6 +3,7 @@ import { HomeHeroModule } from "~/components/Modules/Home/HomeHeroModule";
 import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
 import { HomeEndingSoonCarouselModule } from "~/components/Modules/Home/HomeEndingSoonCarouselModule";
+import { HomePopularQuestModule } from "~/components/Modules/Home/HomePopularQuestModule";
 import { HomePopularCreatorModule } from "~/components/Modules/Home/HomePopularCreatorModule";
 import HomeRecommendedModule from "~/components/Modules/Home/HomeRecommendedModule";
 import HomeNewQuestModule from "~/components/Modules/Home/HomeNewQuestModule";
@@ -12,6 +13,9 @@ type Props = {
   homeHeroModuleProps: React.ComponentProps<typeof HomeHeroModule>;
   homePopularCreatorModuleProps: React.ComponentProps<
     typeof HomePopularCreatorModule
+  >;
+  homePopularQuestModuleprops: React.ComponentProps<
+    typeof HomePopularQuestModule
   >;
   homeEndingSoonModuleprops: React.ComponentProps<
     typeof HomeEndingSoonCarouselModule
@@ -30,6 +34,7 @@ export function HomeTemplate(props: Props) {
       <Content>
         <HomeHeroModule {...props.homeHeroModuleProps} />
         <HomePopularCreatorModule {...props.homePopularCreatorModuleProps} />
+        <HomePopularQuestModule {...props.homePopularQuestModuleprops} />
         <HomeEndingSoonCarouselModule {...props.homeEndingSoonModuleprops} />;
         <HomeRecommendedModule {...props.homeRecommendedModuleprops} />
         <HomeNewQuestModule {...props.homeNewQuestModuleProps} />

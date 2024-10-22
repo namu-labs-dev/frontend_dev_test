@@ -13,6 +13,7 @@ import {} from "~/utils/common";
 import {
   creatorAvatarProps,
   popularCreatorAvatarProps,
+  popularQuestData,
   creatorsData,
   noCoverCreatorProps,
 } from "~/utils/common";
@@ -175,10 +176,21 @@ export const HomeContainer = () => {
         slides: popularCreatorAvatarProps,
       },
     },
+    homePopularQuestModuleprops: {
+      homePopularQuestHeaderProps: {
+        buttonText: "View All",
+        heading: { text: "🔥 Popular Quest" },
+        onClick: handleViewAll,
+      },
+      popularQuestCarouselProps: {
+        slides: popularQuestData,
+        options: OPTIONS,
+      },
+    },
     homeEndingSoonModuleprops: {
       endingSoonSectionHeaderProps: {
         buttonText: "View All",
-        heading: { text: "Ending Soon" },
+        heading: { text: "⏰ Ending Soon" },
         onClick: handleViewAll,
       },
       endingSoonCarouselProps: {
@@ -189,7 +201,7 @@ export const HomeContainer = () => {
     homeRecommendedModuleprops: {
       recommendedHeaderProps: {
         buttonText: "View All",
-        heading: { text: "Recommended Creator" },
+        heading: { text: "🚀 Recommended Creator" },
         onClick: handleViewAll,
       },
       recommededCarouselProps: {
