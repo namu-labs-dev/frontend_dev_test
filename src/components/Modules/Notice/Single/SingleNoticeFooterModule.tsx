@@ -23,13 +23,13 @@ export function SingleNoticeFooterModule(props: Props) {
             <SVGAtom iconName='arrowLeftLong' className='h-4 w-4' />
           </button>
 
-          <Text className='text-lg font-medium group-hover:font-bold'>
+          <Text className='hidden text-lg font-medium group-hover:font-bold lg:block'>
             Notice title
           </Text>
         </div>
 
         <div className='group flex cursor-pointer items-center gap-5'>
-          <Text className='text-lg font-medium group-hover:font-bold'>
+          <Text className='hidden text-lg font-medium group-hover:font-bold lg:block'>
             Notice title
           </Text>
 
