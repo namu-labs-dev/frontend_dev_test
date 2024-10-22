@@ -170,6 +170,13 @@ export const HomeContainer = () => {
         options: OPTIONS,
       },
     },
+    homePopularCreatorModuleProps: {
+      popularCreatorHeaderProps: {
+        buttonText: "View All",
+        heading: { text: "🔥 Popular Creator" },
+        onClick: handleViewAll,
+      },
+    },
   };
   return <HomeTemplate {...homeTemplateProps} />;
 };
