@@ -1,8 +1,17 @@
 import { SearchAndDropDown } from "~/components/Components/SearchAndDropDown/SearchAndDropDown";
+import { Title } from "~/components/Components/Title/Title";
 
-export function NoticeSearchModule() {
+type Props = {
+  noticesLength: number;
+};
+
+export function NoticeSearchModule(props: Props) {
   return (
     <div className='mt-6 flex w-full'>
+      <Title className='hidden text-lg font-medium lg:block'>
+        Total {props.noticesLength}
+      </Title>
+
       <div className='lg:ml-auto'>
         <SearchAndDropDown
           filterOptions={[{ id: "1", label: "Title", value: "title" }]}

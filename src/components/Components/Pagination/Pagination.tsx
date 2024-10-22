@@ -13,7 +13,11 @@ export function Pagination({ total = 50, limit = 10, ...props }: Props) {
   return (
     <div className='mx-auto flex w-fit items-center'>
       <button className='flex h-7 w-7 items-center justify-center'>
-        <SVGAtom iconName='arrowRight' className='h-3 w-3 rotate-180' />
+        <SVGAtom
+          iconName='arrowRight'
+          className='h-3 w-3 rotate-180'
+          color='#D9D9D9'
+        />
       </button>
 
       {Array.from({ length: pages }).map((i, idx) => (

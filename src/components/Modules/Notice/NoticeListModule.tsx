@@ -22,7 +22,7 @@ export function NoticeListModule(props: Props) {
 
   return (
     <div className=''>
-      <Title level={1} className='my-6 text-xl font-bold'>
+      <Title level={1} className='my-6 text-xl font-bold lg:hidden'>
         {" "}
         {noticesLength} Notices{" "}
       </Title>

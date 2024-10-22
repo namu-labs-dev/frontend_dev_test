@@ -15,6 +15,9 @@ export function NoticeContainer() {
         currentPage: 1,
       },
     },
+    noticeSearchModuleProps: {
+      noticesLength: testNotices.length,
+    },
   };
 
   return <NoticesTemplate {...noticeTemplateProps} />;

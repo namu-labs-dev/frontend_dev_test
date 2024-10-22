@@ -9,6 +9,7 @@ type Props = {
   noticeHeaderModuleProps: React.ComponentProps<typeof NoticeHeaderModule>;
   noticeListModuleProps: React.ComponentProps<typeof NoticeListModule>;
   noticeFooterModuleProps: React.ComponentProps<typeof NoticeFooterModule>;
+  noticeSearchModuleProps: React.ComponentProps<typeof NoticeSearchModule>;
 };
 
 export function NoticesTemplate(props: Props) {
@@ -16,7 +17,7 @@ export function NoticesTemplate(props: Props) {
     <section className='px-6 pb-6 lg:px-[40px]'>
       <NoticeHeaderModule {...props.noticeHeaderModuleProps} />
 
-      <NoticeSearchModule />
+      <NoticeSearchModule {...props.noticeSearchModuleProps} />
 
       <NoticeListModule {...props.noticeListModuleProps} />
 
