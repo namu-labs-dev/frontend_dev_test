@@ -11,9 +11,9 @@ type Props = {
   status?: number; // Status
   bannerColor?: string; // Banner Color Options
   useShadow?: boolean; // Use Shadow
-  name: string;
+  name?: string;
   width?: number;
-  icon: string;
+  icon?: string;
 };
 
 export const ListAtom = (props: Props) => {

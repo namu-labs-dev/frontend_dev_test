@@ -212,12 +212,39 @@ export const HomeContainer = () => {
     homeNewQuestModuleProps: {
       newQuestHeaderProps: {
         buttonText: "View All",
-        heading: { text: "New Quest" },
+        heading: { text: "✨ New Quest" },
         onClick: handleViewAll,
       },
       newQuestCarouselProps: {
         slides: noCoverCreatorProps,
         options: OPTIONS,
+      },
+    },
+    homePromotedQuestModuleProps: {
+      promotedQuestHeaderProps: {
+        buttonText: "View All",
+        heading: { text: "🤡 Promoted Quest" },
+        onClick: handleViewAll,
+      },
+      promotedQuestCarouselProps: {
+        slides: noCoverCreatorProps,
+        options: OPTIONS,
+      },
+    },
+    homeQuestBannerModuleProps: {
+      questBannerHeaderProps: {
+        text: "Enjoy a variety of Quests",
+        classNames: `text-center`,
+      },
+      questBannerProps: {
+        rankingBtnText: "Ranking Quest",
+        rankingQuestInfo:
+          "The more quests you complete to take first place, the more rewards you will receive.",
+        raffleBtnText: "Raffle Quest",
+        raffleQuestInfo:
+          "The more quests you complete to take first place, the more rewards you will receive.",
+        onClickRaffle: () => null,
+        onClickRanking: () => null,
       },
     },
   };

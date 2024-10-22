@@ -15,10 +15,11 @@ type Props = {
 
 export function HomeEndingSoonCarouselModule(props: Props) {
   return (
-    <div>
+    <div className='relative py-[2%]'>
       <ViewAllSectionTabAtom {...props.endingSoonSectionHeaderProps} />
       <CreatorCarousel
         {...props.endingSoonCarouselProps}
+        removeLeftMargin={true}
         slideRenderer={(slide, index) => <ListAtom key={index} {...slide} />}
       />
     </div>
