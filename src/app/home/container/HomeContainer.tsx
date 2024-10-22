@@ -9,7 +9,7 @@ import cover1 from "../../../../public/images/cover1.png";
 import heroImage1 from "../../../../public/pngs/heroImage1.png";
 import { message } from "antd";
 import { type EmblaOptionsType } from "embla-carousel";
-import {} from "~/utils/common";
+import { partnerIcons } from "~/utils/common";
 import {
   creatorAvatarProps,
   popularCreatorAvatarProps,
@@ -33,6 +33,8 @@ import CreatorLabelGroupAtom from "~/components/Atoms/CreatorLabelGroupAtom/Crea
 import CreatorWrapAtom from "~/components/Atoms/CreatorWrapAtom/CreatorWrapAtom";
 import CreatorCarousel from "~/components/Components/CreatorCarousel/CreatorCarousel";
 import { TypeOf } from "zod";
+import { FiSend } from "react-icons/fi";
+import { FaDiscord, FaTwitter } from "react-icons/fa";
 
 export const HomeContainer = () => {
   const creators = useDummyCreatorData();
@@ -235,22 +237,25 @@ export const HomeContainer = () => {
         onClickRanking: () => null,
       },
     },
+    homePartnersModuleProps: {
+      icons: partnerIcons,
+      text: "Partners",
+      classNames: `text-center `,
+    },
+    homeFooterModuleProps: {
+      footerTitle: "@FANDOM GLOBAL PTE LTD",
+      navLinks: [
+        { label: "Terms of Service", href: "/terms" },
+        { label: "Privacy Policy", href: "/privacy" },
+        { label: "Contact Us", href: "/contact" },
+        { label: "Notice", href: "/notice" },
+      ],
+      iconLinks: [
+        { icon: <FiSend size={30} />, href: "/twitter" },
+        { icon: <FaDiscord size={30} />, href: "/discord" },
+        { icon: <FaTwitter size={30} />, href: "/telegram" },
+      ],
+    },
   };
   return <HomeTemplate {...homeTemplateProps} />;
 };
-
-{
-  /* <FooterAtom />
-  <ViewAllSectionTabAtom {...viewAllProps} />
-  <SectionWithTabsAtom {...displayTabs} />
-  <DailyEarnMenuAtom {...displayTabs} />
-  <GachaPopUpCardAtom {...gachaModalProps} />
-  <CreatorCarouselAvatarAtom {...creatorAvatarProps} />
-  <CreateQuestAvatarAtom {...createQuestAvatarProps} />
-  <CancelPurchasePopUpCardAtom {...camcelPurchaseModalProps} />
-  <FanQuestBlogPublishPopUpAtom {...fanBlogPostProp} />
-  <EmptyStateAtom {...emptyDataProps} />
-  <ListProfileAtom {...creatorPlatformProps} />
-  <CreatorLabelGroupAtom {...creatorLabelProps} />
-  <CreatorWrapAtom {...creatorWrapProps} /> */
-}

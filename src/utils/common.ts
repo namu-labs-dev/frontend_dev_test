@@ -353,3 +353,14 @@ export const creatorsData = [
     icon: "/svgs/createQuest.svg",
   },
 ];
+export const partnerIcons = [
+  "/svgs/part2.svg",
+  "/svgs/part3.svg",
+  "/svgs/part4.svg",
+  "/svgs/part5.svg",
+  "/svgs/part6.svg",
+  "/svgs/part7.svg",
+  "/svgs/part8.svg",
+  "/svgs/part1.svg",
+  "/svgs/part9.svg",
+];
