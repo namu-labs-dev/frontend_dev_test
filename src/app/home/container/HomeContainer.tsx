@@ -10,6 +10,7 @@ import heroImage1 from "../../../../public/pngs/heroImage1.png";
 import { message } from "antd";
 import { type EmblaOptionsType } from "embla-carousel";
 import { creatorAvatarProps } from "~/utils/common";
+import { popularCreatorAvatarProps } from "~/utils/common";
 // import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 import FooterAtom from "~/components/Atoms/FooterAtom/FooterAtom";
 import ViewAllSectionTabAtom from "~/components/Atoms/ViewAllSectionTabAtom/ViewAllSectionTabAtom";
@@ -168,6 +169,16 @@ export const HomeContainer = () => {
       endingSoonCarouselProps: {
         slides: creatorAvatarProps,
         options: OPTIONS,
+      },
+    },
+    homePopularCreatorModuleProps: {
+      popularCreatorHeaderProps: {
+        buttonText: "View All",
+        heading: { text: "🔥 Popular Quest" },
+        onClick: handleViewAll,
+      },
+      popularCreatorCarouselProps: {
+        slides: popularCreatorAvatarProps,
       },
     },
   };

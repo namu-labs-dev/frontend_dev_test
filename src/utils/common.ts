@@ -128,7 +128,34 @@ export const errorMap: Record<ErrorStates, string> = {
 // for tailwindcss
 const cls = "text-[#DD270E] text-[#1838E0] border-[#DD270E] border-[#1838E0]";
 
-export const creatorAvatarProps  = [
+export const popularCreatorAvatarProps = [
+  {
+    title: "Creator name",
+    avatar: "/images/creatorAvatar1.png",
+  },
+  {
+    title: "Creator name",
+    avatar: "/images/creatorAvatar2.png",
+  },
+  {
+    title: "Creator name",
+    avatar: "/images/creatorAvatar3.png",
+  },
+  {
+    title: "Creator name",
+    avatar: "/images/creatorAvatar4.png",
+  },
+  {
+    title: "Creator name",
+    avatar: "/images/creatorAvatar5.png",
+  },
+  {
+    title: "Creator name",
+    avatar: "/images/creatorAvatar6.png",
+  },
+];
+
+export const creatorAvatarProps = [
   {
     title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
     listPoint: 1000,
