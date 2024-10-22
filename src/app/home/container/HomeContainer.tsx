@@ -196,6 +196,22 @@ export const HomeContainer = () => {
         options: OPTIONS,
       },
     },
+    homeQuestBannerModuleProps: {
+      questBannerHeaderProps: {
+        text: "Enjoy a variety of Quests",
+        classNames: `text-center text-3xl`,
+      },
+      questBannerProps: {
+        rankingBtnText: "Ranking Quest",
+        rankingQuestInfo:
+          "The more quests you complete to take first place, the more rewards you will receive.",
+        raffleBtnText: "Raffle Quest",
+        raffleQuestInfo:
+          "The more quests you complete to take first place, the more rewards you will receive.",
+        onClickRaffle: () => null,
+        onClickRanking: () => null,
+      },
+    },
   };
   return <HomeTemplate {...homeTemplateProps} />;
 };

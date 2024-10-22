@@ -34,6 +34,10 @@ export default {
           DEFAULT: "#475467",
         },
       },
+      backgroundColor: {
+        primaryGreen: "#00FF00",
+        primaryBlue: "#1838E0",
+      },
       keyframes: {
         shimmer: {
           "0%": { backgroundPosition: "200% 0" },

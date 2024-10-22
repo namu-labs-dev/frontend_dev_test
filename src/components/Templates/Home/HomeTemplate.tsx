@@ -5,6 +5,7 @@ import { HomeEndingSoonCarouselModule } from "~/components/Modules/Home/HomeEndi
 import HomeRecommendedModule from "~/components/Modules/Home/HomeRecommendedModule";
 import HomeNewQuestModule from "~/components/Modules/Home/HomeNewQuestModule";
 import HomePromotedQuestModule from "~/components/Modules/Home/HomePromotedQuestModule";
+import HomeQuestBannersModule from "~/components/Modules/Home/HomeQuestBannersModule";
 
 type Props = {
   homeHeaderModuleProps: React.ComponentProps<typeof HomeHeaderModule>;
@@ -18,6 +19,9 @@ type Props = {
   homePromotedQuestModuleProps: React.ComponentProps<
     typeof HomePromotedQuestModule
   >;
+  homeQuestBannerModuleProps: React.ComponentProps<
+    typeof HomeQuestBannersModule
+  >;
 };
 
 export function HomeTemplate(props: Props) {
@@ -30,6 +34,7 @@ export function HomeTemplate(props: Props) {
         <HomeRecommendedModule {...props.homeRecommendedModuleprops} />
         <HomeNewQuestModule {...props.homeNewQuestModuleProps} />
         <HomePromotedQuestModule {...props.homePromotedQuestModuleProps} />
+        <HomeQuestBannersModule {...props.homeQuestBannerModuleProps} />
       </Content>
 
       <Footer style={{ padding: 0, minHeight: 50 }}></Footer>
