@@ -1,6 +1,6 @@
 import React from "react";
 import { DownOutlined } from "@ant-design/icons";
-import SVGAtom from "../SVGAtom/SVGAtom";
+import avatar from "../../../../public/pngs/avatar.png";
 
 export const NotificationPopOutAtom = () => {
   const data = [
@@ -69,14 +69,15 @@ export const NotificationPopOutAtom = () => {
           className={`mb-2 flex items-center py-2 ${item.read ? "text-gray-500" : "text-black"}`}
         >
           <div className='mr-4 flex h-[50px] w-[50px] flex-shrink-0 justify-center rounded-full'>
-            <SVGAtom
-              iconName='point'
-              className='h-full w-full object-contain'
+            <img
+              className='h-full w-full object-cover'
+              src={avatar.src}
+              alt='user avatar png'
             />
           </div>
           <div className='flex-1'>
             <div className='text-sm font-bold'>{item.username}</div>
-            <div className='my-2 text-xs'>{item.text}</div>
+            <div className='my-1 text-xs'>{item.text}</div>
             <div className='text-xs'>{item.date}</div>
           </div>
         </div>
