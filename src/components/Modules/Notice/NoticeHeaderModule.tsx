@@ -7,10 +7,12 @@ type Props = {
 
 export function NoticeHeaderModule(props: Props) {
   return (
-    <div className='hidden lg:block'>
-      <Title>Notice</Title>
+    <div className='hidden items-center justify-between p-5 px-[40px] lg:flex'>
+      <Title className='text-[42px] font-black italic'>Notice</Title>
 
-      <Button>FAN-QUEST Notice</Button>
+      <Button className='bg-black text-lg font-medium text-base-green'>
+        FAN-QUEST Notice
+      </Button>
     </div>
   );
 }
