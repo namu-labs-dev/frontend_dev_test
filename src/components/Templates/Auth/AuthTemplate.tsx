@@ -14,6 +14,14 @@ type Props = {
 export function AuthTemplate(props: Props) {
   return (
     <Layout style={{ height: "100%" }}>
+      <AuthHeaderModule
+        title={"Sign Up"}
+        navigationProps={{
+          creators: undefined,
+          notifications: undefined,
+        }}
+      />
+
       <Content>
         <AuthForm {...props.authFormModuleProps} />
       </Content>
