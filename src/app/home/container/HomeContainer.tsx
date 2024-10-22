@@ -3,9 +3,17 @@ import useDummyCreatorData from "~/hooks/useDummyCreatorData";
 import useDummyNotificationData from "~/hooks/useDummyNotification";
 import useDummyQuestData from "~/hooks/useDummyQuestData";
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
+import avatar from "../../../../public/pngs/avatar.png";
+import fanquest from "../../../../public/pngs/fanquest_logo.png";
+import nft from "../../../../public/pngs/NFTImage.png";
+import heroImage1 from "../../../../public/pngs/heroImage1.png";
 import { message } from "antd";
 import { type EmblaOptionsType } from "embla-carousel";
-import { creatorAvatarProps } from "~/utils/common";
+import {
+  creatorAvatarProps,
+  creatorsData,
+  noCoverCreatorProps,
+} from "~/utils/common";
 // import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 import FooterAtom from "~/components/Atoms/FooterAtom/FooterAtom";
 import ViewAllSectionTabAtom from "~/components/Atoms/ViewAllSectionTabAtom/ViewAllSectionTabAtom";
@@ -54,6 +62,8 @@ export const HomeContainer = () => {
   // const handleUsers = () => {
   //   return null;
   // };
+
+  const heroImages = [heroImage1, nft, fanquest];
 
   //All props would be adjusted based on the code-convention when building modules
 
@@ -144,8 +154,13 @@ export const HomeContainer = () => {
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
     homeHeaderModuleProps: {
       headerProps: {
-        creators: creators,
-        notifications: notifications,
+        creators: [],
+        notifications: [],
+      },
+    },
+    homeHeroModuleProps: {
+      heroProps: {
+        images: heroImages,
       },
     },
     homeEndingSoonModuleprops: {
@@ -156,6 +171,28 @@ export const HomeContainer = () => {
       },
       endingSoonCarouselProps: {
         slides: creatorAvatarProps,
+        options: OPTIONS,
+      },
+    },
+    homeRecommendedModuleprops: {
+      recommendedHeaderProps: {
+        buttonText: "View All",
+        heading: { text: "Recommended Creator" },
+        onClick: handleViewAll,
+      },
+      recommededCarouselProps: {
+        slides: creatorsData,
+        options: OPTIONS,
+      },
+    },
+    homeNewQuestModuleProps: {
+      newQuestHeaderProps: {
+        buttonText: "View All",
+        heading: { text: "New Quest" },
+        onClick: handleViewAll,
+      },
+      newQuestCarouselProps: {
+        slides: noCoverCreatorProps,
         options: OPTIONS,
       },
     },
