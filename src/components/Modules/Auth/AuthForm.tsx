@@ -9,7 +9,7 @@ type Props = {
 };
 
 const AuthForm = (props: Props) => {
-  const [step, setStep] = useState(4); // Track current step
+  const [step, setStep] = useState(2); // Track current step
   const [formData, setFormData] = useState({
     username: "",
     avatar: null,
