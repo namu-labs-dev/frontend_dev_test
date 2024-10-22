@@ -1,29 +1,25 @@
 import React from "react";
 import ViewAllSectionTabAtom from "~/components/Atoms/ViewAllSectionTabAtom/ViewAllSectionTabAtom";
 import CreatorCarousel from "~/components/Components/CreatorCarousel/CreatorCarousel";
-import CreateQuestAvatarAtom from "~/components/Atoms/CreateQuestAvatarAtom/CreateQuestAvatarAtom";
-import CreatorCarouselAvatarAtom from "~/components/Atoms/CreatorCarouselAvatarAtom/CreatorCarouselAvatarAtom";
 import PrimaryBtn from "~/components/Components/PrimaryBtn/PrimaryBtn";
 import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
+import { ListAtom } from "~/components/Atoms/ListAtom/ListAtom";
 
 type Props = {
-  recommendedHeaderProps: React.ComponentProps<typeof ViewAllSectionTabAtom>;
-  recommededCarouselProps: Omit<
+  promotedQuestHeaderProps: React.ComponentProps<typeof ViewAllSectionTabAtom>;
+  promotedQuestCarouselProps: Omit<
     React.ComponentProps<typeof CreatorCarousel>,
     "slideRenderer"
   >;
 };
 
-const HomeRecommendedModule = (props: Props) => {
+const HomePromotedQuestModule = (props: Props) => {
   return (
     <div className='relative py-[3%]'>
-      <ViewAllSectionTabAtom {...props.recommendedHeaderProps} />
+      <ViewAllSectionTabAtom {...props.promotedQuestHeaderProps} />
       <CreatorCarousel
-        {...props.recommededCarouselProps}
-        slideRenderer={(slide, index) => (
-          <CreatorCarouselAvatarAtom key={index} {...slide} />
-        )}
-        reduceSlideWidth={true}
+        {...props.promotedQuestCarouselProps}
+        slideRenderer={(slide, index) => <ListAtom key={index} {...slide} />}
         renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
           <div className='embla__controls z-10'>
             <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
@@ -44,4 +40,4 @@ const HomeRecommendedModule = (props: Props) => {
   );
 };
 
-export default HomeRecommendedModule;
+export default HomePromotedQuestModule;

@@ -1,9 +1,6 @@
 import React from "react";
 import ViewAllSectionTabAtom from "~/components/Atoms/ViewAllSectionTabAtom/ViewAllSectionTabAtom";
 import CreatorCarousel from "~/components/Components/CreatorCarousel/CreatorCarousel";
-import CreateQuestAvatarAtom from "~/components/Atoms/CreateQuestAvatarAtom/CreateQuestAvatarAtom";
-import CreatorCarouselAvatarAtom from "~/components/Atoms/CreatorCarouselAvatarAtom/CreatorCarouselAvatarAtom";
-import PrimaryBtn from "~/components/Components/PrimaryBtn/PrimaryBtn";
 import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
 import { ListAtom } from "~/components/Atoms/ListAtom/ListAtom";
 
@@ -17,7 +14,7 @@ type Props = {
 
 const HomeNewQuestModule = (props: Props) => {
   return (
-    <div className='relative'>
+    <div className='relative py-[3%]'>
       <ViewAllSectionTabAtom {...props.newQuestHeaderProps} />
       <CreatorCarousel
         {...props.newQuestCarouselProps}
@@ -25,21 +22,6 @@ const HomeNewQuestModule = (props: Props) => {
         removeLeftMargin={true}
         increaseWidth={true}
         reduceSlideWidth={true}
-        // renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
-        //   <div className='embla__controls z-10'>
-        //     <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
-        //       <SVGAtom
-        //         className='text-center'
-        //         iconName='arrowLeftLong'
-        //         width={20}
-        //         height={20}
-        //       />
-        //     </PrimaryBtn>
-        //     <button onClick={onNext} disabled={nextDisabled}>
-        //       Next
-        //     </button>
-        //   </div>
-        // )}
       />
     </div>
   );

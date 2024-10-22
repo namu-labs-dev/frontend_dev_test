@@ -4,6 +4,7 @@ import { Content, Footer, Header } from "antd/es/layout/layout";
 import { HomeEndingSoonCarouselModule } from "~/components/Modules/Home/HomeEndingSoonCarouselModule";
 import HomeRecommendedModule from "~/components/Modules/Home/HomeRecommendedModule";
 import HomeNewQuestModule from "~/components/Modules/Home/HomeNewQuestModule";
+import HomePromotedQuestModule from "~/components/Modules/Home/HomePromotedQuestModule";
 
 type Props = {
   homeHeaderModuleProps: React.ComponentProps<typeof HomeHeaderModule>;
@@ -14,6 +15,9 @@ type Props = {
     typeof HomeRecommendedModule
   >;
   homeNewQuestModuleProps: React.ComponentProps<typeof HomeNewQuestModule>;
+  homePromotedQuestModuleProps: React.ComponentProps<
+    typeof HomePromotedQuestModule
+  >;
 };
 
 export function HomeTemplate(props: Props) {
@@ -25,6 +29,7 @@ export function HomeTemplate(props: Props) {
         <HomeEndingSoonCarouselModule {...props.homeEndingSoonModuleprops} />;
         <HomeRecommendedModule {...props.homeRecommendedModuleprops} />
         <HomeNewQuestModule {...props.homeNewQuestModuleProps} />
+        <HomePromotedQuestModule {...props.homePromotedQuestModuleProps} />
       </Content>
 
       <Footer style={{ padding: 0, minHeight: 50 }}></Footer>

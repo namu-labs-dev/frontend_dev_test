@@ -60,7 +60,7 @@ const CreatorCarousel = (props: Props) => {
         ref={emblaRef}
       >
         <div className='embla__container'>
-          {props.slides.map((slide, index) => (
+          {props.slides?.map((slide, index) => (
             <div className='embla__slide ' key={index}>
               {props.slideRenderer(slide, index)}
             </div>

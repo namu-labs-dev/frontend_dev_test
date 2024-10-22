@@ -15,7 +15,7 @@ type Props = {
 
 export function HomeEndingSoonCarouselModule(props: Props) {
   return (
-    <div>
+    <div className='relative py-[3%]'>
       <ViewAllSectionTabAtom {...props.endingSoonSectionHeaderProps} />
       <CreatorCarousel
         {...props.endingSoonCarouselProps}

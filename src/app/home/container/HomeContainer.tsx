@@ -185,6 +185,17 @@ export const HomeContainer = () => {
         options: OPTIONS,
       },
     },
+    homePromotedQuestModuleProps: {
+      promotedQuestHeaderProps: {
+        buttonText: "View All",
+        heading: { text: "Promoted Quest" },
+        onClick: handleViewAll,
+      },
+      promotedQuestCarouselProps: {
+        slides: noCoverCreatorProps,
+        options: OPTIONS,
+      },
+    },
   };
   return <HomeTemplate {...homeTemplateProps} />;
 };
