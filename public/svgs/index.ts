@@ -7,7 +7,6 @@ export { default as outLink } from "./outLink.svg";
 export { default as pause } from "./pause.svg";
 export { default as play } from "./play.svg";
 
-
 export { default as upload } from "./upload.svg";
 
 export { default as search } from "./search.svg";
@@ -28,19 +27,18 @@ export { default as circleX } from "./circle-x.svg";
 export { default as nft } from "./nft.svg";
 export { default as sbt } from "./sbt.svg";
 
-
 export { default as arrowUpRight } from "./arrowUpRight.svg";
 
 export { default as closeCircle } from "./closeCircle.svg";
+export { default as point } from "./point.svg";
 
-
-//export { default as box1 } from "./box1.svg";
-//export { default as box2 } from "./box2.svg";
-//export { default as box3 } from "./box3.svg";
-//export { default as star1 } from "./star1.svg";
-//export { default as star2 } from "./star2.svg";
-//export { default as coin1 } from "./coin2.svg";
-//export { default as coin2 } from "./coin2.svg";
+// export { default as box1 } from "./box1.svg";
+// export { default as box2 } from "./box2.svg";
+// export { default as box3 } from "./box3.svg";
+// export { default as star1 } from "./star1.svg";
+// export { default as star2 } from "./star2.svg";
+// export { default as coin1 } from "./coin2.svg";
+// export { default as coin2 } from "./coin2.svg";
 export { default as animationIcon } from "./animationIcon.svg";
 export { default as successIcon } from "./successIcon.svg";
 export { default as searchIcon } from "./searchIcon.svg";
@@ -51,7 +49,6 @@ export { default as customStar } from "./customStar.svg";
 export { default as discord } from "./discord.svg";
 export { default as facebook } from "./facebook.svg";
 export { default as instagram } from "./instagram.svg";
-export { default as google } from "./google.svg";
 export { default as telegram } from "./telegram.svg";
 export { default as x } from "./x.svg";
 export { default as youtube } from "./youtube.svg";
@@ -74,5 +71,3 @@ export { default as diamondLight } from "./diamondLight.svg";
 export { default as diamondDark } from "./diamondDark.svg";
 export { default as championLight } from "./championLight.svg";
 export { default as championDark } from "./championDark.svg";
-
-export { default as user } from "./user.svg";
