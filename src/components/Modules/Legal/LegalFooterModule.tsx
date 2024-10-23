@@ -1,9 +1,9 @@
 import FooterAtom from "~/components/Atoms/FooterAtom/FooterAtom";
 
 type Props = {
-  foo?: string;
+  footerAtomProps: React.ComponentProps<typeof FooterAtom>;
 };
 
 export function LegalFooterModule(props: Props) {
-  return <FooterAtom />;
+  return <FooterAtom {...props.footerAtomProps} />;
 }
