@@ -28,14 +28,19 @@ export const HeroCarousel = (props: Props) => {
 
   return (
     <div className='relative mx-auto w-full max-w-[90vw] px-4 sm:max-w-2xl sm:px-6 md:max-w-3xl md:px-8'>
-      <div className='relative flex aspect-[1.385] w-full overflow-visible'>
-        <Image
-          src={images[currentIndex] as StaticImageData}
-          alt={`Slide ${currentIndex + 1}`}
-          layout='fill'
-          objectFit='cover'
-          className='rounded-lg transition-opacity duration-500 ease-in-out sm:rounded-[1.125rem]'
-        />
+      <div className='relative flex w-full overflow-visible'>
+        <div className='relative w-full' key={currentIndex}>
+          <Image
+            key={`carousel-image-${currentIndex}`}
+            src={images[currentIndex] as StaticImageData}
+            width={618}
+            height={323}
+            alt={`Slide ${currentIndex + 1}`}
+            objectFit='contain'
+            style={{ height: "20.1875rem" }}
+            className='h-auto w-full rounded-lg transition-opacity duration-500 ease-in-out sm:rounded-[1.125rem]'
+          />
+        </div>
 
         <button
           onClick={goToPrevious}

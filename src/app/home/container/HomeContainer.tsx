@@ -3,7 +3,7 @@ import useDummyCreatorData from "~/hooks/useDummyCreatorData";
 import useDummyNotificationData from "~/hooks/useDummyNotification";
 import useDummyQuestData from "~/hooks/useDummyQuestData";
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
-import avatar from "../../../../public/pngs/avatar.png";
+import congrats from "../../../../public/images/congrats.png";
 import nft from "../../../../public/pngs/NFTImage.png";
 import cover1 from "../../../../public/images/cover1.png";
 import heroImage1 from "../../../../public/pngs/heroImage1.png";
@@ -68,7 +68,7 @@ export const HomeContainer = () => {
   //   return null;
   // };
 
-  const heroImages = [heroImage1, nft, cover1];
+  const heroImages = [heroImage1, nft, cover1, congrats];
 
   //All props would be adjusted based on the code-convention when building modules
 
