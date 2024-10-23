@@ -13,6 +13,7 @@ import { partnerIcons } from "~/utils/common";
 import {
   creatorAvatarProps,
   popularCreatorAvatarProps,
+  popularQuestData,
   creatorsData,
   noCoverCreatorProps,
 } from "~/utils/common";
@@ -175,6 +176,17 @@ export const HomeContainer = () => {
       },
       popularCreatorCarouselProps: {
         slides: popularCreatorAvatarProps,
+      },
+    },
+    homePopularQuestModuleprops: {
+      homePopularQuestHeaderProps: {
+        buttonText: "View All",
+        heading: { text: "🔥 Popular Quest" },
+        onClick: handleViewAll,
+      },
+      popularQuestCarouselProps: {
+        slides: popularQuestData,
+        options: OPTIONS,
       },
     },
     homeEndingSoonModuleprops: {

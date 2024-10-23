@@ -11,7 +11,6 @@ type Props = {
 };
 
 export const HomePopularCreatorModule = (props: Props) => {
-  console.log(props.popularCreatorCarouselProps);
   return (
     <div className='relative py-[2%]'>
       <ViewAllSectionTabAtom {...props.popularCreatorHeaderProps} />

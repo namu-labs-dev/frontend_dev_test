@@ -14,6 +14,7 @@ type Props = {
   legalPrivacycontentModuleProps: React.ComponentProps<
     typeof LegalPrivacyContentModule
   >;
+  legalFooterModuleProps: React.ComponentProps<typeof LegalFooterModule>;
 };
 
 export function LegalTemplate(props: Props) {
@@ -40,7 +41,7 @@ export function LegalTemplate(props: Props) {
         )}
       </Content>
 
-      <LegalFooterModule />
+      <LegalFooterModule {...props.legalFooterModuleProps} />
     </Layout>
   );
 }

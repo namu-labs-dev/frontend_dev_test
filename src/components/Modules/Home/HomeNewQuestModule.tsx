@@ -11,17 +11,16 @@ type Props = {
     "slideRenderer"
   >;
 };
-
 const HomeNewQuestModule = (props: Props) => {
   return (
-    <div className='relative py-[2%]'>
+    <div className='relative py-[3%]'>
       <ViewAllSectionTabAtom {...props.newQuestHeaderProps} />
       <CreatorCarousel
         {...props.newQuestCarouselProps}
         slideRenderer={(slide, index) => <ListAtom key={index} {...slide} />}
         removeLeftMargin={true}
         increaseWidth={true}
-        // reduceSlideWidth={true}
+        reduceSlideWidth={true}
       />
     </div>
   );
