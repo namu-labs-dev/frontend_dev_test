@@ -11,34 +11,57 @@
 }
 
 .embla.reduce-slide-width {
-  --slide-size: 90%; /* Reduced width for small screens */
+  --slide-size: 100%; /* Reduced width for small screens */
   --slide-size-sm: 45%; /* Reduced width for medium screens */
   --slide-size-lg: calc(100% / 4); /* Reduced width for large screens */
 }
+.embla.increase-embla-width {
+  --slide-size: 100%; /* Reduced width for small screens */
+  --slide-size-sm: 45%; /* Reduced width for medium screens */
+  --slide-size-lg: calc(100% / 4); /* Reduced width for large screens */
+}
+@media (min-width: 1200px) {
+  .embla.reduce-slide-width {
+    --slide-size: 50%; /* Reduced width for small screens */
+    --slide-size-sm: 45%; /* Reduced width for medium screens */
+    --slide-size-lg: calc(100% / 4); /* Reduced width for large screens */
+  }
+}
 
 .embla__viewport {
-  overflow: hidden;
-  margin-left: 7rem;
+  /* overflow: hidden; */
+  margin-left: 4rem;
+  /* border: red solid 2px; */
 }
-.embla__viewport.increase-embla-width {
-  overflow: hidden;
-  /* margin-left: 7rem; */
+@media (min-width: 750px) {
+  .embla__viewport.increase-embla-width {
+    overflow: visible;
+    /* margin-right: 7rem; */
+  }
+}
+@media (min-width: 750px) {
+  .embla .embla__container {
+    margin-right: 1rem !important;
+    padding-left: 0;
+    gap: 4rem !important;
+  }
 }
 .embla__container {
   backface-visibility: hidden;
   display: flex;
-  gap: 3rem;
-  /* touch-action: pan-y pinch-zoom; */
+  touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
 }
-@media (max-width: 750px) {
-  .embla.remove-left-margin .embla__container {
-    margin-right: 6rem !important;
-    padding-right: 0 6rem;
-    gap: 2rem !important;
+@media (min-width: 750px) {
+  .embla__container {
+    margin-left: calc(var(--slide-spacing-sm) * -1);
   }
 }
-
+@media (min-width: 750px) {
+  .embla__viewport {
+    overflow: hidden;
+  }
+}
 @media (min-width: 1200px) {
   .embla__container {
     margin-left: calc(var(--slide-spacing-lg) + 8rem);
@@ -46,15 +69,15 @@
 }
 @media (min-width: 1200px) {
   .embla.remove-left-margin .embla__container {
-    margin-left: 1rem !important;
+    margin-left: 8rem !important;
     padding-left: 0;
-    gap: 2rem !important;
+    gap: 6rem !important;
   }
 }
 .embla__slide {
   min-width: 0;
   flex: 0 0 var(--slide-size);
-  padding-left: var(--slide-spacing);
+  /* padding-left: var(--slide-spacing); */
 }
 @media (min-width: 750px) {
   .embla__slide {
@@ -83,7 +106,7 @@
   display: flex;
   position: absolute;
   width: 100%;
-  bottom: 9rem;
+  bottom: 5rem;
   padding-inline: 3rem;
   grid-template-columns: auto 1fr;
   justify-content: space-between;

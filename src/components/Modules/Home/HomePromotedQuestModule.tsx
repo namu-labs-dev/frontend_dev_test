@@ -22,13 +22,14 @@ const HomePromotedQuestModule = (props: Props) => {
       <CreatorCarousel
         {...props.promotedQuestCarouselProps}
         removeLeftMargin={true}
+        reduceSlideWidth={true}
         slideRenderer={(slide, index) => <ListAtom key={index} {...slide} />}
         renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
           <div className='embla__controls z-10'>
-            <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
+            <PrimaryBtn onClick={onNext} disabled={nextDisabled}>
               <ArrowLeftOutlined className='text-base sm:text-lg md:text-xl' />
             </PrimaryBtn>
-            <PrimaryBtn onClick={onNext} disabled={prevDisabled}>
+            <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
               <ArrowRightOutlined className='text-base sm:text-lg md:text-xl' />
             </PrimaryBtn>
           </div>

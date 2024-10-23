@@ -59,7 +59,7 @@ const CreatorCarousel = (props: Props) => {
         className={`embla__viewport ${props.increaseWidth && "increase-embla-width"}`}
         ref={emblaRef}
       >
-        <div className='embla__container'>
+        <div className='embla__container '>
           {props.slides?.map((slide, index) => (
             <div className='embla__slide ' key={index}>
               {props.slideRenderer(slide, index)}

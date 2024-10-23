@@ -20,7 +20,7 @@ const HomeNewQuestModule = (props: Props) => {
         slideRenderer={(slide, index) => <ListAtom key={index} {...slide} />}
         removeLeftMargin={true}
         increaseWidth={true}
-        reduceSlideWidth={true}
+        // reduceSlideWidth={true}
       />
     </div>
   );

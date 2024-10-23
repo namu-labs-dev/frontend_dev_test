@@ -20,6 +20,7 @@ export function HomeEndingSoonCarouselModule(props: Props) {
       <CreatorCarousel
         {...props.endingSoonCarouselProps}
         removeLeftMargin={true}
+        reduceSlideWidth
         slideRenderer={(slide, index) => <ListAtom key={index} {...slide} />}
       />
     </div>

@@ -19,7 +19,7 @@ export const HomePopularCreatorModule = (props: Props) => {
         slideRenderer={(slide, index) => (
           <CreatorCarouselAvatarAtom key={index} {...slide} />
         )}
-        removeLeftMargin={true}
+        // removeLeftMargin={true}
         reduceSlideWidth={true}
       />
     </div>
