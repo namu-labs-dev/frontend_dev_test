@@ -31,6 +31,7 @@ export { default as arrowUpRight } from "./arrowUpRight.svg";
 
 export { default as closeCircle } from "./closeCircle.svg";
 export { default as point } from "./point.svg";
+export { default as arrowLeftLong } from "./arrowLeftLong.svg";
 
 // export { default as box1 } from "./box1.svg";
 // export { default as box2 } from "./box2.svg";
@@ -50,10 +51,12 @@ export { default as discord } from "./discord.svg";
 export { default as facebook } from "./facebook.svg";
 export { default as instagram } from "./instagram.svg";
 export { default as telegram } from "./telegram.svg";
+export { default as google } from "./google.svg";
 export { default as x } from "./x.svg";
 export { default as youtube } from "./youtube.svg";
 export { default as tiktok } from "./tiktok.svg";
 export { default as okx } from "./okx.svg";
+export { default as petra } from "./petra.svg";
 export { default as firstPlace } from "./firstPlace.svg";
 export { default as secondPlace } from "./secondPlace.svg";
 export { default as thirdPlace } from "./thirdPlace.svg";
@@ -71,3 +74,5 @@ export { default as diamondLight } from "./diamondLight.svg";
 export { default as diamondDark } from "./diamondDark.svg";
 export { default as championLight } from "./championLight.svg";
 export { default as championDark } from "./championDark.svg";
+export { default as download } from "./download.svg";
+export { default as arrowRight } from "./arrowRight.svg";

@@ -1,7 +1,11 @@
-import React, { type PropsWithChildren } from "react";
+import React, { type PropsWithChildren, type ReactNode } from "react";
 import { type EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
-import { PrevButton, usePrevNextButtons, NextButton } from "./CarouselBtn";
+import {
+  PrevButton,
+  usePrevNextButtons,
+  NextButton,
+} from "./CarouselNavigation";
 import "./custom.css";
 
 type CreatorProps = {
@@ -14,14 +18,27 @@ type CreatorProps = {
   status?: number; // Status
   bannerColor?: string; // Banner Color Options
   useShadow?: boolean; // Use Shadow
+  name: string;
+  width: number;
+  icon: string;
 };
 
 type Props = {
   options?: EmblaOptionsType;
   slides: CreatorProps[];
+  removeLeftMargin?: boolean;
+  reduceSlideWidth?: boolean;
+  increaseWidth?: boolean;
+  slideRenderer: (slide: CreatorProps, index: number) => ReactNode; // Function to render slide
+  renderNavButtons?: (props: {
+    onPrev: () => void;
+    onNext: () => void;
+    prevDisabled: boolean;
+    nextDisabled: boolean;
+  }) => ReactNode; // Optional function to render custom navigation buttons
 };
 
-const CreatorCarousel = (props: PropsWithChildren<Props>) => {
+const CreatorCarousel = (props: Props) => {
   const { options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
@@ -33,17 +50,33 @@ const CreatorCarousel = (props: PropsWithChildren<Props>) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section className='embla'>
-      <div className='embla__viewport' ref={emblaRef}>
-        <div className='embla__container'>{props.children}</div>
+    <section
+      className={`embla ${props.increaseWidth && "increase-embla-width"} ${props.removeLeftMargin ? "remove-left-margin" : ""} ${
+        props.reduceSlideWidth && "reduce-slide-width"
+      }`}
+    >
+      <div
+        className={`embla__viewport ${props.increaseWidth && "increase-embla-width"}`}
+        ref={emblaRef}
+      >
+        <div className='embla__container'>
+          {props.slides?.map((slide, index) => (
+            <div className='embla__slide ' key={index}>
+              {props.slideRenderer(slide, index)}
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* <div className='embla__controls'>
-        <div className='embla__buttons'>
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
-      </div> */}
+      {/* Conditionally render navigation buttons if provided */}
+      {props.renderNavButtons
+        ? props.renderNavButtons({
+            onPrev: onPrevButtonClick,
+            onNext: onNextButtonClick,
+            prevDisabled: prevBtnDisabled,
+            nextDisabled: nextBtnDisabled,
+          })
+        : null}
     </section>
   );
 };

@@ -1,29 +1,27 @@
-// todo: will push props up
-
 import { ListAtom } from "~/components/Atoms/ListAtom/ListAtom";
 import ViewAllSectionTabAtom from "~/components/Atoms/ViewAllSectionTabAtom/ViewAllSectionTabAtom";
 import CreatorCarousel from "~/components/Components/CreatorCarousel/CreatorCarousel";
-import "../../Components/CreatorCarousel/custom.css";
 
 // during page dev
 type Props = {
   endingSoonSectionHeaderProps: React.ComponentProps<
     typeof ViewAllSectionTabAtom
   >;
-  endingSoonCarouselProps: React.ComponentProps<typeof CreatorCarousel>;
+  endingSoonCarouselProps: Omit<
+    React.ComponentProps<typeof CreatorCarousel>,
+    "slideRenderer"
+  >; // Exclude slideRenderer from the props passed down
 };
 
 export function HomeEndingSoonCarouselModule(props: Props) {
   return (
-    <div>
+    <div className='relative py-[2%]'>
       <ViewAllSectionTabAtom {...props.endingSoonSectionHeaderProps} />
-      <CreatorCarousel {...props.endingSoonCarouselProps}>
-        {props.endingSoonCarouselProps.slides.map((slide, index) => (
-          <div className='embla__slide' key={index}>
-            {<ListAtom {...slide} />}
-          </div>
-        ))}
-      </CreatorCarousel>
+      <CreatorCarousel
+        {...props.endingSoonCarouselProps}
+        removeLeftMargin={true}
+        slideRenderer={(slide, index) => <ListAtom key={index} {...slide} />}
+      />
     </div>
   );
 }

@@ -1,4 +1,7 @@
-import { Props, Reward } from "~/components/Components/RewardOps/RewardOps";
+import {
+  type Props,
+  type Reward,
+} from "~/components/Components/RewardOps/RewardOps";
 
 import { type ErrorStates } from "~/components/Components/TextInput/TextInput";
 
@@ -128,18 +131,67 @@ export const errorMap: Record<ErrorStates, string> = {
 // for tailwindcss
 const cls = "text-[#DD270E] text-[#1838E0] border-[#DD270E] border-[#1838E0]";
 
-export const creatorAvatarProps  = [
+export const popularCreatorAvatarProps = [
+  {
+    name: "Creator name",
+    icon: "/images/creatorAvatar1.png",
+    width: 176,
+  },
+  {
+    name: "Creator name",
+    icon: "/images/creatorAvatar2.png",
+    width: 176,
+  },
+  {
+    name: "Creator name",
+    icon: "/images/creatorAvatar3.png",
+    width: 176,
+  },
+  {
+    name: "Creator name",
+    icon: "/images/creatorAvatar4.png",
+    width: 176,
+  },
+  {
+    name: "Creator name",
+    icon: "/images/creatorAvatar5.png",
+    width: 176,
+  },
+  {
+    name: "Creator name",
+    icon: "/images/creatorAvatar6.png",
+    width: 176,
+  },
+];
+
+export const tos = `This Privacy Policy (“Policy”) describes how Star Frameworks Labs Pte Ltd., d/b/a Galxe with registered office at 3 Fraser Street, #05-25, Duo Tower, Singapore, 189352 (company number 202201184M), and its affiliates (collectively, “Galxe” “we” “us” or “our”) collects, uses, and discloses information related to the users of the website https://app.galxe.com/ (“Website”) and/or our mobile application (“App”), if offered, and any other related and connected platforms and other online and offline interactions (collectively, the “Services”).
+Your use of our Services is subject to our Terms of Use, available at https://gal.xyz/tos, which includes applicable terms governing limitations on liability and the resolution of disputes. By using the Services, you accept and agree to the practices described in this Policy. If you do not agree with this Policy, please do not use the Services or provide us with any Personal Information (as defined below).
+​
+Personal Information
+For purposes of this Policy, unless otherwise required by applicable law, “Personal Information” means any information that (directly or indirectly) identifies, relates to, describes, or is reasonably capable of being associated, linked or linkable with a particular individual or household, including any information that is subject to applicable data protection laws.
+​
+Scope
+This Policy applies to our collection, use and disclosure of Personal 
+​
+This Policy applies to our collection, use and disclosure of Personal 
+This Policy applies to our collection, use and disclosure of Personal 
+This Policy applies to our collection, use and disclosure of Personal `;
+
+export const popularQuestData = [
   {
     title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
     listPoint: 1000,
     description:
       "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     author: "Fractal Visions",
-    cover: "/images/cover1.png",
     bannerColor: "green",
+    cover: "/images/cover1.png",
     status: 1, // 0 - Ended, 1 - Ranking
     avatar: "/images/avatar.png",
     useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
   },
   {
     title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
@@ -147,11 +199,14 @@ export const creatorAvatarProps  = [
     description:
       "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     author: "Fractal Visions",
-    cover: "/images/cover1.png",
     bannerColor: "green",
+    cover: "/images/cover1.png",
     status: 1, // 0 - Ended, 1 - Ranking
     avatar: "/images/avatar.png",
     useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
   },
   {
     title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
@@ -159,11 +214,14 @@ export const creatorAvatarProps  = [
     description:
       "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     author: "Fractal Visions",
-    cover: "/images/cover1.png",
     bannerColor: "green",
     status: 1, // 0 - Ended, 1 - Ranking
     avatar: "/images/avatar.png",
+    cover: "/images/cover1.png",
     useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
   },
   {
     title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
@@ -171,11 +229,14 @@ export const creatorAvatarProps  = [
     description:
       "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     author: "Fractal Visions",
-    cover: "/images/cover1.png",
     bannerColor: "green",
+    cover: "/images/cover1.png",
     status: 1, // 0 - Ended, 1 - Ranking
     avatar: "/images/avatar.png",
     useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
   },
   {
     title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
@@ -183,10 +244,383 @@ export const creatorAvatarProps  = [
     description:
       "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     author: "Fractal Visions",
-    cover: "/images/cover1.png",
     bannerColor: "green",
+    cover: "/images/cover1.png",
     status: 1, // 0 - Ended, 1 - Ranking
     avatar: "/images/avatar.png",
     useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
   },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+];
+
+export const creatorAvatarProps = [
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    cover: "/images/cover1.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+];
+export const noCoverCreatorProps = [
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "blue",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "blue",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "blue",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "blue",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "blue",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+];
+
+export const creatorsData = [
+  {
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/createQuest.svg",
+  },
+  {
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/createQuest.svg",
+  },
+  {
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/createQuest.svg",
+  },
+  {
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/createQuest.svg",
+  },
+];
+
+export const testNotices = [
+  {
+    id: "1",
+    title: "Notice title",
+    timestamp: "0000-00-00",
+    description: "Notice Description",
+    content:
+      "test test\n Join our exciting quest on QuestN to explore Fermion Protocol!\n\n Learn about our innovative approach to tokenizing and trading verified physcial real-world assets.\n\n Participate in educational activities and quizzes to deepen your understanding and stand a chance to win your share of $500 in rewards.\n\n Start your journey today and unlock the potential of Fermion Protocol. For more information visit our website.",
+    img: "/images/reward.png",
+    filename: "filename.png",
+    filesize: "4 mb",
+  },
+  {
+    id: "2",
+    title: "Notice title",
+    timestamp: "0000-00-00",
+    description: "Notice Description",
+    content:
+      "test test\n Join our exciting quest on QuestN to explore Fermion Protocol!\n\n Learn about our innovative approach to tokenizing and trading verified physcial real-world assets.\n\n Participate in educational activities and quizzes to deepen your understanding and stand a chance to win your share of $500 in rewards.\n\n Start your journey today and unlock the potential of Fermion Protocol. For more information visit our website.",
+    img: "/images/reward.png",
+    filename: "filename.png",
+    filesize: "4 mb",
+  },
+  {
+    id: "3",
+    title: "Notice title",
+    timestamp: "0000-00-00",
+    description: "Notice Description",
+    content:
+      "test test\n Join our exciting quest on QuestN to explore Fermion Protocol!\n\n Learn about our innovative approach to tokenizing and trading verified physcial real-world assets.\n\n Participate in educational activities and quizzes to deepen your understanding and stand a chance to win your share of $500 in rewards.\n\n Start your journey today and unlock the potential of Fermion Protocol. For more information visit our website.",
+    img: "/images/reward.png",
+    filename: "filename.png",
+    filesize: "4 mb",
+  },
+  {
+    id: "4",
+    title: "Notice title",
+    timestamp: "0000-00-00",
+    description: "Notice Description",
+    content:
+      "test test\n Join our exciting quest on QuestN to explore Fermion Protocol!\n\n Learn about our innovative approach to tokenizing and trading verified physcial real-world assets.\n\n Participate in educational activities and quizzes to deepen your understanding and stand a chance to win your share of $500 in rewards.\n\n Start your journey today and unlock the potential of Fermion Protocol. For more information visit our website.",
+    img: "/images/reward.png",
+    filename: "filename.png",
+    filesize: "4 mb",
+  },
+  {
+    id: "5",
+    title: "Notice title",
+    timestamp: "0000-00-00",
+    description: "Notice Description",
+    content:
+      "test test\n Join our exciting quest on QuestN to explore Fermion Protocol!\n\n Learn about our innovative approach to tokenizing and trading verified physcial real-world assets.\n\n Participate in educational activities and quizzes to deepen your understanding and stand a chance to win your share of $500 in rewards.\n\n Start your journey today and unlock the potential of Fermion Protocol. For more information visit our website.",
+    img: "/images/reward.png",
+    filename: "filename.png",
+    filesize: "4 mb",
+  },
+  {
+    id: "6",
+    title: "Notice title",
+    timestamp: "0000-00-00",
+    description: "Notice Description",
+    content:
+      "test test\n Join our exciting quest on QuestN to explore Fermion Protocol!\n\n Learn about our innovative approach to tokenizing and trading verified physcial real-world assets.\n\n Participate in educational activities and quizzes to deepen your understanding and stand a chance to win your share of $500 in rewards.\n\n Start your journey today and unlock the potential of Fermion Protocol. For more information visit our website.",
+    img: "/images/reward.png",
+    filename: "filename.png",
+    filesize: "4 mb",
+  },
+  {
+    id: "7",
+    title: "Notice title",
+    timestamp: "0000-00-00",
+    description: "Notice Description",
+    content:
+      "test test\n Join our exciting quest on QuestN to explore Fermion Protocol!\n\n Learn about our innovative approach to tokenizing and trading verified physcial real-world assets.\n\n Participate in educational activities and quizzes to deepen your understanding and stand a chance to win your share of $500 in rewards.\n\n Start your journey today and unlock the potential of Fermion Protocol. For more information visit our website.",
+    img: "/images/reward.png",
+    filename: "filename.png",
+    filesize: "4 mb",
+  },
+  {
+    id: "8",
+    title: "Notice title",
+    timestamp: "0000-00-00",
+    description: "Notice Description",
+    content:
+      "test test\n Join our exciting quest on QuestN to explore Fermion Protocol!\n\n Learn about our innovative approach to tokenizing and trading verified physcial real-world assets.\n\n Participate in educational activities and quizzes to deepen your understanding and stand a chance to win your share of $500 in rewards.\n\n Start your journey today and unlock the potential of Fermion Protocol. For more information visit our website.",
+    img: "/images/reward.png",
+    filename: "filename.png",
+    filesize: "4 mb",
+  },
+];
+export const partnerIcons = [
+  "/svgs/part2.svg",
+  "/svgs/part3.svg",
+  "/svgs/part4.svg",
+  "/svgs/part5.svg",
+  "/svgs/part6.svg",
+  "/svgs/part7.svg",
+  "/svgs/part8.svg",
+  "/svgs/part1.svg",
+  "/svgs/part9.svg",
 ];
