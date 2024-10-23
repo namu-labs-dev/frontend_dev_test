@@ -38,31 +38,31 @@ export const HeroCarousel = (props: Props) => {
             alt={`Slide ${currentIndex + 1}`}
             objectFit='contain'
             style={{ height: "20.1875rem" }}
-            className='h-auto w-full rounded-lg transition-opacity duration-500 ease-in-out sm:rounded-[1.125rem]'
+            className='h-auto w-full rounded-[1.875rem] transition-opacity duration-500 ease-in-out sm:rounded-[1.125rem]'
           />
         </div>
 
         <button
           onClick={goToPrevious}
-          className='absolute -left-3 top-1/2 z-10 -translate-y-1/2 rounded-lg border border-black bg-white/30 p-1 transition-all hover:bg-white/50 focus:outline-none sm:-left-8 sm:px-2 sm:py-1 md:-left-12'
+          className='absolute -left-3 top-1/2 z-10 hidden -translate-y-1/2 rounded-lg border border-black bg-white/30 p-1 transition-all hover:bg-white/50 focus:outline-none sm:-left-8 sm:px-2 sm:py-1 md:-left-12 md:block'
         >
           <ArrowLeftOutlined className='text-base sm:text-lg md:text-xl' />
         </button>
 
         <button
           onClick={goToNext}
-          className='absolute -right-3 top-1/2 z-10 -translate-y-1/2 rounded-lg border border-black bg-white/30 p-1 transition-all hover:bg-white/50 focus:outline-none sm:-right-8 sm:px-2 sm:py-1 md:-right-12'
+          className='absolute -right-3 top-1/2 z-10 hidden -translate-y-1/2 rounded-lg border border-black bg-white/30 p-1 transition-all hover:bg-white/50 focus:outline-none sm:-right-8 sm:px-2 sm:py-1 md:-right-12 md:block'
         >
           <ArrowRightOutlined className='text-base sm:text-lg md:text-xl' />
         </button>
       </div>
 
-      <div className='absolute -bottom-[1.9375rem] left-1/2 flex -translate-x-1/2 transform space-x-2 sm:-bottom-14 sm:space-x-3 md:-bottom-[3.6875rem]'>
+      <div className='absolute -bottom-[1.9375rem] left-1/2 flex -translate-x-1/2 transform space-x-2 sm:-bottom-[3rem] sm:space-x-3 md:-bottom-[3.6875rem]'>
         {images.map((_, slideIndex) => (
           <button
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
-            className={`h-3 w-8 rounded-full transition-all duration-300 ease-in-out focus:outline-none sm:h-4 sm:w-[3.25rem] ${
+            className={`h-3 w-8 rounded-full transition-all duration-300 ease-in-out focus:outline-none sm:h-4 sm:w-[3.0625rem] ${
               currentIndex === slideIndex
                 ? "translate-x-[-2px] translate-y-[-2px] rounded-md bg-white shadow-[2px_2px_0px_black] sm:translate-x-[-4px] sm:translate-y-[-4px] sm:shadow-[4px_4px_0px_black]"
                 : "rounded-[3.125rem] border-2 border-black bg-white"
