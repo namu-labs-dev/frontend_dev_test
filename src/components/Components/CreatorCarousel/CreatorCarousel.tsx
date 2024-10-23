@@ -1,11 +1,7 @@
 import React, { type PropsWithChildren, type ReactNode } from "react";
 import { type EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
-import {
-  PrevButton,
-  usePrevNextButtons,
-  NextButton,
-} from "./CarouselNavigation";
+import { usePrevNextButtons } from "./CarouselNavigation";
 import "./custom.css";
 
 type CreatorProps = {
