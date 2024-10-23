@@ -177,6 +177,174 @@ This Policy applies to our collection, use and disclosure of Personal
 This Policy applies to our collection, use and disclosure of Personal 
 This Policy applies to our collection, use and disclosure of Personal `;
 
+export const popularQuestData = [
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    cover: "/images/cover1.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+  {
+    title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
+    listPoint: 1000,
+    description:
+      "Quest description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    author: "Fractal Visions",
+    bannerColor: "green",
+    cover: "/images/cover1.png",
+    status: 1, // 0 - Ended, 1 - Ranking
+    avatar: "/images/avatar.png",
+    useShadow: false,
+    name: "Creator Name",
+    width: 175,
+    icon: "/svgs/avatar2.svg",
+  },
+];
+
 export const creatorAvatarProps = [
   {
     title: "[$2500+ in rewards] Fullhouse.gg Official Airdrop Quests",
