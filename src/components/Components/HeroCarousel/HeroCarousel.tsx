@@ -52,7 +52,7 @@ export const HeroCarousel = (props: Props) => {
         </button>
       </div>
 
-      <div className='absolute -bottom-[1.9375rem] left-[22%] flex -translate-x-1/2 transform space-x-2 sm:-bottom-14 sm:left-[28%] sm:space-x-3 md:-bottom-[3.6875rem]'>
+      <div className='absolute -bottom-[1.9375rem] left-1/2 flex -translate-x-1/2 transform space-x-2 sm:-bottom-14 sm:space-x-3 md:-bottom-[3.6875rem]'>
         {images.map((_, slideIndex) => (
           <button
             key={slideIndex}
