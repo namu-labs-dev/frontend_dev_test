@@ -21,7 +21,9 @@ export const HomePopularQuestModule = (props: Props) => {
       <CreatorCarousel
         {...props.popularQuestCarouselProps}
         slideRenderer={(slide, index) => <ListAtom key={index} {...slide} />}
-        // removeLeftMargin={true}
+        reduceSlideWidth
+        removeLeftMargin={true}
+
         // renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
         //   <div className='embla__controls z-10'>
         //     <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
