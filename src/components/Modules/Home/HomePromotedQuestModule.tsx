@@ -5,6 +5,7 @@ import PrimaryBtn from "~/components/Components/PrimaryBtn/PrimaryBtn";
 import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
 import { ListAtom } from "~/components/Atoms/ListAtom/ListAtom";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 
 type Props = {
   promotedQuestHeaderProps: React.ComponentProps<typeof ViewAllSectionTabAtom>;
@@ -25,16 +26,11 @@ const HomePromotedQuestModule = (props: Props) => {
         renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
           <div className='embla__controls z-10'>
             <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
-              <SVGAtom
-                className='text-center'
-                iconName='arrowLeftLong'
-                width={20}
-                height={20}
-              />
+              <ArrowLeftOutlined className='text-base sm:text-lg md:text-xl' />
             </PrimaryBtn>
-            <button onClick={onNext} disabled={nextDisabled}>
-              <FaLongArrowAltRight />
-            </button>
+            <PrimaryBtn onClick={onNext} disabled={prevDisabled}>
+              <ArrowRightOutlined className='text-base sm:text-lg md:text-xl' />
+            </PrimaryBtn>
           </div>
         )}
       />

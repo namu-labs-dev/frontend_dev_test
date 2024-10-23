@@ -9,6 +9,9 @@ import HomeRecommendedModule from "~/components/Modules/Home/HomeRecommendedModu
 import HomeNewQuestModule from "~/components/Modules/Home/HomeNewQuestModule";
 import HomePromotedQuestModule from "~/components/Modules/Home/HomePromotedQuestModule";
 import HomeQuestBannersModule from "~/components/Modules/Home/HomeQuestBannersModule";
+import HomeFooterModule from "~/components/Modules/Home/HomeFooterModule";
+import HomePartnersModule from "~/components/Modules/Home/HomePartnersModule";
+import React from "react";
 
 type Props = {
   homeHeaderModuleProps: React.ComponentProps<typeof HomeHeaderModule>;
@@ -32,6 +35,8 @@ type Props = {
   homeQuestBannerModuleProps: React.ComponentProps<
     typeof HomeQuestBannersModule
   >;
+  homePartnersModuleProps: React.ComponentProps<typeof HomePartnersModule>;
+  homeFooterModuleProps: React.ComponentProps<typeof HomeFooterModule>;
 };
 
 export function HomeTemplate(props: Props) {
@@ -49,8 +54,10 @@ export function HomeTemplate(props: Props) {
         <HomePromotedQuestModule {...props.homePromotedQuestModuleProps} />
         <HomeQuestBannersModule {...props.homeQuestBannerModuleProps} />
       </Content>
-
-      <Footer style={{ padding: 0, minHeight: 50 }}></Footer>
+      <HomePartnersModule {...props.homePartnersModuleProps} />
+      <Footer style={{ padding: 0, minHeight: 50 }}>
+        <HomeFooterModule {...props.homeFooterModuleProps} />
+      </Footer>
     </Layout>
   );
 }

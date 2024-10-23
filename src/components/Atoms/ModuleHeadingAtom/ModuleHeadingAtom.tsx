@@ -11,7 +11,7 @@ const ModuleHeadingAtom = (props: Props) => {
     <div className='p-[2%]'>
       <h1
         className={cn(
-          `text-md font-sans font-extrabold lg:text-3xl`,
+          `font-sans text-xl font-extrabold lg:text-3xl`,
           props.classNames
         )}
       >
