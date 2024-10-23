@@ -25,7 +25,7 @@ const HomePromotedQuestModule = (props: Props) => {
         reduceSlideWidth={true}
         slideRenderer={(slide, index) => <ListAtom key={index} {...slide} />}
         renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
-          <div className='embla__controls z-10'>
+          <div className='embla__controls top-[60%] z-10 md:ml-6'>
             <PrimaryBtn onClick={onNext} disabled={nextDisabled}>
               <ArrowLeftOutlined className='text-base sm:text-lg md:text-xl' />
             </PrimaryBtn>

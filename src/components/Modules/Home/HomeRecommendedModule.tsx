@@ -27,7 +27,7 @@ const HomeRecommendedModule = (props: Props) => {
         reduceSlideWidth={true}
         // removeLeftMargin={true}
         renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
-          <div className='embla__controls z-10'>
+          <div className='embla__controls top-[60%] z-10 ml-[3%]'>
             <PrimaryBtn onClick={onNext} disabled={nextDisabled}>
               <ArrowLeftOutlined className='text-base sm:text-lg md:text-xl' />
             </PrimaryBtn>

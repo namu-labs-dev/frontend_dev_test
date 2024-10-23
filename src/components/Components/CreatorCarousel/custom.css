@@ -35,7 +35,7 @@
 }
 @media (min-width: 750px) {
   .embla__viewport.increase-embla-width {
-    overflow: visible;
+    overflow: hidden;
     /* margin-right: 7rem; */
   }
 }
@@ -106,11 +106,11 @@
   display: flex;
   position: absolute;
   width: 100%;
-  bottom: 5rem;
+  /* bottom: 5rem; */
   padding-inline: 3rem;
   grid-template-columns: auto 1fr;
-  justify-content: space-between;
-  gap: 1.2rem;
+  justify-content: left;
+  gap: 85%;
   /* margin-top: 2rem; */
 }
 .embla__buttons {
