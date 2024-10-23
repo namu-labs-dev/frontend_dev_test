@@ -11,17 +11,17 @@ type Props = {
 };
 
 export const HomePopularCreatorModule = (props: Props) => {
-  console.log(props.popularCreatorCarouselProps);
   return (
-    <>
+    <div className='relative py-[2%]'>
       <ViewAllSectionTabAtom {...props.popularCreatorHeaderProps} />
       <CreatorCarousel
         {...props.popularCreatorCarouselProps}
         slideRenderer={(slide, index) => (
           <CreatorCarouselAvatarAtom key={index} {...slide} />
         )}
+        removeLeftMargin={true}
         reduceSlideWidth={true}
       />
-    </>
+    </div>
   );
 };

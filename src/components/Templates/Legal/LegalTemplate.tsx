@@ -18,14 +18,15 @@ type Props = {
 
 export function LegalTemplate(props: Props) {
   return (
-    <Layout style={{ height: "100%" }}>
+    <Layout style={{ height: "100vh" }}>
       <LegalHeaderModule {...props.legalHeaderModuleProps} />
 
       <Content
         style={{
           overflow: "auto",
           padding: "20px",
-          //   height: "100%",
+          paddingLeft: "40px",
+          paddingRight: "40px",
         }}
       >
         {props.legalHeaderModuleProps.legal === "tos" && (

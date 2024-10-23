@@ -9,10 +9,11 @@ import cover1 from "../../../../public/images/cover1.png";
 import heroImage1 from "../../../../public/pngs/heroImage1.png";
 import { message } from "antd";
 import { type EmblaOptionsType } from "embla-carousel";
-import {} from "~/utils/common";
+import { partnerIcons } from "~/utils/common";
 import {
   creatorAvatarProps,
   popularCreatorAvatarProps,
+  popularQuestData,
   creatorsData,
   noCoverCreatorProps,
 } from "~/utils/common";
@@ -33,6 +34,8 @@ import CreatorLabelGroupAtom from "~/components/Atoms/CreatorLabelGroupAtom/Crea
 import CreatorWrapAtom from "~/components/Atoms/CreatorWrapAtom/CreatorWrapAtom";
 import CreatorCarousel from "~/components/Components/CreatorCarousel/CreatorCarousel";
 import { TypeOf } from "zod";
+import { FiSend } from "react-icons/fi";
+import { FaDiscord, FaTwitter } from "react-icons/fa";
 
 export const HomeContainer = () => {
   const creators = useDummyCreatorData();
@@ -175,10 +178,21 @@ export const HomeContainer = () => {
         slides: popularCreatorAvatarProps,
       },
     },
+    homePopularQuestModuleprops: {
+      homePopularQuestHeaderProps: {
+        buttonText: "View All",
+        heading: { text: "🔥 Popular Quest" },
+        onClick: handleViewAll,
+      },
+      popularQuestCarouselProps: {
+        slides: popularQuestData,
+        options: OPTIONS,
+      },
+    },
     homeEndingSoonModuleprops: {
       endingSoonSectionHeaderProps: {
         buttonText: "View All",
-        heading: { text: "Ending Soon" },
+        heading: { text: "⏰ Ending Soon" },
         onClick: handleViewAll,
       },
       endingSoonCarouselProps: {
@@ -189,7 +203,7 @@ export const HomeContainer = () => {
     homeRecommendedModuleprops: {
       recommendedHeaderProps: {
         buttonText: "View All",
-        heading: { text: "Recommended Creator" },
+        heading: { text: "🚀 Recommended Creator" },
         onClick: handleViewAll,
       },
       recommededCarouselProps: {
@@ -200,7 +214,7 @@ export const HomeContainer = () => {
     homeNewQuestModuleProps: {
       newQuestHeaderProps: {
         buttonText: "View All",
-        heading: { text: "New Quest" },
+        heading: { text: "✨ New Quest" },
         onClick: handleViewAll,
       },
       newQuestCarouselProps: {
@@ -208,22 +222,52 @@ export const HomeContainer = () => {
         options: OPTIONS,
       },
     },
+    homePromotedQuestModuleProps: {
+      promotedQuestHeaderProps: {
+        buttonText: "View All",
+        heading: { text: "🤡 Promoted Quest" },
+        onClick: handleViewAll,
+      },
+      promotedQuestCarouselProps: {
+        slides: noCoverCreatorProps,
+        options: OPTIONS,
+      },
+    },
+    homeQuestBannerModuleProps: {
+      questBannerHeaderProps: {
+        text: "Enjoy a variety of Quests",
+        classNames: `text-center`,
+      },
+      questBannerProps: {
+        rankingBtnText: "Ranking Quest",
+        rankingQuestInfo:
+          "The more quests you complete to take first place, the more rewards you will receive.",
+        raffleBtnText: "Raffle Quest",
+        raffleQuestInfo:
+          "The more quests you complete to take first place, the more rewards you will receive.",
+        onClickRaffle: () => null,
+        onClickRanking: () => null,
+      },
+    },
+    homePartnersModuleProps: {
+      icons: partnerIcons,
+      text: "Partners",
+      classNames: `text-center `,
+    },
+    homeFooterModuleProps: {
+      footerTitle: "@FANDOM GLOBAL PTE LTD",
+      navLinks: [
+        { label: "Terms of Service", href: "/terms" },
+        { label: "Privacy Policy", href: "/privacy" },
+        { label: "Contact Us", href: "/contact" },
+        { label: "Notice", href: "/notice" },
+      ],
+      iconLinks: [
+        { icon: <FiSend size={30} />, href: "/twitter" },
+        { icon: <FaDiscord size={30} />, href: "/discord" },
+        { icon: <FaTwitter size={30} />, href: "/telegram" },
+      ],
+    },
   };
   return <HomeTemplate {...homeTemplateProps} />;
 };
-
-{
-  /* <FooterAtom />
-  <ViewAllSectionTabAtom {...viewAllProps} />
-  <SectionWithTabsAtom {...displayTabs} />
-  <DailyEarnMenuAtom {...displayTabs} />
-  <GachaPopUpCardAtom {...gachaModalProps} />
-  <CreatorCarouselAvatarAtom {...creatorAvatarProps} />
-  <CreateQuestAvatarAtom {...createQuestAvatarProps} />
-  <CancelPurchasePopUpCardAtom {...camcelPurchaseModalProps} />
-  <FanQuestBlogPublishPopUpAtom {...fanBlogPostProp} />
-  <EmptyStateAtom {...emptyDataProps} />
-  <ListProfileAtom {...creatorPlatformProps} />
-  <CreatorLabelGroupAtom {...creatorLabelProps} />
-  <CreatorWrapAtom {...creatorWrapProps} /> */
-}

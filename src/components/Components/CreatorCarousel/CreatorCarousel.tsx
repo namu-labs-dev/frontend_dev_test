@@ -18,9 +18,9 @@ type CreatorProps = {
   status?: number; // Status
   bannerColor?: string; // Banner Color Options
   useShadow?: boolean; // Use Shadow
-  name?: string;
-  width?: number;
-  icon?: string;
+  name: string;
+  width: number;
+  icon: string;
 };
 
 type Props = {
@@ -60,7 +60,7 @@ const CreatorCarousel = (props: Props) => {
         ref={emblaRef}
       >
         <div className='embla__container'>
-          {props.slides.map((slide, index) => (
+          {props.slides?.map((slide, index) => (
             <div className='embla__slide ' key={index}>
               {props.slideRenderer(slide, index)}
             </div>

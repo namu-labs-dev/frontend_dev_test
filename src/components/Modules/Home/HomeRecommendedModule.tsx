@@ -5,6 +5,7 @@ import CreateQuestAvatarAtom from "~/components/Atoms/CreateQuestAvatarAtom/Crea
 import CreatorCarouselAvatarAtom from "~/components/Atoms/CreatorCarouselAvatarAtom/CreatorCarouselAvatarAtom";
 import PrimaryBtn from "~/components/Components/PrimaryBtn/PrimaryBtn";
 import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 
 type Props = {
   recommendedHeaderProps: React.ComponentProps<typeof ViewAllSectionTabAtom>;
@@ -16,7 +17,7 @@ type Props = {
 
 const HomeRecommendedModule = (props: Props) => {
   return (
-    <div className='relative'>
+    <div className='relative py-[3%]'>
       <ViewAllSectionTabAtom {...props.recommendedHeaderProps} />
       <CreatorCarousel
         {...props.recommededCarouselProps}
@@ -24,19 +25,15 @@ const HomeRecommendedModule = (props: Props) => {
           <CreatorCarouselAvatarAtom key={index} {...slide} />
         )}
         reduceSlideWidth={true}
-        renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
+        removeLeftMargin={true}
+        renderNavButtons={({ onPrev, onNext, prevDisabled }) => (
           <div className='embla__controls z-10'>
             <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
-              <SVGAtom
-                className='text-center'
-                iconName='arrowLeftLong'
-                width={20}
-                height={20}
-              />
+              <ArrowLeftOutlined className='text-base sm:text-lg md:text-xl' />
             </PrimaryBtn>
-            <button onClick={onNext} disabled={nextDisabled}>
-              Next
-            </button>
+            <PrimaryBtn onClick={onNext} disabled={prevDisabled}>
+              <ArrowRightOutlined className='text-base sm:text-lg md:text-xl' />
+            </PrimaryBtn>
           </div>
         )}
       />
