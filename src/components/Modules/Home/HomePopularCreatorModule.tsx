@@ -12,7 +12,7 @@ type Props = {
 
 export const HomePopularCreatorModule = (props: Props) => {
   return (
-    <div className='relative py-[2%]'>
+    <div className='relative mt-[10%] py-[2%] md:mt-0'>
       <ViewAllSectionTabAtom {...props.popularCreatorHeaderProps} />
       <CreatorCarousel
         {...props.popularCreatorCarouselProps}

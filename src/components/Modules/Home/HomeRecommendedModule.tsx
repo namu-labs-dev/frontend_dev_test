@@ -17,7 +17,7 @@ type Props = {
 
 const HomeRecommendedModule = (props: Props) => {
   return (
-    <div className='relative py-[3%]'>
+    <div className='relative mt-[10%] hidden py-[3%] md:mt-0 md:block'>
       <ViewAllSectionTabAtom {...props.recommendedHeaderProps} />
       <CreatorCarousel
         {...props.recommededCarouselProps}

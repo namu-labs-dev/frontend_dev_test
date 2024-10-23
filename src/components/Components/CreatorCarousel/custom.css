@@ -15,11 +15,13 @@
   --slide-size-sm: 65%; /* Reduced width for medium screens */
   --slide-size-lg: calc(100% / 4); /* Reduced width for large screens */
 }
+
 .embla.increase-embla-width {
   --slide-size: 70%; /* Reduced width for small screens */
   --slide-size-sm: 45%; /* Reduced width for medium screens */
   --slide-size-lg: calc(100% / 4); /* Reduced width for large screens */
 }
+
 @media (min-width: 1200px) {
   .embla.reduce-slide-width {
     --slide-size: 100%; /* Reduced width for small screens */

@@ -15,7 +15,7 @@ type Props = {
 };
 const HomeNewQuestModule = (props: Props) => {
   return (
-    <div className='relative py-[3%]'>
+    <div className='relative mt-[10%] py-[2%] md:mt-0'>
       <ViewAllSectionTabAtom {...props.newQuestHeaderProps} />
       <CreatorCarousel
         {...props.newQuestCarouselProps}
