@@ -2,6 +2,7 @@
 
 import clsx from "clsx";
 import { type Legal } from "~/app/legal/container/LegalContainer";
+import { MobileNavigationAtom } from "~/components/Atoms/MobileNavigationAtom/MobileNavigationAtom";
 import NavigationAtom from "~/components/Atoms/NavigationAtom/NavigationAtom";
 import { Button } from "~/components/Components/Button/Button";
 import { Title } from "~/components/Components/Title/Title";
@@ -15,10 +16,14 @@ type Props = {
 
 export function LegalHeaderModule(props: Props) {
   return (
-    <div>
-      <NavigationAtom {...props.navigationProps} />
+    <header>
+      <div className='hidden lg:block'>
+        <NavigationAtom {...props.navigationProps} />
+      </div>
 
-      <div className='flex items-center justify-between p-5 px-[40px]'>
+      <MobileNavigationAtom title='Legal' />
+
+      <div className='flex items-center justify-between p-5 px-6 lg:px-[40px]'>
         <Title className='hidden text-[42px] font-black italic lg:block'>
           {props.title}
         </Title>
@@ -43,6 +48,6 @@ export function LegalHeaderModule(props: Props) {
           </Button>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
