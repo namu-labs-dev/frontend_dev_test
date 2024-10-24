@@ -16,27 +16,13 @@ type Props = {
 
 export const HomePopularQuestModule = (props: Props) => {
   return (
-    <div>
+    <div className='relative mt-[10%] py-[2%] md:mt-0'>
       <ViewAllSectionTabAtom {...props.homePopularQuestHeaderProps} />
       <CreatorCarousel
         {...props.popularQuestCarouselProps}
         slideRenderer={(slide, index) => <ListAtom key={index} {...slide} />}
+        reduceSlideWidth
         removeLeftMargin={true}
-        // renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
-        //   <div className='embla__controls z-10'>
-        //     <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
-        //       <SVGAtom
-        //         className='text-center'
-        //         iconName='arrowLeftLong'
-        //         width={20}
-        //         height={20}
-        //       />
-        //     </PrimaryBtn>
-        //     <button onClick={onNext} disabled={nextDisabled}>
-        //       Next
-        //     </button>
-        //   </div>
-        // )}
       />
     </div>
   );

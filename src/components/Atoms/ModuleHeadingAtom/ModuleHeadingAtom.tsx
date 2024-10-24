@@ -1,8 +1,9 @@
-import React from "react";
+import React, { type ReactNode } from "react";
 import cn from "classnames";
 
 type Props = {
-  text: string;
+  heading: ReactNode | string;
+
   classNames?: string;
 };
 
@@ -15,7 +16,7 @@ const ModuleHeadingAtom = (props: Props) => {
           props.classNames
         )}
       >
-        {props.text}
+        {props.heading}
       </h1>
     </div>
   );
