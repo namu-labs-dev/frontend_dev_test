@@ -138,20 +138,14 @@ export const HomeContainer = () => {
         classNames: `text-center`,
       },
       questBannerProps: {
-        rankingBtnText: "Ranking Quest",
-        rankingQuestInfo:
-          "The more quests you complete to take first place, the more rewards you will receive.",
-        raffleBtnText: "Raffle Quest",
-        raffleQuestInfo:
-          "The more quests you complete to take first place, the more rewards you will receive.",
-        onClickRaffle: () => null,
-        onClickRanking: () => null,
+        rankingQuestBanner: "/svgs/rankingBanner.svg",
+        raffleQuestBanner: "/svgs/raffleBanner.svg",
       },
     },
     homePartnersModuleProps: {
       icons: partnerIcons,
       text: "Partners",
-      classNames: `text-center `,
+      classNames: `text-center`,
     },
     homeFooterModuleProps: {
       footerTitle: "@FANDOM GLOBAL PTE LTD",
