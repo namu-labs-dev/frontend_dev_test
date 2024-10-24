@@ -1,11 +1,7 @@
 import React, { type PropsWithChildren, type ReactNode } from "react";
 import { type EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
-import {
-  PrevButton,
-  usePrevNextButtons,
-  NextButton,
-} from "./CarouselNavigation";
+import { usePrevNextButtons } from "./CarouselNavigation";
 import "./custom.css";
 
 type CreatorProps = {
@@ -59,7 +55,7 @@ const CreatorCarousel = (props: Props) => {
         className={`embla__viewport ${props.increaseWidth && "increase-embla-width"}`}
         ref={emblaRef}
       >
-        <div className='embla__container'>
+        <div className='embla__container '>
           {props.slides?.map((slide, index) => (
             <div className='embla__slide ' key={index}>
               {props.slideRenderer(slide, index)}

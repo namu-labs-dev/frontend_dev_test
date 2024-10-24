@@ -11,34 +11,64 @@
 }
 
 .embla.reduce-slide-width {
-  --slide-size: 90%; /* Reduced width for small screens */
+  --slide-size: 70%; /* Reduced width for small screens */
+  --slide-size-sm: 65%; /* Reduced width for medium screens */
+  --slide-size-lg: calc(100% / 4); /* Reduced width for large screens */
+}
+
+.embla.increase-embla-width {
+  --slide-size: 70%; /* Reduced width for small screens */
   --slide-size-sm: 45%; /* Reduced width for medium screens */
   --slide-size-lg: calc(100% / 4); /* Reduced width for large screens */
 }
 
+@media (min-width: 1200px) {
+  .embla.reduce-slide-width {
+    --slide-size: 100%; /* Reduced width for small screens */
+    --slide-size-sm: 45%; /* Reduced width for medium screens */
+    --slide-size-lg: calc(100% / 4); /* Reduced width for large screens */
+  }
+}
+
 .embla__viewport {
   overflow: hidden;
-  margin-left: 7rem;
+  margin-right: 0rem;
+  margin-left: 2rem;
+  /* border: red solid 2px; */
 }
-.embla__viewport.increase-embla-width {
-  overflow: hidden;
-  /* margin-left: 7rem; */
+
+@media (min-width: 750px) {
+  .embla__viewport.increase-embla-width {
+    overflow: hidden;
+    /* margin-right: 7rem; */
+  }
+}
+@media (min-width: 750px) {
+  .embla .embla__container {
+    margin-right: 1rem !important;
+    padding-left: 0;
+    gap: 4rem !important;
+  }
 }
 .embla__container {
   backface-visibility: hidden;
   display: flex;
-  gap: 3rem;
-  /* touch-action: pan-y pinch-zoom; */
-  margin-left: calc(var(--slide-spacing) * -1);
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -2);
 }
-@media (max-width: 750px) {
-  .embla.remove-left-margin .embla__container {
-    margin-right: 6rem !important;
-    padding-right: 0 6rem;
-    gap: 2rem !important;
+@media (min-width: 750px) {
+  .embla__container {
+    margin-left: calc(var(--slide-spacing-sm) * -1);
   }
 }
-
+@media (min-width: 750px) {
+  .embla__viewport {
+    overflow: hidden;
+  }
+}
 @media (min-width: 1200px) {
   .embla__container {
     margin-left: calc(var(--slide-spacing-lg) + 8rem);
@@ -46,15 +76,17 @@
 }
 @media (min-width: 1200px) {
   .embla.remove-left-margin .embla__container {
-    margin-left: 1rem !important;
+    margin-left: 8rem !important;
     padding-left: 0;
-    gap: 2rem !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    gap: 6rem !important;
   }
 }
 .embla__slide {
   min-width: 0;
   flex: 0 0 var(--slide-size);
-  padding-left: var(--slide-spacing);
+  padding-left: 2rem;
 }
 @media (min-width: 750px) {
   .embla__slide {
@@ -79,49 +111,32 @@
   height: var(--slide-height);
   user-select: none;
 }
-.embla__controls {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  bottom: 9rem;
-  padding-inline: 3rem;
-  grid-template-columns: auto 1fr;
-  justify-content: space-between;
-  gap: 1.2rem;
-  /* margin-top: 2rem; */
+
+@media (max-width: 750px) {
+  .embla__controls {
+    display: none;
+    visibility: hidden;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    /* bottom: 5rem; */
+    padding-inline: 3rem;
+    grid-template-columns: auto 1fr;
+    justify-content: left;
+    gap: 85%;
+  }
 }
-.embla__buttons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.6rem;
-  align-items: center;
-}
-.embla__button {
-  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  touch-action: manipulation;
-  display: inline-flex;
-  text-decoration: none;
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-  width: 3.6rem;
-  height: 3.6rem;
-  z-index: 1;
-  border-radius: 50%;
-  color: var(--text-body);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.embla__button:disabled {
-  color: var(--detail-high-contrast);
-}
-.embla__button__svg {
-  width: 35%;
-  height: 35%;
+
+@media (min-width: 1200px) {
+  .embla__controls {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    /* bottom: 5rem; */
+    padding-inline: 3rem;
+    grid-template-columns: auto 1fr;
+    justify-content: left;
+    gap: 85%;
+    /* margin-top: 2rem; */
+  }
 }

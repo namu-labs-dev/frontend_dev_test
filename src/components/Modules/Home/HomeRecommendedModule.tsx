@@ -17,7 +17,7 @@ type Props = {
 
 const HomeRecommendedModule = (props: Props) => {
   return (
-    <div className='relative py-[3%]'>
+    <div className='relative mt-[10%] hidden py-[3%] md:mt-0 md:block'>
       <ViewAllSectionTabAtom {...props.recommendedHeaderProps} />
       <CreatorCarousel
         {...props.recommededCarouselProps}
@@ -25,13 +25,13 @@ const HomeRecommendedModule = (props: Props) => {
           <CreatorCarouselAvatarAtom key={index} {...slide} />
         )}
         reduceSlideWidth={true}
-        removeLeftMargin={true}
-        renderNavButtons={({ onPrev, onNext, prevDisabled }) => (
-          <div className='embla__controls z-10'>
-            <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
+        // removeLeftMargin={true}
+        renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
+          <div className='embla__controls top-[60%] z-10 ml-[3%]'>
+            <PrimaryBtn onClick={onNext} disabled={nextDisabled}>
               <ArrowLeftOutlined className='text-base sm:text-lg md:text-xl' />
             </PrimaryBtn>
-            <PrimaryBtn onClick={onNext} disabled={prevDisabled}>
+            <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
               <ArrowRightOutlined className='text-base sm:text-lg md:text-xl' />
             </PrimaryBtn>
           </div>
