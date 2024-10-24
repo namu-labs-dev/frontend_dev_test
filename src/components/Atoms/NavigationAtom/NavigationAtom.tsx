@@ -12,6 +12,11 @@ type Props = {
 };
 
 const NavigationAtom = (props: Props) => {
+  const popoverInnerStyle = {
+    borderRadius: `10px`,
+    border: `2px solid black`,
+    boxShadow: `8px 6px 0px 0px #000000`,
+  };
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [isViewed, setIsViewed] = useState(true);
 
@@ -76,6 +81,11 @@ const NavigationAtom = (props: Props) => {
                 trigger='click'
                 placement='bottomRight'
                 arrow={false}
+                overlayInnerStyle={{
+                  width: `340px`,
+                  padding: `20px`,
+                  ...popoverInnerStyle,
+                }}
               >
                 <button className='inline-block text-2xl md:rounded-[0.625rem] md:!bg-[rgb(0,0,0)] md:!py-0.5 md:px-2'>
                   {isViewed && (
@@ -99,6 +109,11 @@ const NavigationAtom = (props: Props) => {
                 trigger='click'
                 placement='bottomRight'
                 arrow={false}
+                overlayInnerStyle={{
+                  padding: 0,
+                  width: `320px`,
+                  ...popoverInnerStyle,
+                }}
               >
                 <Button className='inline-block text-2xl md:rounded-[0.625rem] md:!bg-[rgb(0,0,0)] md:!px-2 md:!py-0.5'>
                   <UserOutlined
