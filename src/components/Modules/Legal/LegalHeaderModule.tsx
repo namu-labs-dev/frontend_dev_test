@@ -23,7 +23,7 @@ export function LegalHeaderModule(props: Props) {
 
       <MobileNavigationAtom title='Legal' />
 
-      <div className='flex items-center justify-between p-5 px-6 lg:px-[40px]'>
+      <div className='flex items-center justify-between p-5 px-6 lg:px-[200px]'>
         <Title className='hidden text-[42px] font-black italic lg:block'>
           {props.title}
         </Title>

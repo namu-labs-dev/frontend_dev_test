@@ -20,7 +20,7 @@ export function LegalTemplate(props: Props) {
     <main style={{ height: "100vh" }}>
       <LegalHeaderModule {...props.legalHeaderModuleProps} />
 
-      <div className='px-6 py-5 lg:px-10'>
+      <div className='px-6 py-5 lg:px-[200px]'>
         {props.legalHeaderModuleProps.legal === "tos" && (
           <LegalTermsContentModule {...props.legalTermscontentModuleProps} />
         )}
