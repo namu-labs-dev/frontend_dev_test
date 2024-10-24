@@ -135,7 +135,7 @@ export const HomeContainer = () => {
     homeQuestBannerModuleProps: {
       questBannerHeaderProps: {
         heading: "Enjoy a variety of Quests",
-        classNames: `text-center`,
+        classNames: `text-center md:text-3xl mx-auto xl:w-full md:w-[40%]`,
       },
       questBannerProps: {
         rankingQuestBanner: "/svgs/rankingBanner.svg",

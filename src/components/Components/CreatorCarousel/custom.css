@@ -17,7 +17,7 @@
 }
 
 .embla.increase-embla-width {
-  --slide-size: 70%; /* Reduced width for small screens */
+  --slide-size: 77%; /* Reduced width for small screens */
   --slide-size-sm: 44%; /* Reduced width for medium screens */
   --slide-size-lg: calc(100% / 4); /* Reduced width for large screens */
 }
