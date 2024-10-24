@@ -33,12 +33,12 @@ export const HomeContainer = () => {
   const handleViewAll = () => {
     return null;
   };
-  const handleCancelPurchase = () => {
-    return null;
-  };
-  const handleUsers = () => {
-    return null;
-  };
+  // const handleCancelPurchase = () => {
+  //   return null;
+  // };
+  // const handleUsers = () => {
+  //   return null;
+  // };
 
   const heroImages = [heroImage1, nft, cover1];
 

@@ -10,10 +10,10 @@ type Props = {
 const HomePartnersModule = (props: Props) => {
   return (
     <div className=''>
-      <ModuleHeadingAtom text={props.text} classNames={props.classNames} />
+      <ModuleHeadingAtom heading={props.text} classNames={props.classNames} />
       <div className='mx-auto flex w-[90%] flex-col flex-wrap items-center justify-center gap-x-4 gap-y-4 border md:w-[70%] md:flex-row md:px-0'>
         {props.icons.map((icon, index) => (
-          <PartnersAtom icon={icon} index={index} />
+          <PartnersAtom key={index} icon={icon} index={index} />
         ))}
       </div>
     </div>
