@@ -14,7 +14,7 @@ type Props = {
 
 export function NoticesTemplate(props: Props) {
   return (
-    <section className='px-6 pb-6 lg:px-[100px]'>
+    <section className='px-6 pb-6 lg:px-[200px]'>
       <NoticeHeaderModule {...props.noticeHeaderModuleProps} />
 
       <NoticeSearchModule {...props.noticeSearchModuleProps} />
