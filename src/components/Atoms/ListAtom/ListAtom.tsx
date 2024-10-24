@@ -1,5 +1,6 @@
 import { Card, Image, Avatar } from "antd";
 import "./custom.css";
+import cn from "classnames";
 
 type Props = {
   title?: string; // Title
@@ -15,6 +16,10 @@ type Props = {
   width?: number;
   icon?: string;
 };
+
+const overlayEffect: string = cn(
+  `translate-x-[-4px] translate-y-[-4px] border border-black text-black hover:shadow-[4px_4px_0px_black] transition-all duration-300 hover:rounded-md active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl  active:shadow-none`
+);
 
 export const ListAtom = (props: Props) => {
   // Destructured the props here and set default
@@ -48,11 +53,11 @@ export const ListAtom = (props: Props) => {
 
   return (
     <Card
-      style={{ height: "auto" }}
-      className={`relative max-h-[330px] max-w-[270px] overflow-hidden bg-white sm:w-[348px]  md:max-h-[400px] md:max-w-[350px] xl:max-h-[483px] ${shadow}`}
+      style={{ height: "100%" }}
+      className={`relative max-h-[330px] max-w-[270px] overflow-hidden bg-white sm:w-[348px]  md:max-h-[400px] md:max-w-[350px]  xl:max-h-[483px] ${overlayEffect} `}
     >
       <div
-        className={`h-[64px] w-full rounded-t-[20px] ${bannerBgColor} flex items-center justify-between px-4`}
+        className={`min-h-[64px] w-full ${bannerBgColor} flex items-center justify-between px-4`}
       >
         <div className='flex items-center'>
           <span
@@ -143,7 +148,7 @@ export const ListAtom = (props: Props) => {
       </div>
 
       {cover && (
-        <div className='relative w-full md:max-h-[220px]'>
+        <div className='relative h-fit w-full md:max-h-[220px]'>
           <Image
             src={cover}
             alt='Cover'

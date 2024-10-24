@@ -53,6 +53,9 @@
 .embla__container {
   backface-visibility: hidden;
   display: flex;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -2);
 }
@@ -75,6 +78,8 @@
   .embla.remove-left-margin .embla__container {
     margin-left: 8rem !important;
     padding-left: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     gap: 6rem !important;
   }
 }
