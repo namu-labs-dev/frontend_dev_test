@@ -70,7 +70,17 @@ export const NotificationPopOutAtom = () => {
   ];
 
   return (
-    <div className='h-96 overflow-y-scroll rounded'>
+    <div
+      style={{
+        width: "340px",
+        borderRadius: "10px",
+        height: "579px",
+        border: "2px solid black",
+        overflowY: "auto",
+        padding: "20px",
+        boxShadow: "8px 6px 0px 0px #000000",
+      }}
+    >
       {data.map((item) => (
         <div
           key={item.id}
