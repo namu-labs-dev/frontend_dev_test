@@ -74,7 +74,7 @@ export const HomeContainer = () => {
     homePopularCreatorModuleProps: {
       popularCreatorHeaderProps: createModuleHeader(
         "View All",
-        "Promoted Quest",
+        "Popular Creator",
         "🔥"
       ),
       popularCreatorCarouselProps: {

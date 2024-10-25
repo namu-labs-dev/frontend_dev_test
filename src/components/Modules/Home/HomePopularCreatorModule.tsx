@@ -1,6 +1,9 @@
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 import CreatorCarouselAvatarAtom from "~/components/Atoms/CreatorCarouselAvatarAtom/CreatorCarouselAvatarAtom";
 import ViewAllSectionTabAtom from "~/components/Atoms/ViewAllSectionTabAtom/ViewAllSectionTabAtom";
+import CarouselBtnWrapper from "~/components/Components/CarouselBtnWrapper/CarouselBtnWrapper";
 import CreatorCarousel from "~/components/Components/CreatorCarousel/CreatorCarousel";
+import PrimaryBtn from "~/components/Components/PrimaryBtn/PrimaryBtn";
 
 type Props = {
   popularCreatorHeaderProps: React.ComponentProps<typeof ViewAllSectionTabAtom>;
@@ -21,6 +24,16 @@ export const HomePopularCreatorModule = (props: Props) => {
         )}
         // removeLeftMargin={true}
         reduceSlideWidth={true}
+        renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
+          <CarouselBtnWrapper>
+            <PrimaryBtn onClick={onNext} disabled={nextDisabled}>
+              <ArrowLeftOutlined className='text-base sm:text-lg md:text-xl' />
+            </PrimaryBtn>
+            <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
+              <ArrowRightOutlined className='text-base sm:text-lg md:text-xl' />
+            </PrimaryBtn>
+          </CarouselBtnWrapper>
+        )}
       />
     </div>
   );
