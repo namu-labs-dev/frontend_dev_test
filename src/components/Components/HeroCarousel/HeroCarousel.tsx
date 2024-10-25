@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
+import { useNamuIsMobile } from "~/hooks/useNamuIsMobile";
 
 type Props = {
   images: StaticImageData[];
@@ -9,6 +10,7 @@ type Props = {
 export const HeroCarousel = (props: Props) => {
   const { images } = props;
   const [currentIndex, setCurrentIndex] = useState(0);
+  const isMobile = useNamuIsMobile();
 
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
@@ -27,18 +29,71 @@ export const HeroCarousel = (props: Props) => {
   };
 
   return (
-    <div className='relative mx-auto w-full max-w-[90vw] px-4 sm:max-w-2xl sm:px-6 md:max-w-3xl md:px-8'>
-      <div className='relative flex w-full overflow-visible'>
-        <div className='relative w-full' key={currentIndex}>
+    <div className=''>
+      <div className='relative mx-auto max-w-[90vw] sm:max-w-2xl md:max-w-3xl'>
+        <div className='relative flex overflow-visible'>
+          <div className='relative w-full'>
+            <Image
+              key={`carousel-image-${currentIndex}`}
+              src={images[currentIndex] as StaticImageData}
+              width={618}
+              height={368}
+              alt={`Slide ${currentIndex + 1}`}
+              style={{
+                height: "21.25rem",
+                width: "37.5rem",
+              }}
+              className='rounded-[1.875rem] transition-opacity duration-500 ease-in-out sm:rounded-[1.125rem]'
+            />
+          </div>
+
+          <button
+            onClick={goToPrevious}
+            className='absolute top-1/2 z-10 hidden h-[1.875rem] w-[1.875rem] -translate-y-1/2 rounded-lg border border-black bg-white/30 p-2 transition-all hover:bg-white/50 focus:outline-none md:-left-[0.9375rem] md:flex md:items-center md:justify-center lg:md:-left-12'
+          >
+            <ArrowLeftOutlined />
+          </button>
+
+          <button
+            onClick={goToNext}
+            className='absolute top-1/2 z-10 hidden h-[1.875rem] w-[1.875rem] -translate-y-1/2 rounded-lg border border-black bg-white/30 p-2 transition-all hover:bg-white/50 focus:outline-none md:-right-[0.9375rem] md:flex md:items-center md:justify-center lg:-right-12'
+          >
+            <ArrowRightOutlined />
+          </button>
+        </div>
+
+        {/* Carousel Indicators */}
+        <div className='absolute -bottom-[1.875rem] left-1/2 flex -translate-x-1/2 transform space-x-2 sm:-bottom-[2.0625rem] sm:space-x-3 md:-bottom-16'>
+          {images.map((_, slideIndex) => (
+            <button
+              key={slideIndex}
+              onClick={() => goToSlide(slideIndex)}
+              className={`h-3 w-8 rounded-[3.125rem] transition-all duration-300 ease-in-out focus:outline-none sm:h-4 sm:w-12 ${
+                currentIndex === slideIndex
+                  ? "rounded-md bg-white shadow-[2px_2px_0px_black] sm:shadow-[4px_4px_0px_black]"
+                  : "border-2 border-black bg-white"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+{
+  /* <div className='relative max-w-[90vw] sm:max-w-2xl md:max-w-3xl'>
+      <div className='relative flex overflow-visible'>
+        <div className='relative' key={currentIndex}>
           <Image
             key={`carousel-image-${currentIndex}`}
             src={images[currentIndex] as StaticImageData}
             width={618}
-            height={323}
+            height={400}
             alt={`Slide ${currentIndex + 1}`}
             objectFit='contain'
-            style={{ height: "20.1875rem" }}
-            className='h-auto w-full rounded-[1.875rem] transition-opacity duration-500 ease-in-out sm:rounded-[1.125rem]'
+            style={{ height: "25rem", width: "37.5rem" }}
+            className='rounded-[1.875rem] transition-opacity duration-500 ease-in-out sm:rounded-[1.125rem]'
           />
         </div>
 
@@ -62,14 +117,13 @@ export const HeroCarousel = (props: Props) => {
           <button
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
-            className={`h-3 w-8 rounded-full transition-all duration-300 ease-in-out focus:outline-none sm:h-4 sm:w-[3.0625rem] ${
+            className={`h-3 w-8 rounded-[3.125rem] transition-all duration-300 ease-in-out focus:outline-none sm:h-4 sm:w-[3.0625rem] ${
               currentIndex === slideIndex
-                ? "translate-x-[-2px] translate-y-[-2px] rounded-md bg-white shadow-[2px_2px_0px_black] sm:translate-x-[-4px] sm:translate-y-[-4px] sm:shadow-[4px_4px_0px_black]"
-                : "rounded-[3.125rem] border-2 border-black bg-white"
+                ? "rounded-md bg-white shadow-[2px_2px_0px_black] sm:shadow-[4px_4px_0px_black]"
+                : "border-2 border-black bg-white"
             }`}
           ></button>
         ))}
       </div>
-    </div>
-  );
-};
+    </div> */
+}

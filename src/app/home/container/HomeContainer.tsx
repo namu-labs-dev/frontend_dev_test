@@ -3,10 +3,7 @@ import useDummyCreatorData from "~/hooks/useDummyCreatorData";
 import useDummyNotificationData from "~/hooks/useDummyNotification";
 import useDummyQuestData from "~/hooks/useDummyQuestData";
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
-<<<<<<< HEAD
 import congrats from "../../../../public/images/congrats.png";
-=======
->>>>>>> 486ea949b595fea788639b8935eb0bd337621ecb
 import nft from "../../../../public/pngs/NFTImage.png";
 import cover1 from "../../../../public/images/cover1.png";
 import heroImage1 from "../../../../public/pngs/heroImage1.png";
