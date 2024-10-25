@@ -3,6 +3,7 @@ import CreatorCarousel from "~/components/Components/CreatorCarousel/CreatorCaro
 import { ListAtom } from "~/components/Atoms/ListAtom/ListAtom";
 import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
 import PrimaryBtn from "~/components/Components/PrimaryBtn/PrimaryBtn";
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 
 type Props = {
   homePopularQuestHeaderProps: React.ComponentProps<
@@ -23,6 +24,16 @@ export const HomePopularQuestModule = (props: Props) => {
         slideRenderer={(slide, index) => <ListAtom key={index} {...slide} />}
         reduceSlideWidth
         removeLeftMargin={true}
+        renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
+          <div className='embla__controls  top-[60%]  z-10'>
+            <PrimaryBtn onClick={onNext} disabled={nextDisabled}>
+              <ArrowLeftOutlined className='text-base sm:text-lg md:text-xl' />
+            </PrimaryBtn>
+            <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
+              <ArrowRightOutlined className='text-base sm:text-lg md:text-xl' />
+            </PrimaryBtn>
+          </div>
+        )}
       />
     </div>
   );

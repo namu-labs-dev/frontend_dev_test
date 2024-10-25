@@ -1,6 +1,8 @@
 import CreatorCarouselAvatarAtom from "~/components/Atoms/CreatorCarouselAvatarAtom/CreatorCarouselAvatarAtom";
 import ViewAllSectionTabAtom from "~/components/Atoms/ViewAllSectionTabAtom/ViewAllSectionTabAtom";
 import CreatorCarousel from "~/components/Components/CreatorCarousel/CreatorCarousel";
+import PrimaryBtn from "~/components/Components/PrimaryBtn/PrimaryBtn";
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 
 type Props = {
   popularCreatorHeaderProps: React.ComponentProps<typeof ViewAllSectionTabAtom>;
@@ -16,11 +18,21 @@ export const HomePopularCreatorModule = (props: Props) => {
       <ViewAllSectionTabAtom {...props.popularCreatorHeaderProps} />
       <CreatorCarousel
         {...props.popularCreatorCarouselProps}
+        removeLeftMargin={true}
+        reduceSlideWidth
         slideRenderer={(slide, index) => (
           <CreatorCarouselAvatarAtom key={index} {...slide} />
         )}
-        // removeLeftMargin={true}
-        reduceSlideWidth={true}
+        renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
+          <div className='embla__controls  top-[60%]  z-10'>
+            <PrimaryBtn onClick={onNext} disabled={nextDisabled}>
+              <ArrowLeftOutlined className='text-base sm:text-lg md:text-xl' />
+            </PrimaryBtn>
+            <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
+              <ArrowRightOutlined className='text-base sm:text-lg md:text-xl' />
+            </PrimaryBtn>
+          </div>
+        )}
       />
     </div>
   );

@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
-import { useNamuIsMobile } from "~/hooks/useNamuIsMobile";
+// import { useNamuIsMobile } from "~/hooks/useNamuIsMobile";
 
 type Props = {
   images: StaticImageData[];
@@ -10,7 +10,7 @@ type Props = {
 export const HeroCarousel = (props: Props) => {
   const { images } = props;
   const [currentIndex, setCurrentIndex] = useState(0);
-  const isMobile = useNamuIsMobile();
+  // const isMobile = useNamuIsMobile();
 
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
