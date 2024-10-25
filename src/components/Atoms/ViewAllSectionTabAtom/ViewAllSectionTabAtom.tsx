@@ -16,7 +16,9 @@ const ViewAllSectionTabAtom = (props: Props) => {
       {/* section heading */}
       <ModuleHeadingAtom heading={props.heading} />
       <PrimaryBtn {...props}>
-        <span className='mr-2 hidden lg:inline-block'>{props.buttonText}</span>{" "}
+        <span className=' sm::text-sm mr-2 hidden md:mr-0 md:inline-block md:px-1'>
+          {props.buttonText}
+        </span>{" "}
         {/* Text only visible on desktop */}
         <SVGAtom
           iconName='arrowUpRight'

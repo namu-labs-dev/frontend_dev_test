@@ -18,7 +18,7 @@ type Props = {
 
 export function HomeEndingSoonCarouselModule(props: Props) {
   return (
-    <div className='relative mt-[10%]  py-[3%] sm:mt-[6%] md:block lg:mt-[2%]'>
+    <div className='relative mt-[10%]  py-[3%] sm:mt-[6%] lg:mt-[2%]'>
       <ViewAllSectionTabAtom {...props.endingSoonSectionHeaderProps} />
       <CreatorCarousel
         {...props.endingSoonCarouselProps}
