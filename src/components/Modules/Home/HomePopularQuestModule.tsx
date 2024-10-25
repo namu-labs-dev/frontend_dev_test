@@ -3,6 +3,7 @@ import CreatorCarousel from "~/components/Components/CreatorCarousel/CreatorCaro
 import { ListAtom } from "~/components/Atoms/ListAtom/ListAtom";
 import SVGAtom from "~/components/Atoms/SVGAtom/SVGAtom";
 import PrimaryBtn from "~/components/Components/PrimaryBtn/PrimaryBtn";
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 
 type Props = {
   homePopularQuestHeaderProps: React.ComponentProps<
@@ -16,27 +17,23 @@ type Props = {
 
 export const HomePopularQuestModule = (props: Props) => {
   return (
-    <div>
+    <div className='relative mt-[10%] py-[2%] md:mt-0'>
       <ViewAllSectionTabAtom {...props.homePopularQuestHeaderProps} />
       <CreatorCarousel
         {...props.popularQuestCarouselProps}
         slideRenderer={(slide, index) => <ListAtom key={index} {...slide} />}
+        reduceSlideWidth
         removeLeftMargin={true}
-        // renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
-        //   <div className='embla__controls z-10'>
-        //     <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
-        //       <SVGAtom
-        //         className='text-center'
-        //         iconName='arrowLeftLong'
-        //         width={20}
-        //         height={20}
-        //       />
-        //     </PrimaryBtn>
-        //     <button onClick={onNext} disabled={nextDisabled}>
-        //       Next
-        //     </button>
-        //   </div>
-        // )}
+        renderNavButtons={({ onPrev, onNext, prevDisabled, nextDisabled }) => (
+          <div className='embla__controls  top-[60%]  z-10'>
+            <PrimaryBtn onClick={onNext} disabled={nextDisabled}>
+              <ArrowLeftOutlined className='text-base sm:text-lg md:text-xl' />
+            </PrimaryBtn>
+            <PrimaryBtn onClick={onPrev} disabled={prevDisabled}>
+              <ArrowRightOutlined className='text-base sm:text-lg md:text-xl' />
+            </PrimaryBtn>
+          </div>
+        )}
       />
     </div>
   );

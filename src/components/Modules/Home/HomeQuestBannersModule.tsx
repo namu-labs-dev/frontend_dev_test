@@ -6,9 +6,10 @@ type Props = {
   questBannerHeaderProps: React.ComponentProps<typeof ModuleHeadingAtom>;
   questBannerProps: React.ComponentProps<typeof BannerQuestAtom>;
 };
+
 const HomeQuestBannersModule = (props: Props) => {
   return (
-    <div>
+    <div className='mt-[10%] py-[2%] md:mt-0'>
       <div>
         <ModuleHeadingAtom {...props.questBannerHeaderProps} />
         <BannerQuestAtom {...props.questBannerProps} />

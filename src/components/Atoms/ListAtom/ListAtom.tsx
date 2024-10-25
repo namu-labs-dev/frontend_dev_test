@@ -1,5 +1,6 @@
 import { Card, Image, Avatar } from "antd";
 import "./custom.css";
+import cn from "classnames";
 
 type Props = {
   title?: string; // Title
@@ -15,6 +16,10 @@ type Props = {
   width?: number;
   icon?: string;
 };
+
+const overlayEffect: string = cn(
+  `translate-x-[-4px] translate-y-[-4px] border border-black text-black hover:shadow-[4px_4px_0px_black] transition-all duration-300 hover:rounded-md active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl  active:shadow-none`
+);
 
 export const ListAtom = (props: Props) => {
   // Destructured the props here and set default
@@ -49,14 +54,14 @@ export const ListAtom = (props: Props) => {
   return (
     <Card
       style={{ height: "100%" }}
-      className={`relative max-h-[400px] w-[270px] overflow-hidden bg-white sm:max-h-[515px] sm:w-[348px] xl:max-h-[483px] xl:w-[360px] ${shadow}`}
+      className={`relative max-h-[330px] max-w-[270px] overflow-hidden bg-white sm:w-[348px]  md:max-h-[400px] md:max-w-[350px]  xl:max-h-[483px] ${overlayEffect} `}
     >
       <div
-        className={`h-[64px] w-full rounded-t-[20px] ${bannerBgColor} flex items-center justify-between px-4`}
+        className={`min-h-[64px] w-full ${bannerBgColor} flex items-center justify-between px-4`}
       >
         <div className='flex items-center'>
           <span
-            className={`${bannerTextColor} text-[26px] font-black italic leading-[35.88px]`}
+            className={`${bannerTextColor} text-lg font-black italic leading-[35.88px] md:text-[26px]`}
           >
             {listPoint.toLocaleString()} P
           </span>
@@ -78,7 +83,7 @@ export const ListAtom = (props: Props) => {
           </span>
         </div>
       </div>
-      <div className='p-5'>
+      <div className='p-4 md:p-5'>
         <div
           className={`${statusBorderColor} ${statusBgColor} flex h-[32px] w-[98px] items-center justify-center rounded-md border`}
         >
@@ -88,7 +93,7 @@ export const ListAtom = (props: Props) => {
         </div>
         {!cover ? (
           // Layout without cover
-          <>
+          <div>
             <div className='mt-3 flex items-center'>
               <Avatar
                 src={
@@ -105,25 +110,25 @@ export const ListAtom = (props: Props) => {
               </span>
             </div>
             <div className='mt-3'>
-              <span className='line-clamp-2 text-[20px] font-bold leading-[27px] text-black'>
+              <span className='text-md line-clamp-2 font-bold leading-[27px] text-black md:text-[20px]'>
                 {title}
               </span>
             </div>
             <div className='mt-3'>
-              <span className='line-clamp-2 text-ellipsis font-medium leading-[21px] text-[#595959]'>
+              <span className='line-clamp-2 text-ellipsis  font-medium leading-[21px] text-[#595959]'>
                 {description}
               </span>
             </div>
-          </>
+          </div>
         ) : (
           // Layout with cover
-          <>
+          <div className=''>
             <div className='mt-3'>
-              <span className='text-[20px] font-bold leading-[27px] text-black'>
+              <span className='text-md font-bold leading-[27px] text-black md:text-[20px]'>
                 {title}
               </span>
             </div>
-            <div className='mt-3 flex items-center'>
+            <div className='flex items-center'>
               <Avatar
                 src={
                   <img
@@ -138,19 +143,19 @@ export const ListAtom = (props: Props) => {
                 {author}
               </span>
             </div>
-          </>
+          </div>
         )}
       </div>
 
       {cover && (
-        <div className='relative h-[220px] w-full'>
+        <div className='relative h-fit w-full md:max-h-[220px]'>
           <Image
             src={cover}
             alt='Cover'
             height='100%'
             width='100%'
             preview={false}
-            className='rounded-b-[20px] object-cover object-center'
+            className='relative  rounded-b-[20px] object-cover object-center'
           />
         </div>
       )}

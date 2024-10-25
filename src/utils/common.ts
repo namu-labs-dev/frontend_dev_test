@@ -4,7 +4,7 @@ import {
 } from "~/components/Components/RewardOps/RewardOps";
 
 import { type ErrorStates } from "~/components/Components/TextInput/TextInput";
-
+import cn from "classnames";
 import ToastStore from "~/store/ToastStore";
 
 export function generateRandomString(length: number) {
@@ -624,3 +624,7 @@ export const partnerIcons = [
   "/svgs/part1.svg",
   "/svgs/part9.svg",
 ];
+
+export const overlayEffect: string = cn(
+  `translate-x-[-4px] translate-y-[-4px] border border-black  text-center text-sm  text-black hover:shadow-[4px_4px_0px_black] transition-all duration-300 hover:rounded-md active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl  active:shadow-none`
+);
