@@ -7,7 +7,7 @@ import nft from "../../../../public/pngs/NFTImage.png";
 import cover1 from "../../../../public/images/cover1.png";
 import heroImage1 from "../../../../public/pngs/heroImage1.png";
 import { type EmblaOptionsType } from "embla-carousel";
-import { partnerIcons } from "~/utils/common";
+import { mobilePartnerIcons, partnerIcons } from "~/utils/common";
 import {
   creatorAvatarProps,
   popularCreatorAvatarProps,
@@ -146,6 +146,7 @@ export const HomeContainer = () => {
       icons: partnerIcons,
       text: "Partners",
       classNames: `text-center`,
+      mobilePartnerIcons: mobilePartnerIcons,
     },
     homeFooterModuleProps: {
       footerTitle: "@FANDOM GLOBAL PTE LTD",
