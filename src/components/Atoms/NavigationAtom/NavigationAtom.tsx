@@ -7,19 +7,16 @@ import { Popover, Button } from "antd";
 import { NotificationPopOutAtom } from "../PopOutAtom/NotificationPopOutAtom";
 
 type Props = {
-  creators: any;
-  notifications: any;
+  isLoggedIn: boolean;
+  isViewed: boolean;
 };
 
 const NavigationAtom = (props: Props) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
-  const [isViewed, setIsViewed] = useState(true);
-
   return (
-    <nav className='border-b-2 border-black p-4'>
+    <nav className='border-b-2 border-black px-[1.375rem] md:px-[2.625rem]'>
       <div className='flex h-16 items-center justify-between md:h-[5.875rem]'>
         <div className='flex items-center space-x-4'>
-          <div className='h-8 w-32 md:h-[2rem] md:w-[9.5rem]'>
+          <div className='h-8 w-32 md:h-[2rem] md:w-[8.5rem]'>
             <Image
               src={fanquest_logo}
               alt="fanquest's logo"
@@ -28,49 +25,37 @@ const NavigationAtom = (props: Props) => {
               layout='responsive'
             />
           </div>
-          <div className='hidden md:flex md:items-center md:space-x-4'>
+          <div className='hidden md:items-center md:space-x-4 lg:flex'>
             <a
               href='#'
               className='rounded-common bg-black px-3 pb-[0.625rem] pt-[0.5625rem]'
             >
               <p className='text-lg font-medium text-primaryGreen'>Home</p>
             </a>
-            <a
-              href='#'
-              className='text-lg font-medium text-[#262626] md:max-lg:text-base'
-            >
+            <a href='#' className='text-lg font-medium text-[#262626]'>
               Explore
             </a>
-            <a
-              href='#'
-              className='text-lg font-medium text-[#262626] md:max-lg:text-base'
-            >
+            <a href='#' className='text-lg font-medium text-[#262626]'>
               Daily earn
             </a>
-            <a
-              href='#'
-              className='text-lg font-medium text-[#262626] md:max-lg:text-base'
-            >
+            <a href='#' className='text-lg font-medium text-[#262626]'>
               Shop
             </a>
-            <a
-              href='#'
-              className='text-lg font-medium text-[#262626] md:max-lg:text-base'
-            >
+            <a href='#' className='text-lg font-medium text-[#262626]'>
               SBT AirDrop
             </a>
           </div>
         </div>
-        <div className='flex items-center justify-center space-x-4'>
+        <div className='flex items-center justify-center space-x-1 min-[411px]:space-x-4'>
           <a
             href='#'
-            className='hidden rounded-common bg-black px-5 py-1.5 md:block'
+            className='hidden rounded-common bg-black px-5 py-1.5 lg:block'
           >
             <p className='text-base font-medium text-primaryGreen'>
               Create quest
             </p>
           </a>
-          {isLoggedIn ? (
+          {props.isLoggedIn ? (
             <>
               <Popover
                 className='relative'
@@ -79,9 +64,9 @@ const NavigationAtom = (props: Props) => {
                 placement='bottomRight'
                 arrow={false}
               >
-                <button className='inline-block text-2xl md:rounded-common md:!bg-black md:!py-0.5 md:px-2'>
-                  {isViewed && (
-                    <div className='absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-primaryGreen md:-right-[0.8125rem] md:-top-[0.625rem] md:h-[1.5625rem] md:w-[1.5625rem]'>
+                <button className='mb-2 inline-block text-2xl md:mb-0 md:rounded-common md:!bg-black md:!py-0.5 md:px-2 md:hover:translate-y-[-4px] md:hover:rounded-md md:hover:shadow-[2px_2px_0px_white,3px_3px_0px_black]'>
+                  {props.isViewed && (
+                    <div className='absolute -right-1 -top-1 flex items-center justify-center rounded-full bg-primaryGreen px-[0.4375rem] py-0.5 md:-right-[0.8125rem] md:-top-[0.625rem] md:h-[1.5625rem] md:w-[1.5625rem]'>
                       <p className='text-xs font-medium text-black md:text-sm'>
                         N
                       </p>
@@ -103,7 +88,7 @@ const NavigationAtom = (props: Props) => {
                 arrow={false}
               >
                 <Button
-                  className='inline-block bg-white text-2xl md:rounded-common md:!bg-black md:!px-2 md:!py-0.5'
+                  className='inline-block bg-white text-2xl md:rounded-common md:!bg-black md:!px-2 md:!py-0.5 md:hover:!translate-y-[-4px] md:hover:!rounded-md md:hover:shadow-[2px_2px_0px_white,3px_3px_0px_black]'
                   style={{ backgroundColor: "transparent", border: "none" }}
                   type='text'
                 >
@@ -118,14 +103,14 @@ const NavigationAtom = (props: Props) => {
           ) : (
             <a
               href='#'
-              className='hidden rounded-[0.625rem] bg-black px-5 py-1.5 md:inline-block'
+              className='hidden rounded-common bg-black px-5 py-1.5 lg:inline-block'
             >
               <p className='text-base font-medium text-white'>Sign in</p>
             </a>
           )}
-          <button className='mb-1.5 inline-block text-2xl md:hidden'>
+          <button className='flex items-center justify-center rounded p-1 text-2xl md:border-2 md:border-black md:hover:bg-primaryGreen lg:hidden'>
             <MenuOutlined
-              className='rounded p-0.5 text-black hover:bg-primaryGreen md:text-white'
+              className='rounded text-black hover:bg-primaryGreen md:text-white'
               style={{ fontSize: "20px" }}
             />
           </button>

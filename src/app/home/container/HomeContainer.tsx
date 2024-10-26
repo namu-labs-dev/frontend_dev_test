@@ -9,6 +9,7 @@ import cover1 from "../../../../public/images/cover1.png";
 import heroImage1 from "../../../../public/pngs/heroImage1.png";
 import { type EmblaOptionsType } from "embla-carousel";
 import { partnerIcons } from "~/utils/common";
+import { HeroHeading } from "~/components/Components/HeroHeading/HeroHeading";
 import {
   creatorAvatarProps,
   popularCreatorAvatarProps,
@@ -63,12 +64,17 @@ export const HomeContainer = () => {
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
     homeHeaderModuleProps: {
       headerProps: {
-        creators: [],
-        notifications: [],
+        isLoggedIn: true,
+        isViewed: true,
       },
     },
     homeHeroModuleProps: {
-      heroProps: {
+      heroTextProps: {
+        heading: <HeroHeading />,
+        description:
+          "Join exciting communities, have fun and make a difference.",
+      },
+      heroCarouselProps: {
         images: heroImages,
       },
     },
