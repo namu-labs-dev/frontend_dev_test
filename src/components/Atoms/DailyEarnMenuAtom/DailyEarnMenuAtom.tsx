@@ -11,12 +11,18 @@ const DailyEarnMenuAtom = (props: Props) => {
   };
 
   return (
-    <div className='ml-5'>
-      <div className='flex max-w-[8rem] translate-x-[-4px] translate-y-[-4px] flex-col gap-y-2 rounded-md border-2 border-black bg-white px-[2%] py-[1%] text-center text-sm  text-black shadow-[4px_4px_0px_black] transition-all duration-300 hover:rounded-md active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl  active:shadow-none '>
+    <div
+      style={{
+        border: "2px solid black",
+        borderRadius: "10px",
+      }}
+      className='h-[183px] w-[133px] px-[15px] py-[20px] shadow-[4px_4px_0px_black]'
+    >
+      <div className='flex h-full w-full flex-col justify-between gap-y-2 bg-white text-sm text-black'>
         {props.tabs.map((tab, index) => (
           <button
             key={index}
-            className={`my-1 inline-block rounded-lg ${activeTab === tab && "text-base-green bg-black px-1 py-1"}`}
+            className={`inline-block rounded-lg px-[12px] py-[8px] text-left ${activeTab === tab && "bg-black px-1 py-1 text-base-green"}`}
             onClick={() => handleTabClick(tab)} // Set active tab on click
           >
             {tab}

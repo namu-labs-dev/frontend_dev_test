@@ -21,7 +21,7 @@ export function NoticeListModule(props: Props) {
   const noticesLength = props.notices.length;
 
   return (
-    <div className=''>
+    <div className='lg:mt-6'>
       <Title level={1} className='my-6 text-xl font-bold lg:hidden'>
         {" "}
         {noticesLength} Notices{" "}

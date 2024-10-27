@@ -1,5 +1,3 @@
-import { Card } from "antd";
-import { UserOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import { LuMoveUpRight } from "react-icons/lu";
 import { VscCreditCard } from "react-icons/vsc";
@@ -9,11 +7,13 @@ import avatar from "../../../../public/pngs/avatar.png";
 
 export const UserPopOutAtom = () => {
   return (
-    <Card
+    <div
       style={{
-        width: "300px",
+        width: "320px",
         borderRadius: "10px",
-        border: "none",
+        border: "2px solid black",
+        boxShadow: `8px 6px 0px 0px #000000`,
+        padding: "20px",
       }}
     >
       <div className='flex items-center'>
@@ -63,6 +63,6 @@ export const UserPopOutAtom = () => {
           </span>
         </Link>
       </div>
-    </Card>
+    </div>
   );
 };

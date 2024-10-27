@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HomeErrorCardLayout } from "~/components/Components/CardLayout/HomeErrorCardLayout";
 import Link from "next/link";
 import { SocialIconAtom } from "~/components/Atoms/SocialIconAtom/SocialIconAtom";
 
-export const HomeLoginPopUpModule = () => {
+type Props = {
+  isOpen: boolean;
+};
+
+export const LoginModalAtom = (props: Props) => {
   const socialButtons = [
     { iconName: "google", label: "Google" },
     { iconName: "facebook", label: "Facebook" },
@@ -15,8 +19,11 @@ export const HomeLoginPopUpModule = () => {
     { iconName: "petra", label: "Petra" },
     { iconName: "okx", label: "OKX" },
   ];
+  const [isModalOpen, setIsModalOpen] = useState(props.isOpen);
 
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  useEffect(() => {
+    setIsModalOpen(props.isOpen);
+  }, [props.isOpen]);
 
   const handleToggleModal = () => {
     setIsModalOpen(!isModalOpen);

@@ -9,7 +9,7 @@ type Props = {
 
 const HomeQuestBannersModule = (props: Props) => {
   return (
-    <div className='mt-[10%] py-[2%] md:mt-0'>
+    <div className='mt-[8%] py-[2%] md:mt-0 lg:mt-[2%]'>
       <div>
         <ModuleHeadingAtom {...props.questBannerHeaderProps} />
         <BannerQuestAtom {...props.questBannerProps} />
