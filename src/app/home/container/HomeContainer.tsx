@@ -18,6 +18,7 @@ import {
 import { useState } from "react";
 import { FiSend } from "react-icons/fi";
 import { FaDiscord, FaTwitter } from "react-icons/fa";
+import { BellOutlined, UserOutlined } from "@ant-design/icons";
 
 export const HomeContainer = () => {
   const creators = useDummyCreatorData();
@@ -64,6 +65,18 @@ export const HomeContainer = () => {
       headerProps: {
         creators: [],
         notifications: [],
+        HPUserIconButtonProps: {
+          antdIcon: UserOutlined,
+          color: "green",
+        },
+        HpBellIconProps: {
+          antdIcon: BellOutlined,
+          color: "white",
+          additionalStyles: "relative",
+        },
+        DailyEarnMenuProps: {
+          tabs: ["Checkin", "Quiz", "Gacha"],
+        },
       },
     },
     homeHeroModuleProps: {

@@ -1,9 +1,32 @@
-import { BellOutlined } from "@ant-design/icons";
+import React from "react";
 
-export const IconHpButtonAtom = () => {
+type Props = {
+  antdIcon: React.ElementType;
+  children?: React.ReactNode;
+  color: "green" | "white";
+  additionalStyles?: string;
+};
+
+export const IconHpButtonAtom = (
+  props: Props & React.ButtonHTMLAttributes<HTMLButtonElement>
+) => {
+  const {
+    antdIcon: AntdIcon,
+    children,
+    color,
+    additionalStyles,
+    ...rest
+  } = props;
   return (
-    <button type='button' className={`rounded-lg bg-black px-4 py-2`}>
-      <BellOutlined className='text-primaryGreen hover:text-white' />
+    <button
+      type='button'
+      className={`inline-block h-[50px] w-[50px] rounded-[10px] bg-black p-[11px] hover:p-[0px] ${additionalStyles}`}
+      {...rest}
+    >
+      {children}
+      <props.antdIcon
+        className={`${props.color === "green" ? "!text-primaryGreen" : "!text-white"} text-lg`}
+      />
     </button>
   );
 };
