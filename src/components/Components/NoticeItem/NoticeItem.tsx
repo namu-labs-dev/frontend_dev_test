@@ -13,7 +13,7 @@ export function NoticeItem(props: Props) {
         {props.title}
       </Title>
 
-      <Text style={{ color: "#8C8C8C" }} className='mb-2 font-medium'>
+      <Text style={{ color: "#8C8C8C" }} className='mb-4 font-medium'>
         {props.timestamp}
       </Text>
     </div>
