@@ -6,12 +6,12 @@ import { FaDiscord } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import { FaRegCopyright } from "react-icons/fa";
-type navProps = {
+export type navProps = {
   label: string;
   href: string;
 };
 
-type linkProps = {
+export type linkProps = {
   icon: React.ReactNode;
   href: string;
 };
@@ -27,7 +27,7 @@ const FooterAtom = (props: Props) => {
       <header className='mt-2 items-center justify-between px-8 py-4 md:flex'>
         <div className='my-2 items-center md:my-1 md:flex'>
           <span className='flex font-bold md:mr-[3rem] lg:mr-[6rem]'>
-            <FaRegCopyright className='mr-3' /> {new Date().getFullYear()}{" "}
+            <FaRegCopyright className='mr-3 mt-1' /> {new Date().getFullYear()}{" "}
             {props.footerTitle}
           </span>
           <nav className=' mt-5 md:mt-0'>

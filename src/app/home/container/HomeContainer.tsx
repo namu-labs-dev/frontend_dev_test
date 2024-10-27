@@ -8,7 +8,8 @@ import nft from "../../../../public/pngs/NFTImage.png";
 import cover1 from "../../../../public/images/cover1.png";
 import heroImage1 from "../../../../public/pngs/heroImage1.png";
 import { type EmblaOptionsType } from "embla-carousel";
-import { partnerIcons } from "~/utils/common";
+import { HeroHeading } from "~/components/Components/HeroHeading/HeroHeading";
+import { mobilePartnerIcons, partnerIcons } from "~/utils/common";
 import {
   creatorAvatarProps,
   popularCreatorAvatarProps,
@@ -19,6 +20,7 @@ import {
 import { useState } from "react";
 import { FiSend } from "react-icons/fi";
 import { FaDiscord, FaTwitter } from "react-icons/fa";
+import { BellOutlined, UserOutlined } from "@ant-design/icons";
 
 export const HomeContainer = () => {
   const creators = useDummyCreatorData();
@@ -34,12 +36,12 @@ export const HomeContainer = () => {
   const handleViewAll = () => {
     return null;
   };
-  const handleCancelPurchase = () => {
-    return null;
-  };
-  const handleUsers = () => {
-    return null;
-  };
+  // const handleCancelPurchase = () => {
+  //   return null;
+  // };
+  // const handleUsers = () => {
+  //   return null;
+  // };
 
   const heroImages = [heroImage1, nft, cover1, congrats];
 
@@ -63,19 +65,36 @@ export const HomeContainer = () => {
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
     homeHeaderModuleProps: {
       headerProps: {
-        creators: [],
-        notifications: [],
+        isLoggedIn: true,
+        isViewed: true,
+        HPUserIconButtonProps: {
+          antdIcon: UserOutlined,
+          color: "green",
+        },
+        HpBellIconProps: {
+          antdIcon: BellOutlined,
+          color: "white",
+          additionalStyles: "relative",
+        },
+        DailyEarnMenuProps: {
+          tabs: ["Checkin", "Quiz", "Gacha"],
+        },
       },
     },
     homeHeroModuleProps: {
-      heroProps: {
+      heroTextProps: {
+        heading: <HeroHeading />,
+        description:
+          "Join exciting communities, have fun and make a difference.",
+      },
+      heroCarouselProps: {
         images: heroImages,
       },
     },
     homePopularCreatorModuleProps: {
       popularCreatorHeaderProps: createModuleHeader(
         "View All",
-        "Popular Creators",
+        "Popular Creator",
         "🔥"
       ),
       popularCreatorCarouselProps: {
@@ -136,7 +155,7 @@ export const HomeContainer = () => {
     homeQuestBannerModuleProps: {
       questBannerHeaderProps: {
         heading: "Enjoy a variety of Quests",
-        classNames: `text-center`,
+        classNames: `text-center md:text-3xl mx-auto xl:w-full md:w-[40%]`,
       },
       questBannerProps: {
         rankingQuestBanner: "/svgs/rankingBanner.svg",
@@ -147,6 +166,7 @@ export const HomeContainer = () => {
       icons: partnerIcons,
       text: "Partners",
       classNames: `text-center`,
+      mobilePartnerIcons: mobilePartnerIcons,
     },
     homeFooterModuleProps: {
       footerTitle: "@FANDOM GLOBAL PTE LTD",

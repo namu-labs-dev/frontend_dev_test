@@ -6,6 +6,7 @@ import {
 import { type ErrorStates } from "~/components/Components/TextInput/TextInput";
 import cn from "classnames";
 import ToastStore from "~/store/ToastStore";
+import { mobileProps } from "~/components/Modules/Home/HomePartnersModule";
 
 export function generateRandomString(length: number) {
   const characters =
@@ -614,15 +615,45 @@ export const testNotices = [
   },
 ];
 export const partnerIcons = [
-  "/svgs/part2.svg",
+  "/svgs/part6.svg",
+  "/svgs/part5.svg",
   "/svgs/part3.svg",
   "/svgs/part4.svg",
-  "/svgs/part5.svg",
-  "/svgs/part6.svg",
   "/svgs/part7.svg",
   "/svgs/part8.svg",
   "/svgs/part1.svg",
-  "/svgs/part9.svg",
+  "/svgs/part2.svg",
+];
+
+export const mobilePartnerIcons: mobileProps[] = [
+  {
+    text: "Partners",
+    iconName: "mob1",
+  },
+  {
+    text: "Trust Wallet",
+    iconName: "mob7",
+  },
+  {
+    text: "BNB",
+    iconName: "mob6",
+  },
+  {
+    text: "Arbitrum One",
+    iconName: "mob5",
+  },
+  {
+    text: "PancakeSwap",
+    iconName: "mob4",
+  },
+  {
+    text: "Atticc Labs",
+    iconName: "mob3",
+  },
+  {
+    text: "EasyA",
+    iconName: "mob2",
+  },
 ];
 
 export const overlayEffect: string = cn(

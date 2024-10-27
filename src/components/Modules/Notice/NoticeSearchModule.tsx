@@ -7,7 +7,7 @@ type Props = {
 
 export function NoticeSearchModule(props: Props) {
   return (
-    <div className='mt-6 flex w-full'>
+    <div className='mt-6 flex w-full lg:mt-[60px]'>
       <Title className='hidden text-lg font-medium lg:block'>
         Total {props.noticesLength}
       </Title>
