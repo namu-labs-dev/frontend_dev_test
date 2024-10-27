@@ -57,7 +57,7 @@ export const ListAtom = (props: Props) => {
       className={`relative max-h-[330px] max-w-[270px] overflow-hidden bg-white sm:w-[348px]  md:max-h-[400px] md:max-w-[350px]  xl:max-h-[483px] ${overlayEffect} `}
     >
       <div
-        className={`min-h-[64px] w-full ${bannerBgColor} flex items-center justify-between px-4`}
+        className={`h-[64px] w-full ${bannerBgColor} flex items-center justify-between px-4`}
       >
         <div className='flex items-center'>
           <span

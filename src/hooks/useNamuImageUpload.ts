@@ -1,6 +1,6 @@
 "use client";
 
-import { message, UploadFile } from "antd";
+import { message, type UploadFile } from "antd";
 import { useEffect, useState } from "react";
 import { uploadFile } from "~/utils/upload";
 
@@ -19,13 +19,13 @@ export const useNamuImageUpload = (fieldName: string) => {
           uid: "-1",
           name: fieldName,
           status: "done",
-          url: response.fileUrl
-        }
+          url: response.fileUrl,
+        },
       ]);
       setImageUrl(response.fileUrl);
     } catch (error) {
       onError?.(error as Error);
-      message.error(`${fieldName} upload failed`);
+      void message.error(`${fieldName} upload failed`);
     }
   };
 
@@ -33,7 +33,7 @@ export const useNamuImageUpload = (fieldName: string) => {
     if (!imageUrl) return;
 
     if (!imageUrl.startsWith("https://")) {
-      message.warning("imageUrl should start with https://");
+      void message.warning("imageUrl should start with https://");
       setImageUrl("");
       return;
     }
@@ -43,8 +43,8 @@ export const useNamuImageUpload = (fieldName: string) => {
         uid: "-1",
         name: fieldName,
         status: "done",
-        url: imageUrl
-      }
+        url: imageUrl,
+      },
     ]);
   }, [imageUrl]);
 

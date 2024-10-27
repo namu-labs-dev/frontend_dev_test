@@ -3,7 +3,6 @@ import cn from "classnames";
 
 type Props = {
   heading: ReactNode | string;
-
   classNames?: string;
 };
 
@@ -12,7 +11,7 @@ const ModuleHeadingAtom = (props: Props) => {
     <div className='p-[2%]'>
       <h1
         className={cn(
-          `font-sans text-xl font-extrabold lg:text-3xl`,
+          `font-sans text-2xl font-extrabold lg:text-[34px]`,
           props.classNames
         )}
       >

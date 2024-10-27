@@ -7,7 +7,7 @@ import nft from "../../../../public/pngs/NFTImage.png";
 import cover1 from "../../../../public/images/cover1.png";
 import heroImage1 from "../../../../public/pngs/heroImage1.png";
 import { type EmblaOptionsType } from "embla-carousel";
-import { partnerIcons } from "~/utils/common";
+import { mobilePartnerIcons, partnerIcons } from "~/utils/common";
 import {
   creatorAvatarProps,
   popularCreatorAvatarProps,
@@ -34,12 +34,12 @@ export const HomeContainer = () => {
   const handleViewAll = () => {
     return null;
   };
-  const handleCancelPurchase = () => {
-    return null;
-  };
-  const handleUsers = () => {
-    return null;
-  };
+  // const handleCancelPurchase = () => {
+  //   return null;
+  // };
+  // const handleUsers = () => {
+  //   return null;
+  // };
 
   const heroImages = [heroImage1, nft, cover1];
 
@@ -87,7 +87,7 @@ export const HomeContainer = () => {
     homePopularCreatorModuleProps: {
       popularCreatorHeaderProps: createModuleHeader(
         "View All",
-        "Promoted Quest",
+        "Popular Creator",
         "🔥"
       ),
       popularCreatorCarouselProps: {
@@ -148,7 +148,7 @@ export const HomeContainer = () => {
     homeQuestBannerModuleProps: {
       questBannerHeaderProps: {
         heading: "Enjoy a variety of Quests",
-        classNames: `text-center`,
+        classNames: `text-center md:text-3xl mx-auto xl:w-full md:w-[40%]`,
       },
       questBannerProps: {
         rankingQuestBanner: "/svgs/rankingBanner.svg",
@@ -159,6 +159,7 @@ export const HomeContainer = () => {
       icons: partnerIcons,
       text: "Partners",
       classNames: `text-center`,
+      mobilePartnerIcons: mobilePartnerIcons,
     },
     homeFooterModuleProps: {
       footerTitle: "@FANDOM GLOBAL PTE LTD",

@@ -8,11 +8,12 @@ type Props = {
 
 const PartnersAtom = (props: Props) => {
   return (
-    <div className='relative size-36'>
+    <div className='relative'>
       <Image
         src={props.icon}
-        className='relative object-center '
-        fill
+        className='object-cover object-center '
+        width={100}
+        height={100}
         alt={`partner ${props.index} `}
       />
     </div>
