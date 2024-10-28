@@ -45,7 +45,7 @@ const NavigationAtom = (props: Props) => {
               layout='responsive'
             />
           </div>
-          <div className='hidden md:flex md:items-center md:space-x-4'>
+          <div className='hidden md:items-center md:space-x-4 lg:flex'>
             <a
               href='#'
               onClick={() => handleLinkClick("home")}
@@ -105,10 +105,10 @@ const NavigationAtom = (props: Props) => {
             </a>
           </div>
         </div>
-        <div className='flex items-center justify-center space-x-4'>
+        <div className='flex items-center justify-center space-x-1 min-[411px]:space-x-4'>
           <a
             href='#'
-            className='hidden rounded-common bg-black px-5 py-1.5 md:block'
+            className='hidden rounded-common bg-black px-5 py-1.5 lg:block'
           >
             <p className='text-base font-medium text-primaryGreen'>
               Create quest
@@ -155,7 +155,7 @@ const NavigationAtom = (props: Props) => {
           ) : (
             <a
               href='#'
-              className='hidden rounded-[0.625rem] bg-black px-5 py-1.5 md:inline-block'
+              className='hidden rounded-common bg-black px-5 py-1.5 lg:inline-block'
             >
               <p className='text-base font-medium text-white'>Sign in</p>
             </a>
