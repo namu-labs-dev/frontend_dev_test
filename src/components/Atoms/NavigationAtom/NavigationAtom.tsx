@@ -10,8 +10,8 @@ import { IconHpButtonAtom } from "../HPButtonAtom/IconHpButtonAtom";
 import DailyEarnMenuAtom from "../DailyEarnMenuAtom/DailyEarnMenuAtom";
 
 type Props = {
-  creators: any;
-  notifications: any;
+  isLoggedIn: boolean;
+  isViewed: boolean;
   HPUserIconButtonProps: React.ComponentProps<typeof IconHpButtonAtom>;
   HpBellIconProps: React.ComponentProps<typeof IconHpButtonAtom>;
   DailyEarnMenuProps: React.ComponentProps<typeof DailyEarnMenuAtom>;
@@ -27,11 +27,10 @@ const NavigationAtom = (props: Props) => {
   const popoverInnerStyle = {
     padding: 0,
   };
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
-  const [isViewed, setIsViewed] = useState(true);
+
   const [isClicked, setIsClicked] = useState(false);
   const addedClickedClass =
-    "rounded-[0.625rem] text-primaryGreen bg-[#000000] px-3 pb-[0.625rem] pt-[0.5625rem] text-[#00FF00]";
+    "rounded-[0.625rem] text-primaryGreen bg-[#000000] px-3 pb-[0.625rem] pt-[0.5625rem]";
 
   return (
     <nav className='border-b-2 border-[#000000] p-4 px-[24px] py-[22px] min-[600px]:px-[60px]'>
@@ -106,14 +105,16 @@ const NavigationAtom = (props: Props) => {
             </a>
           </div>
         </div>
-        <div className='flex items-center space-x-4'>
+        <div className='flex items-center justify-center space-x-4'>
           <a
             href='#'
-            className='hidden rounded-[0.625rem] bg-[#000000] px-5 py-1.5 md:block'
+            className='hidden rounded-common bg-black px-5 py-1.5 md:block'
           >
-            <p className='text-base font-medium text-[#00FF00]'>Create quest</p>
+            <p className='text-base font-medium text-primaryGreen'>
+              Create quest
+            </p>
           </a>
-          {isLoggedIn ? (
+          {props.isLoggedIn ? (
             <>
               <Popover
                 content={<NotificationPopOutAtom />}
@@ -126,7 +127,7 @@ const NavigationAtom = (props: Props) => {
               >
                 <div className='custom-wrapper-class'>
                   <IconHpButtonAtom {...props.HpBellIconProps}>
-                    {isViewed && (
+                    {props.isViewed && (
                       <div className='absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#00FF00] md:-right-[0.8125rem] md:-top-[0.625rem] md:h-[1.5625rem] md:w-[1.5625rem]'>
                         <p className='text-xs font-medium text-[#000000] md:text-sm'>
                           N
@@ -154,7 +155,7 @@ const NavigationAtom = (props: Props) => {
           ) : (
             <a
               href='#'
-              className='hidden rounded-[0.625rem] bg-[#000000] px-5 py-1.5 md:inline-block'
+              className='hidden rounded-[0.625rem] bg-black px-5 py-1.5 md:inline-block'
             >
               <p className='text-base font-medium text-white'>Sign in</p>
             </a>

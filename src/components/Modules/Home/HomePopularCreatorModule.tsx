@@ -19,6 +19,7 @@ export const HomePopularCreatorModule = (props: Props) => {
       <ViewAllSectionTabAtom {...props.popularCreatorHeaderProps} />
       <CreatorCarousel
         {...props.popularCreatorCarouselProps}
+        removeLeftMargin={true}
         slideRenderer={(slide, index) => (
           <CreatorCarouselAvatarAtom key={index} {...slide} />
         )}

@@ -3,10 +3,12 @@ import useDummyCreatorData from "~/hooks/useDummyCreatorData";
 import useDummyNotificationData from "~/hooks/useDummyNotification";
 import useDummyQuestData from "~/hooks/useDummyQuestData";
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
+import congrats from "../../../../public/images/congrats.png";
 import nft from "../../../../public/pngs/NFTImage.png";
 import cover1 from "../../../../public/images/cover1.png";
 import heroImage1 from "../../../../public/pngs/heroImage1.png";
 import { type EmblaOptionsType } from "embla-carousel";
+import { HeroHeading } from "~/components/Components/HeroHeading/HeroHeading";
 import { mobilePartnerIcons, partnerIcons } from "~/utils/common";
 import {
   creatorAvatarProps,
@@ -41,7 +43,7 @@ export const HomeContainer = () => {
   //   return null;
   // };
 
-  const heroImages = [heroImage1, nft, cover1];
+  const heroImages = [heroImage1, nft, cover1, congrats];
 
   const OPTIONS: EmblaOptionsType = { align: "start" };
 
@@ -63,8 +65,8 @@ export const HomeContainer = () => {
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
     homeHeaderModuleProps: {
       headerProps: {
-        creators: [],
-        notifications: [],
+        isLoggedIn: true,
+        isViewed: true,
         HPUserIconButtonProps: {
           antdIcon: UserOutlined,
           color: "green",
@@ -80,7 +82,12 @@ export const HomeContainer = () => {
       },
     },
     homeHeroModuleProps: {
-      heroProps: {
+      heroTextProps: {
+        heading: <HeroHeading />,
+        description:
+          "Join exciting communities, have fun and make a difference.",
+      },
+      heroCarouselProps: {
         images: heroImages,
       },
     },
